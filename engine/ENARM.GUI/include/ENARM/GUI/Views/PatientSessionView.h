@@ -8,6 +8,7 @@ namespace ENARM::GUI {
     public:
         void render(AppContext& ctx);
         void RenderGuidelinesTab(AppContext& ctx);  // Sprint 7B
+        void RenderReferencesTab(AppContext& ctx);  // Sprint 17 PubMed
 
     private:
         ScoringPanelView m_scoringPanel;

@@ -11,6 +11,7 @@ class PatientSessionView {
 public:
     void render(AppContext& ctx);
         void RenderGuidelinesTab(AppContext& ctx);  // Sprint 7B
+        void RenderReferencesTab(AppContext& ctx);  // Sprint 17 PubMed
 
 private:
     PatientChatView   m_chatView;

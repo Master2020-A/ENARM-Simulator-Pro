@@ -15,6 +15,10 @@ static constexpr const char* DEFAULT_STUDENT_ID = "654e1196-e438-463c-bb6f-d4e05
 void AppContext::StartSession(const Data::ClinicalCaseRecord& c) {
     activeCase = c;
 
+    // Reset referencias PubMed para el nuevo caso
+    pubmedRefs.clear();
+    pubmedLoaded = false;
+
     chatMessages.clear();
     chatInputBuffer[0] = '\0';
     waitingForResponse = false;

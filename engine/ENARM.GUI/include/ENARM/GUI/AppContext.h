@@ -17,6 +17,7 @@
 #include "ENARM/AI/OllamaClient.h"
 #include "ENARM/AI/LLMRouter.h"
 #include "ENARM/AI/PatientAIController.h"
+#include "ENARM/AI/PubMedClient.h"
 
 // ---- Sprint 6: Assessment ----
 #include <enarm/assessment/AssessmentEngine.h>
@@ -63,6 +64,11 @@ namespace ENARM::GUI {
         std::shared_ptr<Data::DatabaseManager> db;
         std::shared_ptr<AI::OllamaClient>       ollama;
         std::shared_ptr<AI::LLMRouter>          router;
+        std::shared_ptr<AI::PubMedClient>       pubmed;
+
+        // Referencias PubMed del caso activo (cache UI)
+        std::vector<AI::PubMedArticle> pubmedRefs;
+        bool pubmedLoaded{false};
 
         std::unique_ptr<Data::CaseRepository>    caseRepo;
         std::unique_ptr<Data::SessionRepository> sessionRepo;

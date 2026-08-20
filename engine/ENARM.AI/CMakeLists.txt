@@ -14,6 +14,7 @@ set(PUBLIC_HEADERS
     include/ENARM/AI/ConversationMemory.h
     include/ENARM/AI/PatientAIController.h
     include/ENARM/AI/RAGService.h
+    include/ENARM/AI/PubMedClient.h
     include/ENARM/AI/PromptTemplates/PatientPrompts.h
     include/ENARM/AI/PromptTemplates/EvaluatorPrompts.h
 )
@@ -26,6 +27,7 @@ set(SOURCES
     src/ConversationMemory.cpp
     src/PatientAIController.cpp
     src/RAGService.cpp
+    src/PubMedClient.cpp
 )
 
 enarm_add_library(ENARM.AI

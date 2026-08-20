@@ -78,6 +78,12 @@ void PatientSessionView::render(AppContext& ctx) {
                 renderFollowUpTab(ctx);
                 ImGui::EndTabItem();
             }
+            // Sprint 17: Referencias PubMed del caso
+            if (ImGui::BeginTabItem("Referencias")) {
+                ImGui::Spacing();
+                RenderReferencesTab(ctx);
+                ImGui::EndTabItem();
+            }
             ImGui::EndTabBar();
         }
 
@@ -1132,5 +1138,81 @@ void PatientSessionView::RenderGuidelinesTab(AppContext& ctx) {
         }
     }
 }
+
+// ================================================================
+// Sprint 17: Referencias PubMed del caso activo
+// ================================================================
+void PatientSessionView::RenderReferencesTab(AppContext& ctx) {
+    if (!ctx.pubmed) {
+        ImGui::TextDisabled("PubMed no disponible");
+        return;
+    }
+
+    // Cargar referencias del caso activo una sola vez
+    if (!ctx.pubmedLoaded) {
+        ctx.pubmedRefs.clear();
+        if (ctx.activeCase.has_value()) {
+            const auto& caseRec = ctx.activeCase.value();
+            if (!caseRec.pubmedPmids.empty()) {
+                auto res = ctx.pubmed->FetchSummaries(caseRec.pubmedPmids);
+                if (res.IsOk()) {
+                    ctx.pubmedRefs = res.Value();
+                }
+            }
+        }
+        ctx.pubmedLoaded = true;
+    }
+
+    if (ctx.pubmedRefs.empty()) {
+        ImGui::Spacing();
+        ImGui::TextDisabled("No hay referencias PubMed asociadas a este caso.");
+        ImGui::Spacing();
+        ImGui::TextWrapped("Sugerencia: ejecuta las migraciones de referencias "
+                           "(029_refs_cardiologia.sql) para casos de cardiologia.");
+        return;
+    }
+
+    ImGui::TextColored(Accent, "Referencias bibliograficas (%zu):", ctx.pubmedRefs.size());
+    ImGui::Separator();
+    ImGui::Spacing();
+
+    for (const auto& art : ctx.pubmedRefs) {
+        if (ImGui::CollapsingHeader(art.title.c_str())) {
+            ImGui::Indent(16.0f);
+            ImGui::TextWrapped("%s", art.title.c_str());
+            ImGui::Spacing();
+
+            if (!art.authors.empty()) {
+                std::string authors;
+                for (size_t i = 0; i < art.authors.size() && i < 5; ++i) {
+                    if (i > 0) authors += ", ";
+                    authors += art.authors[i];
+                }
+                if (art.authors.size() > 5) authors += ", et al.";
+                ImGui::TextColored(ImVec4(0.7f, 0.7f, 0.7f, 1.0f), "%s", authors.c_str());
+            }
+
+            if (!art.journal.empty() || !art.date.empty()) {
+                ImGui::TextColored(ImVec4(0.6f, 0.6f, 0.6f, 1.0f),
+                    "%s%s%s",
+                    art.journal.c_str(),
+                    (art.journal.empty() || art.date.empty()) ? "" : " | ",
+                    art.date.c_str());
+            }
+
+            if (!art.doi.empty()) {
+                ImGui::TextColored(ImVec4(0.5f, 0.5f, 0.5f, 1.0f), "DOI: %s", art.doi.c_str());
+            }
+
+            ImGui::Spacing();
+            if (!art.url.empty()) {
+                ImGui::TextColored(Accent, "PubMed: %s", art.url.c_str());
+            }
+            ImGui::Unindent(16.0f);
+            ImGui::Spacing();
+        }
+    }
+}
+
 } // namespace ENARM::GUI
 
