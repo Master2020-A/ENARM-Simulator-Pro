@@ -39,7 +39,7 @@ namespace ENARM::GUI::Views {
         if (fontSmall) ImGui::PushFont(fontSmall);
         ImGui::TextColored(ImVec4(0.6f, 0.6f, 0.6f, 1.0f),
             "Papel: 25 mm/s | 10 mm/mV | Elevacion ST visible en derivaciones correspondientes");
-        ImGui::PopFont();
+        if (fontSmall) ImGui::PopFont();
         (void)ctx; (void)fontHuge; (void)fontLarge; (void)fontRegular;
     }
 

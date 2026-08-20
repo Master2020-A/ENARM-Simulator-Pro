@@ -81,12 +81,12 @@ namespace ENARM::GUI::Views {
         ImGui::PushStyleColor(ImGuiCol_Text, col);
         if (fontHuge) ImGui::PushFont(fontHuge);
         ImGui::Text("EMERGENCIA");
-        ImGui::PopFont();
+        if (fontHuge) ImGui::PopFont();
         ImGui::PopStyleColor();
 
         if (fontLarge) ImGui::PushFont(fontLarge);
         ImGui::Text("%s", st.codeName.c_str());
-        ImGui::PopFont();
+        if (fontLarge) ImGui::PopFont();
     }
 
     void EmergencyCodeView::RenderTimer(const Simulation::CodeStatus& st,
@@ -104,7 +104,7 @@ namespace ENARM::GUI::Views {
 
         if (fontRegular) ImGui::PushFont(fontRegular);
         ImGui::Text("Puntaje: %d/%d", st.totalPoints, st.maxPoints);
-        ImGui::PopFont();
+        if (fontRegular) ImGui::PopFont();
     }
 
     void EmergencyCodeView::RenderActionButtons(AppContext& ctx,
@@ -170,7 +170,7 @@ namespace ENARM::GUI::Views {
                                                    ImFont* fontRegular) {
         if (fontRegular) ImGui::PushFont(fontRegular);
         ImGui::TextUnformatted("Selecciona un codigo de emergencia para iniciar:");
-        ImGui::PopFont();
+        if (fontRegular) ImGui::PopFont();
         ImGui::Spacing();
 
         const char* scenarios[] = {

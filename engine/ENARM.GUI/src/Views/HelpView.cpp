@@ -62,7 +62,7 @@ namespace ENARM::GUI::Views {
         ImGui::Spacing();
         ImGui::TextColored(ImVec4(0.6f, 0.6f, 0.6f, 1.0f),
             "Estado: %s", ctx.statusMessage.c_str());
-        ImGui::PopFont();
+        if (fontRegular) ImGui::PopFont();
     }
 
 } // namespace ENARM::GUI::Views

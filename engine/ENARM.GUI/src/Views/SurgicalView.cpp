@@ -35,7 +35,7 @@ namespace ENARM::GUI::Views {
 
         if (fontLarge) ImGui::PushFont(fontLarge);
         ImGui::Text("%s", st.procedureName.c_str());
-        ImGui::PopFont();
+        if (fontLarge) ImGui::PopFont();
 
         // Timer
         double remaining = st.timeLimitSeconds - st.elapsedSeconds;
@@ -79,7 +79,7 @@ namespace ENARM::GUI::Views {
                                                ImFont* fontRegular) {
         if (fontRegular) ImGui::PushFont(fontRegular);
         ImGui::TextUnformatted("Selecciona un procedimiento quirurgico:");
-        ImGui::PopFont();
+        if (fontRegular) ImGui::PopFont();
         ImGui::Spacing();
 
         const char* procedures[] = {
@@ -120,7 +120,7 @@ namespace ENARM::GUI::Views {
                            "Instrumento: %s | Puntos: %d%s",
                            step.instrument.c_str(), step.points,
                            step.isCritical ? " (CRITICO)" : "");
-        ImGui::PopFont();
+        if (fontRegular) ImGui::PopFont();
     }
 
     void SurgicalView::RenderActionButtons(AppContext& ctx,
@@ -160,7 +160,7 @@ namespace ENARM::GUI::Views {
         ImGui::TextColored(ImVec4(0.6f, 0.6f, 0.6f, 1.0f),
                            "Instrumentos disponibles: %s",
                            st.steps.empty() ? "-" : st.steps[st.currentStep].instrument.c_str());
-        ImGui::PopFont();
+        if (fontSmall) ImGui::PopFont();
     }
 
     void SurgicalView::RenderComplications(const Simulation::ProcedureStatus& st,
@@ -174,7 +174,7 @@ namespace ENARM::GUI::Views {
             ImGui::BulletText("%s", c.c_str());
         }
         ImGui::PopStyleColor();
-        ImGui::PopFont();
+        if (fontSmall) ImGui::PopFont();
     }
 
 } // namespace ENARM::GUI::Views

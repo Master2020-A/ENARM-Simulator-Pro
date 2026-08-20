@@ -81,11 +81,11 @@ namespace ENARM::GUI::Views {
                                          ImFont* fontLarge, ImFont* fontRegular) {
         if (fontLarge) ImGui::PushFont(fontLarge);
         ImGui::TextWrapped("%s", q.vignette.c_str());
-        ImGui::PopFont();
+        if (fontLarge) ImGui::PopFont();
         ImGui::Spacing();
         if (fontRegular) ImGui::PushFont(fontRegular);
         ImGui::TextWrapped("%s", q.question.c_str());
-        ImGui::PopFont();
+        if (fontRegular) ImGui::PopFont();
         ImGui::Spacing();
     }
 
