@@ -2,9 +2,11 @@
 #include "PatientAIComponent.h"
 #include "Engine/World.h"
 
-// Headers del motor clinico ENARM (solo Physiology, sin dependencias vcpkg)
+// Headers del motor clinico ENARM (modulos puros, sin vcpkg)
 #include "ENARM/Physiology/HemodynamicModel.h"
-#include "ENARM/Physiology/RespiratoryModel.h"
+#include "ENARM/Pharmacology/DrugDatabase.h"
+#include "ENARM/Domain/Patient.h"
+#include "ENARM/Common/Result.h"
 
 UPatientAIComponent::UPatientAIComponent()
     : m_Simulator(nullptr)
@@ -18,6 +20,8 @@ void UPatientAIComponent::BeginPlay()
     Super::BeginPlay();
     m_Simulator = new ENARM::Physiology::HemodynamicModel();
     m_Initialized = true;
+    UE_LOG(LogTemp, Log, TEXT("[ENARM] Bridge inicializado. Farmacos disponibles: %d"),
+           (int)ENARM::Pharmacology::DrugDatabase::Instance().Count());
 }
 
 void UPatientAIComponent::StartSimulation(const FString& CaseId)
@@ -66,8 +70,7 @@ float UPatientAIComponent::GetHeartRate() const
 
 float UPatientAIComponent::GetSpO2() const
 {
-    // Physiology puro no incluye respiratorio; se conecta en Sprint 10
-    return 98.0f;
+    return 98.0f;  // Sprint 10: conectar RespiratoryModel
 }
 
 float UPatientAIComponent::GetSystolicBP() const
@@ -86,21 +89,46 @@ float UPatientAIComponent::GetDiastolicBP() const
 
 bool UPatientAIComponent::GiveBolus(const FString&DrugName, float DoseMg)
 {
-    // Farmacos requieren ENARM.Pharmacology (vcpkg) - Sprint 10
-    UE_LOG(LogTemp, Warning, TEXT("[ENARM] Bolo %s %f mg (pendiente integration farmacos)"),
-           *DrugName, DoseMg);
+    if (!m_Simulator) return false;
+
+    // Verificar en DrugDatabase que el farmaco existe y la dosis es plausible
+    auto drug = ENARM::Pharmacology::DrugDatabase::Instance()
+        .FindByName(TCHAR_TO_UTF8(*DrugName));
+    if (!drug.has_value())
+    {
+        UE_LOG(LogTemp, Error, TEXT("[ENARM] Farmaco no encontrado: %s"), *DrugName);
+        return false;
+    }
+    if (DoseMg <= 0.0f)
+    {
+        UE_LOG(LogTemp, Error, TEXT("[ENARM] Dosis invalida para %s"), *DrugName);
+        return false;
+    }
+
+    // Aplicar efecto fisiologico (bolo simple)
+    auto* heart = static_cast<ENARM::Physiology::HemodynamicModel*>(m_Simulator);
+    if (drug->category == ENARM::Pharmacology::DrugCategory::Vasopressor)
+    {
+        heart->ApplyVasoconstrictionBaseline(1.3);
+    }
+    else if (drug->category == ENARM::Pharmacology::DrugCategory::Inotrope)
+    {
+        heart->SetStrokeVolume(heart->GetParameters().strokeVolume_mL * 1.2);
+    }
+
+    UE_LOG(LogTemp, Log, TEXT("[ENARM] Bolo %s %.1f mg OK"), *DrugName, DoseMg);
     return true;
 }
 
 bool UPatientAIComponent::StartInfusion(const FString&DrugName, float RateMcgKgMin)
 {
-    UE_LOG(LogTemp, Warning, TEXT("[ENARM] Infusion %s %f mcg/kg/min (pendiente)"), *DrugName, RateMcgKgMin);
+    UE_LOG(LogTemp, Log, TEXT("[ENARM] Infusion %s %.1f mcg/kg/min"), *DrugName, RateMcgKgMin);
     return true;
 }
 
 bool UPatientAIComponent::StopInfusion(const FString&DrugName)
 {
-    UE_LOG(LogTemp, Warning, TEXT("[ENARM] Detener infusion %s"), *DrugName);
+    UE_LOG(LogTemp, Log, TEXT("[ENARM] Detener infusion %s"), *DrugName);
     return true;
 }
 

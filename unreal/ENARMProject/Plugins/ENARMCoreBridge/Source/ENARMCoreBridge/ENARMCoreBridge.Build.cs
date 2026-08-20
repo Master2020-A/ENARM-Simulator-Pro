@@ -20,8 +20,11 @@ public class ENARMCoreBridge : ModuleRules
 
         if (Target.Platform == UnrealTargetPlatform.Win64)
         {
-            // Solo modulos sin dependencias externas (vcpkg)
+            // Modulos puros sin dependencias externas (vcpkg)
+            PublicAdditionalLibraries.Add(Path.Combine(EnarmLib, "ENARM.Common.lib"));
+            PublicAdditionalLibraries.Add(Path.Combine(EnarmLib, "ENARM.Domain.lib"));
             PublicAdditionalLibraries.Add(Path.Combine(EnarmLib, "ENARM.Physiology.lib"));
+            PublicAdditionalLibraries.Add(Path.Combine(EnarmLib, "ENARM.Pharmacology.lib"));
         }
     }
 }
