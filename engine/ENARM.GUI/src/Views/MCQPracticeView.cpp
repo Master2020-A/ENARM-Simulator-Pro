@@ -94,7 +94,16 @@ namespace ENARM::GUI::Views {
         if (fontRegular) ImGui::PushFont(fontRegular);
         const char* labels[] = {"A", "B", "C", "D", "E"};
         for (int i = 0; i < 5 && i < (int)q.options.size(); ++i) {
-            std::string opt = q.options[i].get<std::string>();
+            // Las opciones son objetos: {"text": "...", "letter": "A"}
+            std::string opt;
+            const auto& o = q.options[i];
+            if (o.is_string()) {
+                opt = o.get<std::string>();
+            } else if (o.is_object() && o.contains("text")) {
+                opt = o["text"].get<std::string>();
+            } else {
+                continue;
+            }
             std::string btn = std::string(labels[i]) + ") " + opt;
             if (ImGui::Button(btn.c_str(), ImVec2(ImGui::GetContentRegionAvail().x, 36.0f))) {
                 Data::MCQEngine engine(ctx.db);
