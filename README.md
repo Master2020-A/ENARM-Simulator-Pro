@@ -10,10 +10,11 @@ Combina un motor fisiológico/farmacológico determinista en C++20 con un pacien
 - **Hemodinámica**: Modelo Windkessel 4 elementos (PA, FC, gasto cardíaco, presión de pulso)
 - **Respiratorio**: Compliance pulmonar dinámica (FR, SpO₂, PaO₂, PaCO₂, EtCO₂)
 - **Metabólico**: Balance ácido-base, electrolitos, lactato, glucosa
-- **ECG sintético**: 12 derivaciones, ritmos (sinusal, taquicardia, FA, STEMI anterior/inferior, bloqueo AV, FV)
+- **ECG sintético**: 12 derivaciones, 7 ritmos (sinusal, taquicardia, FA, STEMI anterior/inferior, bloqueo AV, FV)
 - **Farmacología ICU**: 8 categorías, bolos + infusiones, PK 2 compartimentos
 - **Progresión de enfermedad**: Fases Estable → Compensado → Descompensando → Crítico
 - **Códigos de emergencia**: Código Azul, STEMI, Stroke, Trauma, Sepsis con cronómetros
+- **Simulador quirúrgico**: 9 procedimientos con árbol de decisión (apendicectomía, cesárea, toracostomía, RCP...)
 
 ### Paciente virtual (Ollama)
 - Chat conversacional con persona configurable (edad, sexo, síntomas, historia)
@@ -30,11 +31,12 @@ Combina un motor fisiológico/farmacológico determinista en C++20 con un pacien
 - **89+ casos clínicos** generados en 21+ especialidades
 - **PostgreSQL 16** con pgvector para búsqueda semántica
 - **RAGService**: embeddings + búsqueda de GPCs por similitud
+- **PubMed**: E-utilities con cache de referencias por caso
 
 ### Interfaces
-- **GUI**: Dear ImGui + DX11 (dashboard, casos, guías, sesión clínica, scoring)
+- **GUI**: Dear ImGui + DX11 (dashboard, casos, guías, sesión clínica, códigos, ECG, quirófano)
 - **CLI**: Interactivo de 1000+ líneas
-- **UE5**: Proyecto `unreal/ENARMProject` con plugin `ENARMCoreBridge` que expone el motor clínico a Blueprints
+- **UE5**: Proyecto `unreal/ENARMProject` con plugin `ENARMCoreBridge` (7 módulos + vcpkg) que expone el motor clínico a Blueprints
 
 ## Requisitos
 
@@ -57,6 +59,11 @@ cmake --build build --config Release
 
 # Tests
 .\scripts\run_tests.ps1
+
+# Benchmarks
+cmake -S . -B build -DENARM_BUILD_BENCHMARKS=ON
+cmake --build build --config Release --target ENARM.Benchmarks
+.\build\bin\Release\ENARM.Benchmarks.exe 100 30
 ```
 
 ## Run
@@ -71,8 +78,17 @@ cmake --build build --config Release
 
 ## Tests
 
-- **43 tests** con Catch2 (100% pasan)
-- Coverage por módulo: fisiológico, farmacología, assessment, metabolismo, ECG
+- **58 tests** con Catch2 (100% pasan)
+- Coverage: fisiológico, farmacología, assessment, metabolismo, ECG, códigos, quirófano, MCQ
+
+## Benchmarks
+
+| Métrica | Resultado |
+|---------|-----------|
+| Pacientes en paralelo | 100 |
+| FPS de simulación | 2149 |
+| ms por paso (60fps) | 0.465 ms |
+| Pacientes a 60fps | 36 |
 
 ## Roadmap
 
@@ -85,16 +101,21 @@ cmake --build build --config Release
 | S5 | ✅ | Paciente virtual conversacional |
 | S7 | ✅ | Evaluación por competencias |
 | S8 | ✅ | MCQ Engine |
-| S9 | ✅ | UE5 + Bridge (fase 1) |
+| S9 | ✅ | UE5 + Bridge (7 módulos + vcpkg) |
 | S13 | ✅ | Contenido: 89 casos, 21 especialidades |
 | S14 | ✅ | Learning adaptativo |
-| S16 | ✅ | Códigos de emergencia |
-| S18 | ✅ | Sala multi-usuario (esqueleto) |
-| S19 | ✅ | Analytics embebidos |
+| S15 | ✅ | Simulador quirúrgico + UI |
+| S16 | ✅ | Códigos de emergencia + UI |
+| S17 | ✅ | PubMed + referencias |
+| S18 | ✅ | Sala multi-usuario |
 | S21 | ✅ | Instalador NSIS/ZIP |
-| S10-12 | 🚧 | MetaHumans, entornos 3D, equipos médicos |
-| S15 | 🚧 | Simulador quirúrgico/anestesia |
-| S17 | 🚧 | PubMed + FAISS |
+| S10-12 | 🚧 | MetaHumans, entornos 3D (guía en `unreal/ENARMProject/GUIA_ESCENA_METAHUMAN.md`) |
+
+## Documentación
+
+- **API**: `docs/API/API_REFERENCE.md`
+- **Escena UE5**: `unreal/ENARMProject/GUIA_ESCENA_METAHUMAN.md`
+- **Scripts**: `scripts/` (generación de casos, tests, instalador)
 
 ## Licencia
 

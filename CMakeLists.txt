@@ -102,6 +102,11 @@ add_subdirectory(engine/ENARM.GUI)
 # --- Tests ---
 add_subdirectory(tests/ENARM.SmokeTest)
 
+# --- Benchmarks ---
+if(ENARM_BUILD_BENCHMARKS)
+    add_subdirectory(benchmarks)
+endif()
+
 # --- Tools ---
 add_subdirectory(tools/ENARM.CLI)
 add_subdirectory(tools/ENARM.App)
