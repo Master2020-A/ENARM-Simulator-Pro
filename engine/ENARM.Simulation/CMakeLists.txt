@@ -10,6 +10,7 @@ set(PUBLIC_HEADERS
     include/ENARM/Simulation/DiseaseProgressionEngine.h
     include/ENARM/Simulation/EmergencyCode.h
     include/ENARM/Simulation/SimulationRoom.h
+    include/ENARM/Simulation/SurgicalProcedure.h
 )
 
 set(SOURCES
@@ -20,6 +21,7 @@ set(SOURCES
     src/DiseaseProgressionEngine.cpp
     src/EmergencyCode.cpp
     src/SimulationRoom.cpp
+    src/SurgicalProcedure.cpp
 )
 
 enarm_add_library(ENARM.Simulation
