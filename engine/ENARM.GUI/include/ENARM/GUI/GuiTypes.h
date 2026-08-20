@@ -31,6 +31,7 @@ namespace ENARM::GUI {
         GuidelineDetail,   // Sprint 7A.5: Detalle GPC
         EmergencyCode,     // Sprint 16: Codigo de emergencia
         ECGMonitor,        // Sprint 12.5: Monitor ECG en tiempo real
+        Surgical,          // Sprint 15: Simulador quirurgico
         Settings
     };
 

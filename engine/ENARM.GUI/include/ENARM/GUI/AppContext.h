@@ -7,6 +7,7 @@
 #include "ENARM/Data/Repositories/MCQRepository.h"
 #include "ENARM/Data/Repositories/GuidelineRepository.h"
 #include "ENARM/Simulation/EmergencyCode.h"
+#include "ENARM/Simulation/SurgicalProcedure.h"
 
 #include <spdlog/spdlog.h>
 #include <algorithm>
@@ -288,6 +289,10 @@ namespace ENARM::GUI {
         // ---- Sprint 16: Codigo de emergencia activo ----
         std::unique_ptr<Simulation::EmergencyCode> emergencyCode;
         bool emergencyCodeRunning{false};
+
+        // ---- Sprint 15: Procedimiento quirurgico activo ----
+        std::unique_ptr<Simulation::SurgicalProcedure> surgicalProcedure;
+        bool surgicalRunning{false};
 
         // ---- Helpers Sprint 6 ----
         bool        IsExamRequested(const std::string& name) const;

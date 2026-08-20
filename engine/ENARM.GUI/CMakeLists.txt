@@ -22,6 +22,7 @@ set(GUI_SOURCES
     src/Views/GuidelinesListView.cpp
     src/Views/EmergencyCodeView.cpp
     src/Views/ECGMonitorView.cpp
+    src/Views/SurgicalView.cpp
 
     # Views opcionales (agregar cuando existan)
     # src/Views/CaseSelectorView.cpp
