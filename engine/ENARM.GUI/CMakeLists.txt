@@ -23,6 +23,9 @@ set(GUI_SOURCES
     src/Views/EmergencyCodeView.cpp
     src/Views/ECGMonitorView.cpp
     src/Views/SurgicalView.cpp
+    src/Views/MCQPracticeView.cpp
+    src/Views/SettingsView.cpp
+    src/Views/HelpView.cpp
 
     # Views opcionales (agregar cuando existan)
     # src/Views/CaseSelectorView.cpp

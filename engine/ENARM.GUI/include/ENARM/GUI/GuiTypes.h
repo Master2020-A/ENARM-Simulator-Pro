@@ -32,7 +32,9 @@ namespace ENARM::GUI {
         EmergencyCode,     // Sprint 16: Codigo de emergencia
         ECGMonitor,        // Sprint 12.5: Monitor ECG en tiempo real
         Surgical,          // Sprint 15: Simulador quirurgico
-        Settings
+        MCQPractice,       // Sprint 8: Banco de preguntas
+        Settings,          // Configuracion
+        Help,              // Ayuda y atajos
     };
 
     // Mantener AppMode como alias por compatibilidad
