@@ -6,6 +6,7 @@
 #include "ENARM/Data/Repositories/SessionRepository.h"
 #include "ENARM/Data/Repositories/MCQRepository.h"
 #include "ENARM/Data/Repositories/GuidelineRepository.h"
+#include "ENARM/Simulation/EmergencyCode.h"
 
 #include <spdlog/spdlog.h>
 #include <algorithm>
@@ -277,6 +278,10 @@ namespace ENARM::GUI {
         void* headerFont{nullptr};
         void* subtitleFont{nullptr};
         void* bodyFont{nullptr};
+
+        // ---- Sprint 16: Codigo de emergencia activo ----
+        std::unique_ptr<Simulation::EmergencyCode> emergencyCode;
+        bool emergencyCodeRunning{false};
 
         // ---- Helpers Sprint 6 ----
         bool        IsExamRequested(const std::string& name) const;

@@ -18,10 +18,9 @@ set(GUI_SOURCES
     # Views (version nueva: namespace ENARM::GUI::Views)
     src/Views/CasesListView.cpp
     src/Views/PatientSessionView.cpp
-    #
-# TODO: API incompatible
     src/Views/ScoringPanelView.cpp
     src/Views/GuidelinesListView.cpp
+    src/Views/EmergencyCodeView.cpp
 
     # Views opcionales (agregar cuando existan)
     # src/Views/CaseSelectorView.cpp

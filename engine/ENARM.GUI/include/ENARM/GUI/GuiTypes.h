@@ -29,6 +29,7 @@ namespace ENARM::GUI {
         SessionSummary,    // Resumen post-sesion
         GuidelinesList,    // Sprint 7A.5: Lista de GPCs
         GuidelineDetail,   // Sprint 7A.5: Detalle GPC
+        EmergencyCode,     // Sprint 16: Codigo de emergencia
         Settings
     };
 
