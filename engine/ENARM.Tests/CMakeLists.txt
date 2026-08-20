@@ -11,6 +11,9 @@ add_executable(ENARM.Tests
     src/test_competency.cpp
     src/test_metabolic.cpp
     src/test_ecg.cpp
+    src/test_emergency_code.cpp
+    src/test_surgical.cpp
+    src/test_mcq.cpp
 )
 
 target_link_libraries(ENARM.Tests PRIVATE
@@ -25,6 +28,11 @@ target_link_libraries(ENARM.Tests PRIVATE
 )
 
 target_compile_features(ENARM.Tests PRIVATE cxx_std_20)
+
+if(MSVC)
+    # pqxx.lib exporta string_view inline -> LNK2005; FORCE:MULTIPLE lo silencia
+    target_link_options(ENARM.Tests PRIVATE /FORCE:MULTIPLE)
+endif()
 
 include(CTest)
 include(Catch)
