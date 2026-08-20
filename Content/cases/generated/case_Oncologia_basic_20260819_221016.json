@@ -1,0 +1,102 @@
+{
+  "title": "Caso de paciente con dolor torácico y fatiga",
+  "slug": "caso-dolor-toracico-fatiga",
+  "chief_complaint": "Dolor torácico y fatiga generalizada durante los últimos 2 meses",
+  "specialty": "Oncologia",
+  "difficulty": "basic",
+  "setting": "outpatient",
+  "patient_json": {
+    "name": "Juan Perez Garcia",
+    "age": 55,
+    "age_unit": "years",
+    "sex": "M",
+    "weight_kg": 70,
+    "height_cm": 170,
+    "occupation": "Trabajador administrativo",
+    "vitals_on_arrival": {
+      "hr": 80,
+      "sbp": 120,
+      "dbp": 80,
+      "rr": 16,
+      "spo2": 98,
+      "temp_c": 36.8
+    },
+    "past_medical_history": [
+      "hipertension arterial"
+    ],
+    "allergies": "ninguna conocida",
+    "current_medications": [
+      "metoprolol 50mg VO"
+    ],
+    "family_history": "negado",
+    "social_history": "ninguna relevante"
+  },
+  "history_present_illness": "El paciente de 55 años presenta dolor torácico crónico, principalmente en el pecho derecho, que ha aumentado en intensidad y duración durante los últimos 2 meses. El dolor es descrito como estreñido y persistente, no se le asocia con actividad física intensa. El paciente también ha notado una pérdida de peso de 5 kg en los últimos 3 meses y una fatiga generalizada. El dolor no ha mejorado con el descanso y los analgésicos de venta libre. No ha experimentado fiebre, sudoración nocturna, diarrea o pérdida de apetito.",
+  "symptoms_json": [
+    {
+      "name": "Dolor torácico",
+      "duration": "2 meses",
+      "severity": "moderada"
+    },
+    {
+      "name": "Fatiga",
+      "duration": "2 meses",
+      "severity": "moderada"
+    },
+    {
+      "name": "Pérdida de peso",
+      "duration": "3 meses",
+      "severity": "moderada"
+    }
+  ],
+  "expected_diagnosis_json": {
+    "primary": "Cáncer pulmonar",
+    "icd10": "C34.9",
+    "differential": [
+      "Cáncer gastrointestinal",
+      "Cáncer pulmonar primario"
+    ],
+    "justification": "El dolor torácico crónico, pérdida de peso y fatiga generalizada son signos tipicos del cáncer pulmonar. La historia de hipertensión arterial y el ausencia de signos clínicos que sugieran otro origen del dolor, hacen que el cáncer pulmonar sea el diagnostico principal."
+  },
+  "expected_studies_json": [
+    {
+      "name": "ECG 12 derivaciones",
+      "priority": "routine",
+      "expected_finding": "sin datos de congestión"
+    },
+    {
+      "name": "Ct torax",
+      "priority": "urgent",
+      "expected_finding": "tumor pulmonar en segmento V"
+    },
+    {
+      "name": "Fonograma pulmonar",
+      "priority": "routine",
+      "expected_finding": "sin datos de infección"
+    }
+  ],
+  "expected_treatments_json": [
+    {
+      "treatment": "Oxígeno ambiental",
+      "priority": "immediate",
+      "evidence": "Class I - AHA/ACC 2022"
+    },
+    {
+      "treatment": "Antibióticos empiricos",
+      "priority": "urgent",
+      "evidence": "Class I"
+    },
+    {
+      "treatment": "Immunoterapia (pembrolizumab)",
+      "priority": "urgent",
+      "evidence": "Class I"
+    }
+  ],
+  "expected_followup": "El paciente debe seguirse en consulta oncologica semanalmente para monitoreo del tumor y evaluación de la respuesta terapéutica. El paciente debe iniciar una terapia con immunoterapia y seguirse por rutina oncológica.",
+  "learning_objectives_json": [
+    "Identificar criterios diagnosticos de cáncer pulmonar",
+    "Aplicar protocolo de atención inicial en oncología",
+    "Reconocer complicaciones de la infección pulmonar"
+  ],
+  "teaching_points": "El dolor torácico crónico puede ser un signo de cáncer pulmonar, especialmente en pacientes mayores. La CT pulmonar es la imagen de referencia para el diagnóstico. La terapia inmediata debe ser antibióticos empiricos y terapia de apoyo (oxígeno ambiental). La monitoreo regular y el seguimiento del paciente son esenciales para el control del cáncer."
+}

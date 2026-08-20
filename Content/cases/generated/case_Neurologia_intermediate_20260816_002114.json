@@ -1,0 +1,93 @@
+{
+    "title":  "Caso de Epilessia Generalizada Automicta",
+    "slug":  "caso-epilessia-generalizada-automicta",
+    "chief_complaint":  "Episodios recurrentes de convulsiones",
+    "specialty":  "Neurologia",
+    "difficulty":  "intermediate",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  27,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  75,
+                         "height_cm":  175,
+                         "occupation":  "Estudiante universitario",
+                         "vitals_on_arrival":  {
+                                                   "hr":  100,
+                                                   "sbp":  130,
+                                                   "dbp":  85,
+                                                   "rr":  18,
+                                                   "spo2":  95,
+                                                   "temp_c":  36.7
+                                               },
+                         "past_medical_history":  [
+                                                      "Sin antecedentes de salud"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Sin medicamentos"
+                                                 ],
+                         "family_history":  "Sin relevancia para la historia clinica",
+                         "social_history":  "Sin tabaquismo, alcohol ni drogas"
+                     },
+    "history_present_illness":  "El paciente se presenta con episodios recurrentes de convulsiones. Los episodios comenzaron a los 18 años de edad y han aumentado en frecuencia en los últimos meses. Cada episodio dura aproximadamente 2-3 minutos. Los episodios son generalmente fortuitos y no ocurren durante las actividades cotidianas. El paciente ha intentado evitar ciertas situaciones, como el agua y los altos lugares, debido a la preocupación de que pueda tener un episodio en estos lugares. El paciente ha notado que antes de los episodios hay un mal olor intenso y luego un mareo leve. No ha habido pérdida de conciencia. Los episodios ocurren de manera espontánea y sin una causa conocida. El paciente no ha experimentado cambios en el comportamiento, la memoria o la inteligencia durante los episodios. El paciente ha intentado dormir en una cama separada para evitar tener episodios durante el sueño.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Convulsiones generalizadas",
+                              "duration":  "3 meses",
+                              "severity":  "moderada"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Epilessia Generalizada Automicta",
+                                    "icd10":  "G40.11",
+                                    "differential":  [
+                                                         "Epilessia Generalizada Focal",
+                                                         "Epilessia Partial",
+                                                         "Convulsiones no convulsivas"
+                                                     ],
+                                    "justification":  "El paciente presenta episodios recurrentes de convulsiones generalizadas, lo cual es compatible con la epilessia generalizada automicta. La ausencia de pérdida de conciencia y el mal olor intenso antes del episodio son indicadores de una convulsión focal que se extiende generalmente en un episodio. La ausencia de cambios en el comportamiento, memoria o inteligencia durante los episodios es consistente con un diagnóstico de epilessia generalizada automicta."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "Electroencefalograma (EEG)",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Pattograma de paroxismo automicto"
+                                  },
+                                  {
+                                      "name":  "Imaging cerebrovascular (MRI)",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin evidencia de daño cerebral"
+                                  },
+                                  {
+                                      "name":  "Electromiografía (EMG)",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin evidencia de alteración en la función neuromuscular"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Anticonvulsivos (valproato 1000mg VO c/24h)",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Monitoreo de la tosferina (tiroxina)",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Prevención de posibles complicaciones (infecciones)",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente debe seguir con un neurologista para un seguimiento de los episodios de convulsiones. El paciente debe presentar regularmente los EEG y realizar un seguimiento de los niveles de tiroxina. El paciente debe tomar los anticonvulsivos según indicaciones del médico. El paciente debe evitar actividades que puedan desencadenar convulsiones y mantener un estilo de vida saludable. El paciente debe ser educado sobre el manejo de los episodios de convulsiones y las precauciones para evitar lesiones durante los episodios. El paciente debe tener un plan de escape en caso de que un episodio de convulsiones tenga lugar en el lugar de trabajo o en casa.",
+    "learning_objectives_json":  [
+                                     "Identificar los criterios diagnósticos de la epilessia generalizada automicta",
+                                     "Aplicar el protocolo de manejo de la epilessia generalizada automicta en la sala de emergencias",
+                                     "Reconocer las complicaciones potenciales de la epilessia generalizada automicta y cómo prevenirlas"
+                                 ],
+    "teaching_points":  "La epilessia generalizada automicta es una forma de epilepsia que afecta todo el cerebro. Los episodios son generalmente fortuitos y no ocurren durante las actividades cotidianas. Los episodios pueden ser desencadenados por ciertos factores, como el estrés, la fatiga, la falta de sueño o ciertas situaciones. La epilepsia generalizada automicta puede causar lesiones cerebrales si los episodios no se controlan adecuadamente. Los anticonvulsivos son la terapia de primera línea para la epilepsia generalizada automicta. Es importante educar al paciente sobre el manejo de los episodios de convulsiones y las precauciones para evitar lesiones durante los episodios."
+}

@@ -1,0 +1,102 @@
+{
+    "title":  "Caso de Diabetes Mellitus Type 2",
+    "slug":  "caso-diabetes-mellitus-type-2",
+    "chief_complaint":  "Fatiga extrema, sed excesiva y frecuencia urinaria aumentada durante los últimos dos días.",
+    "specialty":  "Endocrinologia",
+    "difficulty":  "basic",
+    "setting":  "outpatient",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  50,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  90,
+                         "height_cm":  175,
+                         "occupation":  "Trabajador administrativo",
+                         "vitals_on_arrival":  {
+                                                   "hr":  85,
+                                                   "sbp":  128,
+                                                   "dbp":  82,
+                                                   "rr":  20,
+                                                   "spo2":  99,
+                                                   "temp_c":  36.5
+                                               },
+                         "past_medical_history":  [
+                                                      "Hipertension arterial"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Acetaminofen 500mg"
+                                                 ],
+                         "family_history":  "Diabetes familiar en primera familia",
+                         "social_history":  "Sin tabaquismo, alcohol moderado"
+                     },
+    "history_present_illness":  "El paciente llegó el día anterior con fiebre y sensación de malestar general. La semana pasada comenzó a experimentar fatiga extrema, sed excesiva y frecuencia urinaria aumentada. Ha aumentado su consumo de agua en el último día. No tiene dolor abdominal, fiebre alta o pérdida de peso. Antes de que se enfermara, estaba trabajando en la oficina y no realizaba ejercicio físico regularmente.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Fatiga",
+                              "duration":  "2 semanas",
+                              "severity":  "severa"
+                          },
+                          {
+                              "name":  "Sed excesiva",
+                              "duration":  "2 días",
+                              "severity":  "leve"
+                          },
+                          {
+                              "name":  "Frecuencia urinaria aumentada",
+                              "duration":  "2 días",
+                              "severity":  "moderada"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Diabetes Mellitus Type 2",
+                                    "icd10":  "E11.9",
+                                    "differential":  [
+                                                         "Gastroenteritis",
+                                                         "Dehidratación"
+                                                     ],
+                                    "justification":  "La anamnesis y la fiebre alta, junto con la fatiga extrema, sed excesiva y frecuencia urinaria aumentada, sugieren una posible infección urinaria. Sin embargo, el historial familiar de diabetes y la presencia de signos de hiperglycemia (sed excesiva y frecuencia urinaria) hacen que la diabetes mellitus type 2 sea el diagnóstico más probable."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "Orina de orina rápida",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "pH 5.5-6.0, glucosa en orina \u003e 1000 mg/dL"
+                                  },
+                                  {
+                                      "name":  "Glucosa en sangre venosa en ayunas",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "glucosa \u003e 200 mg/dL"
+                                  },
+                                  {
+                                      "name":  "Pruebas de tolerancia a la glucosa",
+                                      "priority":  "routine",
+                                      "expected_finding":  "no necesario para el diagnóstico, pero útil para evaluar la eficacia del tratamiento"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Orina de orina rápida",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Glucosa en sangre venosa en ayunas",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Oral Glucose Tolerance Test (OGTT) en 1 semana",
+                                         "priority":  "routine",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente debe volver a la consulta en una semana para una evaluación de la glucosa venosa en ayunas y una discusión sobre el manejo del diabetes. Se recomienda una dieta balanceada, ejercicio físico regular y monitoreo de la glucosa regularmente.",
+    "learning_objectives_json":  [
+                                     "Identificar los síntomas clínicos de la diabetes mellitus type 2",
+                                     "Aplicar el protocolo de diagnóstico de la diabetes mellitus type 2",
+                                     "Reconocer la importancia del seguimiento en el manejo de la diabetes mellitus type 2"
+                                 ],
+    "teaching_points":  "La diabetes mellitus type 2 es una enfermedad crónica que requiere un manejo integral. La identificación temprana y el diagnóstico preciso son cruciales para prevenir complicaciones graves. El seguimiento regular y el monitoreo de la glucosa son fundamentales para el control de la enfermedad y la prevención de las complicaciones."
+}

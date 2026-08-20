@@ -1,0 +1,28 @@
+﻿cmake_minimum_required(VERSION 3.28)
+
+set(PHYSIOLOGY_SOURCES
+    src/DiseaseProgressionEngine.cpp
+    src/ECGSynthesizer.cpp
+    src/HemodynamicModel.cpp
+    src/OxygenationModel.cpp
+    src/RespiratoryModel.cpp
+)
+
+add_library(ENARM.Physiology STATIC ${PHYSIOLOGY_SOURCES})
+
+target_include_directories(ENARM.Physiology PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+
+target_compile_features(ENARM.Physiology PUBLIC cxx_std_20)
+
+# Link con Common si existe
+if(TARGET ENARM.Common)
+    target_link_libraries(ENARM.Physiology PUBLIC ENARM.Common)
+endif()
+
+set_target_properties(ENARM.Physiology PROPERTIES
+    ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
+    ARCHIVE_OUTPUT_DIRECTORY_RELEASE "${CMAKE_BINARY_DIR}/lib/Release"
+    ARCHIVE_OUTPUT_DIRECTORY_DEBUG "${CMAKE_BINARY_DIR}/lib/Debug"
+)

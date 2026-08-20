@@ -1,0 +1,111 @@
+{
+    "title":  "Infarto agudo del miocardio (IAMI) en paciente con angina pectorial crónica",
+    "slug":  "infarto-agudo-del-miocardio-en-paciente-con-angina-pectorial-cronica",
+    "chief_complaint":  "Dolor torácico intenso en el pecho durante la noche que ha evolucionado a dolor torácico agudo durante el día",
+    "specialty":  "Cardiologia",
+    "difficulty":  "basic",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  55,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  80,
+                         "height_cm":  175,
+                         "occupation":  "Jefe de oficina",
+                         "vitals_on_arrival":  {
+                                                   "hr":  90,
+                                                   "sbp":  140,
+                                                   "dbp":  90,
+                                                   "rr":  16,
+                                                   "spo2":  95,
+                                                   "temp_c":  36.9
+                                               },
+                         "past_medical_history":  [
+                                                      "angina pectorial crónica",
+                                                      "hipertensión arterial",
+                                                      "colesterol alto"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "aspirina 300mg VO",
+                                                     "lisinopril 10mg PO"
+                                                 ],
+                         "family_history":  "negado",
+                         "social_history":  "fumador de 15 cigarrillos al día, alcohol moderado"
+                     },
+    "history_present_illness":  "El paciente presenta un dolor torácico intenso que ha comenzado durante la noche y ha evolucionado a dolor torácico agudo durante el día. El dolor se describe como picazón, presión y dolor de punta. El paciente ha experimentado sudoración profusa, malestar gastrointestinal, nausea y malestar general. El dolor no se ha ameliorado con el reposo y ha requerido dos dosis de nitroglicerina sin efecto. El dolor es reproducido durante la ejercicio y desaparece con el reposo. El paciente ha tenido episodios similares en el pasado, pero no ha necesitado atención médica.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Dolor torácico",
+                              "duration":  "24 horas",
+                              "severity":  "intenso"
+                          },
+                          {
+                              "name":  "Sudoración profusa",
+                              "duration":  "24 horas",
+                              "severity":  "leve"
+                          },
+                          {
+                              "name":  "Nausea",
+                              "duration":  "24 horas",
+                              "severity":  "leve"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Infarto agudo del miocardio (IAMI)",
+                                    "icd10":  "I21.0",
+                                    "differential":  [
+                                                         "angina pectorial estables",
+                                                         "angina pectorial instables",
+                                                         "pericarditis"
+                                                     ],
+                                    "justification":  "El dolor torácico intenso, evolución a dolor agudo, sudoración profusa, malestar gastrointestinal, malestar general y el dolor reproducido durante la ejercicio son indicativos de un IAMI. La historia de angina pectorial crónica y el fumadorismo aumentan el riesgo de IAMI."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "elevación ST V1-V4"
+                                  },
+                                  {
+                                      "name":  "Troponinas seriadas",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "elevadas"
+                                  },
+                                  {
+                                      "name":  "Radiografia de torax",
+                                      "priority":  "routine",
+                                      "expected_finding":  "sin datos de congestion"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Aspirina 300mg VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Clopidogrel 600mg carga VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Enoxaparina 1mg/kg SC c/12h",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Angioplastia primaria en \u003c90 min",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente será evaluado en el hospital de emergencia para un ECG, troponina y radiografía de torax. El paciente será transferido al departamento de cardiología para una angiografía coronaria. El seguimiento incluirá medicación anticoagulante, anticoagulante placa y antiplaca. El paciente será monitoreado diariamente para cualquier signo de complicaciones.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnósticos de IAMI",
+                                     "Aplicar protocolo de manejo de IAMI en primera hora",
+                                     "Reconocer complicaciones de IAMI"
+                                 ],
+    "teaching_points":  "El IAMI es una emergencia cardiológica grave que requiere un manejo rápido y eficaz. El ECG es el estudio de diagnóstico más rápido y esencial para identificar un IAMI. La aspirina, clopidogrel y enoxaparina son tratamientos fundamentales para prevenir la complicación de trombosis. El manejo del IAMI debe ser realizado de manera inmediata y debe seguir los protocolos de orientación de la AHA/ACC 2022."
+}

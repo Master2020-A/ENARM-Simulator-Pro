@@ -1,0 +1,123 @@
+{
+    "title":  "Trastorno de ansiedad generalizada en un adulto joven",
+    "slug":  "trastorno-de-ansiedad-generalizada-adulto-joven",
+    "chief_complaint":  "Sentimientos de miedo o inquietud intenso, dificultad para relajarse, nerviosismo y temor a situaciones sociales.",
+    "specialty":  "Psiquiatria",
+    "difficulty":  "basic",
+    "setting":  "outpatient",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  25,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  75,
+                         "height_cm":  175,
+                         "occupation":  "Estudiante universitario",
+                         "vitals_on_arrival":  {
+                                                   "hr":  78,
+                                                   "sbp":  120,
+                                                   "dbp":  80,
+                                                   "rr":  16,
+                                                   "spo2":  99,
+                                                   "temp_c":  36.8
+                                               },
+                         "past_medical_history":  [
+                                                      "Ninguno relevante"
+                                                  ],
+                         "allergies":  "Ninguna conocida",
+                         "current_medications":  [
+                                                     "Ninguna"
+                                                 ],
+                         "family_history":  "Negado",
+                         "social_history":  "Ninguno relevante"
+                     },
+    "history_present_illness":  "El paciente se presenta con sentimientos de miedo o inquietud intenso, dificultad para relajarse, nerviosismo y temor a situaciones sociales, que han estado presentes durante el último año. El paciente se siente temeroso de estar en lugares públicos, a tener que hacer presentaciones públicas o de ser observado. A pesar de esto, el paciente ha estado tratando de mantener su vida diaria como normal. El paciente ha experimentado insomnio, sudoración nocturna y fatiga durante el último mes. El paciente ha estado tratando de lidiar con estos sentimientos solos, pero ha estado teniendo dificultades para mantenerse productivo.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Ansiedad",
+                              "duration":  "1 año",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Inquietud intenso",
+                              "duration":  "1 año",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Nerviosismo",
+                              "duration":  "1 año",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Temor a situaciones sociales",
+                              "duration":  "1 año",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Insomnio",
+                              "duration":  "1 mes",
+                              "severity":  "leve"
+                          },
+                          {
+                              "name":  "Sudoración nocturna",
+                              "duration":  "1 mes",
+                              "severity":  "leve"
+                          },
+                          {
+                              "name":  "Fatiga",
+                              "duration":  "1 mes",
+                              "severity":  "leve"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Trastorno de ansiedad generalizada (GAD)",
+                                    "icd10":  "F41.0",
+                                    "differential":  [
+                                                         "Trastorno de ansiedad pánico",
+                                                         "Trastorno de ansiedad social",
+                                                         "Trastorno de ansiedad por obsesiones y compulsiones"
+                                                     ],
+                                    "justification":  "El paciente presenta un patrón clásico de ansiedad generalizada, caracterizado por miedo intenso y preocupación, dificultad para relajarse y temor a situaciones sociales. El paciente también presenta insomnio, sudoración nocturna y fatiga, que son síntomas comunes de GAD."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "Evaluación neurológica",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin datos de alteración"
+                                  },
+                                  {
+                                      "name":  "Laboratorio general",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin datos de alteración"
+                                  },
+                                  {
+                                      "name":  "Evaluación psiquiátrica",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Diagnóstico de GAD"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Cognitivo-Comportamental Terapia (CCT)",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Medicación: Duloxetina 30mg PO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Relaxación profunda y meditación",
+                                         "priority":  "routine",
+                                         "evidence":  "Class II"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente debe seguir con sesiones de CCT semanalmente por 12 semanas. El paciente debe ser evaluado semanalmente para monitorear la progresión del tratamiento y ajustar las dosis de medicación según sea necesario. El paciente debe ser educado sobre las técnicas de relajación y meditación y recomendado para seguir un estilo de vida saludable.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnosticos de trastorno de ansiedad generalizada",
+                                     "Aplicar protocolo de terapia cognitivo-comportamental en primera hora",
+                                     "Reconocer complicaciones de la no respuesta a la terapia"
+                                 ],
+    "teaching_points":  "El trastorno de ansiedad generalizada es el más común de los trastornos ansiosos y puede ser tratado con terapia cognitivo-comportamental y medicación. La CCT es la terapia de primera línea para el tratamiento de GAD y debe ser iniciada lo antes posible. La medición duloxetina puede ser efectiva en el tratamiento de GAD y debe ser iniciada lo antes posible."
+}

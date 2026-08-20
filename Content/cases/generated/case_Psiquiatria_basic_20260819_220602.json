@@ -1,0 +1,115 @@
+{
+  "title": "Trastorno Depresivo Mayor en Paciente de 50 Años",
+  "slug": "trastorno-depresivo-mayor-paciente-50-anos",
+  "chief_complaint": "Sentimientos de tristeza y desinterés por las actividades que antes disfrutaba",
+  "specialty": "Psiquiatria",
+  "difficulty": "basic",
+  "setting": "outpatient",
+  "patient_json": {
+    "name": "Juan Perez Garcia",
+    "age": 50,
+    "age_unit": "years",
+    "sex": "M",
+    "weight_kg": 85,
+    "height_cm": 175,
+    "occupation": "Gerontólogo",
+    "vitals_on_arrival": {
+      "hr": 88,
+      "sbp": 120,
+      "dbp": 80,
+      "rr": 16,
+      "spo2": 98,
+      "temp_c": 36.9
+    },
+    "past_medical_history": [
+      "Hipertensión arterial",
+      "Diabetes tipo 2"
+    ],
+    "allergies": "ninguna conocida",
+    "current_medications": [
+      "Metformina 500mg diaria",
+      "Losartan 50mg diaria"
+    ],
+    "family_history": "Depresión familiar",
+    "social_history": "No fuma, no consume alcohol, no usa drogas"
+  },
+  "history_present_illness": "El paciente ha estado sintiendo un sentimiento constante de tristeza y desinterés por las actividades que antes disfrutaba. Ha experimentado pérdida de apetito, pérdida de peso, dificultad para conciliar el sueño y pensamientos de suicidio. Estos síntomas han estado presentes durante las últimas 2 semanas y han afectado su capacidad para funcionar diariamente.",
+  "symptoms_json": [
+    {
+      "name": "Sentimientos de tristeza",
+      "duration": "2 semanas",
+      "severity": "intensa"
+    },
+    {
+      "name": "Desinterés por actividades",
+      "duration": "2 semanas",
+      "severity": "intenso"
+    },
+    {
+      "name": "Pérdida de apetito",
+      "duration": "2 semanas",
+      "severity": "moderada"
+    },
+    {
+      "name": "Pérdida de peso",
+      "duration": "2 semanas",
+      "severity": "moderada"
+    },
+    {
+      "name": "Dificultad para conciliar el sueño",
+      "duration": "2 semanas",
+      "severity": "moderada"
+    },
+    {
+      "name": "Pensamientos de suicidio",
+      "duration": "2 semanas",
+      "severity": "moderada"
+    }
+  ],
+  "expected_diagnosis_json": {
+    "primary": "Trastorno Depresivo Mayor",
+    "icd10": "F32.0",
+    "differential": [
+      "Depresión Disfuncional",
+      "Trastorno Bipolar Depresivo",
+      "Trastorno Depresivo Postparto"
+    ],
+    "justification": "El paciente presenta una presentación clásica del Trastorno Depresivo Mayor, con sentimientos de tristeza intensos, desinterés por actividades, pérdida de apetito, pérdida de peso, dificultad para conciliar el sueño y pensamientos de suicidio. La historial familiar de depresión también apoya este diagnóstico."
+  },
+  "expected_studies_json": [
+    {
+      "name": "Escala de Depresión de Hamilton (SDH)",
+      "priority": "urgent",
+      "expected_finding": "Puntaje mayor a 18"
+    },
+    {
+      "name": "Examen Neurológico",
+      "priority": "routine",
+      "expected_finding": "Sin hallazgos anormales"
+    }
+  ],
+  "expected_treatments_json": [
+    {
+      "treatment": "Antidepresivos de segunda generación (AGSG) 150mg VO",
+      "priority": "immediate",
+      "evidence": "Class I - NICE 2019"
+    },
+    {
+      "treatment": "Cognitivo-conductual terapia (CBT)",
+      "priority": "immediate",
+      "evidence": "Class I - NICE 2019"
+    },
+    {
+      "treatment": "Sistema de seguridad y prevención de riesgos",
+      "priority": "immediate",
+      "evidence": "Recomendado por la IMSS"
+    }
+  ],
+  "expected_followup": "El paciente debe ser evaluado semanalmente por el psiquiatra hasta que el sintoma de tristeza disminuya a nivel de 50%. Luego, el seguimiento debe ser cada 2 semanas hasta que el paciente esté completamente recuperado.",
+  "learning_objectives_json": [
+    "Identificar criterios diagnósticos de Trastorno Depresivo Mayor",
+    "Aplicar protocolo de tratamiento inicial en primera hora",
+    "Reconocer la importancia del sistema de seguridad y prevención de riesgos en pacientes con depresión"
+  ],
+  "teaching_points": "El Trastorno Depresivo Mayor es una enfermedad neurológica que requiere un enfoque integral que incluye terapia farmacológica y terapia psicológica. La prevención y el tratamiento temprano son fundamentales para prevenir complicaciones y mejorar el pronóstico."
+}

@@ -1,0 +1,33 @@
+# ================================================================
+#   ENARM.Physiology - Motor fisiologico determinista
+#   Hemodinamica, Respiratorio, ECG, Progresion de enfermedad
+# ================================================================
+
+set(PUBLIC_HEADERS
+    include/ENARM/Physiology/Constants.h
+    include/ENARM/Physiology/DiseaseProgressionEngine.h
+    include/ENARM/Physiology/ECGSynthesizer.h
+    include/ENARM/Physiology/HemodynamicModel.h
+    include/ENARM/Physiology/MetabolicModel.h
+    include/ENARM/Physiology/NumericalIntegration.h
+    include/ENARM/Physiology/OxygenationModel.h
+    include/ENARM/Physiology/PhysiologyTypes.h
+    include/ENARM/Physiology/RespiratoryModel.h
+)
+
+set(SOURCES
+    src/DiseaseProgressionEngine.cpp
+    src/ECGSynthesizer.cpp
+    src/HemodynamicModel.cpp
+    src/MetabolicModel.cpp
+    src/OxygenationModel.cpp
+    src/RespiratoryModel.cpp
+)
+
+enarm_add_library(ENARM.Physiology
+    FOLDER "Engine"
+    SOURCES ${SOURCES}
+    PUBLIC_HEADERS ${PUBLIC_HEADERS}
+    PUBLIC_DEPS
+        ENARM.Common
+)

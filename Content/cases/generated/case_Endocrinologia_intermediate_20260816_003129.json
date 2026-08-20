@@ -1,0 +1,153 @@
+{
+    "title":  "Caso de Hipertiroidismo Agudo",
+    "slug":  "caso-de-hipertiroidismo-agudo",
+    "chief_complaint":  "Fiebre alta, sudoración excesiva, náuseas y pérdida de apetito durante los últimos 3 días.",
+    "specialty":  "Endocrinologia",
+    "difficulty":  "intermediate",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  35,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  75,
+                         "height_cm":  175,
+                         "occupation":  "Ingeniero",
+                         "vitals_on_arrival":  {
+                                                   "hr":  110,
+                                                   "sbp":  150,
+                                                   "dbp":  90,
+                                                   "rr":  20,
+                                                   "spo2":  97,
+                                                   "temp_c":  39.5
+                                               },
+                         "past_medical_history":  [
+                                                      "Hipotiroidismo hipercálculo"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Levothyroxina 100mcg diario"
+                                                 ],
+                         "family_history":  "Hipotiroidismo familiar",
+                         "social_history":  "No tabaquismo, alcohol moderado, ninguna droga"
+                     },
+    "history_present_illness":  "El paciente presentó fiebre alta de 38-39°C, sudoración nocturna intenso, náuseas y vómitos, pérdida de apetito, diarrea, fatiga y nerviosismo durante los últimos 3 días. Antes de estos síntomas, el paciente sintió un aumento de su ritmo cardíaco y frecuencia respiratoria. El paciente no ha tomado su medicación de tiroides durante los últimos 2 días debido a un conflicto familiar.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Fiebre",
+                              "duration":  "3 dias",
+                              "severity":  "severa"
+                          },
+                          {
+                              "name":  "Sudoración nocturna",
+                              "duration":  "3 dias",
+                              "severity":  "severa"
+                          },
+                          {
+                              "name":  "Náuseas y vómitos",
+                              "duration":  "3 dias",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Pérdida de apetito",
+                              "duration":  "3 dias",
+                              "severity":  "severa"
+                          },
+                          {
+                              "name":  "Diarrea",
+                              "duration":  "3 dias",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Fatiga",
+                              "duration":  "3 dias",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Nerviosismo",
+                              "duration":  "3 dias",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Ritmo cardíaco acelerado",
+                              "duration":  "3 dias",
+                              "severity":  "severa"
+                          },
+                          {
+                              "name":  "Frecuencia respiratoria aumentada",
+                              "duration":  "3 dias",
+                              "severity":  "severa"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Hipertiroidismo agudo",
+                                    "icd10":  "E08.00",
+                                    "differential":  [
+                                                         "Hipertiroidismo crónico",
+                                                         "Toxicosis de graves",
+                                                         "Sepsis"
+                                                     ],
+                                    "justification":  "El paciente presenta fiebre alta, sudoración excesiva, náuseas, pérdida de apetito, diarrea, fatiga y nerviosismo, además de un ritmo cardíaco y frecuencia respiratoria aumentados, lo cual es consistente con el hipertiroidismo agudo. El historial de tiroides y el aumento de los signos vitales son indicativos de esta condición."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Tachycardia, arritmias supraventriculares"
+                                  },
+                                  {
+                                      "name":  "TSH",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Hipotiroidismo"
+                                  },
+                                  {
+                                      "name":  "Free T4",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Hipertiroidismo"
+                                  },
+                                  {
+                                      "name":  "Free T3",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Hipertiroidismo"
+                                  },
+                                  {
+                                      "name":  "Radiografia de torax",
+                                      "priority":  "routine",
+                                      "expected_finding":  "sin datos de congestión"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Antibióticos",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Metimizol 1g IV",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Levothyroxina 250mcg IV c/6h",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Clorhidrato de sodio IV",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Antidiarreicos",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente deberá ser admitido en el ICU para monitoreo continuo. Será evaluado regularmente para la regresión de los signos vitales y la disminución de la fiebre. Se iniciará el tratamiento con antidiarreicos y antibióticos. El paciente será evaluado nuevamente en 24 horas para la regresión de los signos y la modificación del tratamiento de tiroides.",
+    "learning_objectives_json":  [
+                                     "Identificar los criterios diagnósticos del hipertiroidismo agudo",
+                                     "Aplicar el protocolo de primeros auxilios en pacientes con hipertiroidismo agudo",
+                                     "Reconocer la importancia del manejo inmediato de la fiebre y la tachicardia en pacientes con hipertiroidismo agudo"
+                                 ],
+    "teaching_points":  "El hipertiroidismo agudo es una emergencia que requiere un manejo rápido y adecuado. El diagnóstico se basa en la historia del paciente, el examen físico y los resultados de los estudios de laboratorio. El tratamiento inicial debe ser inmediato y debe incluir la controlación de la fiebre, la tachicardia y la diarrea. El paciente debe ser monitoreado continuamente y evaluado regularmente para la regresión de los signos vitales y la modificación del tratamiento de tiroides."
+}

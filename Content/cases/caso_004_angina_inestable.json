@@ -1,0 +1,90 @@
+﻿{
+  "id": 4,
+  "title": "Angina Inestable en Paciente con Factores de Riesgo Cardiovascular",
+  "specialty": "Cardiología",
+  "difficulty": 2,
+  "chief_complaint": "Dolor en el pecho que me da en reposo desde ayer",
+  "patient": {
+    "age": 62,
+    "sex": "M",
+    "weight_kg": 88,
+    "height_cm": 172,
+    "occupation": "Chofer de camión (jubilado)",
+    "relevant_history": [
+      "Hipertensión arterial sistémica de 10 años, en tratamiento con amlodipino 5 mg/día",
+      "Diabetes mellitus tipo 2 de 8 años, metformina 850 mg c/12h",
+      "Tabaquismo activo 40 paquetes-año",
+      "Dislipidemia, sin tratamiento actual",
+      "Padre fallecido por infarto a los 58 años"
+    ]
+  },
+  "vitals_on_arrival": {
+    "systolic_bp": 158,
+    "diastolic_bp": 96,
+    "heart_rate": 94,
+    "respiratory_rate": 18,
+    "temperature_c": 36.8,
+    "spo2_percent": 97,
+    "weight_kg": 88
+  },
+  "history_of_present_illness": "Masculino de 62 años que acude a urgencias por dolor retroesternal opresivo 7/10 irradiado a brazo izquierdo, inicio hace 18 horas, episódico, cada episodio dura 15-20 minutos, se presenta en reposo. Niega disnea, diaforesis o síncope en este momento. Refiere episodio similar hace 3 semanas durante esfuerzo moderado que cedió espontáneamente y no consultó.",
+  "physical_exam": {
+    "general": "Masculino ansioso, diaforético, en posición de Fowler. Orientado en tiempo, lugar y persona.",
+    "cardiovascular": "Ruidos cardíacos rítmicos, sin soplos. Pulsos periféricos presentes y simétricos. No ingurgitación yugular.",
+    "respiratory": "Campos pulmonares limpios, sin estertores. Murmullo vesicular conservado.",
+    "abdomen": "Blando, depresible, sin dolor. Sin hepatomegalia.",
+    "neurological": "Sin focalización neurológica.",
+    "extremities": "Sin edema. Llenado capilar 2 segundos."
+  },
+  "key_labs": {
+    "troponina_I_inicial": "0.04 ng/mL (normal <0.04)",
+    "troponina_I_3h": "0.04 ng/mL (sin cambio significativo)",
+    "CPK_MB": "18 U/L (normal <25)",
+    "glucosa": "148 mg/dL",
+    "creatinina": "1.1 mg/dL",
+    "colesterol_total": "238 mg/dL",
+    "LDL": "162 mg/dL",
+    "BH_normal": "Leucocitos 9,200, Hb 14.2, plaquetas 210,000"
+  },
+  "key_imaging": [
+    "ECG: Ritmo sinusal FC 94 lpm. Cambios dinámicos en ST: depresión 1mm en V4-V6 durante dolor, que se normaliza al ceder el episodio. Sin elevación de ST. Sin ondas Q patológicas.",
+    "RX tórax: Índice cardiotorácico 0.52. Sin cardiomegalia. Sin infiltrados. Sin derrame pleural."
+  ],
+  "correct_diagnosis": "Síndrome coronario agudo sin elevación del ST (SICA SEST) - Angina inestable",
+  "differential_diagnosis": [
+    "IAMCEST (descartar por ausencia de elevación ST y troponinas negativas seriales)",
+    "IAMSEST (troponinas negativas × 2, sin criterios actuales)",
+    "Disección aórtica (dolor diferente, pulsos simétricos, sin diferencia de PA en brazos)",
+    "Espasmo coronario (Prinzmetal - menos probable por factores de riesgo múltiples)",
+    "Reflujo gastroesofágico"
+  ],
+  "treatment_plan": [
+    "Monitorización continua ECG, oximetría, PA cada 15 min",
+    "Acceso venoso periférico x2",
+    "Aspirina 300 mg VO dosis de carga, luego 100 mg/día",
+    "Clopidogrel 300 mg VO dosis de carga (o ticagrelor 180 mg si disponible)",
+    "Enoxaparina 1 mg/kg SC c/12h (anticoagulación)",
+    "Metoprolol 25-50 mg VO si no hay contraindicación (FC >60, sin broncoespasmo)",
+    "Nitratos sublinguales PRN para dolor (NTG 0.4 mg SL c/5min hasta 3 dosis)",
+    "Estatina de alta intensidad: atorvastatina 80 mg/noche",
+    "Calcular score TIMI o GRACE para estratificación de riesgo",
+    "Valorar coronariografía en 24-72h según score de riesgo",
+    "Control estricto de glucemia (meta 140-180 mg/dL en hospital)"
+  ],
+  "scoring_rubric": {
+    "anamnesis": 0.20,
+    "physical_exam": 0.15,
+    "diagnosis": 0.35,
+    "treatment": 0.30
+  },
+  "learning_objectives": [
+    "Reconocer presentación clínica de angina inestable vs IAMSEST vs IAMCEST",
+    "Interpretar cambios dinámicos de ST en ECG sin elevación",
+    "Aplicar doble antiagregación en SICA SEST",
+    "Calcular score de riesgo TIMI/GRACE para estratificación",
+    "Indicar coronariografía según riesgo (estrategia invasiva temprana vs diferida)"
+  ],
+  "guideline_ids": [1, 2],
+  "tags": ["SCA", "SICA", "angina_inestable", "cardiologia", "ECG", "antiagregacion"],
+  "enarm_topics": ["Síndrome coronario agudo", "Electrocardiografía", "Farmacología cardiovascular"]
+}

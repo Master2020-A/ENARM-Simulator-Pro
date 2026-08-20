@@ -1,0 +1,82 @@
+﻿{
+  "id": "case_010",
+  "version": "1.0",
+  "specialty": "PEDIATRIA",
+  "complexity": "INTERMEDIO",
+  "setting": "emergency",
+  "title": "Bronquiolitis aguda por VSR en lactante de 6 meses con dificultad respiratoria",
+  "patient": {
+    "name": "Emilio Ruiz Cortes",
+    "age": 0.5,
+    "age_unit": "years",
+    "sex": "M",
+    "weight_kg": 7.2,
+    "height_cm": 66
+  },
+  "chief_complaint": "Tos, dificultad para respirar y rechazo al alimento de 3 dias",
+  "history": {
+    "present_illness": "Lactante masculino de 6 meses previamente sano que inicia hace 3 dias con rinorrea hialina y tos seca, agregandose en las ultimas 24h dificultad respiratoria progresiva, sibilancias audibles y rechazo parcial al alimento (toma <50% de lo habitual). Sin fiebre cuantificada. Contacto con hermano mayor con cuadro catarral en la ultima semana.",
+    "past_medical": "Producto de embarazo a termino sin complicaciones, parto eutocico. Esquema de vacunacion completo para la edad. Sin hospitalizaciones previas.",
+    "allergies": "Ninguna conocida",
+    "medications": "Ninguna",
+    "family": "Padres sanos. Hermano de 4 anos con IVRS actual.",
+    "social": "Lactancia materna exclusiva hasta los 4 meses, ahora alimentacion mixta. Asiste a guarderia desde los 4 meses."
+  },
+  "vitals_initial": {
+    "hr": 158,
+    "bp_sys": 95,
+    "bp_dia": 55,
+    "spo2": 89,
+    "rr": 62,
+    "temp": 37.4
+  },
+  "physical_exam": {
+    "general": "Lactante irritable, con dificultad respiratoria evidente, palidez leve",
+    "head_neck": "Fontanela anterior normotensa, aleteo nasal presente, rinorrea hialina",
+    "cardio": "Taquicardia sin soplos, pulsos simetricos, llenado capilar 3 seg",
+    "resp": "Tiraje intercostal y subcostal marcado, retraccion supraesternal. Sibilancias espiratorias difusas bilaterales, estertores crepitantes en bases. Espiracion prolongada.",
+    "abdomen": "Blando, no distendido, sin visceromegalias, peristalsis presente",
+    "neuro": "Reactivo pero irritable, hipotonia leve por fatiga respiratoria, llanto debil"
+  },
+  "correct_diagnosis": {
+    "primary": "Bronquiolitis aguda moderada-severa probable por VSR",
+    "icd10": "J21.0",
+    "differentials": ["Neumonia viral", "Crisis asmatica (poco probable por edad)", "Cuerpo extrano en via aerea", "Insuficiencia cardiaca por cardiopatia congenita"]
+  },
+  "correct_treatment": {
+    "immediate": [
+      "Oxigeno suplementario por puntas nasales 1-2 L/min para SpO2 >92%",
+      "Aspiracion suave de secreciones nasales con solucion fisiologica",
+      "Posicion semi-Fowler (elevacion 30 grados)",
+      "Monitorizacion cardiorespiratoria continua",
+      "Alimentacion fraccionada o suspender via oral si dificultad severa",
+      "Hidratacion IV con solucion mixta a requerimientos basales + perdidas"
+    ],
+    "medications": [
+      "NO usar broncodilatadores de rutina (GPC IMSS 032-08)",
+      "NO usar corticoides sistemicos ni inhalados",
+      "NO usar antibioticos salvo sobreinfeccion bacteriana documentada",
+      "NO usar mucoliticos ni antihistaminicos",
+      "Paracetamol 10-15 mg/kg VO/rectal si fiebre >38.5",
+      "Considerar solucion salina hipertonica 3% nebulizada (controversial)"
+    ],
+    "admission": "Hospitalizacion en piso de pediatria por SpO2 <92%, dificultad respiratoria moderada y edad <6 meses. Vigilar signos de apnea. Aislamiento respiratorio de contacto y gotitas."
+  },
+  "expected_studies": [
+    "Oximetria continua",
+    "Panel viral respiratorio (VSR, Influenza, Metapneumovirus, Adenovirus)",
+    "Radiografia de torax (solo si sospecha de complicacion o duda diagnostica)",
+    "Gasometria capilar o venosa si empeoramiento",
+    "Biometria hematica (no de rutina)",
+    "Electrolitos sericos si hidratacion IV"
+  ],
+  "gpc_references": ["IMSS-032-08"],
+  "learning_objectives": [
+    "Reconocer signos de dificultad respiratoria en lactante",
+    "Aplicar criterios de gravedad de bronquiolitis (Wood-Downes, Tal)",
+    "Evitar terapias sin evidencia (broncodilatadores, corticoides, antibioticos)",
+    "Identificar criterios de hospitalizacion",
+    "Reconocer signos de alarma para UCI (apnea, agotamiento, hipoxemia refractaria)"
+  ],
+  "ai_prompt_context": "El paciente es Emilio, bebe de 6 meses. Como bebe NO habla. Su MAMA Maria (28 anos) esta muy preocupada y responde por el. Ella describe: 'Mi bebe lleva 3 dias con tos y mocos, ayer empezo a respirar muy rapido y hace ruiditos al respirar, hoy no quiere comer bien'. Responde SIEMPRE como la madre, en primera persona ('mi bebe', 'mi hijo'), en espanol coloquial mexicano, con angustia natural de madre. Frases cortas (2-3 oraciones max). NO uses terminos medicos. Si el doctor pregunta algo al bebe, responde: 'Doctor, es muy chiquito, no puede contestarle, pero yo le digo lo que veo'."
+}

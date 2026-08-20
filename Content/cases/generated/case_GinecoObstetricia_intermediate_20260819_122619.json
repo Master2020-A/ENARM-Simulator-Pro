@@ -1,0 +1,103 @@
+{
+    "title":  "Embarazo ectopico tubario roto con inestabilidad hemodinamica",
+    "slug":  "embarazo-ectopico-tubario-roto-inestabilidad-hemodinamica",
+    "chief_complaint":  "Dolor abdominal intenso y sangrado vaginal en la 16ª semana de gestación.",
+    "specialty":  "GinecoObstetricia",
+    "difficulty":  "intermediate",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Ana Martinez Rodriguez",
+                         "age":  28,
+                         "age_unit":  "years",
+                         "sex":  "F",
+                         "weight_kg":  55,
+                         "height_cm":  160,
+                         "occupation":  "Profesora",
+                         "vitals_on_arrival":  {
+                                                   "hr":  120,
+                                                   "sbp":  80,
+                                                   "dbp":  40,
+                                                   "rr":  28,
+                                                   "spo2":  85,
+                                                   "temp_c":  36.5
+                                               },
+                         "past_medical_history":  [
+                                                      "Ninguno relevante"
+                                                  ],
+                         "allergies":  "Ninguna conocida",
+                         "current_medications":  [
+                                                     "Corticoesteroide"
+                                                 ],
+                         "family_history":  "Negado",
+                         "social_history":  "No fuma, no bebe alcohol, no consume drogas"
+                     },
+    "history_present_illness":  "La paciente se presentó por dolor intenso y sangrado vaginal durante las últimas horas. Ha estado en dolor constante desde la mañana, aunque el dolor ha aumentado en la última hora. No ha sentido movimientos uterinos ni mareos. Ha tenido un leve dolor abdominal desde el inicio de la gestación, pero no ha experimentado dolor intenso anteriormente. No ha tenido relaciones sexuales recientemente.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Dolor abdominal intenso",
+                              "duration":  "3 horas",
+                              "severity":  "muy severa"
+                          },
+                          {
+                              "name":  "Sangrado vaginal",
+                              "duration":  "1 hora",
+                              "severity":  "moderado"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Embarazo ectopico tubario roto",
+                                    "icd10":  "O44.0",
+                                    "differential":  [
+                                                         "Embarazo ectopico tubario sin roto",
+                                                         "Cese espontáneo de placenta previa",
+                                                         "Embarazo ectopico tubario no roto"
+                                                     ],
+                                    "justification":  "La paciente tiene signos de inestabilidad hemodinámica (tacones bajos, frecuencia cardíaca y respiratoria aumentadas, saturación oxígeno baja) junto con dolor abdominal intenso y sangrado vaginal. El dolor intenso y el sangrado son los signos más característicos de un ectopico tubario roto."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Sin hallazgos específicos"
+                                  },
+                                  {
+                                      "name":  "Cistografía de útero y vesículas ovarianas",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Ectopico tubario roto"
+                                  },
+                                  {
+                                      "name":  "Hemograma completo",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Anemia"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Intravenosa hidratación con生理盐水",
+                                         "priority":  "immediate",
+                                         "evidence":  "Requerida para estabilizar la inestabilidad hemodinámica"
+                                     },
+                                     {
+                                         "treatment":  "Antibióticos (ciprofloxacino 500mg cada 8 horas)",
+                                         "priority":  "immediate",
+                                         "evidence":  "Para prevenir infección de la fuga"
+                                     },
+                                     {
+                                         "treatment":  "Uterotocina (misoprostol 200mcg cada 4 horas)",
+                                         "priority":  "immediate",
+                                         "evidence":  "Para inducir parto"
+                                     },
+                                     {
+                                         "treatment":  "Angiografía percutánea y embolización del torrente sanguíneo ectópico",
+                                         "priority":  "urgent",
+                                         "evidence":  "Para controlar la sangrado"
+                                     }
+                                 ],
+    "expected_followup":  "La paciente debe ser llevada a la sala de parto para monitoreo continuo y preparación para el parto. Debe ser realizada una cistografía de útero y vesículas ovarianas perioperativamente para confirmar el diagnóstico y evaluar las complicaciones.",
+    "learning_objectives_json":  [
+                                     "Identificar los signos y síntomas de un ectopico tubario roto",
+                                     "Aplicar el protocolo de manejo inmediato de un ectopico tubario roto",
+                                     "Reconocer la necesidad de angiografía percutánea y embolización en casos de ectopico tubario roto"
+                                 ],
+    "teaching_points":  "La inestabilidad hemodinámica en pacientes de gestación es un riesgo grave que requiere una evaluación rápida y un manejo inmediato. El ectopico tubario roto es una emergencia obstétrica que requiere un protocolo de manejo específico para asegurar el bienestar de la paciente y el feto."
+}

@@ -1,0 +1,28 @@
+﻿// ============================================================
+// AGREGAR ESTE CODIGO AL ROUTER DE VISTAS EN Application.cpp
+// Busca el switch/if-else que selecciona la vista actual
+// y agrega el caso PatientSession:
+// ============================================================
+
+// En el render loop de Application.cpp:
+switch (m_ctx.currentView) {
+    case AppView::Dashboard:
+        m_dashboardView.render(m_ctx);
+        break;
+    case AppView::CasesList:
+        m_casesListView.render(m_ctx);
+        break;
+    case AppView::PatientSession:
+        m_patientSessionView.render(m_ctx);  // <-- NUEVO
+        break;
+    default:
+        m_dashboardView.render(m_ctx);
+        break;
+}
+
+// En el header de Application (miembros privados):
+PatientSessionView  m_patientSessionView;
+
+// Al hacer click en un caso en CasesListView:
+// ctx.startNewSession(caseId, caseTitle);
+// (startNewSession navega automaticamente a PatientSession)

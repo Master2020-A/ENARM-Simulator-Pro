@@ -1,0 +1,124 @@
+{
+    "title":  "Paciente con dolor de pecho agudo y sudoración profusa",
+    "slug":  "paciente-con-dolor-de-pecho-agudo-y-sudoracion-profusa",
+    "chief_complaint":  "Dolor de pecho agudo desde hace 2 horas, acompañado de sudoración profusa, sudoración fría y sudoración sudorante.",
+    "specialty":  "UrgenciasTrauma",
+    "difficulty":  "advanced",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  50,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  80,
+                         "height_cm":  175,
+                         "occupation":  "Trabajador de oficina",
+                         "vitals_on_arrival":  {
+                                                   "hr":  100,
+                                                   "sbp":  140,
+                                                   "dbp":  90,
+                                                   "rr":  30,
+                                                   "spo2":  92,
+                                                   "temp_c":  37.2
+                                               },
+                         "past_medical_history":  [
+                                                      "Hipertensión arterial",
+                                                      "Antiplateletas"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Aspirina 300mg VO"
+                                                 ],
+                         "family_history":  "Hipertensión arterial familiar",
+                         "social_history":  "No tabaquismo, alcohol moderado"
+                     },
+    "history_present_illness":  "Paciente con dolor de pecho agudo desde hace 2 horas que comenzó de repente mientras estaba trabajando. El dolor es descripto como picazón y dolor punzante que se extiende desde el pecho hacia el hombro derecho. El dolor es agudo y se incrementa con la respiración profunda y el estrés. El paciente también tiene sudoración profusa, sudoración fría y sudoración sudorante. No ha tenido fiebre ni vomito. Ha estado desorientado y ha perdido conciencia por 10 minutos.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Dolor de pecho",
+                              "duration":  "2 horas",
+                              "severity":  "severa"
+                          },
+                          {
+                              "name":  "Sudoración profusa",
+                              "duration":  "desde la presentación",
+                              "severity":  "severa"
+                          },
+                          {
+                              "name":  "Sudoración fría",
+                              "duration":  "desde la presentación",
+                              "severity":  "severa"
+                          },
+                          {
+                              "name":  "Sudoración sudorante",
+                              "duration":  "desde la presentación",
+                              "severity":  "severa"
+                          },
+                          {
+                              "name":  "Desorientación",
+                              "duration":  "desde la presentación",
+                              "severity":  "severa"
+                          },
+                          {
+                              "name":  "Perdida de conciencia",
+                              "duration":  "10 minutos",
+                              "severity":  "severa"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Infarto miocardial agudo",
+                                    "icd10":  "I21.0",
+                                    "differential":  [
+                                                         "Angina pectoral",
+                                                         "Pericarditis",
+                                                         "Atelectasis"
+                                                     ],
+                                    "justification":  "La presentación clínica de dolor de pecho agudo, sudoración profusa, sudoración fría, sudoración sudorante, desorientación y pérdida de conciencia es compatible con un infarto miocardial agudo, especialmente en un paciente con antecedentes de hipertensión arterial y antiplateletas. Los signos vitales (taquicardia, hipertensión arterial) también apoyan esta诊断."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "elevación ST V1-V4"
+                                  },
+                                  {
+                                      "name":  "Troponinas seriadas",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "elevadas"
+                                  },
+                                  {
+                                      "name":  "Radiografia de torax",
+                                      "priority":  "routine",
+                                      "expected_finding":  "sin datos de congestion"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Aspirina 300mg VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Clopidogrel 600mg carga VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Enoxaparina 1mg/kg SC c/12h",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Angioplastia primaria en \u003c90 min",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente debe ser transferido inmediatamente a un centro cardíaco. Se debe realizar un seguimiento cardiológico con ecocardiograma y pruebas de función cardíaca. El paciente debe ser evaluado para la prevención de complicaciones como reinfarto miocardial recurrente y trombosis periférica.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnósticos de infarto miocardial agudo",
+                                     "Aplicar protocolo de tratamiento de infarto miocardial agudo en primera hora",
+                                     "Reconocer complicaciones de infarto miocardial agudo"
+                                 ],
+    "teaching_points":  "En caso de presentación de dolor de pecho agudo, sudoración profusa, sudoración fría y sudoración sudorante, desorientación y pérdida de conciencia, debe sospecharse de infarto miocardial agudo. Los signos vitales y la historia clínica deben ser cuidadosamente examinados para confirmar el diagnóstico y planificar un tratamiento inmediato y adecuado."
+}

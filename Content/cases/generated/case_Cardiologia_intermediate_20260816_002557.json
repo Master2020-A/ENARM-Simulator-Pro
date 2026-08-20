@@ -1,0 +1,114 @@
+{
+    "title":  "Sepsis por Streptococcus pneumoniae complicada por embolia pulmonar",
+    "slug":  "sepsis-estreptococcus-pneumoniae-embolia-pulmonar",
+    "chief_complaint":  "Fiebre alta, dolor torácico, dificultad respiratoria",
+    "specialty":  "Cardiologia",
+    "difficulty":  "intermediate",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  60,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  80,
+                         "height_cm":  175,
+                         "occupation":  "Profesor",
+                         "vitals_on_arrival":  {
+                                                   "hr":  110,
+                                                   "sbp":  130,
+                                                   "dbp":  85,
+                                                   "rr":  24,
+                                                   "spo2":  90,
+                                                   "temp_c":  38.5
+                                               },
+                         "past_medical_history":  [
+                                                      "Hipertensión arterial",
+                                                      "Diabetes tipo 2"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Ácido metformina 500mg cada 12 horas"
+                                                 ],
+                         "family_history":  "Hipertensión arterial en familia",
+                         "social_history":  "No fuma, consume alcohol moderadamente, no usa drogas"
+                     },
+    "history_present_illness":  "El paciente presentó fiebre alta de repente, con temperatura de 38.5°C, dolor torácico intenso, dificultad respiratoria y escalofríos. Ha estado con fiebre durante los últimos 3 días. No ha tenido mareos, náuseas, vómitos ni diarrea. No ha realizado actividad física intensa en los últimos días.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Fiebre alta",
+                              "duration":  "3 dias",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Dolor torácico",
+                              "duration":  "3 dias",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Dificultad respiratoria",
+                              "duration":  "3 dias",
+                              "severity":  "moderada"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Sepsis por Streptococcus pneumoniae complicada por embolia pulmonar",
+                                    "icd10":  "A91.0",
+                                    "differential":  [
+                                                         "Sepsis por Streptococcus pneumoniae",
+                                                         "Atelectasis",
+                                                         "Pneumonía no infectiosa"
+                                                     ],
+                                    "justification":  "Presentación clásica de fiebre alta, dolor torácico y dificultad respiratoria, junto con signos vitales y examen físico sospechosos de embolia pulmonar."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Sin evidencia de embolia"
+                                  },
+                                  {
+                                      "name":  "Troponinas seriadas",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "No elevadas"
+                                  },
+                                  {
+                                      "name":  "Radiografia de torax",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Consolidación bilateral, sin evidencia de embolia pulmonar"
+                                  },
+                                  {
+                                      "name":  "Doppler pulmonar",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Embolia pulmonar bilateral"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Antibiótico por S. pneumoniae (cefixime 200mg cada 12 horas)",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - Surviving Sepsis 2020"
+                                     },
+                                     {
+                                         "treatment":  "Anticoagulación con enoxaparina 1mg/kg SC c/12h",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Oxígenoterapia con presión de 100%",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Ventilación mecánica si la respiración es comprometida",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente debe ser evaluado nuevamente en 24 horas para monitorear la respuesta al tratamiento, incluyendo medición de troponinas y Doppler pulmonar. El paciente debe seguir con antibióticos por 7-10 días y anticoagulación por 3-6 meses.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnosticos de sepsis por Streptococcus pneumoniae",
+                                     "Aplicar protocolo de manejo de embolia pulmonar",
+                                     "Reconocer complicaciones de sepsis como dificultad respiratoria y embolia pulmonar"
+                                 ],
+    "teaching_points":  "La presencia de fiebre alta, dolor torácico y dificultad respiratoria puede ser sospechosa de sepsis complicada, especialmente en pacientes con factores de riesgo. El diagnóstico definitivo requiere de estudios como Doppler pulmonar. El manejo de la embolia pulmonar debe ser inmediato y debe considerarse el uso de ventilación mecánica en casos graves."
+}

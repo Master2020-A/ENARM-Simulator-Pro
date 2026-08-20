@@ -1,0 +1,104 @@
+{
+    "title":  "Paciente con tos severa y fiebre alta",
+    "slug":  "paciente-con-tos-severa-y-fiebre-alta",
+    "chief_complaint":  "Tos severa y fiebre alta durante las últimas 3 días",
+    "specialty":  "Neumología",
+    "difficulty":  "basic",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  45,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  70,
+                         "height_cm":  170,
+                         "occupation":  "Trabajador administrativo",
+                         "vitals_on_arrival":  {
+                                                   "hr":  80,
+                                                   "sbp":  120,
+                                                   "dbp":  80,
+                                                   "rr":  16,
+                                                   "spo2":  98,
+                                                   "temp_c":  39.2
+                                               },
+                         "past_medical_history":  [
+                                                      "Hipertensión arterial",
+                                                      "Fumador de 20 cigarrillos al día"
+                                                  ],
+                         "allergies":  "Ninguna conocida",
+                         "current_medications":  [
+                                                     "Ácido acetilsalicílico"
+                                                 ],
+                         "family_history":  "Negado",
+                         "social_history":  "Fumador, alcohol moderado"
+                     },
+    "history_present_illness":  "Paciente que ha estado tosiendo severamente durante las últimas 3 días. Acompañado de fiebre alta de 39.2°C, sudoración profusa, dolor de cabeza y leves dolores musculares. No ha tenido expectoración ni ha notado dificultad para respirar.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Tos",
+                              "duration":  "3 dias",
+                              "severity":  "severa"
+                          },
+                          {
+                              "name":  "Fiebre",
+                              "duration":  "3 dias",
+                              "severity":  "alta"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Infección respiratoria viral (IRV)",
+                                    "icd10":  "R09.0",
+                                    "differential":  [
+                                                         "Infección respiratoria bacteriana",
+                                                         "Respiración dificultosa",
+                                                         "Enfisema"
+                                                     ],
+                                    "justification":  "La tos severa, fiebre alta y falta de expectoración sugieren una infección respiratoria viral. El historial de fumar podría contribuir a complicaciones."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin hallazgos significativos"
+                                  },
+                                  {
+                                      "name":  "Radiografía de torax",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Sin hallazgos significativos"
+                                  },
+                                  {
+                                      "name":  "Pruebas de laboratorio de sangre",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Leucocitosis"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Acetilsalicílico 500mg VO q6h",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class II"
+                                     },
+                                     {
+                                         "treatment":  "Paracetamol 500mg VO q6h",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class II"
+                                     },
+                                     {
+                                         "treatment":  "Ibuprofeno 400mg VO q6h",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class II"
+                                     },
+                                     {
+                                         "treatment":  "Dosis adicional de aceite de manzanilla",
+                                         "priority":  "immediate",
+                                         "evidence":  "Sin evidencia clínica"
+                                     }
+                                 ],
+    "expected_followup":  "Monitoreo de la fiebre y la tos. Evaluación de la necesidad de antibióticos si la tos persiste más de 48 horas.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnosticos de infección respiratoria viral",
+                                     "Aplicar protocolo de tratamiento de infecciones respiratorias virales",
+                                     "Reconocer complicaciones de infecciones respiratorias virales"
+                                 ],
+    "teaching_points":  "1. Tener en cuenta los síntomas atípicos como la tos severa y fiebre alta en pacientes de alto riesgo. 2. Revisar el historial de fumar al evaluar pacientes con infecciones respiratorias. 3. Utilizar los anticonvulsivos como terapia de apoyo en infecciones respiratorias virales."
+}

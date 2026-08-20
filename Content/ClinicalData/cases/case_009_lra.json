@@ -1,0 +1,86 @@
+﻿{
+  "id": "case_009",
+  "version": "1.0",
+  "specialty": "NEFROLOGIA",
+  "complexity": "INTERMEDIO",
+  "setting": "ward",
+  "title": "Lesion renal aguda por AINEs en adulto mayor con HTA y DM2",
+  "patient": {
+    "name": "Guillermo Salinas Ochoa",
+    "age": 71,
+    "age_unit": "years",
+    "sex": "M",
+    "weight_kg": 74,
+    "height_cm": 168
+  },
+  "chief_complaint": "Disminucion del volumen urinario y edema de miembros inferiores de 5 dias",
+  "history": {
+    "present_illness": "Paciente masculino de 71 anos que acude por disminucion progresiva del gasto urinario (aproximadamente 300 ml en 24h), edema bilateral de miembros inferiores hasta rodillas, fatiga generalizada y nausea. Refiere que hace 10 dias inicio automedicacion con ibuprofeno 600mg cada 8h por gonalgia bilateral, sin control medico. Sin fiebre, sin sintomas urinarios bajos, sin hematuria macroscopica.",
+    "past_medical": "HAS de 15 anos en tratamiento con enalapril 20mg/dia, DM2 de 10 anos con metformina 850mg BID, dislipidemia con atorvastatina 20mg, gonartrosis bilateral",
+    "allergies": "Ninguna conocida",
+    "medications": "Enalapril 20mg/dia, metformina 850mg BID, atorvastatina 20mg/dia, ibuprofeno 600mg TID (automedicacion 10 dias)",
+    "family": "Padre fallecido por IAM, madre con DM2",
+    "social": "Jubilado, vive con esposa, sin toxicomanias"
+  },
+  "vitals_initial": {
+    "hr": 88,
+    "bp_sys": 158,
+    "bp_dia": 92,
+    "spo2": 96,
+    "rr": 20,
+    "temp": 36.6
+  },
+  "physical_exam": {
+    "general": "Paciente consciente, orientado, con facies edematizada, palidez de tegumentos",
+    "head_neck": "Mucosas humedas, ingurgitacion yugular ++/++++",
+    "cardio": "Ritmo regular, S3 audible, sin soplos",
+    "resp": "Estertores crepitantes bibasales",
+    "abdomen": "Blando, depresible, no doloroso, sin visceromegalias, puno percusion lumbar negativa bilateral",
+    "extremidades": "Edema +++ hasta rodillas, con fovea, simetrico, sin datos de trombosis venosa",
+    "neuro": "Alerta, orientado, sin focalizacion"
+  },
+  "correct_diagnosis": {
+    "primary": "Lesion renal aguda AKIN 2 de causa mixta (prerrenal e intrinseca por AINEs)",
+    "icd10": "N17.9",
+    "differentials": ["Nefritis intersticial aguda por AINEs", "Necrosis tubular aguda", "Sindrome cardiorenal", "Glomerulonefritis rapidamente progresiva"]
+  },
+  "correct_treatment": {
+    "immediate": [
+      "Suspender INMEDIATAMENTE: ibuprofeno, enalapril, metformina",
+      "Hospitalizacion para monitoreo",
+      "Balance hidrico estricto con sonda vesical",
+      "Pesar diariamente",
+      "Restriccion de sodio (<2g/dia) y potasio",
+      "Evitar nefrotoxicos (contrastes, aminoglucosidos)"
+    ],
+    "medications": [
+      "Diuretico de asa: furosemida 40mg IV cada 8-12h segun respuesta",
+      "Control de TA con calcio antagonista (amlodipino 5mg) si es necesario",
+      "Manejo de hiperkalemia si K+ >5.5: gluconato de calcio, insulina+glucosa, resinas",
+      "Bicarbonato de sodio si acidosis metabolica severa (pH <7.2)",
+      "Ajuste de dosis de todos los medicamentos segun TFG",
+      "NO reiniciar IECA hasta recuperacion de funcion renal"
+    ],
+    "admission": "Piso de medicina interna con interconsulta a nefrologia. Considerar terapia de reemplazo renal si: hiperkalemia refractaria, acidosis severa, sobrecarga hidrica refractaria, uremia sintomatica."
+  },
+  "expected_studies": [
+    "Creatinina y urea sericas (esperado elevadas)",
+    "Electrolitos sericos completos con enfasis en K+",
+    "Gasometria arterial o venosa",
+    "Biometria hematica completa",
+    "Examen general de orina",
+    "Indices urinarios: FeNa, FeUrea, sodio urinario",
+    "Sedimento urinario (buscar eosinofiluria por nefritis intersticial)",
+    "Ultrasonido renal (descartar uropatia obstructiva)",
+    "Electrocardiograma (cambios por hiperkalemia)"
+  ],
+  "gpc_references": ["IMSS-395-10"],
+  "learning_objectives": [
+    "Clasificar LRA con criterios AKIN/KDIGO",
+    "Identificar causas prerrenales, intrinsecas y postrenales",
+    "Reconocer nefrotoxicidad por AINEs y otros farmacos",
+    "Manejar hiperkalemia como complicacion urgente",
+    "Ajustar dosis de medicamentos segun funcion renal"
+  ],
+  "ai_prompt_context": "Eres Guillermo Salinas, hombre de 71 anos. Estas hospitalizado porque desde hace 5 dias casi no orinas y se te hincharon las piernas. Te sientes cansado y con nausea. Tomas medicinas para la presion (enalapril) y para el azucar (metformina). Hace 10 dias empezaste a tomar ibuprofeno por tu cuenta porque te dolian mucho las rodillas. Responde en primera persona, espanol coloquial mexicano, tono de senor mayor, un poco cansado. Frases cortas. Si el doctor pregunta por medicinas, es importante mencionar el ibuprofeno que tomaste solo. NO uses terminos medicos."
+}

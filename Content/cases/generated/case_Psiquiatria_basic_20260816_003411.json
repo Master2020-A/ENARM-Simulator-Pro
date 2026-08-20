@@ -1,0 +1,103 @@
+{
+    "title":  "Paciente con ansiedad y agitación",
+    "slug":  "paciente-con-ansiedad-y-agitacion",
+    "chief_complaint":  "Siento mucho miedo y no puedo parar de moverme",
+    "specialty":  "Psiquiatria",
+    "difficulty":  "basic",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  28,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  75,
+                         "height_cm":  175,
+                         "occupation":  "Trabajador de oficina",
+                         "vitals_on_arrival":  {
+                                                   "hr":  110,
+                                                   "sbp":  130,
+                                                   "dbp":  85,
+                                                   "rr":  22,
+                                                   "spo2":  95,
+                                                   "temp_c":  36.5
+                                               },
+                         "past_medical_history":  [
+                                                      "Ninguno relevante"
+                                                  ],
+                         "allergies":  "Ninguna conocida",
+                         "current_medications":  [
+                                                     "Ninguno"
+                                                 ],
+                         "family_history":  "Ninguno relevante",
+                         "social_history":  "Ninguno relevante"
+                     },
+    "history_present_illness":  "Paciente de 28 años de edad, presenta ansiedad intensa y agitación sin motivo aparente. Ha estado experimentando estos síntomas durante las últimas 24 horas. Antes de este episodio, estaba trabajando en su oficina y comenzó a sentir un fuerte miedo, luego comenzó a moverse incesantemente. No tiene antecedentes personales o familiares de trastornos psiquiátricos. Está desorientado y tiene dificultades para mantenerse en su lugar.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Ansiedad intensa",
+                              "duration":  "24 horas",
+                              "severity":  "grave"
+                          },
+                          {
+                              "name":  "Agitación",
+                              "duration":  "24 horas",
+                              "severity":  "grave"
+                          },
+                          {
+                              "name":  "Miedo",
+                              "duration":  "24 horas",
+                              "severity":  "grave"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Ansiedad aguda",
+                                    "icd10":  "F41.11",
+                                    "differential":  [
+                                                         "Pánico agudo",
+                                                         "Delirio",
+                                                         "Ansiedad por situaciones"
+                                                     ],
+                                    "justification":  "El paciente presenta síntomas tipicos de ansiedad aguda, como miedo intenso, agitación y dificultad para mantenerse en su lugar. No hay indicaciones de delirio o situaciones que causen ansiedad."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "Laboratorio completo",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Ninguno notable"
+                                  },
+                                  {
+                                      "name":  "Electroencefalograma (EEG)",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Ninguno notable"
+                                  },
+                                  {
+                                      "name":  "Imágen cerebrovascular por resonancia magnética (RM)",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Ninguno notable"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Antidolorígenes como alprazolam 1 mg IM",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Aplicación de técnicas de respiración y relajación",
+                                         "priority":  "immediate",
+                                         "evidence":  "Recomendado por la ASHA"
+                                     },
+                                     {
+                                         "treatment":  "Seguimiento en consulta psiquiátrica",
+                                         "priority":  "routine",
+                                         "evidence":  "Recomendado por la APS"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente será evaluado nuevamente en consulta psiquiátrica para evaluar el progreso y ajustar el tratamiento según sea necesario.",
+    "learning_objectives_json":  [
+                                     "Identificar los criterios diagnósticos de ansiedad aguda",
+                                     "Aplicar el tratamiento inicial de ansiedad aguda",
+                                     "Reconocer la importancia del seguimiento en pacientes con ansiedad aguda"
+                                 ],
+    "teaching_points":  "La ansiedad aguda es un trastorno psiquiátrico comunes que puede presentarse de manera aguda. Es importante reconocer los síntomas y aplicar un tratamiento inicial apropiado. El seguimiento en consulta es crucial para el manejo adecuado del trastorno."
+}

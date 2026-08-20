@@ -1,0 +1,108 @@
+{
+    "title":  "Anemia peripartum complicada",
+    "slug":  "anemia-peripartum-complicada",
+    "chief_complaint":  "Fatiga intensa, mareos, deshidratación y dolor abdominal",
+    "specialty":  "GinecoObstetricia",
+    "difficulty":  "basic",
+    "setting":  "inpatient",
+    "patient_json":  {
+                         "name":  "Maria Lopez Hernandez",
+                         "age":  32,
+                         "age_unit":  "years",
+                         "sex":  "F",
+                         "weight_kg":  50,
+                         "height_cm":  160,
+                         "occupation":  "Trabajadora de oficina",
+                         "vitals_on_arrival":  {
+                                                   "hr":  110,
+                                                   "sbp":  130,
+                                                   "dbp":  80,
+                                                   "rr":  20,
+                                                   "spo2":  90,
+                                                   "temp_c":  36.5
+                                               },
+                         "past_medical_history":  [
+                                                      "anemia",
+                                                      "hipertension arterial"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "ferro 300mg VO"
+                                                 ],
+                         "family_history":  "anemia familiar",
+                         "social_history":  "ninguna"
+                     },
+    "history_present_illness":  "Paciente gravida de 38 semanas gestacional. Presenta fatiga intensa, mareos, deshidratación y dolor abdominal desde el día anterior. El dolor abdominal es principalmente en la región lumbar y sacral, pero también hay presión en la región pelviana. No ha tenido fiebre ni malestar gastrointestinal. La paciente ha estado bebiendo agua pero sigue sintiéndose cansada.",
+    "symptoms_json":  [
+                          {
+                              "name":  "fatiga",
+                              "duration":  "3 dias",
+                              "severity":  "intensa"
+                          },
+                          {
+                              "name":  "mareos",
+                              "duration":  "2 dias",
+                              "severity":  "moderado"
+                          },
+                          {
+                              "name":  "dolor abdominal",
+                              "duration":  "2 dias",
+                              "severity":  "intenso"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Anemia peripartum complicada",
+                                    "icd10":  "D58.80",
+                                    "differential":  [
+                                                         "Anemia peripartum no complicada",
+                                                         "Anemia postparto"
+                                                     ],
+                                    "justification":  "La paciente es gravida y presenta signos y síntomas consistentes con anemia peripartum, incluyendo fatiga, mareos y dolor abdominal. El historial médico revela anemia previa y la paciente ha estado en riesgo de anemia durante la gestación."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "Hematograma completo",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Hemoglobina \u003c 10 g/dL, hematocrito \u003c 30%"
+                                  },
+                                  {
+                                      "name":  "Perfil de coagulación",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Tiempo de coagulación prolongado"
+                                  },
+                                  {
+                                      "name":  "Escanleo abdominal ultrasonico",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin datos de congestión"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Ferro 300mg VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Vitamina B12 1mg IM",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Folicina 5mg PO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Hidratación intravenosa (Ringer\u0027s lactate)",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente se seguirá con una consulta obstétrica en 24 horas para evaluar el progreso del tratamiento y la hemoglobina. Se realizará un escáner abdominal ultrasonico en 48 horas para evaluar la posible presión en el feto.",
+    "learning_objectives_json":  [
+                                     "Identificar los criterios diagnósticos de anemia peripartum complicada",
+                                     "Aplicar protocolo de tratamiento de anemia en primera hora",
+                                     "Reconocer las complicaciones potenciales de la anemia peripartum"
+                                 ],
+    "teaching_points":  "La anemia peripartum puede presentarse de manera sutil y puede llevar a complicaciones graves si no se trata a tiempo. Es crucial realizar un evaluación completa del paciente para identificar los riesgos y proporcionar un tratamiento adecuado. El seguimiento post tratamiento es esencial para asegurar un buen resultado obstétrico."
+}

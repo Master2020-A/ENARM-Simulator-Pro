@@ -1,0 +1,22 @@
+{
+	"FileVersion": 3,
+	"FriendlyName": "ENARM Core Bridge",
+	"Version": 1,
+	"VersionName": "0.1",
+	"Description": "Expone el motor clinico ENARM (Physiology, Pharmacology, AI) a Blueprints",
+	"Category": "Simulation",
+	"CreatedBy": "ENARM",
+	"CanContainContent": true,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "ENARMCoreBridge",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine",
+				"CoreUObject"
+			]
+		}
+	]
+}

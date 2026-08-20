@@ -1,0 +1,69 @@
+﻿==== Scripts SQL en scripts/postgres/ ====
+  006_assessment_tables.sql  (3.2 KB)
+
+==== Schema de clinical_cases ====
+Archivo: 006_assessment_tables.sql
+CREATE TABLE IF NOT EXISTS assessment_rubrics (
+    id          UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    case_id     UUID REFERENCES clinical_cases(id) ON DELETE CASCADE,
+    name        VARCHAR(200) NOT NULL,
+    total_max_points INTEGER DEFAULT 185,
+    rubric_data JSONB NOT NULL,
+    created_at  TIMESTAMPTZ DEFAULT NOW()
+);
+
+==== Schema de mcq_questions ====
+
+==== Schema de guidelines ====
+
+==== Ejemplo INSERT case existente (primer match) ====
+
+==== ClinicalCaseRecord struct ====
+Archivo: .\engine\ENARM.Data\include\ENARM\Data\Repositories\CaseRepository.h
+struct ClinicalCaseRecord {
+        std::string id;
+        std::string title;
+        std::string slug;
+        std::string chiefComplaint;
+        std::string specialty;
+        std::optional<std::string> subSpecialty;
+        std::string difficulty;
+        std::string setting;
+        nlohmann::json patient;
+        std::string historyPresentIllness;
+        nlohmann::json symptoms;
+        nlohmann::json expectedDiagnosis;
+        nlohmann::json expectedStudies;
+        nlohmann::json expectedTreatments;
+        std::optional<std::string> expectedFollowup;
+        nlohmann::json learningObjectives;
+        std::vector<std::string> pubmedPmids;
+        std::vector<std::string> guidelinesIds;
+        std::optional<std::string> teachingPoints;
+        std::optional<std::string> authorName;
+        int version{1};
+
+==== Estructura MCQ (buscando MCQRecord/MCQQuestion) ====
+Archivo: MCQRepository.h
+struct MCQuestion {
+        std::string id;
+        std::string specialty;
+        std::optional<std::string> subSpecialty;
+        std::string difficulty{"intermediate"};
+
+==== Estructura Guideline (buscando GuidelineRecord) ====
+Archivo: GuidelineRepository.h
+struct Guideline {
+        std::string id;             // "IMSS-234-09"
+        std::string title;
+        std::optional<std::string> organization;
+        std::optional<int> year;
+        std::optional<std::string> url;
+        std::optional<std::string> summary;
+    };
+
+==== Ejecutar en psql para ver counts (informativo) ====
+psql -U postgres -d enarm_db -c 'SELECT COUNT(*) FROM clinical_cases;'
+psql -U postgres -d enarm_db -c 'SELECT COUNT(*) FROM mcq_questions;'
+psql -U postgres -d enarm_db -c 'SELECT COUNT(*) FROM guidelines;'
+

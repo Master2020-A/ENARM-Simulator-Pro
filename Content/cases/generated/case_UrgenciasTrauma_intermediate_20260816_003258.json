@@ -1,0 +1,118 @@
+{
+    "title":  "Caso de Trauma Perforado por Violencia",
+    "slug":  "caso-trauma-perforado-violencia",
+    "chief_complaint":  "Dolor abdominal agudo y vomito de sangre",
+    "specialty":  "UrgenciasTrauma",
+    "difficulty":  "intermediate",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  35,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  75,
+                         "height_cm":  170,
+                         "occupation":  "Trabajador",
+                         "vitals_on_arrival":  {
+                                                   "hr":  100,
+                                                   "sbp":  110,
+                                                   "dbp":  70,
+                                                   "rr":  20,
+                                                   "spo2":  92,
+                                                   "temp_c":  36.5
+                                               },
+                         "past_medical_history":  [
+                                                      "Antecedente de diabetes tipo 2"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Metformina 500mg VO"
+                                                 ],
+                         "family_history":  "negado",
+                         "social_history":  "tabaquismo moderado, alcohol ocasional"
+                     },
+    "history_present_illness":  "Se presentó en emergencias tras un violento altercado. Ha estado experimentando dolor abdominal agudo desde las últimas 2 horas, que se ha agudo en los últimos 30 minutos. Ha vomitado sangre por la mañana. No ha habido pérdida de conciencia, pero ha sentido deshidratación. Ha notado fiebre y sudoración. No ha tenido dolor abdominal previo.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Dolor abdominal",
+                              "duration":  "2 horas",
+                              "severity":  "severo"
+                          },
+                          {
+                              "name":  "Vomito de sangre",
+                              "duration":  "1 hora",
+                              "severity":  "severo"
+                          },
+                          {
+                              "name":  "Fiebre",
+                              "duration":  "30 minutos",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Sudoración",
+                              "duration":  "30 minutos",
+                              "severity":  "moderada"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Perforación perforada estómago",
+                                    "icd10":  "K25.0",
+                                    "differential":  [
+                                                         "Perforación perforada intestino delgado",
+                                                         "Perforación perforada intestino grueso",
+                                                         "Pierde de órgano"
+                                                     ],
+                                    "justification":  "El dolor abdominal agudo, la hemorragia gastrointestinal y la fiebre son indicativos de perforación perforada estómago. La hemorragia gastrointestinal es una complicación grave que requiere atención inmediata."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Sin hallazgos sospechosos"
+                                  },
+                                  {
+                                      "name":  "Troponinas seriadas",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Sin elevaciones"
+                                  },
+                                  {
+                                      "name":  "Radiografia de torax",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin datos de congestión"
+                                  },
+                                  {
+                                      "name":  "Contraste abdominal",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Perforación perforada estómago"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Antibiotico empírico",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - IMSS 2021"
+                                     },
+                                     {
+                                         "treatment":  "Lavado peritoneal",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Clorhidrato de sodio intravenoso",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Ventilación mecánica",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente será trasladado a quirurgía para cirugía abierta en caso de confirmación de perforación perforada estómago. Se realizará monitorización continua y tratamiento de complicaciones post-operatorias.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnosticos de perforación perforada estómago",
+                                     "Aplicar protocolo de lavado peritoneal en primera hora",
+                                     "Reconocer complicaciones de perforación perforada estómago"
+                                 ],
+    "teaching_points":  "Es crucial el reconocimiento rápido y el manejo inmediato de los casos de perforación perforada estómago debido a su alta mortalidad. El lavado peritoneal es una medida esencial para controlar la hemorragia y evitar complicaciones."
+}

@@ -1,0 +1,278 @@
+﻿==== TODOS los .sql en el proyecto completo ====
+  .\.vs\slnx.sqlite  (1428 KB)
+  .\build\vcpkg_installed\x64-windows\share\postgresql\system_constraints.sql  (8.9 KB)
+  .\build-vs\vcpkg_installed\x64-windows\share\postgresql\system_constraints.sql  (8.9 KB)
+  .\engine\ENARM.Data\schema\001_initial.sql  (8.8 KB)
+  .\engine\ENARM.Data\schema\002_indices.sql  (1.3 KB)
+  .\engine\ENARM.Data\schema\003_vectors.sql  (2.1 KB)
+  .\engine\ENARM.Data\schema\004_functions.sql  (2 KB)
+  .\engine\ENARM.Data\schema\005_seed.sql  (2.9 KB)
+  .\scripts\postgres\006_assessment_tables.sql  (3.2 KB)
+  .\vcpkg_installed\x64-windows\share\postgresql\system_constraints.sql  (8.9 KB)
+
+==== Archivos con 'CREATE TABLE clinical_cases' (global) ====
+  .\engine\ENARM.Data\schema\001_initial.sql
+
+==== Archivos con 'CREATE TABLE mcq_questions' (global) ====
+  .\engine\ENARM.Data\schema\001_initial.sql
+
+==== Archivos con 'CREATE TABLE guidelines' (global) ====
+  .\engine\ENARM.Data\schema\001_initial.sql
+
+==== SmokeTest o similar que inserta casos ====
+
+Archivo: .\engine\ENARM.Data\src\Repositories\CaseRepository.cpp
+  L2: //   ENARM.Data - CaseRepository Implementation (libpqxx v7.10+)
+  L4: #include "ENARM/Data/Repositories/CaseRepository.h"
+  L9: Common::Result<std::string> CaseRepository::Insert(const ClinicalCaseRecord& c) {
+  L15: "INSERT INTO clinical_cases ("
+  L55: Common::Result<void> CaseRepository::Update(const ClinicalCaseRecord& c) {
+  L75: std::optional<ClinicalCaseRecord> CaseRepository::FindById(const std::string& id) {
+  L87: std::optional<ClinicalCaseRecord> CaseRepository::FindBySlug(const std::string& slug) {
+  L99: std::vector<ClinicalCaseRecord> CaseRepository::FindBySpecialty(
+  L102: std::vector<ClinicalCaseRecord> out;
+  L115: std::vector<ClinicalCaseRecord> CaseRepository::FindAll(bool onlyPublished, int limit) {
+  L116: std::vector<ClinicalCaseRecord> out;
+  L129: size_t CaseRepository::Count() {
+  L138: size_t CaseRepository::CountBySpecialty(const std::string& specialty) {
+  L150: Common::Result<void> CaseRepository::Publish(const std::string& caseId) {
+  L165: Common::Result<void> CaseRepository::Unpublish(const std::string& caseId) {
+  L179: Common::Result<void> CaseRepository::AddTag(const std::string& caseId, const std::string& tag) {
+  L184: "INSERT INTO case_tags (case_id, tag) VALUES ($1::uuid, $2) "
+  L194: std::vector<std::string> CaseRepository::GetTags(const std::string& caseId) {
+
+==== CaseRepository.cpp - busqueda de SQL INSERT ====
+Archivo: .\engine\ENARM.Data\src\Repositories\CaseRepository.cpp
+  L9: Common::Result<std::string> CaseRepository::Insert(const ClinicalCaseRecord& c) {
+  L15: "INSERT INTO clinical_cases ("
+  L80: "SELECT * FROM clinical_cases WHERE id = $1::uuid",
+  L92: "SELECT * FROM clinical_cases WHERE slug = $1",
+  L106: std::string sql = "SELECT * FROM clinical_cases WHERE specialty = $1";
+  L108: sql += " ORDER BY created_at DESC";
+  L120: std::string sql = "SELECT * FROM clinical_cases";
+  L122: sql += " ORDER BY created_at DESC LIMIT $1";
+  L133: auto row = tx.exec("SELECT COUNT(*) FROM clinical_cases").one_row();
+  L143: "SELECT COUNT(*) FROM clinical_cases WHERE specialty = $1",
+  L184: "INSERT INTO case_tags (case_id, tag) VALUES ($1::uuid, $2) "
+
+==== Schema REAL desde PostgreSQL ====
+Ejecutando: psql -U postgres -d enarm_db -c '\d clinical_cases'
+
+--- clinical_cases ---
+                                                          Tabla �public.clinical_cases�
+         Columna          |           Tipo           | Ordenamiento | Nulable  |     Por omisi     | Almacenamiento | Compresi | Estad�sticas | Descripci 
+--------------------------+--------------------------+--------------+----------+-------------------+----------------+----------+------------+-----------
+ id                       | uuid                     |              | not null | gen_random_uuid() | plain          |          |            | 
+ title                    | character varying(500)   |              | not null |                   | extended       |          |            | 
+ slug                     | character varying(255)   |              | not null |                   | extended       |          |            | 
+ chief_complaint          | text                     |              | not null |                   | extended       |          |            | 
+ specialty                | character varying(100)   |              | not null |                   | extended       |          |            | 
+ sub_specialty            | character varying(100)   |              |          |                   | extended       |          |            | 
+ difficulty               | character varying(50)    |              | not null |                   | extended       |          |            | 
+ setting                  | character varying(50)    |              | not null |                   | extended       |          |            | 
+ patient_json             | jsonb                    |              | not null |                   | extended       |          |            | 
+ history_present_illness  | text                     |              |          |                   | extended       |          |            | 
+ symptoms_json            | jsonb                    |              |          | '[]'::jsonb       | extended       |          |            | 
+ expected_diagnosis_json  | jsonb                    |              | not null |                   | extended       |          |            | 
+ expected_studies_json    | jsonb                    |              |          | '[]'::jsonb       | extended       |          |            | 
+ expected_treatments_json | jsonb                    |              |          | '[]'::jsonb       | extended       |          |            | 
+ expected_followup        | text                     |              |          |                   | extended       |          |            | 
+ learning_objectives_json | jsonb                    |              |          | '[]'::jsonb       | extended       |          |            | 
+ pubmed_pmids             | text[]                   |              |          |                   | extended       |          |            | 
+ guidelines_ids           | text[]                   |              |          |                   | extended       |          |            | 
+ teaching_points          | text                     |              |          |                   | extended       |          |            | 
+ author_name              | character varying(255)   |              |          |                   | extended       |          |            | 
+ reviewed_by              | character varying(255)   |              |          |                   | extended       |          |            | 
+ version                  | integer                  |              |          | 1                 | plain          |          |            | 
+ is_published             | boolean                  |              |          | false             | plain          |          |            | 
+ created_at               | timestamp with time zone |              |          | now()             | plain          |          |            | 
+ updated_at               | timestamp with time zone |              |          | now()             | plain          |          |            | 
+ published_at             | timestamp with time zone |              |          |                   | plain          |          |            | 
+ embedding                | vector(768)              |              |          |                   | external       |          |            | 
+�ndices:
+    "clinical_cases_pkey" PRIMARY KEY, btree (id)
+    "clinical_cases_slug_key" UNIQUE CONSTRAINT, btree (slug)
+    "idx_cases_diagnosis_gin" gin (expected_diagnosis_json)
+    "idx_cases_difficulty" btree (difficulty)
+    "idx_cases_embedding" ivfflat (embedding vector_cosine_ops) WITH (lists='100')
+    "idx_cases_patient_gin" gin (patient_json)
+    "idx_cases_published" btree (is_published) WHERE is_published = true
+    "idx_cases_setting" btree (setting)
+    "idx_cases_slug" btree (slug)
+    "idx_cases_specialty" btree (specialty)
+    "idx_cases_symptoms_gin" gin (symptoms_json)
+    "idx_cases_title_trgm" gin (title gin_trgm_ops)
+Referenciada por:
+    TABLE "case_tags" CONSTRAINT "case_tags_case_id_fkey" FOREIGN KEY (case_id) REFERENCES clinical_cases(id) ON DELETE CASCADE
+    TABLE "case_versions" CONSTRAINT "case_versions_case_id_fkey" FOREIGN KEY (case_id) REFERENCES clinical_cases(id) ON DELETE CASCADE
+    TABLE "study_sessions" CONSTRAINT "study_sessions_case_id_fkey" FOREIGN KEY (case_id) REFERENCES clinical_cases(id)
+Restricci�n not-null:
+    "clinical_cases_id_not_null" NOT NULL "id"
+    "clinical_cases_title_not_null" NOT NULL "title"
+    "clinical_cases_slug_not_null" NOT NULL "slug"
+    "clinical_cases_chief_complaint_not_null" NOT NULL "chief_complaint"
+    "clinical_cases_specialty_not_null" NOT NULL "specialty"
+    "clinical_cases_difficulty_not_null" NOT NULL "difficulty"
+    "clinical_cases_setting_not_null" NOT NULL "setting"
+    "clinical_cases_patient_json_not_null" NOT NULL "patient_json"
+    "clinical_cases_expected_diagnosis_json_not_null" NOT NULL "expected_diagnosis_json"
+Triggers:
+    trg_cases_updated BEFORE UPDATE ON clinical_cases FOR EACH ROW EXECUTE FUNCTION set_updated_at()
+M�todo de acceso: heap
+
+
+
+--- mcq_questions ---
+psql.exe : No se encontr� relaci�n llamada �mcq_questions�.
+En línea: 4 Carácter: 19
++         $result = & psql -U postgres -d enarm_db -c $q.Query 2>&1
++                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (No se encontr� ...mcq_questions�.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+
+--- guidelines ---
+psql.exe : No se encontr� relaci�n llamada �guidelines�.
+En línea: 4 Carácter: 19
++         $result = & psql -U postgres -d enarm_db -c $q.Query 2>&1
++                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (No se encontr� ...a �guidelines�.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+
+--- Count cases ---
+ count 
+-------
+     6
+(1 fila)
+
+
+
+--- Count mcq ---
+psql.exe : ERROR:  relation "mcq_questions" does not exist
+En línea: 4 Carácter: 19
++         $result = & psql -U postgres -d enarm_db -c $q.Query 2>&1
++                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ERROR:  relatio... does not exist:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+L�NEA 1: SELECT COUNT(*) FROM mcq_questions;
+                             ^
+
+
+--- Count guides ---
+psql.exe : ERROR:  relation "guidelines" does not exist
+En línea: 4 Carácter: 19
++         $result = & psql -U postgres -d enarm_db -c $q.Query 2>&1
++                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ERROR:  relatio... does not exist:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+L�NEA 1: SELECT COUNT(*) FROM guidelines;
+                             ^
+
+
+--- Sample case ---
+                  id                  |                                  title                                  |  specialty  
+--------------------------------------+-------------------------------------------------------------------------+-------------
+ d4b6832c-d579-47b6-82f8-3ed37794cab3 | Caso de prueba Sprint 3B                                                | Cardiology
+ 79ea47d9-96fb-4667-820d-d2ed1452708c | Caso de prueba Sprint 3B                                                | Cardiology
+ 54fb652a-cc38-4f1a-858d-53381e4647ba | Caso de prueba Sprint 3B                                                | Cardiology
+ e9604696-819b-4803-99da-0589b6fb8910 | IAM con elevacion del ST (STEMI) anterior en varon de 58 anos           | Cardiology
+ 1a2bb679-5a59-442e-919d-8a8ca2d26748 | Shock septico secundario a ITU complicada en mujer diabetica de 68 anos | Infectology
+(5 filas)
+
+
+
+==== MCQuestion COMPLETO ====
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+//   ENARM.Data - MCQRepository
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+#pragma once
+
+#include "ENARM/Common/Result.h"
+#include "ENARM/Data/DatabaseManager.h"
+#include "ENARM/Data/JsonHelpers.h"
+
+#include <memory>
+#include <string>
+#include <vector>
+#include <optional>
+#include <nlohmann/json.hpp>
+
+namespace ENARM::Data {
+
+    struct MCQuestion {
+        std::string id;
+        std::string specialty;
+        std::optional<std::string> subSpecialty;
+        std::string difficulty{"intermediate"};
+        std::optional<std::string> topic;
+        std::string vignette;
+        std::string question;
+        nlohmann::json options;
+        char correctAnswer{'A'};
+        std::optional<std::string> explanationCorrect;
+        nlohmann::json explanationIncorrect;
+        std::vector<std::string> pubmedPmids;
+        std::vector<std::string> guidelinesIds;
+        std::optional<std::string> referencesText;
+        int timesAttempted{0};
+        int timesCorrect{0};
+        std::optional<double> difficultyIndex;
+        bool isActive{true};
+    };
+
+    class MCQRepository {
+    public:
+        explicit MCQRepository(std::shared_ptr<DatabaseManager> db) : m_db(db) {}
+
+        Common::Result<std::string> Insert(const MCQuestion& q);
+
+        std::optional<MCQuestion> FindById(const std::string& id);
+        std::vector<MCQuestion> FindBySpecialty(const std::string& specialty, int limit = 20);
+        std::vector<MCQuestion> FindRandom(int count = 10, const std::string& specialty = "");
+
+        Common::Result<void> RecordAttempt(const std::string& studentId,
+                                            const std::string& mcqId,
+                                            const std::string& sessionId,
+                                            char selectedAnswer,
+                                            bool isCorrect,
+                                            double timeSeconds);
+
+        [[nodiscard]] size_t Count();
+
+        template <typename Row>
+        static MCQuestion RowToMCQ(const Row& row) {
+            MCQuestion q;
+            q.id                    = row["id"].template as<std::string>();
+            q.specialty             = row["specialty"].template as<std::string>();
+            q.subSpecialty          = GetOptString(row, "sub_specialty");
+            q.difficulty            = row["difficulty"].template as<std::string>();
+            q.topic                 = GetOptString(row, "topic");
+            q.vignette              = row["vignette"].template as<std::string>();
+            q.question              = row["question"].template as<std::string>();
+            q.options               = GetJson(row, "options_json");
+            auto ca                 = row["correct_answer"].template as<std::string>();
+            q.correctAnswer         = ca.empty() ? 'A' : ca[0];
+            q.explanationCorrect    = GetOptString(row, "explanation_correct");
+            q.explanationIncorrect  = GetJson(row, "explanation_incorrect_json");
+            q.pubmedPmids           = GetStringArray(row, "pubmed_pmids");
+            q.guidelinesIds         = GetStringArray(row, "guidelines_ids");
+            q.referencesText        = GetOptString(row, "references_text");
+            q.timesAttempted        = row["times_attempted"].template as<int>();
+            q.timesCorrect          = row["times_correct"].template as<int>();
+            if (!row["difficulty_index"].is_null())
+                q.difficultyIndex = row["difficulty_index"].template as<double>();
+            q.isActive              = row["is_active"].template as<bool>();
+            return q;
+        }
+
+    private:
+        std::shared_ptr<DatabaseManager> m_db;
+    };
+
+}
+

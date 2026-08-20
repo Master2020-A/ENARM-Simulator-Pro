@@ -1,0 +1,110 @@
+{
+  "title": "Infección Otorrinolaringológica Aguda (IOA) en Paciente con Diabetes Mellitus",
+  "slug": "infeccion-otorrinolaringologica-aguda-paciente-con-diabetes-mellitus",
+  "chief_complaint": "Dolor otorrinolaringológico intenso",
+  "specialty": "Otorrinolaringología",
+  "difficulty": "basic",
+  "setting": "outpatient",
+  "patient_json": {
+    "name": "Juan Perez Garcia",
+    "age": 55,
+    "age_unit": "years",
+    "sex": "M",
+    "weight_kg": 85,
+    "height_cm": 175,
+    "occupation": "Trabajador de oficina",
+    "vitals_on_arrival": {
+      "hr": 100,
+      "sbp": 140,
+      "dbp": 90,
+      "rr": 18,
+      "spo2": 95,
+      "temp_c": 37.5
+    },
+    "past_medical_history": [
+      "Diabetes Mellitus tipo 2",
+      "Hipertensión arterial"
+    ],
+    "allergies": "ninguna conocida",
+    "current_medications": [
+      "Metformina 500mg BID",
+      "Aceclofenac 200mg PRN"
+    ],
+    "family_history": "Diabetes en familia paterna",
+    "social_history": "No fuma, limitado alcohol, no consume drogas"
+  },
+  "history_present_illness": "Paciente presenta dolor intenso en la oreja derecha que comenzó hace 2 días. El dolor se asocia con fiebre (37.5°C), sensación de presión y oído hinchado. Ha tenido dificultad para escuchar y no ha tenido secreción nasal. El paciente dice que no ha tomado medicamentos específicos para el dolor.",
+  "symptoms_json": [
+    {
+      "name": "Dolor otorrinolaringológico",
+      "duration": "2 dias",
+      "severity": "intenso"
+    },
+    {
+      "name": "Fiebre",
+      "duration": "2 dias",
+      "severity": "moderada"
+    },
+    {
+      "name": "Sensación de presión",
+      "duration": "2 dias",
+      "severity": "moderada"
+    },
+    {
+      "name": "Oído hinchado",
+      "duration": "2 dias",
+      "severity": "moderada"
+    },
+    {
+      "name": "Dificultad para escuchar",
+      "duration": "2 dias",
+      "severity": "moderada"
+    }
+  ],
+  "expected_diagnosis_json": {
+    "primary": "Infección Otorrinolaringológica Aguda (IOA)",
+    "icd10": "B30.9",
+    "differential": [
+      "Infección Orbitaria",
+      "Infección Laringe",
+      "Infección Nasofaringe"
+    ],
+    "justification": "La presentación clínica de dolor otorrinolaringológico intenso, fiebre y dificultad para escuchar es compatible con IOA. El paciente tiene diabetes mellitus, lo que aumenta el riesgo de complicaciones infecciosas."
+  },
+  "expected_studies_json": [
+    {
+      "name": "Radiografía de la otorrinolaringología",
+      "priority": "urgent",
+      "expected_finding": "Absceso otorrinolaringológico"
+    },
+    {
+      "name": "Laboratorio de orina",
+      "priority": "routine",
+      "expected_finding": "Sin datos de glóbulos rojos elevados"
+    }
+  ],
+  "expected_treatments_json": [
+    {
+      "treatment": "Antibiótico orales (Amoxiciclina 500mg TID)",
+      "priority": "immediate",
+      "evidence": "Class I - IMSS 2021"
+    },
+    {
+      "treatment": "Metformina 500mg BID",
+      "priority": "immediate",
+      "evidence": "Manejo de la diabetes"
+    },
+    {
+      "treatment": "Acetaminofén 500mg PRN",
+      "priority": "immediate",
+      "evidence": "Class I - AHA/ACC 2022"
+    }
+  ],
+  "expected_followup": "Seguimiento en 1 semana para evaluar la respuesta al tratamiento y la ausencia de complicaciones. Control de la diabetes y seguimiento de la presión arterial.",
+  "learning_objectives_json": [
+    "Identificar criterios diagnósticos de infección otorrinolaringológica aguda en pacientes con diabetes mellitus",
+    "Aplicar protocolo de manejo de la infección otorrinolaringológica aguda en pacientes con diabetes mellitus",
+    "Reconocer complicaciones potenciales de la infección otorrinolaringológica aguda en pacientes con diabetes mellitus"
+  ],
+  "teaching_points": "El manejo de pacientes con diabetes mellitus y IOA requiere un enfoque integral, incluyendo el manejo de la infección, la control del diabetes y la prevención de complicaciones. La presencia de diabetes mellitus aumenta el riesgo de complicaciones infecciosas y requiere un seguimiento más frecuente."
+}

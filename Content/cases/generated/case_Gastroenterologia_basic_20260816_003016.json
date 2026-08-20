@@ -1,0 +1,103 @@
+{
+    "title":  "Dolor abdominal agudo y vómitos frecuentes",
+    "slug":  "dolor-abdominal-agudo-y-vomitos-frecuentes",
+    "chief_complaint":  "Dolor abdominal agudo y vómitos frecuentes durante las últimas 24 horas",
+    "specialty":  "Gastroenterologia",
+    "difficulty":  "basic",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  28,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  80,
+                         "height_cm":  175,
+                         "occupation":  "Estudiante universitario",
+                         "vitals_on_arrival":  {
+                                                   "hr":  100,
+                                                   "sbp":  130,
+                                                   "dbp":  85,
+                                                   "rr":  20,
+                                                   "spo2":  95,
+                                                   "temp_c":  37.5
+                                               },
+                         "past_medical_history":  [
+                                                      "Sin antecedentes de salud importantes"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Paracetamol 500mg cada 6 horas"
+                                                 ],
+                         "family_history":  "negado",
+                         "social_history":  "No fuma, consume alcohol ocasionalmente"
+                     },
+    "history_present_illness":  "Paciente se despierta con dolor abdominal intenso en el abdomen central y derecha, que se describe como \u0027picazón intensa\u0027 y \u0027dolor punzante\u0027. El dolor ha sido constante y no ha mejorado con el paracetamol. Ha sentido náuseas y vómitos frecuentes durante las últimas 24 horas. No ha tenido fiebre ni diarrea. Ha estado deshidratado debido a los vómitos.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Dolor abdominal",
+                              "duration":  "24 horas",
+                              "severity":  "intenso"
+                          },
+                          {
+                              "name":  "Vómitos frecuentes",
+                              "duration":  "24 horas",
+                              "severity":  "severos"
+                          },
+                          {
+                              "name":  "Náuseas",
+                              "duration":  "24 horas",
+                              "severity":  "moderadas"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Gastroenteritis aguda viral",
+                                    "icd10":  "A00.0",
+                                    "differential":  [
+                                                         "Gastroenteritis por salmonella",
+                                                         "Gastroenteritis por campylobacter",
+                                                         "Gastroenteritis por clostridium difficile"
+                                                     ],
+                                    "justification":  "La presentación clínica característica de dolor abdominal intenso, vómitos frecuentes y náuseas, junto con el estado de deshidratación, es compatible con gastroenteritis aguda viral. Los sintomas son consistentes con esta diagnóstico, y no hay signos de complicaciones."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "Cultivo de orina para bacterias entericas",
+                                      "priority":  "routine",
+                                      "expected_finding":  "negativo"
+                                  },
+                                  {
+                                      "name":  "Cultivo de heces para bacterias entericas",
+                                      "priority":  "routine",
+                                      "expected_finding":  "negativo"
+                                  },
+                                  {
+                                      "name":  "Electrolitos sanguíneos",
+                                      "priority":  "routine",
+                                      "expected_finding":  "deshidratación leve a moderada"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Oral rehidratación con ORS (Oral Rehydration Solution)",
+                                         "priority":  "immediate",
+                                         "evidence":  "Basado en la presentación de deshidratación"
+                                     },
+                                     {
+                                         "treatment":  "Antiemético 5-HT3 (ondansetron 4mg SC o 4mg PO)",
+                                         "priority":  "immediate",
+                                         "evidence":  "Baja evidencia, pero puede ser beneficioso"
+                                     },
+                                     {
+                                         "treatment":  "Antidiarreígeno (loperamide 2mg SC o 2mg PO)",
+                                         "priority":  "routine",
+                                         "evidence":  "Baja evidencia, pero puede ser útil"
+                                     }
+                                 ],
+    "expected_followup":  "Paciente a seguir en consulta gastroenterológica en 1 semana para evaluación de la resolución de síntomas y ajuste de tratamiento de rehidratación.",
+    "learning_objectives_json":  [
+                                     "Identificar los criterios diagnósticos de gastroenteritis aguda viral",
+                                     "Aplicar protocolo de rehidratación oral en pacientes con deshidratación leve a moderada",
+                                     "Reconocer el uso de antieméticos y antidiarreígenos en pacientes con gastroenteritis aguda viral"
+                                 ],
+    "teaching_points":  "El diagnóstico de gastroenteritis aguda viral es común y se basa en la presentación clínica. La rehidratación oral es fundamental en estos casos. El uso de antieméticos y antidiarreígenos puede ser útil pero debe ser utilizado con precaución."
+}

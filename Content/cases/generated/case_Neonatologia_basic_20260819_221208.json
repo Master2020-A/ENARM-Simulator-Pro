@@ -1,0 +1,96 @@
+{
+  "title": "Necrotizing Enterocolitis (NEC) en un recién nacido",
+  "slug": "necrotizing-enterocolitis-neonatal",
+  "chief_complaint": "Crecimiento retrasado y dolor abdominal",
+  "specialty": "Neonatologia",
+  "difficulty": "basic",
+  "setting": "inpatient",
+  "patient_json": {
+    "name": "Juan Perez Garcia",
+    "age": 2,
+    "age_unit": "months",
+    "sex": "M",
+    "weight_kg": 4.5,
+    "height_cm": 65,
+    "occupation": "Madre de familia",
+    "vitals_on_arrival": {
+      "hr": 120,
+      "sbp": 100,
+      "dbp": 60,
+      "rr": 20,
+      "spo2": 95,
+      "temp_c": 36.4
+    },
+    "past_medical_history": [],
+    "allergies": "ninguna conocida",
+    "current_medications": [
+      "antibióticos"
+    ],
+    "family_history": "relevante",
+    "social_history": "ninguna relevante"
+  },
+  "history_present_illness": "El paciente es un recién nacido de 2 meses de edad con un crecimiento retrasado. Ha estado despierto y alerta, pero ha tenido dolor abdominal intenso durante las últimas 24 horas. Ha vomitado una vez, pero no ha habido diarrea. El niño ha estado en la UTI neonatal por dos días por infección bacteriana y ha recibido antibióticos. El recién nacido es hijo de padres con historia familiar de NEC.",
+  "symptoms_json": [
+    {
+      "name": "Dolor abdominal",
+      "duration": "24 horas",
+      "severity": "intenso"
+    },
+    {
+      "name": "Vomito",
+      "duration": "24 horas",
+      "severity": "leve"
+    }
+  ],
+  "expected_diagnosis_json": {
+    "primary": "Necrotizing Enterocolitis (NEC)",
+    "icd10": "K50.20",
+    "differential": [
+      "Infección intestinal neonatal",
+      "Pneumonía neonatal",
+      "Salud general baja"
+    ],
+    "justification": "El recién nacido presenta síntomas clásicos de NEC, como dolor abdominal intenso y crecimiento retrasado, junto con una historia familiar relevante y un recién nacido despierto y alerta."
+  },
+  "expected_studies_json": [
+    {
+      "name": "Ultrasonido abdominal",
+      "priority": "urgent",
+      "expected_finding": "edema intestinal y signos de necrosis"
+    },
+    {
+      "name": "Cultivo de sangre neonatal",
+      "priority": "urgent",
+      "expected_finding": "Bacterias gram negativas"
+    },
+    {
+      "name": "Electrocardiograma",
+      "priority": "routine",
+      "expected_finding": "sin datos significativos"
+    }
+  ],
+  "expected_treatments_json": [
+    {
+      "treatment": "Nutrición parenteral total",
+      "priority": "immediate",
+      "evidence": "Basado en la recomendación de las guías neonatales"
+    },
+    {
+      "treatment": "Antibióticos intravenosos",
+      "priority": "immediate",
+      "evidence": "Basado en la recomendación de las guías neonatales"
+    },
+    {
+      "treatment": "Monitorización continuada del recién nacido",
+      "priority": "urgent",
+      "evidence": "Basado en las recomendaciones neonatales"
+    }
+  ],
+  "expected_followup": "Monitorización del recién nacido con ultrasonido abdominal cada 6 horas y cultivo de sangre neonatal cada 24 horas hasta que el diagnóstico sea definitivo. Nutrición parenteral total hasta que el recién nacido esté tolerante a la alimentación oral.",
+  "learning_objectives_json": [
+    "Identificar los criterios diagnósticos de Necrotizing Enterocolitis (NEC)",
+    "Aplicar el protocolo de tratamiento recomendado por las guías neonatales",
+    "Reconocer las complicaciones potenciales de NEC"
+  ],
+  "teaching_points": "El recién nacido con crecimiento retrasado y dolor abdominal intenso debe ser sospechoso de NEC. El ultrasonido abdominal es el estudiio de diagnóstico más utilizado para confirmar el diagnóstico. La nutrición parenteral total y los antibióticos intravenosos son tratamientos esenciales en el manejo de la NEC."
+}

@@ -1,0 +1,100 @@
+{
+    "title":  "Caso de Angina Pectoral Estable",
+    "slug":  "caso-angina-pectoral-estable",
+    "chief_complaint":  "Dolor torácico intenso durante el ejercicio",
+    "specialty":  "Cardiologia",
+    "difficulty":  "basic",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  55,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  80,
+                         "height_cm":  175,
+                         "occupation":  "Trabajador administrativo",
+                         "vitals_on_arrival":  {
+                                                   "hr":  80,
+                                                   "sbp":  130,
+                                                   "dbp":  80,
+                                                   "rr":  18,
+                                                   "spo2":  95,
+                                                   "temp_c":  37.2
+                                               },
+                         "past_medical_history":  [
+                                                      "Hipertensión arterial (HTA)",
+                                                      "Diabetes mellitus tipo 2"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Aspirina 300mg VO",
+                                                     "Atorvastatin 20mg DI"
+                                                 ],
+                         "family_history":  "Negado",
+                         "social_history":  "No fuma ni bebe alcohol"
+                     },
+    "history_present_illness":  "El paciente ha estado experimentando dolor torácico intenso durante el ejercicio durante las últimas 2 semanas. El dolor parece empeorar con la actividad física y desaparece cuando se detiene. No ha tenido sudoración, mareos, fatiga extrema ni dificultad para respirar. El dolor se describe como una sensación de presión en el pecho que se extiende a la espalda, hombros y cuello.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Dolor torácico",
+                              "duration":  "2 semanas",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Fadiga extrema",
+                              "duration":  "2 semanas",
+                              "severity":  "leve"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Angina pectoral estables",
+                                    "icd10":  "I21.0",
+                                    "differential":  [
+                                                         "Angina pectoral instables",
+                                                         "Infarto agudo del miocardio",
+                                                         "Pericarditis"
+                                                     ],
+                                    "justification":  "El paciente tiene antecedentes de HTA y Diabetes mellitus, lo que aumenta el riesgo de angina pectoral. El dolor torácico durante el ejercicio es un indicador de angina pectoral estables."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Sin evidencia de miocarditis o infarto"
+                                  },
+                                  {
+                                      "name":  "Troponinas seriadas",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Nivel normal"
+                                  },
+                                  {
+                                      "name":  "Radiografia de torax",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin datos de congestion"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Aspirina 300mg VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Oxígeno suplementario",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Anti-angiotensina II (ARB) o beta bloqueante",
+                                         "priority":  "routine",
+                                         "evidence":  "Class IIa - AHA/ACC 2022"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente debe seguir con un seguimiento cardiológico en 1 semana para monitorear su condición y ajustar el tratamiento según sea necesario.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnosticos de angina pectoral estables",
+                                     "Aplicar protocolo de manejo de angina pectoral en pacientes estables",
+                                     "Reconocer complicaciones potenciales de angina pectoral"
+                                 ],
+    "teaching_points":  "Es importante diferenciar entre angina pectoral instables y estables, ya que la gestión clínica puede variar significativamente. En pacientes con antecedentes de HTA y Diabetes mellitus, el dolor torácico durante el ejercicio debe ser evaluado con cuidado y considerarse angina pectoral estables."
+}

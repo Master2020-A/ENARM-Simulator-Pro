@@ -1,0 +1,110 @@
+{
+    "title":  "Depresión mayor con ideación suicida",
+    "slug":  "depresion-mayor-ideacion-suicida",
+    "chief_complaint":  "No me siento bien, no quiero comer y estoy pensando en cosas graves.",
+    "specialty":  "Psiquiatria",
+    "difficulty":  "intermediate",
+    "setting":  "outpatient",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  50,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  75,
+                         "height_cm":  175,
+                         "occupation":  "Jefe de empresa",
+                         "vitals_on_arrival":  {
+                                                   "hr":  78,
+                                                   "sbp":  120,
+                                                   "dbp":  80,
+                                                   "rr":  15,
+                                                   "spo2":  99,
+                                                   "temp_c":  36.9
+                                               },
+                         "past_medical_history":  [
+                                                      "Hipertensión arterial",
+                                                      "Diabetes tipo 2"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Losartan 50mg",
+                                                     "Metformina 500mg"
+                                                 ],
+                         "family_history":  "Depresión familiar",
+                         "social_history":  "Tabaquismo de 20 años"
+                     },
+    "history_present_illness":  "El paciente ha estado experimentando un estado de ánimo triste, sin motivación, y ha perdido interés en actividades que antes disfrutaba. Ha sentido que no tiene valor y ha pensado en formas de terminar su vida. Ha descorado un aumento de la ansiedad y la irritabilidad. Ha perdido peso sin intento y ha tenido dificultades para dormir. Ha estado sentado durante largas horas y ha evitado interacciones sociales.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Depresión",
+                              "duration":  "2 semanas",
+                              "severity":  "muy severa"
+                          },
+                          {
+                              "name":  "Anorexia",
+                              "duration":  "1 semana",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Irritabilidad",
+                              "duration":  "3 días",
+                              "severity":  "muy severa"
+                          },
+                          {
+                              "name":  "Ideación suicida",
+                              "duration":  "1 semana",
+                              "severity":  "severa"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Trastorno depresivo mayor con ideación suicida",
+                                    "icd10":  "F32.0",
+                                    "differential":  [
+                                                         "Trastorno bipolar II",
+                                                         "Trastorno postparto depresivo",
+                                                         "Trastorno por estrés crónico"
+                                                     ],
+                                    "justification":  "Basado en la anamnesis clínica, el examen físico normal y la ausencia de signos de ansiedad bipolar."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "Electrocardiograma",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin anomalías"
+                                  },
+                                  {
+                                      "name":  "Laboratorio de sangre",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Niveles normales de glucosa y presión arterial"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Antidepresivos (Escitalopram 10mg)",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Antipsicótico (Aripiprazol 10mg)",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Observación psiquiátrica",
+                                         "priority":  "immediate",
+                                         "evidence":  "Basado en criterios de risa"
+                                     },
+                                     {
+                                         "treatment":  "Evaluación por psiquiatra especializado",
+                                         "priority":  "urgent",
+                                         "evidence":  "Basado en criterios de riesgo de suicidio"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente será evaluado por un psiquiatra especializado en 24 horas. Se programará una cita semanal para monitoreo del estado del paciente.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnósticos de trastorno depresivo mayor con ideación suicida",
+                                     "Aplicar protocolo de manejo de riesgo de suicidio en primera hora",
+                                     "Reconocer complicaciones potenciales de la depresión"
+                                 ],
+    "teaching_points":  "La identificación temprana y tratamiento adecuado de la depresión con ideación suicida son fundamentales para prevenir complicaciones graves. El manejo del riesgo de suicidio debe ser un enfoque multidisciplinario y abordar aspectos emocionales, psicológicos y sociales del paciente."
+}

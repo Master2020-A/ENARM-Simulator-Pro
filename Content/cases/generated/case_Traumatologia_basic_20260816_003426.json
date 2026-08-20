@@ -1,0 +1,93 @@
+{
+    "title":  "Lesión de tibio peroneal por torcedura",
+    "slug":  "lesion-tibio-peroneal-torcedura",
+    "chief_complaint":  "Dolor y dificultad para caminar en el pie derecho desde hace 12 horas",
+    "specialty":  "Traumatologia",
+    "difficulty":  "basic",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  28,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  70,
+                         "height_cm":  175,
+                         "occupation":  "Trabajador de oficina",
+                         "vitals_on_arrival":  {
+                                                   "hr":  90,
+                                                   "sbp":  130,
+                                                   "dbp":  85,
+                                                   "rr":  18,
+                                                   "spo2":  97,
+                                                   "temp_c":  36.5
+                                               },
+                         "past_medical_history":  [
+                                                      "Ninguno relevante"
+                                                  ],
+                         "allergies":  "Ninguna conocida",
+                         "current_medications":  [
+                                                     "Ninguno"
+                                                 ],
+                         "family_history":  "Negado",
+                         "social_history":  "No fuma, no bebe, no usa drogas"
+                     },
+    "history_present_illness":  "El paciente se presentó debido a un fuerte torcedura del pie derecho mientras corría por el parque. Ha sentido un fuerte dolor intenso en el pie durante las últimas 12 horas y ha tenido dificultad para caminar. No ha podido hacer flexión o pronación del pie derecho, solo puede mantenerlo en una posición de neutral.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Dolor",
+                              "duration":  "12 horas",
+                              "severity":  "intenso"
+                          },
+                          {
+                              "name":  "No circulación sanguínea",
+                              "duration":  "12 horas",
+                              "severity":  "moderada"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Lesión de tibio peroneal",
+                                    "icd10":  "S51.191",
+                                    "differential":  [
+                                                         "Lesión de tibio medial",
+                                                         "Lesión de peroneo lateral",
+                                                         "Fractura de tibio"
+                                                     ],
+                                    "justification":  "Basado en el dolor intenso y la incapacidad para mover el pie derecho, junto con la ausencia de flexión y pronación, el diagnóstico de lesión de tibio peroneal es obvio."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "Escanear tibio peroneal por ultrasonido",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Desplazamiento de la peroneo lateral"
+                                  },
+                                  {
+                                      "name":  "Magnetoterapia",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin datos"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Mobilidad temprana con gafas de rodillas",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Cicatrización con compresas de gel de colageno",
+                                         "priority":  "routine",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Control del dolor con paracetamol 500mg VO",
+                                         "priority":  "routine",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente debe ser evaluado nuevamente en 24 horas para evaluar la evolución de la lesión. Se recomienda hacer una consulta de seguimiento en 1 semana para evaluar el progreso y la necesidad de una cirugía si es necesario.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnosticos de lesión de tibio peroneal",
+                                     "Aplicar protocolo de manejo de lesión de tibio peroneal",
+                                     "Reconocer complicaciones de lesión de tibio peroneal"
+                                 ],
+    "teaching_points":  "Es importante tener en cuenta la importancia de la mobilidad temprana en el manejo de lesiones de articulaciones, así como la necesidad de control del dolor para el bienestar del paciente."
+}

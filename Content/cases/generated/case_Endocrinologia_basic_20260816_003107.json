@@ -1,0 +1,109 @@
+{
+    "title":  "Insuficiencia Diabetica Aguda (IDA) en Paciente Mayor",
+    "slug":  "insuficiencia-diabetica-aguda-paciente-mayor",
+    "chief_complaint":  "Dolor abdominal intenso y fatiga",
+    "specialty":  "Endocrinologia",
+    "difficulty":  "basic",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  75,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  80,
+                         "height_cm":  170,
+                         "occupation":  "Jubilado",
+                         "vitals_on_arrival":  {
+                                                   "hr":  110,
+                                                   "sbp":  140,
+                                                   "dbp":  80,
+                                                   "rr":  20,
+                                                   "spo2":  95,
+                                                   "temp_c":  37.2
+                                               },
+                         "past_medical_history":  [
+                                                      "Diabetes tipo 2 por 10 años"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Insulina glargina 100UI diurna",
+                                                     "Metformina 500mg BID"
+                                                 ],
+                         "family_history":  "Diabetes en familia",
+                         "social_history":  "Tabaquismo pasivo"
+                     },
+    "history_present_illness":  "El paciente se presentó con dolor abdominal intenso y crónico que ha empeorado en las últimas 24 horas, asociado con fiebre leve y fatiga severa. El dolor es epigástrico y se describe como espasmos y picazón. No ha presentado vómitos ni diarrea. El paciente ha estado tomando su insulina y metformina normalmente, pero ha aumentado su consumo de alcohol durante las últimas semanas.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Dolor abdominal intenso",
+                              "duration":  "24 horas",
+                              "severity":  "intenso"
+                          },
+                          {
+                              "name":  "Fiebre leve",
+                              "duration":  "24 horas",
+                              "severity":  "leve"
+                          },
+                          {
+                              "name":  "Fatiga severa",
+                              "duration":  "24 horas",
+                              "severity":  "severa"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Insuficiencia Diabetica Aguda (IDA)",
+                                    "icd10":  "A15.9",
+                                    "differential":  [
+                                                         "Infección abdominal",
+                                                         "Embolia intestinal",
+                                                         "Ectasia biliar"
+                                                     ],
+                                    "justification":  "Dolor abdominal intenso, fiebre leve y fatiga severa son clásicos de la IDA. El aumento del consumo de alcohol y la historia de diabetes tipo 2 aumentan el riesgo de complicaciones de la diabetes."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "Laboratorios de sangre completa",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Glucosa en sangre 250mg/dL, Creatinina 1.5mg/dL, LDH 1000U/L"
+                                  },
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin hallazgos significativos"
+                                  },
+                                  {
+                                      "name":  "Radiografia de abdomen",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Sin datos de congestion o dilatación biliar"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Insulina rápida (Insulina aspárica 40UI IV)",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Oral Glucose 50g IV en 20 minutos",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Antibiótico empírico (Amoxicilina 500mg IV cada 8 horas)",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class II"
+                                     },
+                                     {
+                                         "treatment":  "Hidratación oral y líquidos isotônicos",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente debe ser monitorizado en el ICU con control de signos vitales, cianosis, saturación de oxígeno, presión arterial y glucosa en sangre. Se debe realizar un citoquimioterapia en 24 horas si no mejora. Se debe evaluar la posibilidad de una transferencia a un centro de cirugía.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnósticos de Insuficiencia Diabetica Aguda",
+                                     "Aplicar protocolo de maniobra de la IDA en primera hora",
+                                     "Reconocer complicaciones potenciales de la IDA"
+                                 ],
+    "teaching_points":  "La IDA es una emergencia grave en pacientes diabéticos. El manejo inmediato y la coordinación del equipo de cuidados son cruciales para mejorar los resultados de los pacientes."
+}

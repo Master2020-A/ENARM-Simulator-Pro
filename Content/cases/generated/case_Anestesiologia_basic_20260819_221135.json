@@ -1,0 +1,104 @@
+{
+  "title": "Caso de Paciente con Dolor Torácico Agudo",
+  "slug": "caso-paciente-con-dolor-toracico-agudo",
+  "chief_complaint": "Dolor torácico agudo de repente mientras realiza ejercicio intenso.",
+  "specialty": "Anestesiología",
+  "difficulty": "basic",
+  "setting": "emergency",
+  "patient_json": {
+    "name": "Juan Perez Garcia",
+    "age": 45,
+    "age_unit": "years",
+    "sex": "M",
+    "weight_kg": 80,
+    "height_cm": 180,
+    "occupation": "Trabajador de oficina",
+    "vitals_on_arrival": {
+      "hr": 110,
+      "sbp": 130,
+      "dbp": 90,
+      "rr": 20,
+      "spo2": 95,
+      "temp_c": 36.5
+    },
+    "past_medical_history": [
+      "Hipertensión arterial controlada",
+      "Ninguna complicación previa"
+    ],
+    "allergies": "Ninguna conocida",
+    "current_medications": [
+      "Aspirina 100mg diario"
+    ],
+    "family_history": "No relevante",
+    "social_history": "Ninguno"
+  },
+  "history_present_illness": "El paciente comenzó a experimentar dolor torácico agudo mientras realizaba ejercicio intenso. El dolor es intenso y de repente, no ha mejorado desde que llegó al hospital. El paciente no tiene mareos, dificultad para respirar o sudoración excesiva.",
+  "symptoms_json": [
+    {
+      "name": "Dolor torácico",
+      "duration": "2 horas",
+      "severity": "intenso"
+    },
+    {
+      "name": "Sudoración",
+      "duration": "2 horas",
+      "severity": "moderada"
+    }
+  ],
+  "expected_diagnosis_json": {
+    "primary": "Angina de pecho aguda",
+    "icd10": "I21.0",
+    "differential": [
+      "Dolor de espalda",
+      "Cistitis reumatoide",
+      "Dolor gastrointestinal"
+    ],
+    "justification": "El dolor torácico agudo de repente, en el contexto de ejercicio intenso y la ausencia de otros signos de complicación, sugiere angina de pecho aguda."
+  },
+  "expected_studies_json": [
+    {
+      "name": "ECG 12 derivaciones",
+      "priority": "urgent",
+      "expected_finding": "elevación ST V1-V4"
+    },
+    {
+      "name": "Troponinas seriadas",
+      "priority": "urgent",
+      "expected_finding": "elevadas"
+    },
+    {
+      "name": "Radiografía de torax",
+      "priority": "routine",
+      "expected_finding": "sin datos de congestion"
+    }
+  ],
+  "expected_treatments_json": [
+    {
+      "treatment": "Aspirina 300mg VO",
+      "priority": "immediate",
+      "evidence": "Class I - AHA/ACC 2022"
+    },
+    {
+      "treatment": "Clopidogrel 600mg carga VO",
+      "priority": "immediate",
+      "evidence": "Class I"
+    },
+    {
+      "treatment": "Enoxaparina 1mg/kg SC c/12h",
+      "priority": "urgent",
+      "evidence": "Class I"
+    },
+    {
+      "treatment": "Angioplastia primaria en <90 min",
+      "priority": "urgent",
+      "evidence": "Class I"
+    }
+  ],
+  "expected_followup": "El paciente será evaluado por el equipo de cardiología. Se realizarán pruebas adicionales si es necesario. El seguimiento será en el hospital por al menos 24 horas.",
+  "learning_objectives_json": [
+    "Identificar criterios diagnosticos de angina de pecho aguda",
+    "Aplicar protocolo de tratamiento inmediato en primera hora",
+    "Reconocer complicaciones de angina de pecho aguda"
+  ],
+  "teaching_points": "El paciente debe ser evaluado rápidamente para excluir complicaciones graves. La aspirina y clopidogrel deben ser administradas inmediatamente. El seguimiento en el hospital es crucial para monitorizar la respuesta al tratamiento."
+}

@@ -1,0 +1,72 @@
+﻿{
+  "_template_version": "1.0",
+  "_instrucciones": {
+    "difficulty": "1=Básico, 2=Intermedio, 3=Avanzado",
+    "specialty_id": "Ver tabla medical_specialties en DB",
+    "guideline_ids": "IDs de GPCs vinculadas (tabla clinical_guidelines)",
+    "scoring": "Suma de pesos debe ser 1.0",
+    "vitals_on_arrival": "Valores al momento de la consulta/urgencias"
+  },
+  "id": null,
+  "title": "TÍTULO DEL CASO",
+  "specialty": "ESPECIALIDAD",
+  "difficulty": 2,
+  "chief_complaint": "Motivo de consulta en palabras del paciente",
+  "patient": {
+    "age": 50,
+    "sex": "M",
+    "weight_kg": 70,
+    "height_cm": 170,
+    "occupation": "Ocupación",
+    "relevant_history": [
+      "Antecedente 1",
+      "Antecedente 2"
+    ]
+  },
+  "vitals_on_arrival": {
+    "systolic_bp": 120,
+    "diastolic_bp": 80,
+    "heart_rate": 80,
+    "respiratory_rate": 16,
+    "temperature_c": 37.0,
+    "spo2_percent": 98,
+    "weight_kg": 70
+  },
+  "history_of_present_illness": "Descripción detallada del padecimiento actual",
+  "physical_exam": {
+    "general": "Estado general del paciente",
+    "cardiovascular": "Hallazgos cardiovasculares",
+    "respiratory": "Hallazgos pulmonares",
+    "abdomen": "Hallazgos abdominales",
+    "neurological": "Hallazgos neurológicos",
+    "extremities": "Hallazgos en extremidades"
+  },
+  "key_labs": {
+    "lab_name": "valor unidades"
+  },
+  "key_imaging": [
+    "Hallazgo radiológico 1"
+  ],
+  "correct_diagnosis": "Diagnóstico exacto esperado",
+  "differential_diagnosis": [
+    "Diagnóstico diferencial 1",
+    "Diagnóstico diferencial 2"
+  ],
+  "treatment_plan": [
+    "Medida terapéutica 1",
+    "Medida terapéutica 2"
+  ],
+  "scoring_rubric": {
+    "anamnesis": 0.20,
+    "physical_exam": 0.15,
+    "diagnosis": 0.35,
+    "treatment": 0.30
+  },
+  "learning_objectives": [
+    "Objetivo de aprendizaje 1",
+    "Objetivo de aprendizaje 2"
+  ],
+  "guideline_ids": [],
+  "tags": ["tag1", "tag2"],
+  "enarm_topics": ["Tema ENARM 1"]
+}

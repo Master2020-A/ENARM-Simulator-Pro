@@ -1,0 +1,113 @@
+{
+    "title":  "Parto Ectopico",
+    "slug":  "parto-ectopico",
+    "chief_complaint":  "Dolor abdominal agudo, sangrado vaginal y dolor de cabeza",
+    "specialty":  "GinecoObstetricia",
+    "difficulty":  "intermediate",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "María López Hernández",
+                         "age":  32,
+                         "age_unit":  "years",
+                         "sex":  "F",
+                         "weight_kg":  60,
+                         "height_cm":  165,
+                         "occupation":  "Trabajadora",
+                         "vitals_on_arrival":  {
+                                                   "hr":  100,
+                                                   "sbp":  120,
+                                                   "dbp":  80,
+                                                   "rr":  20,
+                                                   "spo2":  95,
+                                                   "temp_c":  36.5
+                                               },
+                         "past_medical_history":  [
+                                                      "Gestación previa de 1 término"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Ibuprofeno 400mg"
+                                                 ],
+                         "family_history":  "Madre ha tenido parto ectópico",
+                         "social_history":  "No fuma, no bebe alcohol, no consume drogas"
+                     },
+    "history_present_illness":  "María se dio cuenta de un dolor abdominal agudo, que comenzó de repente 4 horas antes de llegar al hospital. El dolor se ha vuelto intenso y ha estado acompañado de sangrado vaginal rojo y espuma. También ha sentido dolor de cabeza y sudoración profusa. No ha tenido náuseas o vómitos. El dolor parece estar centrándose en la región abdominal izquierda.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Dolor abdominal",
+                              "duration":  "4 horas",
+                              "severity":  "intenso"
+                          },
+                          {
+                              "name":  "Sangrado vaginal",
+                              "duration":  "3 horas",
+                              "severity":  "intenso"
+                          },
+                          {
+                              "name":  "Dolor de cabeza",
+                              "duration":  "2 horas",
+                              "severity":  "moderado"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Parto ectópico",
+                                    "icd10":  "O38.12",
+                                    "differential":  [
+                                                         "Parto placentario",
+                                                         "Parto subamniótico",
+                                                         "Aborto"
+                                                     ],
+                                    "justification":  "Signos como dolor abdominal intenso, sangrado vaginal y dolor de cabeza son consistentes con parto ectópico. La presencia de sangrado espuma y náuseas es particularmente sospechosa."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "Examen ginecológico vaginal",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "No se observan tejidos placentarios"
+                                  },
+                                  {
+                                      "name":  "B超",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Parto ectópico"
+                                  },
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin datos significativos"
+                                  },
+                                  {
+                                      "name":  "Hemoglobina",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Bajo"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Medicación antipirético",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Anticoagulación",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Cesárea",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Observación en observatorio",
+                                         "priority":  "routine",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "María será observada en observatorio durante 24 horas después del parto ectópico. Se realizarán chequeos de temperatura, frecuencia cardíaca, presión arterial y hemoglobina. Será educada sobre el cuidado post-parto y las señales de alarma.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnósticos de parto ectópico",
+                                     "Aplicar protocolo de cesárea en primera hora",
+                                     "Reconocer complicaciones post-parto"
+                                 ],
+    "teaching_points":  "1. Parto ectópico es una emergencia obstétrica que requiere diagnóstico rápido y tratamiento inmediato. 2. El examen ginecológico vaginal y el B超 son esenciales para confirmar el diagnóstico. 3. La cesárea debe ser la intervención de primera en caso de parto ectópico debido a su alta mortalidad obstétrica."
+}

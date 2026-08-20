@@ -1,0 +1,95 @@
+﻿{
+  "id": 7,
+  "title": "Hemorragia Intracerebral Hipertensiva - Ganglio Basal",
+  "specialty": "Neurología",
+  "difficulty": 3,
+  "chief_complaint": "Mi marido se desplomó y no puede mover el brazo derecho",
+  "patient": {
+    "age": 67,
+    "sex": "M",
+    "weight_kg": 79,
+    "height_cm": 168,
+    "occupation": "Contador (jubilado)",
+    "relevant_history": [
+      "Hipertensión arterial de 15 años, mal controlada, sin seguimiento regular",
+      "Toma amlodipino 5 mg (no siempre lo toma)",
+      "No anticoagulantes ni antiagregantes",
+      "Fumador 30 paquetes-año, activo",
+      "Sin cirugías previas",
+      "Sin antecedente de TCE"
+    ]
+  },
+  "vitals_on_arrival": {
+    "systolic_bp": 210,
+    "diastolic_bp": 118,
+    "heart_rate": 88,
+    "respiratory_rate": 20,
+    "temperature_c": 37.1,
+    "spo2_percent": 95,
+    "weight_kg": 79
+  },
+  "history_of_present_illness": "Masculino de 67 años que estando viendo televisión presentó de forma súbita cefalea intensa 10/10 'la peor de su vida', seguida de caída al piso con pérdida transitoria del estado de alerta, recuperándose parcialmente en 5 minutos. Familiar refiere que al recuperarse presentaba desviación de la comisura labial hacia la izquierda, no podía mover el brazo ni pierna derechos y el habla era incomprensible. Tiempo de evolución: 45 minutos.",
+  "physical_exam": {
+    "general": "Masculino somnoliento, GCS 12 (O3V3M6). No colabora completamente.",
+    "cardiovascular": "HTA severa. Ruidos cardíacos rítmicos. Sin soplos carotídeos.",
+    "respiratory": "Sin dificultad respiratoria. SpO2 95%.",
+    "abdomen": "Sin alteraciones.",
+    "neurological": "GCS 12. Afasia mixta (expresiva y receptiva). Hemiparesia derecha: fuerza 1/5 en brazo, 2/5 en pierna. Hemihipoestesia derecha. Desviación conjugada de la mirada hacia la izquierda. Reflejos de estiramiento muscular aumentados en hemicuerpo derecho. Babinski derecho positivo. Pupilas isocóricas, fotorreactivas.",
+    "extremities": "Sin edema. Pulsos simétricos."
+  },
+  "key_labs": {
+    "BH": "Hb 14.6, leucocitos 12,400, plaquetas 198,000",
+    "TP_INR": "INR 1.0 (no anticoagulado)",
+    "TTP": "Normal",
+    "glucosa": "138 mg/dL",
+    "creatinina": "1.2 mg/dL",
+    "sodio": "138 mEq/L",
+    "ECG": "Ritmo sinusal, sin fibrilación auricular"
+  },
+  "key_imaging": [
+    "TAC craneal simple URGENTE: Hematoma hiperdenso en ganglio basal izquierdo (putamen) de 3.2 x 2.8 cm (volumen ~12 mL). Edema perilesional leve. Desviación de línea media 2mm hacia la derecha. Sin herniación. Ventrículos de tamaño normal. Sin hidrocefalia.",
+    "Sin realce con contraste (no indica malformación vascular en este contexto)"
+  ],
+  "correct_diagnosis": "Hemorragia intracerebral espontánea hipertensiva en ganglio basal izquierdo (putamen)",
+  "differential_diagnosis": [
+    "ACV isquémico (excluido por hiperdensidad en TAC sin contraste)",
+    "Hemorragia subaracnoidea (no hay sangre en cisternas basales, patrón diferente)",
+    "Tumor cerebral con sangrado intratumoral (sin datos de lesión previa)",
+    "Malformación arteriovenosa rota (paciente mayor, HTA severa, localización típica)"
+  ],
+  "treatment_plan": [
+    "ABC: vía aérea, respiración, circulación. Monitorización neurológica continua.",
+    "Posición: cabecera a 30 grados",
+    "Control de PA: meta PA sistólica 130-150 mmHg en HIC aguda",
+    "  - Labetalol 20 mg IV en 2 min, repetir c/10 min (máx 300 mg/día)",
+    "  - O nicardipino en infusión IV 5-15 mg/h",
+    "  - EVITAR nitroprusiato (aumenta PIC)",
+    "NO trombolíticos (contraindicados en hemorragia)",
+    "Corregir coagulopatía si existe (INR normal en este caso)",
+    "Glucemia meta 140-180 mg/dL",
+    "Temperatura meta <37.5°C (antipiréticos PRN)",
+    "Profilaxis convulsiones: NO rutinaria (solo si hay crisis clínica)",
+    "Valoración neuroquirúrgica urgente:",
+    "  - En este caso: hematoma 12 mL, sin herniación → manejo conservador",
+    "  - Criterios de cirugía: >30 mL o deterioro neurológico progresivo",
+    "Ingreso a UCI neurológica o unidad de ictus",
+    "TAC control a las 24h para verificar expansión del hematoma",
+    "Rehabilitación temprana (fisio, fono, TO) cuando estabilizado"
+  ],
+  "scoring_rubric": {
+    "anamnesis": 0.20,
+    "physical_exam": 0.15,
+    "diagnosis": 0.35,
+    "treatment": 0.30
+  },
+  "learning_objectives": [
+    "Distinguir HIC de ACV isquémico por TAC simple",
+    "Reconocer síntomas de alarma: cefalea thunderclap + déficit focal",
+    "Manejar urgencia hipertensiva en HIC (meta PA, fármacos seguros)",
+    "Conocer criterios de manejo quirúrgico vs conservador de HIC",
+    "Aplicar escala de Glasgow y NIHSS en evaluación neurológica"
+  ],
+  "guideline_ids": [7, 8],
+  "tags": ["HIC", "hemorragia_cerebral", "ACV", "neurologia", "hipertension", "emergencia"],
+  "enarm_topics": ["Enfermedad cerebrovascular", "Urgencias neurológicas", "Neuroimagen"]
+}

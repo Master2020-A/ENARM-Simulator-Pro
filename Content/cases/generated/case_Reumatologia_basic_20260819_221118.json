@@ -1,0 +1,99 @@
+{
+  "title": "Artritis Reumatoide Aguda",
+  "slug": "artritis-reumatoide-aguda",
+  "chief_complaint": "Dolor articular intenso en la muñeca derecha y dedo pulgar durante las últimas 24 horas",
+  "specialty": "Reumatologia",
+  "difficulty": "basic",
+  "setting": "emergency",
+  "patient_json": {
+    "name": "Juan Perez Garcia",
+    "age": 55,
+    "age_unit": "years",
+    "sex": "M",
+    "weight_kg": 80,
+    "height_cm": 175,
+    "occupation": "Trabajador de oficina",
+    "vitals_on_arrival": {
+      "hr": 90,
+      "sbp": 130,
+      "dbp": 85,
+      "rr": 18,
+      "spo2": 97,
+      "temp_c": 36.5
+    },
+    "past_medical_history": [
+      "hipertension arterial",
+      "artritis reumatoide cronica"
+    ],
+    "allergies": "ninguna conocida",
+    "current_medications": [
+      "metotrexate 20mg/sem"
+    ],
+    "family_history": "negado",
+    "social_history": "no fuma, no bebe, no usa drogas"
+  },
+  "history_present_illness": "El paciente se presenta con dolor intenso en la muñeca derecha y dedo pulgar durante las últimas 24 horas. El dolor es agudo, le duele al mover y al levantar los dedos. No ha tenido fiebre ni otros síntomas como malestar general, malestar estomacal o náuseas. El dolor comenzó repentinamente y no ha mejorado con el reposo o el uso de medicamentos locales.",
+  "symptoms_json": [
+    {
+      "name": "Dolor articular",
+      "duration": "24 horas",
+      "severity": "intenso"
+    },
+    {
+      "name": "Inflamación",
+      "duration": "24 horas",
+      "severity": "moderada"
+    }
+  ],
+  "expected_diagnosis_json": {
+    "primary": "Artritis Reumatoide Aguda",
+    "icd10": "M05.1",
+    "differential": [
+      "Artritis Psoriática",
+      "Osteoartritis Aguda",
+      "Septic Artritis"
+    ],
+    "justification": "El paciente presenta dolor intenso, inflamación y malestar articular, lo que sugiere una inflamación reumatoide. El historial médico incluye artritis reumatoide cronica, lo que aumenta el riesgo de una ataque agudo."
+  },
+  "expected_studies_json": [
+    {
+      "name": "Laboratorio completo",
+      "priority": "routine",
+      "expected_finding": "elevación de C-Reactivo Proteína (CRP) y Eritrocitosis"
+    },
+    {
+      "name": "ECG 12 derivaciones",
+      "priority": "urgent",
+      "expected_finding": "sin hallazgos"
+    },
+    {
+      "name": "Radiografia de muñeca",
+      "priority": "urgent",
+      "expected_finding": "sin hallazgos"
+    }
+  ],
+  "expected_treatments_json": [
+    {
+      "treatment": "Corticosteroides IV",
+      "priority": "immediate",
+      "evidence": "Class I - AHA/ACC 2022"
+    },
+    {
+      "treatment": "Anti inflamatorios no esteroideos (AINE) 400mg PO",
+      "priority": "immediate",
+      "evidence": "Class I"
+    },
+    {
+      "treatment": "Monofosfato hidroxiureado 1g PO",
+      "priority": "immediate",
+      "evidence": "Class I"
+    }
+  ],
+  "expected_followup": "El paciente debe ser evaluado nuevamente en 24 horas para evaluar la respuesta a la terapia y ajustar el tratamiento según sea necesario.",
+  "learning_objectives_json": [
+    "Identificar criterios diagnosticos de Artritis Reumatoide Aguda",
+    "Aplicar protocolo de manejo agudo de la artritis reumatoide",
+    "Reconocer complicaciones potenciales de la artritis reumatoide aguda"
+  ],
+  "teaching_points": "La artritis reumatoide aguda es una emergencia y requiere una terapia inmediata para prevenir la destrucción articular. El manejo inicial debe incluir corticosteroides y AINE."
+}

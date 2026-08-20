@@ -1,0 +1,103 @@
+{
+  "title": "Descompresión torácica de emergencia debido a una herida perforante abdominal",
+  "slug": "descompresion-toracica-emergencia-herida-perforante-abdominal",
+  "chief_complaint": "Dolor torácico intenso y dificultad respiratoria",
+  "specialty": "Anestesiologia",
+  "difficulty": "basic",
+  "setting": "emergency",
+  "patient_json": {
+    "name": "Juan Perez Garcia",
+    "age": 30,
+    "age_unit": "years",
+    "sex": "M",
+    "weight_kg": 80,
+    "height_cm": 180,
+    "occupation": "Trabajador de oficina",
+    "vitals_on_arrival": {
+      "hr": 120,
+      "sbp": 80,
+      "dbp": 60,
+      "rr": 20,
+      "spo2": 85,
+      "temp_c": 36.5
+    },
+    "past_medical_history": [
+      "hipertensión arterial"
+    ],
+    "allergies": "ninguna conocida",
+    "current_medications": [
+      "aceclofenac"
+    ],
+    "family_history": "negado",
+    "social_history": "no fuma, no bebe, no consume drogas"
+  },
+  "history_present_illness": "El paciente presentó súbitamente un dolor torácico intenso durante su trabajo. El dolor comenzó como un dolor estomacal pero se extendió rápidamente hacia la parte inferior del pecho y comenzó a sentirse como una presión. Algunas horas después, el paciente comenzó a tener dificultades respiratorias y comenzó a sudar intensamente. El dolor se intensificó con cada respiración. El paciente se presentó de inmediato en el hospital.",
+  "symptoms_json": [
+    {
+      "name": "Dolor torácico intenso",
+      "duration": "2 horas",
+      "severity": "muy severo"
+    },
+    {
+      "name": "Dificultad respiratoria",
+      "duration": "30 minutos",
+      "severity": "severa"
+    }
+  ],
+  "expected_diagnosis_json": {
+    "primary": "Herida perforante abdominal",
+    "icd10": "I35.91",
+    "differential": [
+      "Herida perforante intestinal",
+      "Herida perforante estómago",
+      "Herida perforante páncreas"
+    ],
+    "justification": "El paciente presenta signos de peritonitis abdominal (dolor torácico intenso, dificultad respiratoria) y la ausencia de signos de shock (spo2 bajo, presión arterial baja). El dolor estomacal no es común en la herida perforante páncreas."
+  },
+  "expected_studies_json": [
+    {
+      "name": "ECG 12 derivaciones",
+      "priority": "urgent",
+      "expected_finding": "sin datos de arritmia"
+    },
+    {
+      "name": "Imágen abdominal CT",
+      "priority": "urgent",
+      "expected_finding": "herida perforante en el intestino delgado"
+    },
+    {
+      "name": "Complejo de laboratorios (CBC, coagulación)",
+      "priority": "routine",
+      "expected_finding": "anemia, trombocitosis"
+    }
+  ],
+  "expected_treatments_json": [
+    {
+      "treatment": "Anestesia con sedación y neuromuscular bloqueo",
+      "priority": "immediate",
+      "evidence": "Clase III"
+    },
+    {
+      "treatment": "Descompresión torácica",
+      "priority": "immediate",
+      "evidence": "Clase III"
+    },
+    {
+      "treatment": "Intravenosa fluidos y colicos",
+      "priority": "urgent",
+      "evidence": "Clase IIa"
+    },
+    {
+      "treatment": "Antibióticos (cefixime)",
+      "priority": "urgent",
+      "evidence": "Clase IIa"
+    }
+  ],
+  "expected_followup": "El paciente debe ser trasladado a ICU y seguir un protocolo de seguimiento intensivo. El paciente debe ser evaluado para posibles complicaciones como infección, shock y fuga de abducens.",
+  "learning_objectives_json": [
+    "Identificar los signos y síntomas de una herida perforante abdominal",
+    "Aplicar el protocolo de descompresión torácica en pacientes con heridas perforantes",
+    "Reconocer las complicaciones potenciales de una herida perforante abdominal"
+  ],
+  "teaching_points": "En la anestesiología, es crucial identificar rápidamente los signos de una herida perforante abdominal y aplicar el protocolo de descompresión torácica de manera eficiente. También es importante estar preparado para las complicaciones posibles y seguir un protocolo de seguimiento intensivo."
+}

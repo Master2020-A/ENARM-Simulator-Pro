@@ -1,0 +1,112 @@
+﻿{
+  "id": 8,
+  "title": "Cetoacidosis Diabética en Debut de DM Tipo 1",
+  "specialty": "Endocrinología",
+  "difficulty": 2,
+  "chief_complaint": "Mi hijo lleva 3 días muy mal, no come y respira raro",
+  "patient": {
+    "age": 19,
+    "sex": "M",
+    "weight_kg": 65,
+    "height_cm": 178,
+    "occupation": "Estudiante universitario",
+    "relevant_history": [
+      "Sin enfermedades crónicas previas conocidas",
+      "Pérdida de peso de 8 kg en último mes",
+      "Poliuria y polidipsia de 3 semanas",
+      "Sin medicamentos previos",
+      "Sin familiares con DM tipo 1 conocidos"
+    ]
+  },
+  "vitals_on_arrival": {
+    "systolic_bp": 104,
+    "diastolic_bp": 68,
+    "heart_rate": 116,
+    "respiratory_rate": 30,
+    "temperature_c": 37.2,
+    "spo2_percent": 98,
+    "weight_kg": 65
+  },
+  "history_of_present_illness": "Masculino de 19 años sin antecedentes, traído por su madre por 3 días de náusea, vómito en múltiples ocasiones, dolor abdominal difuso, debilidad intensa y confusión progresiva. La madre nota que respira 'muy profundo y rápido'. Refiere que en las últimas 3 semanas el paciente tomaba mucha agua, orinaba constantemente y bajó de peso. Sin traumatismo, sin fiebre.",
+  "physical_exam": {
+    "general": "Masculino joven, delgado, con aspecto de deshidratación severa. Somnoliento pero despertable. Aliento con olor a fruta (acetona).",
+    "cardiovascular": "Taquicardia 116 lpm. Hipotensión leve. Pulsos débiles. Mucosas secas.",
+    "respiratory": "Respiración de Kussmaul (profunda y rápida, FR 30). SpO2 98%.",
+    "abdomen": "Distendido, dolor difuso a la palpación sin peritonismo. Ruidos intestinales disminuidos.",
+    "neurological": "Somnoliento. GCS 13 (O3V4M6). Sin focalización.",
+    "extremities": "Turgencia cutánea disminuida. Sin edema. Llenado capilar 3 segundos."
+  },
+  "key_labs": {
+    "glucosa_capilar": "524 mg/dL",
+    "glucosa_venosa": "518 mg/dL",
+    "gasometria_venosa": "pH 7.18, HCO3 8 mEq/L, PCO2 22 mmHg",
+    "cetonas_orina": "4+ (strongly positive)",
+    "beta_hidroxibutirato": "6.2 mmol/L (normal <0.6)",
+    "sodio": "132 mEq/L (corregido: 132 + 1.6 x (518-100)/100 = 138.7)",
+    "potasio": "5.8 mEq/L (falsamente elevado, deplección real)",
+    "cloro": "98 mEq/L",
+    "BUN": "28 mg/dL",
+    "creatinina": "1.4 mg/dL",
+    "anion_gap": "26 mEq/L (Na - Cl - HCO3 = 132-98-8 = 26, elevado)",
+    "osmolalidad_efectiva": "320 mOsm/kg",
+    "HbA1c": "13.8%",
+    "insulina_basal": "2 mU/L (muy baja)",
+    "peptido_C": "0.1 ng/mL (muy bajo, confirma DM tipo 1)",
+    "anticuerpos_anti_GAD": "Positivos",
+    "ECG": "Taquicardia sinusal. Sin cambios por hiperpotasemia"
+  },
+  "key_imaging": [
+    "RX tórax: Sin infiltrados. Sin cardiomegalia. Normal.",
+    "USG abdominal: Sin alteraciones agudas. Normal."
+  ],
+  "correct_diagnosis": "Cetoacidosis Diabética severa (pH <7.2, HCO3 <10, glucosa >500) como debut de Diabetes Mellitus tipo 1",
+  "differential_diagnosis": [
+    "Estado hiperosmolar hiperglucémico (glucosa >600, osmolalidad >320, SIN cetosis significativa)",
+    "Acidosis láctica (sin causa de hipoperfusión, cetonas elevadas en este caso)",
+    "Intoxicación por salicilatos (historia negativa)",
+    "Acidosis urémica (creatinina no tan elevada)"
+  ],
+  "treatment_plan": [
+    "FASE 1 - Reanimación (0-1h):",
+    "  - SF 0.9% 1000 mL en 1 hora (15-20 mL/kg)",
+    "  - NO iniciar insulina hasta K+ >3.5 mEq/L",
+    "  - Si K+ <3.5: reemplazar potasio antes de insulina",
+    "FASE 2 - Insulina (cuando K+ >3.5):",
+    "  - Insulina regular en infusión: 0.1 U/kg/h (NO bolo inicial en CAD)",
+    "  - Meta: reducir glucosa 50-70 mg/dL/hora",
+    "FASE 3 - Reposición de líquidos:",
+    "  - SF 0.9% o 0.45% según sodio corregido: 250-500 mL/h",
+    "  - Cuando glucosa <200: cambiar a Dextrosa 5% + SF 0.45% + insulina",
+    "FASE 4 - Potasio:",
+    "  - Agregar 20-40 mEq/L de KCl a sueros (meta K+ 4.0-5.0)",
+    "  - Monitorizar ECG si K+ <3 o >6",
+    "FASE 5 - Bicarbonato:",
+    "  - SOLO si pH <6.9 (este caso pH 7.18: NO administrar bicarbonato)",
+    "Monitorización:",
+    "  - Glucemia capilar c/1h",
+    "  - Gasometría c/2-4h",
+    "  - Electrolitos c/2-4h",
+    "  - Balance hídrico estricto",
+    "Criterios de resolución de CAD:",
+    "  - Glucosa <200 + HCO3 ≥15 + pH >7.3 + anion gap normal",
+    "Transición a insulina SC:",
+    "  - Iniciar insulina basal 30-60 min ANTES de suspender infusión",
+    "Educación diabetológica y seguimiento con endocrinología"
+  ],
+  "scoring_rubric": {
+    "anamnesis": 0.20,
+    "physical_exam": 0.15,
+    "diagnosis": 0.35,
+    "treatment": 0.30
+  },
+  "learning_objectives": [
+    "Diagnosticar CAD con triada: hiperglucemia + cetonemia + acidosis metabólica AG elevado",
+    "Calcular anión gap y sodio corregido en CAD",
+    "Iniciar secuencia correcta: fluidos → corregir K+ → insulina",
+    "Conocer cuándo NO usar bicarbonato en CAD",
+    "Distinguir CAD de estado hiperosmolar hiperglucémico"
+  ],
+  "guideline_ids": [9, 10],
+  "tags": ["CAD", "cetoacidosis", "diabetes_tipo1", "endocrinologia", "Kussmaul", "anion_gap"],
+  "enarm_topics": ["Cetoacidosis diabética", "Trastornos ácido-base", "Diabetes mellitus"]
+}

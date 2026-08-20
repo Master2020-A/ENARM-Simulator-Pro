@@ -1,0 +1,78 @@
+﻿{
+  "id": "case_004",
+  "version": "1.0",
+  "specialty": "NEUMOLOGIA",
+  "complexity": "INTERMEDIO",
+  "setting": "emergency",
+  "title": "Neumonia adquirida en la comunidad en varon de 74 anos con EPOC",
+  "patient": {
+    "name": "Ernesto Vazquez Morales",
+    "age": 74,
+    "age_unit": "years",
+    "sex": "M",
+    "weight_kg": 68,
+    "height_cm": 170
+  },
+  "chief_complaint": "Tos con expectoracion amarillenta y dificultad para respirar de 4 dias",
+  "history": {
+    "present_illness": "Paciente masculino de 74 anos con EPOC conocido GOLD C, que inicia hace 4 dias con incremento de tos habitual, expectoracion que cambia de blanquecina a amarillo-verdosa abundante, fiebre no cuantificada y disnea progresiva hasta hacerse de reposo en las ultimas 24h. Refiere dolor toracico tipo pleuritico en hemitorax derecho.",
+    "past_medical": "EPOC diagnosticado hace 15 anos, tabaquismo activo (40 paquetes/ano), HAS controlada con losartan, exacerbaciones previas 2 en el ultimo ano.",
+    "allergies": "Ninguna conocida",
+    "medications": "Tiotropio 18mcg/dia, salbutamol PRN, losartan 50mg/dia",
+    "family": "Padre fallecido por cancer pulmonar",
+    "social": "Tabaquismo activo 20 cig/dia desde los 18 anos, exposicion a humo de lena en la infancia, vive solo"
+  },
+  "vitals_initial": {
+    "hr": 108,
+    "bp_sys": 135,
+    "bp_dia": 82,
+    "spo2": 88,
+    "rr": 28,
+    "temp": 38.6
+  },
+  "physical_exam": {
+    "general": "Paciente consciente, taquipneico, con uso de musculos accesorios, cianosis peribucal leve",
+    "head_neck": "Mucosas secas, ingurgitacion yugular leve",
+    "cardio": "Ruidos cardiacos ritmicos, taquicardicos, sin soplos",
+    "resp": "Sindrome de condensacion en base pulmonar derecha con estertores crepitantes, disminucion del murmullo vesicular, sibilancias espiratorias difusas bilaterales",
+    "abdomen": "Blando, depresible, no doloroso",
+    "neuro": "Alerta, orientado en tiempo, espacio y persona"
+  },
+  "correct_diagnosis": {
+    "primary": "Neumonia adquirida en la comunidad grave sobre EPOC exacerbado",
+    "icd10": "J18.9",
+    "differentials": ["Exacerbacion de EPOC no infecciosa", "Tromboembolia pulmonar", "Insuficiencia cardiaca descompensada"]
+  },
+  "correct_treatment": {
+    "immediate": [
+      "Oxigeno suplementario por puntas nasales 2-3 L/min para SpO2 88-92% (paciente EPOC)",
+      "Acceso venoso periferico",
+      "Monitorizacion continua",
+      "Posicion semi-Fowler"
+    ],
+    "medications": [
+      "Ceftriaxona 1g IV cada 24h + Azitromicina 500mg IV cada 24h",
+      "Salbutamol + ipratropio nebulizado cada 6h",
+      "Metilprednisolona 40mg IV cada 8h por 5 dias",
+      "Hidratacion IV con solucion fisiologica"
+    ],
+    "admission": "Hospitalizacion en piso de medicina interna. CURB-65: 2 puntos. Considerar UCI si deterioro."
+  },
+  "expected_studies": [
+    "Radiografia de torax PA y lateral",
+    "Biometria hematica completa",
+    "Quimica sanguinea con PCR y procalcitonina",
+    "Gasometria arterial",
+    "Cultivo de expectoracion y hemocultivos",
+    "Panel viral respiratorio",
+    "Electrocardiograma"
+  ],
+  "gpc_references": ["IMSS-234-09", "IMSS-037-08"],
+  "learning_objectives": [
+    "Aplicar score CURB-65 para clasificar gravedad",
+    "Reconocer neumonia sobre EPOC como entidad de alto riesgo",
+    "Usar oxigenoterapia controlada en paciente EPOC (evitar hiperoxia)",
+    "Seleccionar antibioticoterapia empirica segun guias"
+  ],
+  "ai_prompt_context": "Eres Ernesto Vazquez Morales, hombre de 74 anos con EPOC. Estas en urgencias porque llevas 4 dias con tos con flemas amarillas y verdes, ahora te falta mucho el aire y tienes fiebre. Sientes dolor en el lado derecho del pecho al respirar. Eres fumador desde joven. Responde en primera persona, espanol coloquial mexicano, con voz cansada por la falta de aire. Frases cortas (2-3 oraciones max). NO uses terminos medicos. Si el doctor no pregunta algo especifico, no lo menciones."
+}

@@ -1,0 +1,109 @@
+{
+  "title": "Caso de paciente con dolor abdominal crónico",
+  "slug": "caso-dolor-abdominal-cronico",
+  "chief_complaint": "Dolor abdominal crónico desde hace 2 meses",
+  "specialty": "MedicinaFamiliar",
+  "difficulty": "basic",
+  "setting": "outpatient",
+  "patient_json": {
+    "name": "Juan Perez Garcia",
+    "age": 45,
+    "age_unit": "years",
+    "sex": "M",
+    "weight_kg": 70,
+    "height_cm": 170,
+    "occupation": "Ingeniero Civil",
+    "vitals_on_arrival": {
+      "hr": 78,
+      "sbp": 122,
+      "dbp": 80,
+      "rr": 18,
+      "spo2": 99,
+      "temp_c": 36.7
+    },
+    "past_medical_history": [
+      "hipertension arterial",
+      "sinusitis recurrente"
+    ],
+    "allergies": "ninguna conocida",
+    "current_medications": [
+      "aceite de manzanilla"
+    ],
+    "family_history": "ninguno relevante",
+    "social_history": "no tabaquismo, no alcohol, no drogas"
+  },
+  "history_present_illness": "El paciente se queja de dolor abdominal crónico desde hace 2 meses. El dolor es episódico, se siente más fuerte por la mañana y mejora a medida que avanza el día. El dolor es cíclico y se asocia con el desayuno. Ha notado que el dolor es más intenso después de comer alimentos grasos o pesados. Además, ha experimentado náuseas y vómitos ocasionalmente. No ha notado fiebre, diarrea, sangrado rectal ni pérdida de apetito. El dolor no se ha aliviado con los medicamentos de venta libre que ha tomado.",
+  "symptoms_json": [
+    {
+      "name": "dolor abdominal",
+      "duration": "2 meses",
+      "severity": "moderado"
+    },
+    {
+      "name": "náuseas",
+      "duration": "2 meses",
+      "severity": "leve"
+    },
+    {
+      "name": "vómitos",
+      "duration": "2 meses",
+      "severity": "leve"
+    }
+  ],
+  "expected_diagnosis_json": {
+    "primary": "Colitis ulcerosa",
+    "icd10": "K20.00",
+    "differential": [
+      "Colecistitis",
+      "Enfermedad celiac",
+      "Pancreatitis"
+    ],
+    "justification": "El dolor abdominal crónico, la náusea y los vómitos, junto con la asociación con alimentos grasos, sugieren la posibilidad de colitis ulcerosa."
+  },
+  "expected_studies_json": [
+    {
+      "name": "CCT abdo",
+      "priority": "urgent",
+      "expected_finding": "edemas y ulceraciones en el intestino delgado"
+    },
+    {
+      "name": "Colonoscopy",
+      "priority": "urgent",
+      "expected_finding": "edemas y ulceraciones en el intestino delgado"
+    },
+    {
+      "name": "Laboratorio de sangre",
+      "priority": "routine",
+      "expected_finding": "anemia microcytica"
+    }
+  ],
+  "expected_treatments_json": [
+    {
+      "treatment": "Antíbióticos (amoxiciclina)",
+      "priority": "immediate",
+      "evidence": "Class II - AHA/ACC 2022"
+    },
+    {
+      "treatment": "Corticosteroides (prednisolona)",
+      "priority": "immediate",
+      "evidence": "Class II"
+    },
+    {
+      "treatment": "Antagonista del H2 receptor (ranitidina)",
+      "priority": "routine",
+      "evidence": "Class I"
+    },
+    {
+      "treatment": "Dietética especial",
+      "priority": "routine",
+      "evidence": "Class I"
+    }
+  ],
+  "expected_followup": "El paciente debe seguir el protocolo de tratamiento y ser evaluado en 1 mes para verificar la respuesta al tratamiento. Se debe realizar un colonoscopy en 3 meses para asegurar la curación.",
+  "learning_objectives_json": [
+    "Identificar criterios diagnosticos de colitis ulcerosa",
+    "Aplicar protocolo de tratamiento de colitis ulcerosa",
+    "Reconocer complicaciones de colitis ulcerosa"
+  ],
+  "teaching_points": "La colitis ulcerosa es una enfermedad crónica que requiere un tratamiento adecuado y seguimiento regular. El diagnóstico se basa en la historia clínica, el examen físico y los estudios de imagen y laboratorio. El tratamiento incluye antibióticos, corticosteroides y dietética especial."
+}

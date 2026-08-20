@@ -1,0 +1,103 @@
+{
+  "title": "Caso de paciente con dolor abdominal y fatiga",
+  "slug": "caso-paciente-con-dolor-abdominal-y-fatiga",
+  "chief_complaint": "Dolor abdominal y fatiga por 2 semanas",
+  "specialty": "Oncologia",
+  "difficulty": "basic",
+  "setting": "outpatient",
+  "patient_json": {
+    "name": "Juan Perez Garcia",
+    "age": 55,
+    "age_unit": "years",
+    "sex": "M",
+    "weight_kg": 75,
+    "height_cm": 175,
+    "occupation": "Licenciado en Ciencias",
+    "vitals_on_arrival": {
+      "hr": 78,
+      "sbp": 125,
+      "dbp": 80,
+      "rr": 16,
+      "spo2": 99,
+      "temp_c": 36.9
+    },
+    "past_medical_history": [
+      "Hepatitis B crónica"
+    ],
+    "allergies": "ninguna conocida",
+    "current_medications": [
+      "Acetaminofén"
+    ],
+    "family_history": "ninguna relevante",
+    "social_history": "No fuma, no bebe, no consume drogas"
+  },
+  "history_present_illness": "El paciente ha estado experimentando dolor abdominal crónico en la zona epigástrica por 2 semanas, que se ha vuelto más intenso en las últimas 3 días. El dolor es desafiante, de caracter de espasmos y esfuerzo gastrointestinal. Acompaña el dolor una fatiga significativa, pérdida de apetito y pérdida de peso de 5 kg en los últimos 2 meses. No ha notado melena ni sangrado gastrointestinal. No ha tenido fiebre ni malestar gastrointestinal en los días recientes.",
+  "symptoms_json": [
+    {
+      "name": "Dolor abdominal",
+      "duration": "2 semanas",
+      "severity": "moderada"
+    },
+    {
+      "name": "Fatiga",
+      "duration": "2 semanas",
+      "severity": "leve"
+    },
+    {
+      "name": "Pérdida de apetito",
+      "duration": "2 semanas",
+      "severity": "moderada"
+    },
+    {
+      "name": "Pérdida de peso",
+      "duration": "2 meses",
+      "severity": "moderada"
+    }
+  ],
+  "expected_diagnosis_json": {
+    "primary": "Carcinoma de cólon",
+    "icd10": "C10",
+    "differential": [
+      "Carcinoma de estómago",
+      "Carcinoma rectal",
+      "Enfermedad inflamatoria del intestino grueso"
+    ],
+    "justification": "El dolor abdominal crónico, la fatiga y la pérdida de apetito son signos tipicos del cáncer de cólon. El historial de hepatitis B crónica también sugiere un riesgo mayor de cáncer gastrointestinal."
+  },
+  "expected_studies_json": [
+    {
+      "name": "Colonoscopia",
+      "priority": "urgent",
+      "expected_finding": "Polipos adenofístatos o tumor"
+    },
+    {
+      "name": "Imaging abdominal con contraste",
+      "priority": "urgent",
+      "expected_finding": "Sin evidencia de metástasis"
+    },
+    {
+      "name": "Pruebas de sangre",
+      "priority": "routine",
+      "expected_finding": "Sin anemias ni anemias inflamatorias"
+    }
+  ],
+  "expected_treatments_json": [
+    {
+      "treatment": "Anticoagulación oral (Aspirina 300mg VO)",
+      "priority": "immediate",
+      "evidence": "Prevenir trombosis venosa profunda"
+    },
+    {
+      "treatment": "Referencia a oncología para diagnóstico definitivo y tratamiento",
+      "priority": "immediate",
+      "evidence": "Class I"
+    }
+  ],
+  "expected_followup": "El paciente debe seguir los protocolos de seguimiento recomendados por la oncología para el seguimiento de cáncer gastrointestinal.",
+  "learning_objectives_json": [
+    "Identificar los signos y síntomas del cáncer de cólon",
+    "Aplicar la protocolo de colonoscopia en pacientes con sospecha de cáncer gastrointestinal",
+    "Reconocer el papel de la anticoagulación en pacientes con cáncer gastrointestinal"
+  ],
+  "teaching_points": "El cáncer de cólon es el cáncer más común en México. El dolor abdominal crónico y la pérdida de apetito son signos tipicos que deben ser sospechosos de cáncer gastrointestinal. El colonoscopia es la prueba de diagnóstico definitivo para este cáncer. La anticoagulación es crucial para prevenir complicaciones trombóticas en pacientes con cáncer gastrointestinal."
+}

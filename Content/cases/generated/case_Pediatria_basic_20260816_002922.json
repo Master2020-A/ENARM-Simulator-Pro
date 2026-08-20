@@ -1,0 +1,103 @@
+{
+    "title":  "Resfriado común en niña de 2 años",
+    "slug":  "resfriado-comun-niña-2-anos",
+    "chief_complaint":  "Nina de 2 años que ha estado con fiebre, tos y picazón en los ojos durante las últimas 3 días.",
+    "specialty":  "Pediatria",
+    "difficulty":  "basic",
+    "setting":  "outpatient",
+    "patient_json":  {
+                         "name":  "Juanita Perez Garcia",
+                         "age":  2,
+                         "age_unit":  "years",
+                         "sex":  "F",
+                         "weight_kg":  10,
+                         "height_cm":  90,
+                         "occupation":  "Madre",
+                         "vitals_on_arrival":  {
+                                                   "hr":  88,
+                                                   "sbp":  120,
+                                                   "dbp":  80,
+                                                   "rr":  20,
+                                                   "spo2":  95,
+                                                   "temp_c":  39.0
+                                               },
+                         "past_medical_history":  [
+
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+
+                                                 ],
+                         "family_history":  "negado",
+                         "social_history":  "ninguna"
+                     },
+    "history_present_illness":  "La niña ha estado con fiebre alta (hasta 40°C), tos seca, picazón intenso en los ojos, dolor de cabeza leve y malestar general. No ha tenido náuseas, vómitos ni dificultad para comer o beber. La fiebre comenzó hace 3 días y la tos y picazón en los ojos han sido constantes durante las últimas 2 días.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Fiebre alta",
+                              "duration":  "3 dias",
+                              "severity":  "severa"
+                          },
+                          {
+                              "name":  "Tos seca",
+                              "duration":  "2 dias",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Picazón en los ojos",
+                              "duration":  "2 dias",
+                              "severity":  "severa"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Resfriado común",
+                                    "icd10":  "R07.00",
+                                    "differential":  [
+                                                         "Afebril",
+                                                         "Conjuntivitis",
+                                                         "Sinusitis"
+                                                     ],
+                                    "justification":  "La niña presenta fiebre alta, tos y picazón en los ojos, lo que es compatible con un resfriado común en niños. La fiebre alta es la característica más importante que nos lleva a este diagnostico."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "Examen ocular",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Inflamación de los ojos"
+                                  },
+                                  {
+                                      "name":  "Escanio de tórax",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin evidencia de infección pulmonar"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Ibuprofeno 10 mg/kg por vía oral",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Paracetamol 15 mg/kg por vía oral",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Antibióticos por 5 días si persiste la fiebre",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class III"
+                                     },
+                                     {
+                                         "treatment":  "Irrigación de los ojos con agua tibia",
+                                         "priority":  "routine",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "Seguimiento en 2 días para evaluar la evolución de la fiebre y los síntomas. Se recomienda controlar la fiebre y mantener el niño hidratado.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnosticos de resfriado común",
+                                     "Aplicar protocolo de manejo de fiebre en niños",
+                                     "Reconocer indicaciones de antibióticos en resfriados"
+                                 ],
+    "teaching_points":  "El resfriado común es una infección viral común en niños, que se caracteriza por fiebre alta y tos. Es importante diferenciarlo de otras infecciones más graves como el afebril o la conjuntivitis. La gestión del resfriado común incluye el manejo de la fiebre y la hidratación, y en algunos casos, el uso de antibióticos."
+}

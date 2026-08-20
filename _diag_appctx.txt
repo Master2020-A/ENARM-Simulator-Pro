@@ -1,0 +1,133 @@
+﻿==== Campos m_context.<campo> ====
+  activeCase                     usos: 2
+  caseRepo                       usos: 3
+  casesList                      usos: 1
+  chatMessages                   usos: 1
+  db                             usos: 4
+  dbConnected                    usos: 4
+  mcqRepo                        usos: 2
+  NavigateTo                     usos: 2
+  ollama                         usos: 3
+  ollamaConnected                usos: 5
+  RefreshCasesList               usos: 1
+  router                         usos: 1
+  sessionRepo                    usos: 1
+  showAboutWindow                usos: 3
+  showDemoWindow                 usos: 1
+  statusMessage                  usos: 2
+  totalCases                     usos: 2
+  totalMcqs                      usos: 2
+  view                           usos: 9
+
+==== Primera aparicion de cada campo (con contexto) ====
+  view                       L208: m_context.view = AppView::Loading;
+  statusMessage              L209: m_context.statusMessage = "Iniciando ENARM Simulator...";
+  db                         L221: m_context.db = dbRes.Value();
+  dbConnected                L222: m_context.dbConnected = true;
+  caseRepo                   L223: m_context.caseRepo = std::make_unique<Data::CaseRepository>(m_context.db);
+  sessionRepo                L224: m_context.sessionRepo = std::make_unique<Data::SessionRepository>(m_context.db);
+  mcqRepo                    L225: m_context.mcqRepo = std::make_unique<Data::MCQRepository>(m_context.db);
+  totalCases                 L226: m_context.totalCases = m_context.caseRepo->Count();
+  totalMcqs                  L227: m_context.totalMcqs  = m_context.mcqRepo->Count();
+  ollama                     L233: m_context.ollama = std::make_shared<AI::OllamaClient>(oCfg);
+  ollamaConnected            L234: m_context.ollamaConnected = m_context.ollama->IsAvailable();
+  router                     L236: m_context.router = std::make_shared<AI::LLMRouter>(m_context.ollama);
+  casesList                  L547: if (m_context.casesList.empty() && m_context.caseRepo) {
+  RefreshCasesList           L548: m_context.RefreshCasesList();
+  activeCase                 L564: ImGui::Text("Paciente: %s", m_context.activeCase ? m_context.activeCase->title.c_str() : "N/A");
+  chatMessages               L565: ImGui::Text("Chat: %zu mensajes", m_context.chatMessages.size());
+  showAboutWindow            L580: if (m_context.showAboutWindow) {
+  NavigateTo                 L596: if (ImGui::MenuItem("Dashboard", "Ctrl+H")) m_context.NavigateTo(AppView::Dashboard);
+  showDemoWindow             L603: ImGui::MenuItem("Ventana ImGui Demo", nullptr, &m_context.showDemoWindow);
+
+==== activeCase-> ====
+  activeCase->title
+
+==== chatMessages usos ====
+  L565: ImGui::Text("Chat: %zu mensajes", m_context.chatMessages.size());
+
+==== activeCase usos ====
+  L564: ImGui::Text("Paciente: %s", m_context.activeCase ? m_context.activeCase->title.c_str() : "N/A");
+
+==== m_impl-> usos ====
+  m_impl->CleanupDeviceD3D
+  m_impl->CreateDeviceD3D
+  m_impl->d3dContext
+  m_impl->d3dDevice
+  m_impl->fontHuge
+  m_impl->fontLarge
+  m_impl->fontMedium
+  m_impl->fontRegular
+  m_impl->fontSmall
+  m_impl->hwnd
+  m_impl->renderTarget
+  m_impl->swapChain
+  m_impl->wc
+
+==== Bloque L540-L580 (donde esta el placeholder) ====
+L540:             else if (m_context.view == AppView::CasesList) {
+L541:                 if (ImGui::Button("< Volver al Dashboard", ImVec2(250, 40))) {
+L542:                     m_context.view = AppView::Dashboard;
+L543:                 }
+L544:                 ImGui::Dummy(ImVec2(0, 20));
+L545: 
+L546:                 // Cargar casos si la lista esta vacia
+L547:                     if (m_context.casesList.empty() && m_context.caseRepo) {
+L548:                         m_context.RefreshCasesList();
+L549:                     }
+L550:                      
+L551:                 Views::CasesListView::Render(m_context,
+L552:                     m_impl->fontHuge, m_impl->fontLarge,
+L553:                     m_impl->fontMedium, m_impl->fontRegular, m_impl->fontSmall);
+L554:             }
+L555:             else if (m_context.view == AppView::PatientSession) {
+L556:                 if (ImGui::Button("< Volver a Casos", ImVec2(250, 40))) {
+L557:                     m_context.view = AppView::CasesList;
+L558:                 }
+L559:                 ImGui::Dummy(ImVec2(0, 20));
+L560:                 if (m_impl->fontLarge) ImGui::PushFont(m_impl->fontLarge);
+L561:                 ImGui::Text("Sesion clinica activa");
+L562:                 if (m_impl->fontLarge) ImGui::PopFont();
+L563:                 if (m_impl->fontRegular) ImGui::PushFont(m_impl->fontRegular);
+L564:                 ImGui::Text("Paciente: %s", m_context.activeCase ? m_context.activeCase->title.c_str() : "N/A");
+L565:                 ImGui::Text("Chat: %zu mensajes", m_context.chatMessages.size());
+L566:                 ImGui::Text("(Vista PatientSessionView en desarrollo)");
+L567:                 if (m_impl->fontRegular) ImGui::PopFont();
+L568:             }
+L569:             else {
+L570:                 RenderDashboardView(m_context, m_impl.get());
+L571:             }
+L572: 
+L573:             ImGui::End();
+L574:             ImGui::PopStyleColor();
+L575:             ImGui::PopStyleVar(2);
+L576:         }
+L577: 
+L578:         RenderStatusBar();
+L579: 
+L580:         if (m_context.showAboutWindow) {
+
+==== TODOS los #include ====
+  #include <windows.h>
+  #include <d3d11.h>
+  #include <tchar.h>
+  #include <shlobj.h>
+  #include <imgui.h>
+  #include <imgui_impl_win32.h>
+  #include <imgui_impl_dx11.h>
+  #include <implot.h>
+  #include "ENARM/GUI/Application.h"
+  #include "ENARM/GUI/Theme.h"
+  #include "ENARM/Common/Logger.h"
+  #include "ENARM/GUI/Views/CasesListView.h"
+  #include <sstream>
+  #include <cstring>
+  #include <string>
+
+==== RenderPlaceholderPanels definicion ====
+  L520: if (m_context.view == AppView::Loading) {
+  L537: if (m_context.view == AppView::Dashboard) {
+  L540: else if (m_context.view == AppView::CasesList) {
+  L555: else if (m_context.view == AppView::PatientSession) {
+  L615: void Application::RenderPlaceholderPanels() {}
+

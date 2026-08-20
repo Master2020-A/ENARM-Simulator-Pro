@@ -1,0 +1,112 @@
+{
+    "title":  "Caso de Infarto Agudo del Miocardio (IAM)",
+    "slug":  "caso-infarto-agudo-del-miocardio",
+    "chief_complaint":  "Dolor torácico agudo de repente, irradiado al pecho izquierdo y espalda.",
+    "specialty":  "Cardiologia",
+    "difficulty":  "basic",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  55,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  80,
+                         "height_cm":  180,
+                         "occupation":  "Ingeniero",
+                         "vitals_on_arrival":  {
+                                                   "hr":  100,
+                                                   "sbp":  160,
+                                                   "dbp":  100,
+                                                   "rr":  18,
+                                                   "spo2":  95,
+                                                   "temp_c":  37.0
+                                               },
+                         "past_medical_history":  [
+                                                      "Diabetes tipo 2",
+                                                      "Hipertensión arterial",
+                                                      "Fumador"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Glipizida",
+                                                     "Atenolol",
+                                                     "Aspirina"
+                                                 ],
+                         "family_history":  "Negado",
+                         "social_history":  "Fumador de 20 años, alcohol moderado"
+                     },
+    "history_present_illness":  "El paciente presentó un dolor torácico agudo de repente, empezó en el pecho y se extendió al pecho izquierdo y la espalda. El dolor comenzó hace 2 horas. El paciente tuvo dificultad para respirar, sudoración profusa y malestar general. No ha vomitado ni urinó. El dolor no se alivió con el náusea y el sudor.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Dolor torácico",
+                              "duration":  "2 horas",
+                              "severity":  "intenso"
+                          },
+                          {
+                              "name":  "Dificultad para respirar",
+                              "duration":  "1 hora",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Sudoración profusa",
+                              "duration":  "2 horas",
+                              "severity":  "leve"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Infarto Agudo del Miocardio (IAM)",
+                                    "icd10":  "I21.0",
+                                    "differential":  [
+                                                         "Dolor torácico no cardíaco",
+                                                         "Estatus hemorrágico",
+                                                         "Angina pectoral"
+                                                     ],
+                                    "justification":  "Basado en el dolor torácico agudo, la historia de fumador, diabetes y hipertensión arterial, junto con la ausencia de otros signos de causa no cardíaca."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "elevación ST V1-V3"
+                                  },
+                                  {
+                                      "name":  "Troponinas seriadas",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "elevadas"
+                                  },
+                                  {
+                                      "name":  "Radiografía de torax",
+                                      "priority":  "routine",
+                                      "expected_finding":  "sin datos de congestión"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Aspirina 300mg VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Clopidogrel 600mg carga VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Enoxaparina 1mg/kg SC c/12h",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Angioplastia primaria en \u003c90 min",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente será evaluado nuevamente en el hospital después de la estabilidad del dolor, con un seguimiento de ECG, troponinas y estudios de función cardíaca. El paciente seguirá un plan de tratamiento incluyendo medicamentos, dieta y estilo de vida.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnosticos de Infarto Agudo del Miocardio",
+                                     "Aplicar protocolo de maniobra de emergencia en IAM",
+                                     "Reconocer complicaciones potenciales de IAM"
+                                 ],
+    "teaching_points":  "Los signos vitales clave en IAM son el dolor torácico agudo, la presencia de elevación ST en ECG y la elevación de troponinas. Es crucial realizar un ECG y tomar medidas de estabilización inmediata para mejorar la supervivencia del paciente."
+}

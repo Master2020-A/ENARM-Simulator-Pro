@@ -1,0 +1,98 @@
+{
+    "title":  "Epilepsia focal",
+    "slug":  "epilepsia-focal",
+    "chief_complaint":  "Dolor de cabeza y mareos",
+    "specialty":  "Neurologia",
+    "difficulty":  "basic",
+    "setting":  "outpatient",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  28,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  70,
+                         "height_cm":  175,
+                         "occupation":  "Estudiante universitario",
+                         "vitals_on_arrival":  {
+                                                   "hr":  88,
+                                                   "sbp":  125,
+                                                   "dbp":  82,
+                                                   "rr":  16,
+                                                   "spo2":  99,
+                                                   "temp_c":  36.5
+                                               },
+                         "past_medical_history":  [
+                                                      "hipertension arterial",
+                                                      "asma"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "aceprometazina"
+                                                 ],
+                         "family_history":  "negado",
+                         "social_history":  "no tabaquismo, alcohol moderado, sin consumo de drogas"
+                     },
+    "history_present_illness":  "El paciente se presentó hoy por dolor de cabeza de tipo estremecedor que comenzó hace 2 horas. Al inicio, sintió mareos fuertes y luego comenzó a tener convulsiones de corta duración y frecuencia. Los episodios duraron unos minutos. El dolor de cabeza es de intensidad 8/10 y se acompaña de sudoración, náuseas y vómitos. El paciente no ha estado consiente entre los episodios.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Dolor de cabeza",
+                              "duration":  "2 horas",
+                              "severity":  "grave"
+                          },
+                          {
+                              "name":  "Mareos",
+                              "duration":  "2 horas",
+                              "severity":  "grave"
+                          },
+                          {
+                              "name":  "Convulsiones",
+                              "duration":  "1 minuto cada 2 horas",
+                              "severity":  "grave"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Epilepsia focal",
+                                    "icd10":  "G40.0",
+                                    "differential":  [
+                                                         "Epilepsia generalizada",
+                                                         " Migraña"
+                                                     ],
+                                    "justification":  "El paciente presenta episodios de convulsiones y dolor de cabeza, lo que sugiere un episodio de epilepsia focal. La ausencia de convulsiones prolongadas y la ausencia de alteración del estado consciencia lo diferencia de una epilepsia generalizada. El dolor de cabeza de tipo estremecedor y los mareos también son comunes en la epilepsia focal."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "Electroencefalograma (EEG)",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "actividad focal izquierda"
+                                  },
+                                  {
+                                      "name":  "Imaging cerebral",
+                                      "priority":  "routine",
+                                      "expected_finding":  "sin anomalías visibles"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Acetazolamida 250mg VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Sedación con lorazepam 2mg IV",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Seguimiento de EEG",
+                                         "priority":  "routine",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente debe seguir con un neurologista para el seguimiento del EEG y la evaluación de la necesidad de terapia farmacológica. Se recomienda un seguimiento cada 3 meses.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnosticos de epilepsia focal",
+                                     "Aplicar protocolo de sedación en pacientes con ataques de epilepsia",
+                                     "Reconocer la importancia del seguimiento en pacientes con epilepsia"
+                                 ],
+    "teaching_points":  "La epilepsia focal es un tipo común de epilepsia que requiere un diagnóstico preciso y un tratamiento adecuado. El EEG es el estudio de elección para el diagnóstico de la epilepsia focal. La sedación puede ser necesaria en pacientes con ataques de epilepsia. El seguimiento es crucial para la gestión de la epilepsia."
+}

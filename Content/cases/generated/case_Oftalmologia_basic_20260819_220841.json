@@ -1,0 +1,105 @@
+{
+  "title": "Paciente con dolor ocular y visión borrosa",
+  "slug": "dolor-ocular-visión-borrosa",
+  "chief_complaint": "Dolor ocular intenso y visión borrosa en ambas ojos durante las últimas 24 horas.",
+  "specialty": "Oftalmología",
+  "difficulty": "basic",
+  "setting": "outpatient",
+  "patient_json": {
+    "name": "Juan Perez Garcia",
+    "age": 50,
+    "age_unit": "years",
+    "sex": "M",
+    "weight_kg": 80,
+    "height_cm": 175,
+    "occupation": "Ingeniero",
+    "vitals_on_arrival": {
+      "hr": 85,
+      "sbp": 125,
+      "dbp": 85,
+      "rr": 18,
+      "spo2": 95,
+      "temp_c": 36.7
+    },
+    "past_medical_history": [
+      "hipertension arterial",
+      "diabetes mellitus tipo 2"
+    ],
+    "allergies": "ninguna conocida",
+    "current_medications": [
+      "gliclazida 25mg",
+      "amlodipina 5mg"
+    ],
+    "family_history": "negado",
+    "social_history": "no fuma, consume alcohol moderadamente, no usa drogas recreativas"
+  },
+  "history_present_illness": "El paciente aportó que ha estado experimentando dolor intenso en ambas ojos durante las últimas 24 horas. El dolor es descripto como dolor de cabeza, pero centrado en los ojos. Además, ha notado una visión borrosa y sensibilidad a la luz y los vientos. El dolor empeora cuando mira a los objetos lejanos. No ha realizado ninguna actividad que le haya causado lesiones o trauma en los ojos. Ha tomado paracetamol de venta libre sin beneficio alguno.",
+  "symptoms_json": [
+    {
+      "name": "Dolor ocular",
+      "duration": "24 horas",
+      "severity": "intenso"
+    },
+    {
+      "name": "Visión borrosa",
+      "duration": "24 horas",
+      "severity": "moderada"
+    },
+    {
+      "name": "Sensibilidad a la luz",
+      "duration": "24 horas",
+      "severity": "leve"
+    },
+    {
+      "name": "Sensibilidad al viento",
+      "duration": "24 horas",
+      "severity": "leve"
+    }
+  ],
+  "expected_diagnosis_json": {
+    "primary": "Cicatrización de la membrana tarsal (epitelio tarsal)",
+    "icd10": "H54.12",
+    "differential": [
+      "Infección ocular",
+      "Cicatrización de la membrana tarsal",
+      "Quiste tarsal"
+    ],
+    "justification": "Se deduce de la presentación clínica de dolor ocular, visión borrosa y sensibilidad a la luz y el viento, los cuales son características comunes de la cicatrización de la membrana tarsal."
+  },
+  "expected_studies_json": [
+    {
+      "name": "Examen de la membrana tarsal",
+      "priority": "urgent",
+      "expected_finding": "Cicatrización de la membrana tarsal"
+    },
+    {
+      "name": "Ultrasonografía ocular",
+      "priority": "routine",
+      "expected_finding": "Sin evidencia de lesiones óculas"
+    }
+  ],
+  "expected_treatments_json": [
+    {
+      "treatment": "Ocurrencia ocular con proteína",
+      "priority": "immediate",
+      "evidence": "Protocolo estándar de la Oftalmología"
+    },
+    {
+      "treatment": "Corticosteroides ocular (prednisolone 1%)",
+      "priority": "urgent",
+      "evidence": "Protocolo estándar de la Oftalmología"
+    },
+    {
+      "treatment": "Antibióticos oculares (ofloxacin 0.1%) si sospecha de infección",
+      "priority": "urgent",
+      "evidence": "Protocolo estándar de la Oftalmología"
+    }
+  ],
+  "expected_followup": "El paciente debe ser evaluado nuevamente en 24 horas para evaluar el progreso de la cicatrización. Debe evitar el uso de productos oculares no prescritos y seguir las indicaciones del médico.",
+  "learning_objectives_json": [
+    "Identificar los síntomas y signos de la cicatrización de la membrana tarsal",
+    "Aplicar el protocolo de tratamiento para la cicatrización de la membrana tarsal",
+    "Reconocer la necesidad de evaluación y tratamiento de complicaciones como infección ocular"
+  ],
+  "teaching_points": "La cicatrización de la membrana tarsal es una emergencia oftalmológica que requiere tratamiento inmediato para evitar complicaciones como infección. El ocurrencia ocular es un importante medicamento que debe ser aplicado en la superficie ocular para prevenir la infección. El seguimiento es crucial para evaluar el progreso y evitar complicaciones."
+}

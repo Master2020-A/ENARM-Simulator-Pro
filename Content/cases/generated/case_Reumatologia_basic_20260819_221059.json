@@ -1,0 +1,103 @@
+{
+  "title": "Reumatismo Juvenil",
+  "slug": "reumatismo-juvenil",
+  "chief_complaint": "Dolor articular y fatiga por 2 semanas",
+  "specialty": "Reumatologia",
+  "difficulty": "basic",
+  "setting": "outpatient",
+  "patient_json": {
+    "name": "Juan Perez Garcia",
+    "age": 15,
+    "age_unit": "years",
+    "sex": "M",
+    "weight_kg": 50,
+    "height_cm": 160,
+    "occupation": "Estudiante",
+    "vitals_on_arrival": {
+      "hr": 88,
+      "sbp": 122,
+      "dbp": 80,
+      "rr": 18,
+      "spo2": 99,
+      "temp_c": 36.7
+    },
+    "past_medical_history": [
+      "No antecedentes relevantes"
+    ],
+    "allergies": "ninguna conocida",
+    "current_medications": [
+      "Ibuprofeno 400mg PO"
+    ],
+    "family_history": "negado",
+    "social_history": "No tabaquismo, alcohol moderado, no drogas"
+  },
+  "history_present_illness": "El paciente presentó dolor articular en las rodillas y codos por la última 2 semanas. Los dolores comenzaron de manera leve pero se han intensificado. Además, el paciente se siente fatigado y tiene fiebre por las noches pasadas.",
+  "symptoms_json": [
+    {
+      "name": "Dolor articular",
+      "duration": "2 semanas",
+      "severity": "moderado"
+    },
+    {
+      "name": "Fatiga",
+      "duration": "2 semanas",
+      "severity": "moderado"
+    },
+    {
+      "name": "Fiebre nocturna",
+      "duration": "2 semanas",
+      "severity": "leve"
+    }
+  ],
+  "expected_diagnosis_json": {
+    "primary": "Reumatismo Juvenil",
+    "icd10": "M25.0",
+    "differential": [
+      "Reumatismo Juvenil",
+      "Artritis Reumatoide",
+      "Fibromialgia"
+    ],
+    "justification": "Basado en la presentación de dolor articular multifocal, fatiga y fiebre nocturna"
+  },
+  "expected_studies_json": [
+    {
+      "name": "Laboratorio de sangre completo",
+      "priority": "urgent",
+      "expected_finding": "Anemia leucocitaria"
+    },
+    {
+      "name": "Anti-DNase B",
+      "priority": "urgent",
+      "expected_finding": "Negativo"
+    },
+    {
+      "name": "Radiografía de rodillas y codos",
+      "priority": "routine",
+      "expected_finding": "Sin evidencia de enfermedad osteoarticular"
+    }
+  ],
+  "expected_treatments_json": [
+    {
+      "treatment": "Ibuprofeno 800mg VO",
+      "priority": "immediate",
+      "evidence": "Class II - AHA/ACC 2022"
+    },
+    {
+      "treatment": "Acetaminofén 500mg PO",
+      "priority": "immediate",
+      "evidence": "Class I"
+    },
+    {
+      "treatment": "Irritación bucal con metoclopramida 10mg SC",
+      "priority": "urgent",
+      "evidence": "Class II"
+    }
+  ],
+  "expected_followup": "Cita médica en 1 semana para evaluación del tratamiento y seguimiento",
+  "learning_objectives_json": [
+    "Identificar criterios diagnosticos de Reumatismo Juvenil",
+    "Aplicar protocolo de tratamiento inicial en pacientes de reumatismo juvenil",
+    "Reconocer complicaciones potenciales del reumatismo juvenil"
+  ],
+  "teaching_points": "El reumatismo juvenil es un trastorno inflamatorio autoinmune que afecta a los articulaciones de los niños y adolescentes. Es importante diferenciarlo de otras condiciones inflamatorias articulares como la artritis reumatoide. El diagnóstico se basa en la anamnesis, el examen físico y los estudios de laboratorio. El tratamiento inicial suele ser con antiinflamatorios no esteroideos orales y otros tratamientos según la gravedad del síndrome."
+}

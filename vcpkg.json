@@ -1,0 +1,33 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+  "name": "enarm-simulator",
+  "version-string": "0.1.0",
+  "description": "ENARM Simulator Pro",
+  "homepage": "https://github.com/enarm/simulator",
+  "license": "MIT",
+  "supports": "windows & x64",
+  "dependencies": [
+    "spdlog",
+    "fmt",
+    "nlohmann-json",
+    "tomlplusplus",
+    "magic-enum",
+    "eigen3",
+    "catch2",
+    "libpq",
+    "libpqxx",
+    "cpr",
+    {
+      "name": "imgui",
+      "features": ["docking-experimental", "dx11-binding", "win32-binding", "freetype"]
+    },
+    "implot"
+  ],
+  "builtin-baseline": "3c5d90a305ff00ca841f085a74a7ce74ee777dee",
+  "overrides": [
+    {
+      "name": "imgui",
+      "version": "1.91.5"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+    "title":  "Deshidratación severa por gastroenteritis en lactante de 8 meses",
+    "slug":  "deshidratacion-severa-gastroenteritis-lactante-8-meses",
+    "chief_complaint":  "Debilidad, diarrea intensa y náuseas",
+    "specialty":  "Pediatria",
+    "difficulty":  "intermediate",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  8,
+                         "age_unit":  "months",
+                         "sex":  "M",
+                         "weight_kg":  10,
+                         "height_cm":  80,
+                         "occupation":  "Madre",
+                         "vitals_on_arrival":  {
+                                                   "hr":  140,
+                                                   "sbp":  120,
+                                                   "dbp":  80,
+                                                   "rr":  20,
+                                                   "spo2":  92,
+                                                   "temp_c":  38.5
+                                               },
+                         "past_medical_history":  [
+                                                      "Gastroenteritis leve en los últimos 3 meses"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Paracetamol"
+                                                 ],
+                         "family_history":  "Negado",
+                         "social_history":  "Ninguno relevante"
+                     },
+    "history_present_illness":  "El niño ha estado experimentando diarrea intensa durante las últimas 24 horas, con hasta 10-12 diarreas por día. Además, ha tenido náuseas y vomito leve. La fiebre ha llegado hasta 38.5°C. El niño no ha bebido ni come nada durante los últimos 12 horas, solo ha estado bebiendo agua oral (ORS). Ha estado muy debilitado y ha perdido interés en jugar y jugar.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Diarrea intensa",
+                              "duration":  "24 horas",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Náuseas",
+                              "duration":  "24 horas",
+                              "severity":  "leve"
+                          },
+                          {
+                              "name":  "Fiebre",
+                              "duration":  "24 horas",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Debilidad",
+                              "duration":  "24 horas",
+                              "severity":  "severa"
+                          },
+                          {
+                              "name":  "No ha bebido ni comido",
+                              "duration":  "12 horas",
+                              "severity":  "severa"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Dehidratación severa por gastroenteritis",
+                                    "icd10":  "R44.00",
+                                    "differential":  [
+                                                         "Dehidratación leve",
+                                                         "Dehidratación moderada",
+                                                         "Fiebre motriz"
+                                                     ],
+                                    "justification":  "La diarrea intensa, fiebre, debilidad y el hecho de que el niño no ha bebido ni comido durante los últimos 12 horas sugieren una posible dehidratación severa. La edad del niño (8 meses) y su peso bajo (10 kg) hacen que esta situación sea más crítica."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "Medida de peso",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Menor de 5 kg"
+                                  },
+                                  {
+                                      "name":  "Medida de talla",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Menor de 80 cm"
+                                  },
+                                  {
+                                      "name":  "Medida de volumen de orina diario",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Menor a 150 ml"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Rehidratación intravenosa con solución isotónica (Ringers Lactate)",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - IMSS/CENETEC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Dosis de metoclopramide 5 mg IM",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Antidiarreicos como metronidazol (10 mg/kg cada 12 horas)",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Antibióticos como amoxiciclina (20 mg/kg cada 8 horas)",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "El niño debe ser sometido a seguimiento cada 4 horas para evaluar la progresión de la dehidratación. Es importante continuar con la rehidratación intravenosa y monitorear los signos vitales y la capacidad para mantenerse hidratado.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnósticos de dehidratación severa en niños",
+                                     "Aplicar protocolo de rehidratación intravenosa en primera hora",
+                                     "Reconocer complicaciones de la dehidratación severa"
+                                 ],
+    "teaching_points":  "La dehidratación severa es un riesgo grave en niños pequeños, especialmente en la edad pediátrica. Es crucial identificar los signos y síntomas tempranos para evitar complicaciones. La rehidratación intravenosa es el tratamiento principal y debe ser iniciada de inmediato en casos graves de dehidratación."
+}

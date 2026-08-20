@@ -1,0 +1,100 @@
+{
+    "title":  "Paciente con fiebre y tos persistente",
+    "slug":  "paciente-con-fiebre-y-tos-persistente",
+    "chief_complaint":  "Tos seca y fiebre alta por 3 días",
+    "specialty":  "Neumología",
+    "difficulty":  "basic",
+    "setting":  "outpatient",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  45,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  70,
+                         "height_cm":  170,
+                         "occupation":  "Trabajador de oficina",
+                         "vitals_on_arrival":  {
+                                                   "hr":  88,
+                                                   "sbp":  125,
+                                                   "dbp":  82,
+                                                   "rr":  18,
+                                                   "spo2":  96,
+                                                   "temp_c":  39.5
+                                               },
+                         "past_medical_history":  [
+                                                      "Hipertensión arterial",
+                                                      "Diabetes tipo 2"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Glipizida 10mg PO",
+                                                     "Tablas de ácido acetilsalicílico"
+                                                 ],
+                         "family_history":  "Diabetes familiar",
+                         "social_history":  "Fuma 1 paquete al día, no consume alcohol ni sustancias"
+                     },
+    "history_present_illness":  "El paciente se presentó con tos seca y fiebre alta por 3 días. La fiebre ha aumentado a nivel de 39.5°C durante las últimas 24 horas. Ha estado bebiendo líquidos suficientes y no ha presentado dolor torácico, dificultad para respirar o expectoración. Ha estado descansando en su casa y no ha salido del domicilio.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Fiebre",
+                              "duration":  "3 dias",
+                              "severity":  "severa"
+                          },
+                          {
+                              "name":  "Tos seca",
+                              "duration":  "3 dias",
+                              "severity":  "moderada"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Infección respiratoria viral (IRV)",
+                                    "icd10":  "R07.0",
+                                    "differential":  [
+                                                         "Respiración aguda con infección bacteriana",
+                                                         "Respiración aguda viral (RAV)",
+                                                         "Respiración aguda con neumonía bacteriana"
+                                                     ],
+                                    "justification":  "La fiebre alta y la tos seca sin otros signos de complicación son consistentes con una IRV. El historial de diabetes y hipertensión arterial debe ser monitoreado."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "routine",
+                                      "expected_finding":  "sin hallazgos"
+                                  },
+                                  {
+                                      "name":  "Radiografía de torax",
+                                      "priority":  "routine",
+                                      "expected_finding":  "sin hallazgos"
+                                  },
+                                  {
+                                      "name":  "Leucocitos",
+                                      "priority":  "routine",
+                                      "expected_finding":  "leucocitos leves a moderados"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Acetilsalicilico 500mg cada 6 horas",
+                                         "priority":  "immediate",
+                                         "evidence":  "Consuelo y reducción del dolor"
+                                     },
+                                     {
+                                         "treatment":  "Ibuprofeno 400mg cada 6 horas",
+                                         "priority":  "immediate",
+                                         "evidence":  "Reducción de la fiebre"
+                                     },
+                                     {
+                                         "treatment":  "Monitoreo de la glucosa y control de la presión arterial",
+                                         "priority":  "immediate",
+                                         "evidence":  "Manejo de comorbilidades"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente debe seguir con un seguimiento en 24-48 horas para evaluar la respuesta al tratamiento y la evolución del síntoma.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnósticos de infección respiratoria viral",
+                                     "Aplicar protocolo de manejo de tos y fiebre",
+                                     "Reconocer complicaciones de infección respiratoria viral en pacientes con comorbilidades"
+                                 ],
+    "teaching_points":  "La IRV es una infección común que requiere atención primaria y monitoreo de la glucosa y presión arterial en pacientes con comorbilidades. El manejo de la fiebre con medicamentos como el acetilsalicilico y el ibuprofeno puede mejorar la calidad de vida del paciente."
+}

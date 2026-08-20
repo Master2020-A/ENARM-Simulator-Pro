@@ -1,0 +1,121 @@
+{
+    "title":  "Caso de Infarto Agudo del Miocardio (IAM) complicado por trombosis vascular cerebral (TVC)",
+    "slug":  "infarto-agudo-del-miocardio-complicado-por-trombosis-vascular-cerebral",
+    "chief_complaint":  "Dolor precordial agudo de 4 horas, sudoración, náuseas y malestar general",
+    "specialty":  "CirugiaGeneral",
+    "difficulty":  "intermediate",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  55,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  80,
+                         "height_cm":  175,
+                         "occupation":  "Profesor de Universidad",
+                         "vitals_on_arrival":  {
+                                                   "hr":  100,
+                                                   "sbp":  150,
+                                                   "dbp":  90,
+                                                   "rr":  20,
+                                                   "spo2":  92,
+                                                   "temp_c":  37.2
+                                               },
+                         "past_medical_history":  [
+                                                      "Hipertension arterial",
+                                                      "Diabetes mellitus tipo 2",
+                                                      "Fumador"
+                                                  ],
+                         "allergies":  "Ninguna conocida",
+                         "current_medications":  [
+                                                     "Metformina 500mg TID",
+                                                     "Aceclofenac 200mg OD"
+                                                 ],
+                         "family_history":  "Familiares con enfermedad cardiovascular",
+                         "social_history":  "Fumador de 20 años, alcohol moderado"
+                     },
+    "history_present_illness":  "Paciente presentó un dolor precordial agudo de repente que comenzó como un dolor de pecho leve pero se intensificó durante las últimas 4 horas. El dolor se describió como una sensación de presión, molestia o dolor de espalda. El paciente también sintió sudoración profusa, náuseas y malestar general. No ha tenido relajación del dolor, náuseas o malestar general. No ha vomitado. El dolor se intensificó al hacer ejercicio o levantarse. El paciente menciona haber fumado una cigarrillo 30 minutos antes de que comenzara el dolor. El paciente ha estado desorientado y ha notado que su visión ha oscurecido.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Dolor precordial",
+                              "duration":  "4 horas",
+                              "severity":  "intenso"
+                          },
+                          {
+                              "name":  "Sudoración",
+                              "duration":  "30 minutos",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Náuseas",
+                              "duration":  "3 horas",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Malestar general",
+                              "duration":  "4 horas",
+                              "severity":  "leve"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Infarto Agudo del Miocardio (IAM)",
+                                    "icd10":  "I21.0",
+                                    "differential":  [
+                                                         "Angina pectoral",
+                                                         "Dolor de pecho gástrico",
+                                                         "Trombosis vascular cerebral"
+                                                     ],
+                                    "justification":  "El dolor precordial agudo, sudoración, náuseas, malestar general y la historia del fumador son indicativos de un IAM. La presión arterial alta y la tachicardia también sugieren una respuesta inflamatoria. La náusea y el malestar general pueden estar asociados con un IAM."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Elevación ST V1-V4"
+                                  },
+                                  {
+                                      "name":  "Troponinas seriadas",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Elevadas"
+                                  },
+                                  {
+                                      "name":  "Radiografia de torax",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin datos de congestion"
+                                  },
+                                  {
+                                      "name":  "Imaging cerebral",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Trombosis vascular cerebral"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Aspirina 300mg VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Clopidogrel 600mg carga VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Enoxaparina 1mg/kg SC c/12h",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Angioplastia primaria en \u003c90 min",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente requerirá una evaluación cardiológica urgente para descartar complicaciones del IAM y el TVC. Se le realizará una evaluación neurológica para determinar la gravedad del daño cerebral. El paciente necesitará una evaluación de factores de riesgo cardiovascular y se le realizará un seguimiento cardiológico periódico.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnósticos de Infarto Agudo del Miocardio (IAM)",
+                                     "Aplicar protocolo de manejo del IAM en primera hora",
+                                     "Reconocer complicaciones de Trombosis Vascular Cerebral (TVC)"
+                                 ],
+    "teaching_points":  "Los estudiantes deben conocer los criterios diagnósticos de IAM y cómo aplicar el protocolo de manejo en primera hora. También deben estar familiarizados con las complicaciones potenciales de IAM y cómo manejarlas. Los estudiantes también deben aprender a reconocer el TVC y cómo aplicar el protocolo de manejo en primera hora."
+}

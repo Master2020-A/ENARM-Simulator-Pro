@@ -1,0 +1,103 @@
+{
+    "title":  "Paciente con Diarrea Profusa y Perdida de Peso",
+    "slug":  "paciente-con-diarrea-profusa-y-perdida-de-peso",
+    "chief_complaint":  "Diarrhea profusa durante los últimos 3 días y pérdida de peso de 2 kg en las últimas 2 semanas",
+    "specialty":  "Gastroenterologia",
+    "difficulty":  "basic",
+    "setting":  "outpatient",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  45,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  50,
+                         "height_cm":  170,
+                         "occupation":  "Gerente de empresa",
+                         "vitals_on_arrival":  {
+                                                   "hr":  88,
+                                                   "sbp":  130,
+                                                   "dbp":  88,
+                                                   "rr":  20,
+                                                   "spo2":  95,
+                                                   "temp_c":  37.5
+                                               },
+                         "past_medical_history":  [
+                                                      "Hipertensión arterial"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Tabaco"
+                                                 ],
+                         "family_history":  "No relevante",
+                         "social_history":  "Tabaquismo de 20 años, consumo moderado de alcohol"
+                     },
+    "history_present_illness":  "El paciente reportó inicio de fiebre, malestar estomacal, náuseas y diarrea profusa durante los últimos 3 días. La diarrea es de color verde y espeso, con volumen de aproximadamente 3 litros por día. También ha notado pérdida de apetito y pérdida de peso de 2 kg en las últimas 2 semanas. No ha tenido melena ni vómitos. Antes de esta enfermedad, el paciente no presentaba síntomas similares.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Diarrea",
+                              "duration":  "3 dias",
+                              "severity":  "severa"
+                          },
+                          {
+                              "name":  "Pérdida de peso",
+                              "duration":  "2 semanas",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Fiebre",
+                              "duration":  "3 dias",
+                              "severity":  "leve"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Diarrea bacteriana por E. coli O157:H7",
+                                    "icd10":  "A04.8",
+                                    "differential":  [
+                                                         "Dx diferencial 1: Diarrea viral",
+                                                         "Dx diferencial 2: Diarrea bacteriana por Salmonella",
+                                                         "Dx diferencial 3: Diarrea ciprofitosa"
+                                                     ],
+                                    "justification":  "El paciente presenta fiebre, diarrea profusa y pérdida de peso, lo que sugiere una infección gastrointestinal. La diarrea es espesa y verde, lo que apunta a una posible infección bacteriana. El E. coli O157:H7 es una causante común de diarrea grave. La fiebre es típica de este diagnóstico."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "Cultivo de orina",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Aislamiento del E. coli O157:H7"
+                                  },
+                                  {
+                                      "name":  "Electrolitos séricos",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Deshidratación moderada a grave"
+                                  },
+                                  {
+                                      "name":  "Coproscopía",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin datos relevantes"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Oral rehidratación con soluciones isotônicas",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - IMSS"
+                                     },
+                                     {
+                                         "treatment":  "Antibiótico de clase 3 (ciprofloxacino) 500mg VO cada 12 horas",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - IMSS"
+                                     },
+                                     {
+                                         "treatment":  "Dolor abdominal con paracetamol 500mg VO cada 6 horas",
+                                         "priority":  "routine",
+                                         "evidence":  "Class II - IMSS"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente debe seguir con control de fiebre, hidratación y monitoreo de la diarrea. Se le debe recomendar un seguimiento en 24 horas para evaluar el estado de la infección y ajustar el tratamiento si es necesario.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnosticos de diarrea bacteriana por E. coli O157:H7",
+                                     "Aplicar protocolo de manejo de diarrea grave en pacientes adultos",
+                                     "Reconocer complicaciones de diarrea bacteriana"
+                                 ],
+    "teaching_points":  "La diarrea bacteriana por E. coli O157:H7 es una infección grave que puede causar deshidratación y pérdida de peso significativa. El diagnóstico se realiza con cultivo de orina y tratamiento inmediato con antibióticos de clase 3. El manejo de la diarrea grave incluye hidratación y monitoreo del paciente."
+}

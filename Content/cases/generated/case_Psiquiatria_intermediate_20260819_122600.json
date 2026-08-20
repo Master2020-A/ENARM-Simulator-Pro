@@ -1,0 +1,103 @@
+{
+    "title":  "Episodio Depresivo Mayor con Ideacion Suicida en Adulto Joven",
+    "slug":  "episodio-depresivo-mayor-ideacion-suicida-adulto-joven",
+    "chief_complaint":  "Sentimientos constantes de tristeza y desesperación",
+    "specialty":  "Psiquiatria",
+    "difficulty":  "intermediate",
+    "setting":  "inpatient",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  22,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  65,
+                         "height_cm":  175,
+                         "occupation":  "Estudiante universitario",
+                         "vitals_on_arrival":  {
+                                                   "hr":  78,
+                                                   "sbp":  130,
+                                                   "dbp":  85,
+                                                   "rr":  18,
+                                                   "spo2":  95,
+                                                   "temp_c":  36.9
+                                               },
+                         "past_medical_history":  [
+                                                      "Depresión previa a los 18 años"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Fluoxetina 20mg cada mañana"
+                                                 ],
+                         "family_history":  "Negado",
+                         "social_history":  "Depresión familiar, tabaquismo ocasional, alcohol de moderado consumo"
+                     },
+    "history_present_illness":  "Paciente de 22 años de edad, estudiante universitario que ha estado experimentando sentimientos constantes de tristeza y desesperación durante los últimos 2 meses. Ha notado una pérdida de interés en actividades que antes disfrutaba, ha perdido peso sin intento, ha tenido dificultades para concentrarse y ha experimentado sueño alterado. Ha pensado en formas de terminar su vida, pero no ha tenido intención de hacerlo. Ha estado soltero y ha dejado de trabajar en su trabajo para centrarse en sus sentimientos de tristeza.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Depresión",
+                              "duration":  "2 meses",
+                              "severity":  "muy severa"
+                          },
+                          {
+                              "name":  "Pensamientos de suicidio",
+                              "duration":  "2 semanas",
+                              "severity":  "moderada"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Depresión mayor con ideacion suicida",
+                                    "icd10":  "F32.01",
+                                    "differential":  [
+                                                         "Anorexia nerviosa",
+                                                         "Bipolaridad",
+                                                         "Trastorno de estrés postraumático"
+                                                     ],
+                                    "justification":  "Basado en la anamnesis, el examen físico normal y los hallazgos del ECG que reflejan un ritmo cardíaco alterado"
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Ritmo sinusoidal alterado"
+                                  },
+                                  {
+                                      "name":  "Laboratorio de sangre completo",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Anemia leve, leucocitos normales"
+                                  },
+                                  {
+                                      "name":  "Luminoftalimografia",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Vista normal"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Fluoxetina 40mg cada mañana",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - NICE 2019"
+                                     },
+                                     {
+                                         "treatment":  "Lorazepam 2mg IM",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Citalopram 20mg cada mañana",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Observación intensiva por 24 horas",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente será transferido al hospital psiquiátrico para un seguimiento intensivo. Se realizará un seguimiento semanal de la depresión y la ideación suicida. Se realizará un seguimiento médico cada 2 semanas para evaluar la evolución de la anemia y el ritmo cardíaco.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnósticos de depresión mayor con ideacion suicida",
+                                     "Aplicar protocolo de manejo inmediato en pacientes con depresión mayor con ideacion suicida",
+                                     "Reconocer complicaciones potenciales de la depresión mayor con ideacion suicida"
+                                 ],
+    "teaching_points":  "El manejo de la depresión mayor con ideacion suicida requiere un enfoque multidisciplinario y el reconocimiento de la importancia del seguimiento intensivo. El paciente debe ser evaluado por un psiquiatra y un médico general para asegurar el manejo de la anemia y el ritmo cardíaco."
+}

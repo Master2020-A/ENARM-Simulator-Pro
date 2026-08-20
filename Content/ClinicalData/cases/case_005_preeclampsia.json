@@ -1,0 +1,81 @@
+﻿{
+  "id": "case_005",
+  "version": "1.0",
+  "specialty": "GINECO-OBSTETRICIA",
+  "complexity": "AVANZADO",
+  "setting": "emergency",
+  "title": "Preeclampsia severa en primigesta de 28 anos con 32 SDG",
+  "patient": {
+    "name": "Andrea Martinez Ruiz",
+    "age": 28,
+    "age_unit": "years",
+    "sex": "F",
+    "weight_kg": 78,
+    "height_cm": 162
+  },
+  "chief_complaint": "Cefalea intensa, vision borrosa y edema facial de 24 horas",
+  "history": {
+    "present_illness": "Primigesta de 32 SDG con embarazo previamente sin complicaciones que acude por cefalea holocraneana intensa que no cede a paracetamol, vision borrosa con fotopsias, edema facial y de manos progresivo en las ultimas 24h. Refiere epigastralgia tipo barra desde hace 6 horas. Movimientos fetales presentes y normales.",
+    "past_medical": "Sin antecedentes cronicos. Control prenatal irregular (5 consultas). Ultimo control hace 3 semanas con TA 140/85.",
+    "allergies": "Ninguna conocida",
+    "medications": "Acido folico y sulfato ferroso",
+    "family": "Madre con HAS a los 45 anos",
+    "social": "Casada, ama de casa, sin toxicomanias"
+  },
+  "vitals_initial": {
+    "hr": 96,
+    "bp_sys": 172,
+    "bp_dia": 112,
+    "spo2": 97,
+    "rr": 20,
+    "temp": 36.8
+  },
+  "physical_exam": {
+    "general": "Paciente conciente, ansiosa, con edema facial evidente",
+    "head_neck": "Edema palpebral bilateral, mucosas humedas",
+    "cardio": "Ruidos cardiacos ritmicos sin soplos",
+    "resp": "Campos pulmonares con estertores crepitantes basales bilaterales",
+    "abdomen": "Utero gravido de aproximadamente 32 SDG, doloroso a la palpacion en epigastrio, hiperreflexia patelar +++",
+    "obstetric": "FCF 148 lpm, movimientos fetales presentes, no actividad uterina, cervix cerrado",
+    "neuro": "Alerta, orientada, hiperreflexia generalizada, sin clonus"
+  },
+  "correct_diagnosis": {
+    "primary": "Preeclampsia con datos de severidad en embarazo de 32 SDG",
+    "icd10": "O14.1",
+    "differentials": ["Sindrome HELLP", "Eclampsia inminente", "Higado graso agudo del embarazo", "Crisis hipertensiva"]
+  },
+  "correct_treatment": {
+    "immediate": [
+      "Hospitalizacion en area de tococirugia",
+      "Acceso venoso con dos vias perifericas",
+      "Sonda Foley con medicion horaria de uresis",
+      "Monitorizacion materna y fetal continua",
+      "Reposo absoluto en decubito lateral izquierdo"
+    ],
+    "medications": [
+      "Sulfato de magnesio: impregnacion 4-6g IV en 20 min, mantenimiento 1-2g/h en infusion",
+      "Antihipertensivo: hidralazina 5mg IV cada 20 min o labetalol 20mg IV",
+      "Meta TA: sistolica 140-155, diastolica 90-105",
+      "Maduracion pulmonar: betametasona 12mg IM cada 24h por 2 dosis",
+      "NO usar diureticos salvo edema agudo pulmonar"
+    ],
+    "admission": "Interrupcion del embarazo indicada tras estabilizacion y maduracion pulmonar. Via de nacimiento segun condiciones obstetricas."
+  },
+  "expected_studies": [
+    "Biometria hematica con plaquetas",
+    "Quimica sanguinea, pruebas de funcion hepatica",
+    "Deshidrogenasa lactica",
+    "Tiempos de coagulacion",
+    "Examen general de orina y proteinuria en 24h o indice proteina/creatinina",
+    "Ultrasonido obstetrico con Doppler",
+    "Registro cardiotocografico"
+  ],
+  "gpc_references": ["IMSS-020-08", "IMSS-058-08"],
+  "learning_objectives": [
+    "Diferenciar preeclampsia leve vs con datos de severidad",
+    "Aplicar sulfato de magnesio como profilaxis de eclampsia",
+    "Reconocer indicaciones de interrupcion del embarazo",
+    "Manejar crisis hipertensiva en embarazo"
+  ],
+  "ai_prompt_context": "Eres Andrea Martinez Ruiz, mujer embarazada de 28 anos, es tu primer embarazo y tienes 8 meses (32 semanas). Estas en urgencias porque desde ayer tienes un dolor de cabeza muy fuerte que no se te quita, ves borroso con lucecitas, se te hincho la cara y las manos, y desde hace 6 horas te duele mucho la boca del estomago como una barra. Estas asustada por tu bebe. Responde en primera persona, espanol coloquial mexicano, con angustia. Frases cortas. NO uses terminos medicos. Si el doctor no pregunta algo especifico, no lo menciones."
+}

@@ -1,0 +1,23 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "5.8",
+	"Category": "",
+	"Description": "ENARM Simulator Pro - Simulador clinico con paciente virtual 3D",
+	"Modules": [
+		{
+			"Name": "ENARMProject",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine",
+				"CoreUObject"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "ENARMCoreBridge",
+			"Enabled": true
+		}
+	]
+}

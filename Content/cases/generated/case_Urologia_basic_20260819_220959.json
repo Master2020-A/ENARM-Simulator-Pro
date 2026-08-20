@@ -1,0 +1,98 @@
+{
+  "title": "Caso de Urología: Urgencia por Hematuria y Disconfort",
+  "slug": "caso-urologia-hematuria-disconfort",
+  "chief_complaint": "Hematuria y disconfort en el torrente urinario durante las últimas 24 horas",
+  "specialty": "Urologia",
+  "difficulty": "basic",
+  "setting": "emergency",
+  "patient_json": {
+    "name": "Juan Perez Garcia",
+    "age": 50,
+    "age_unit": "years",
+    "sex": "M",
+    "weight_kg": 80,
+    "height_cm": 175,
+    "occupation": "Trabajador de oficina",
+    "vitals_on_arrival": {
+      "hr": 78,
+      "sbp": 130,
+      "dbp": 88,
+      "rr": 18,
+      "spo2": 97,
+      "temp_c": 36.5
+    },
+    "past_medical_history": [
+      "Hipertensión arterial",
+      "Diabetes tipo 2"
+    ],
+    "allergies": "ninguna conocida",
+    "current_medications": [
+      "Metformina 500mg BID"
+    ],
+    "family_history": "Hipertensión arterial familiar",
+    "social_history": "Tabaquismo, no alcohol, no drogas"
+  },
+  "history_present_illness": "El paciente informó que ha estado experimentando hematuria (sangre en la orina) y un fuerte disconfort en el torrente urinario durante las últimas 24 horas. El hemorragia comenzó repentinamente y ha sido constante. No ha notado dolor abdominal, fiebre, dolor urinario intenso o dolor de cabeza. No ha hecho cambios significativos en su dieta o estilo de vida recientemente.",
+  "symptoms_json": [
+    {
+      "name": "Hematuria",
+      "duration": "24 horas",
+      "severity": "moderada"
+    },
+    {
+      "name": "Disconfort",
+      "duration": "24 horas",
+      "severity": "leve"
+    }
+  ],
+  "expected_diagnosis_json": {
+    "primary": "Cisto vesical",
+    "icd10": "C61.90",
+    "differential": [
+      "Cisto vesical simple",
+      "Cisto vesical oncocitos"
+    ],
+    "justification": "Basado en la hematuria y la ausencia de otras complicaciones visibles, el cisto vesical es la causa más probable."
+  },
+  "expected_studies_json": [
+    {
+      "name": "Examen de orina con microscopia",
+      "priority": "urgent",
+      "expected_finding": "Celulas epiteliales renales y/o bacterias"
+    },
+    {
+      "name": "Ultrasonido renal y vesical",
+      "priority": "urgent",
+      "expected_finding": "Cisto vesical simple"
+    },
+    {
+      "name": "Examen de orina citológica",
+      "priority": "routine",
+      "expected_finding": "Ninguna anomalía significativa"
+    }
+  ],
+  "expected_treatments_json": [
+    {
+      "treatment": "Antibióticos (ciprofloxacino 500mg VO)",
+      "priority": "immediate",
+      "evidence": "Class I - AHA/ACC 2022"
+    },
+    {
+      "treatment": "Hidratación oral",
+      "priority": "immediate",
+      "evidence": "Class I"
+    },
+    {
+      "treatment": "Observación y seguimiento en 24 horas",
+      "priority": "urgent",
+      "evidence": "Class I"
+    }
+  ],
+  "expected_followup": "El paciente se seguirá en consulta en 24 horas para una evaluación del resultado del ultrasonido y revisión de los signos vitales.",
+  "learning_objectives_json": [
+    "Identificar criterios diagnosticos de cisto vesical",
+    "Aplicar protocolo de manejo de cisto vesical en primera hora",
+    "Reconocer complicaciones de cisto vesical"
+  ],
+  "teaching_points": "Es importante mantener una alta sospecha de cistos vesicales en pacientes con hematuria, especialmente en aquellos con antecedentes de hipertensión o diabetes. El ultrasonido es la imagen de elección para la evaluación del cisto vesical."
+}

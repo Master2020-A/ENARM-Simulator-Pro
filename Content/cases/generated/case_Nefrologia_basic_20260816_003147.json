@@ -1,0 +1,120 @@
+{
+    "title":  "Caso de insuficiencia renal aguda complicada de infarto miocardio",
+    "slug":  "insuficiencia-renal-aguda-complicada-de-infarto-miocardio",
+    "chief_complaint":  "Nauseas, fatiga y dispnea",
+    "specialty":  "Nefrologia",
+    "difficulty":  "basic",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  55,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  80,
+                         "height_cm":  175,
+                         "occupation":  "Trabajador de oficina",
+                         "vitals_on_arrival":  {
+                                                   "hr":  120,
+                                                   "sbp":  140,
+                                                   "dbp":  90,
+                                                   "rr":  20,
+                                                   "spo2":  93,
+                                                   "temp_c":  36.5
+                                               },
+                         "past_medical_history":  [
+                                                      "Insuficiencia renal aguda",
+                                                      "Hipertension arterial"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Acetaminofen",
+                                                     "Dipirona"
+                                                 ],
+                         "family_history":  "Diabetes familiar",
+                         "social_history":  "No tabaquismo, moderado alcoholismo"
+                     },
+    "history_present_illness":  "Paciente de 55 años, conocido por insuficiencia renal aguda (SRA) y hipertension arterial, presenta nausea, fatiga y dispnea de repente. El paciente siente que sus orinas son menos frecuentes y ha sentido hambre excesivo. Sin dolor de cabeza o sudoración.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Nauseas",
+                              "duration":  "2 horas",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Fatiga",
+                              "duration":  "1 día",
+                              "severity":  "severa"
+                          },
+                          {
+                              "name":  "Dispnea",
+                              "duration":  "30 minutos",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Menor frecuencia urinaria",
+                              "duration":  "1 día",
+                              "severity":  "moderada"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Insuficiencia renal aguda complicada de infarto miocardio",
+                                    "icd10":  "I25.810",
+                                    "differential":  [
+                                                         "Insuficiencia renal aguda",
+                                                         "Infeccion urinaria",
+                                                         "Infarto miocardio"
+                                                     ],
+                                    "justification":  "La paciente presenta signos de insuficiencia renal aguda (SRA) y nuevos síntomas de dispnea y menor frecuencia urinaria que sugieren complicación, además de su historial de SRA y hipertension arterial."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "Electrocardiograma (ECG) 12 derivaciones",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Sin evidencia evidente de infarto miocardio"
+                                  },
+                                  {
+                                      "name":  "Troponinas seriadas",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Sin elevación"
+                                  },
+                                  {
+                                      "name":  "Orina completa",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Anormalidades urinarias indicativas de insuficiencia renal aguda"
+                                  },
+                                  {
+                                      "name":  "Radiografia de torax",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin evidencia evidente de complicación"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Orina diurética",
+                                         "priority":  "immediate",
+                                         "evidence":  "Necesaria para controlar la acumulación de fluido"
+                                     },
+                                     {
+                                         "treatment":  "Orina osmectizante",
+                                         "priority":  "immediate",
+                                         "evidence":  "Para mejorar la función renal"
+                                     },
+                                     {
+                                         "treatment":  "Antibióticos (si sospecha de infección)",
+                                         "priority":  "urgent",
+                                         "evidence":  "Dependiendo del examen de orina"
+                                     },
+                                     {
+                                         "treatment":  "Mantener la seda",
+                                         "priority":  "immediate",
+                                         "evidence":  "Para evitar la retención de fluido"
+                                     }
+                                 ],
+    "expected_followup":  "Reevaluación en 24 horas para control del estado de la insuficiencia renal aguda y el paciente será referido a urgencia cardiológica para evaluación de posibles complicaciones del infarto miocardio.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnósticos de insuficiencia renal aguda complicada",
+                                     "Aplicar protocolo de tratamiento de insuficiencia renal aguda",
+                                     "Reconocer complicaciones de insuficiencia renal aguda y referir a urgencia cardiológica"
+                                 ],
+    "teaching_points":  "Los pacientes con insuficiencia renal aguda pueden presentar complicaciones graves, por lo que es crucial identificarlas rápidamente y referirlos a urgencia si es necesario."
+}

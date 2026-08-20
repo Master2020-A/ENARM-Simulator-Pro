@@ -1,0 +1,100 @@
+﻿{
+  "id": 6,
+  "title": "Pancreatitis Aguda Severa por Litiasis Biliar",
+  "specialty": "Gastroenterología",
+  "difficulty": 3,
+  "chief_complaint": "Dolor de panza que no se me quita y vomité muchas veces",
+  "patient": {
+    "age": 45,
+    "sex": "F",
+    "weight_kg": 82,
+    "height_cm": 160,
+    "occupation": "Comerciante",
+    "relevant_history": [
+      "Colelitiasis conocida hace 2 años, no operada por decisión propia",
+      "Obesidad grado I (IMC 32)",
+      "Hipertrigliceridemia en tratamiento con fibratos",
+      "Sin cirugías previas",
+      "Niega alcohol"
+    ]
+  },
+  "vitals_on_arrival": {
+    "systolic_bp": 96,
+    "diastolic_bp": 60,
+    "heart_rate": 124,
+    "respiratory_rate": 22,
+    "temperature_c": 38.6,
+    "spo2_percent": 94,
+    "weight_kg": 82
+  },
+  "history_of_present_illness": "Femenino de 45 años con 24 horas de dolor epigástrico intenso 9/10, de inicio súbito tras cena copiosa, irradiado en cinturón hacia dorso, náusea y vómito en múltiples ocasiones (8-10 veces), sin mejoría con analgésicos orales. Distensión abdominal progresiva. En las últimas 6 horas con escalofríos y fiebre.",
+  "physical_exam": {
+    "general": "Femenino en posición fetal, diaforética, con dolor evidente. Piel ictérica leve.",
+    "cardiovascular": "Taquicardia 124 lpm. Hipotensión. Pulsos periféricos débiles.",
+    "respiratory": "Taquipnea. Hipoventilación en base izquierda. SpO2 94%.",
+    "abdomen": "Distendido, dolor intenso a la palpación en epigastrio e hipocondrio derecho. Defensa muscular. Signo de Blumberg negativo. Signo de Grey-Turner (equimosis en flancos) incipiente. Ruidos intestinales disminuidos. Murphy positivo.",
+    "neurological": "Orientada, ansiosa por el dolor.",
+    "extremities": "Llenado capilar 4 segundos. Edema leve en tobillos."
+  },
+  "key_labs": {
+    "lipasa": "1840 U/L (>3x normal = diagnóstico)",
+    "amilasa": "920 U/L",
+    "BH": "Leucocitos 18,600 con 85% neutrófilos. Hb 15.8 (hemoconcentración). Plaquetas 198,000",
+    "BUN": "32 mg/dL",
+    "creatinina": "1.8 mg/dL (probable LRA prerrenal)",
+    "glucosa": "218 mg/dL",
+    "calcio": "7.8 mg/dL (hipocalcemia)",
+    "bilirrubina_total": "3.2 mg/dL (directa 2.1)",
+    "ALT": "186 U/L",
+    "AST": "142 U/L",
+    "fosfatasa_alcalina": "320 U/L",
+    "trigliceridos": "480 mg/dL",
+    "PCR_48h": "280 mg/L",
+    "lactato": "3.2 mmol/L",
+    "gasometria": "pH 7.32, PaO2 68, PaCO2 30, HCO3 15 (acidosis metabólica)"
+  },
+  "key_imaging": [
+    "USG abdominal: Colelitiasis múltiple. Vesícula distendida sin Murphy ecográfico definido. Colédoco 10mm (dilatado). Páncreas no visualizable por gas.",
+    "TAC abdomen con contraste (Balthazar): Aumento difuso del páncreas con zonas de necrosis ≥30%. Líquido peripancreático. Balthazar D-E. CTSI (CT Severity Index) 7/10.",
+    "RX tórax: Derrame pleural izquierdo pequeño. Asa centinela en epigastrio."
+  ],
+  "correct_diagnosis": "Pancreatitis aguda severa por litiasis biliar (Ranson ≥3, CTSI 7, BISAP 2)",
+  "differential_diagnosis": [
+    "Úlcera péptica perforada (sin neumoperitoneo en RX, lipasa muy elevada)",
+    "Colangitis aguda (fiebre + ictericia + dolor = tríada de Charcot, pero lipasa elevada sugiere pancreatitis)",
+    "Isquemia mesentérica aguda (menos probable, dolor diferente)",
+    "Cetoacidosis diabética con dolor abdominal"
+  ],
+  "treatment_plan": [
+    "Ingreso a UCI o área de cuidados intermedios",
+    "NPO absoluto (nil per os)",
+    "Reanimación agresiva con cristaloides: Ringer Lactato 250-500 mL/h las primeras 12-24h (meta: FC<100, TA normal, diuresis >0.5 mL/kg/h)",
+    "Analgesia: morfina 0.05 mg/kg IV c/4h PRN, o meperidina si morfina contraindicada",
+    "Antieméticos: ondansetrón 4-8 mg IV c/8h",
+    "Sonda nasogástrica si vómito incoercible o íleo paralítico",
+    "Monitorización estricta: diuresis horaria, balance hídrico, PA, FC",
+    "Laboratorios seriados c/12-24h: BUN, creatinina, calcio, glucosa, Hto",
+    "Si colangitis o coledocolitiasis: CPRE urgente en primeras 24-72h",
+    "Antibióticos: NO profilácticos en pancreatitis leve-moderada. En necrosis infectada: imipenem o meropenem",
+    "Nutrición: enteral temprana (sonda nasoyeyunal) en primeras 24-48h si tolera, evitar NPT si es posible",
+    "Calcio IV si hipocalcemia sintomática (<7.5 mg/dL)",
+    "Insulina si glucemia >200 mg/dL",
+    "Colecistectomía diferida (6-8 semanas) una vez resuelto el episodio agudo"
+  ],
+  "scoring_rubric": {
+    "anamnesis": 0.20,
+    "physical_exam": 0.15,
+    "diagnosis": 0.35,
+    "treatment": 0.30
+  },
+  "learning_objectives": [
+    "Diagnosticar pancreatitis aguda con criterios de lipasa/amilasa + imagen",
+    "Aplicar score de Ranson/BISAP/CTSI para clasificar severidad",
+    "Indicar reanimación hídrica con Ringer Lactato vs solución salina",
+    "Decidir cuándo indicar antibiótico (solo necrosis infectada)",
+    "Indicar CPRE urgente en coledocolitiasis asociada"
+  ],
+  "guideline_ids": [5, 6],
+  "tags": ["pancreatitis", "litiasis_biliar", "gastroenterologia", "UCI", "Ranson", "CPRE"],
+  "enarm_topics": ["Pancreatitis aguda", "Cirugía de urgencia", "Nutrición enteral"]
+}

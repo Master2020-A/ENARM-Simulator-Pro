@@ -1,0 +1,136 @@
+{
+    "title":  "Caso Clinico: Asma Aguda Sevria",
+    "slug":  "asma-aguda-sevria",
+    "chief_complaint":  "Dificultad respiratoria, tos y dolor torácico",
+    "specialty":  "Neumologia",
+    "difficulty":  "intermediate",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  35,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  75,
+                         "height_cm":  175,
+                         "occupation":  "Trabajador administrativo",
+                         "vitals_on_arrival":  {
+                                                   "hr":  110,
+                                                   "sbp":  130,
+                                                   "dbp":  85,
+                                                   "rr":  30,
+                                                   "spo2":  88,
+                                                   "temp_c":  36.5
+                                               },
+                         "past_medical_history":  [
+                                                      "Asma crónica",
+                                                      "Hipertension arterial",
+                                                      "Ninguna otra"
+                                                  ],
+                         "allergies":  "Penicilina",
+                         "current_medications":  [
+                                                     "Albuterol 90 mcg x2 puff BD",
+                                                     "Fluticasone 400 mcg inhaler QD"
+                                                 ],
+                         "family_history":  "Negado",
+                         "social_history":  "Fumador de 10 cigarrillos al día durante 5 años"
+                     },
+    "history_present_illness":  "Paciente presentó de repente dificultad respiratoria intenso, tos seca y dolor torácico desde hace 2 horas. Aseguró que ha estado tomando sus inhaladores habituales, pero la respiración se ha vuelto cada vez más difícil. Notó que necesita tomar albuterol cada 30 minutos debido a la urgencia de respirar. Ha estado sudando profusamente y tiene náuseas. El paciente no ha estado tomando alimentos ni agua durante las últimas 4 horas.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Dificultad respiratoria",
+                              "duration":  "2 horas",
+                              "severity":  "grave"
+                          },
+                          {
+                              "name":  "Tos seca",
+                              "duration":  "2 horas",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Dolor torácico",
+                              "duration":  "2 horas",
+                              "severity":  "leve"
+                          },
+                          {
+                              "name":  "Sudoración profusa",
+                              "duration":  "2 horas",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Náuseas",
+                              "duration":  "2 horas",
+                              "severity":  "leve"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Asma aguda",
+                                    "icd10":  "J45.2",
+                                    "differential":  [
+                                                         "Asma estacional",
+                                                         "COPD agudo",
+                                                         "Asma severa"
+                                                     ],
+                                    "justification":  "La presentación del paciente con dificultad respiratoria intenso, tos seca y dolor torácico es compatible con la asma aguda. El aumento repente en la dosis de inhaladores y la necesidad de tomas adicionales de albuterol sugiere una exacerbación. La ausencia de otras alergias, el historial de fumar y el aumento en la frecuencia respiratoria son indicativos de una asma aguda. La ausencia de signos de COPD y la ausencia de signos de asma severa (como falta de respuesta al tratamiento y deshidratación) sugieren que es una asma aguda en lugar de una asma severa."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Ninguno significativo"
+                                  },
+                                  {
+                                      "name":  "FBC",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Leucocitos normales, hematocrito normal"
+                                  },
+                                  {
+                                      "name":  "Colesterol",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Ninguno significativo"
+                                  },
+                                  {
+                                      "name":  "Oxígeno por nebulización",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Aumento de la saturación de oxígeno a 95% o más"
+                                  },
+                                  {
+                                      "name":  "Radiografia de torax",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin datos de congestión"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Oxígeno por nebulización",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Albuterol 90 mcg x2 puff BD",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Fluticasone 400 mcg inhaler QD",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Prednisolona 60 mg IV c/12h x3 días",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Observación en el quirófano para evaluar la respuesta al tratamiento",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente debe ser evaluado en el quirófano para evaluar la respuesta al tratamiento y la necesidad de una intervención quirúrgica. El paciente debe seguir un programa de seguimiento para controlar la asma crónica y prevenir las complicaciones futuras.",
+    "learning_objectives_json":  [
+                                     "Identificar los criterios diagnósticos de asma aguda",
+                                     "Aplicar el protocolo de manejo de asma aguda en primera hora",
+                                     "Reconocer las complicaciones potenciales de asma aguda"
+                                 ],
+    "teaching_points":  "La asma aguda es una emergencia médica que requiere un manejo rápido y adecuado. El paciente debe ser evaluado de inmediato para prevenir la deshidratación y las complicaciones graves. El manejo de la asma aguda debe incluir el uso de broncodilatadores y corticosteroides. El seguimiento es crucial para prevenir las complicaciones futuras de la asma."
+}

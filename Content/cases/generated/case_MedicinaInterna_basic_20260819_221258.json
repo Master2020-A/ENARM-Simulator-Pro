@@ -1,0 +1,115 @@
+{
+  "title": "Paciente con fiebre alta y tos",
+  "slug": "paciente-con-fiebre-alta-y-tos",
+  "chief_complaint": "Tos seca y fiebre alta",
+  "specialty": "MedicinaInterna",
+  "difficulty": "basic",
+  "setting": "outpatient",
+  "patient_json": {
+    "name": "Juan Perez Garcia",
+    "age": 65,
+    "age_unit": "years",
+    "sex": "M",
+    "weight_kg": 85,
+    "height_cm": 175,
+    "occupation": "Jubilado",
+    "vitals_on_arrival": {
+      "hr": 78,
+      "sbp": 130,
+      "dbp": 85,
+      "rr": 20,
+      "spo2": 95,
+      "temp_c": 39.2
+    },
+    "past_medical_history": [
+      "hipertension arterial",
+      "diabetes mellitus tipo 2"
+    ],
+    "allergies": "ninguna conocida",
+    "current_medications": [
+      "metformin 500mg BID",
+      "lisinopril 10mg DI"
+    ],
+    "family_history": "negado",
+    "social_history": "no fuma, no bebe, no consume drogas"
+  },
+  "history_present_illness": "El paciente, de 65 años, comenzó a experimentar fiebre alta hace dos días, alcanzando temperaturas máximas de 39.2°C. Además, presenta tos seca intensa, escalofríos, dolor de cabeza y fatiga. A pesar de la fiebre, no tiene dolor de garganta, malestar estomacal ni dificultad para orinar. El paciente ha tomado paracetamol en dosis de 500mg cada 6 horas sin mejora. No ha viajado a lugares con riesgo de infección infecciosa ni ha tenido contacto con personas con enfermedades respiratorias infecciosas. A su nivel de vida diario, ha estado descansando en casa.",
+  "symptoms_json": [
+    {
+      "name": "fiebre alta",
+      "duration": "2 días",
+      "severity": "grave"
+    },
+    {
+      "name": "tos seca",
+      "duration": "2 días",
+      "severity": "grave"
+    },
+    {
+      "name": "escalofríos",
+      "duration": "2 días",
+      "severity": "grave"
+    },
+    {
+      "name": "dolor de cabeza",
+      "duration": "2 días",
+      "severity": "grave"
+    },
+    {
+      "name": "fatiga",
+      "duration": "2 días",
+      "severity": "grave"
+    }
+  ],
+  "expected_diagnosis_json": {
+    "primary": "Sepsis",
+    "icd10": "A41.9",
+    "differential": [
+      "Infección respiratoria aguda",
+      "Miocarditis",
+      "Infección urinaria"
+    ],
+    "justification": "La fiebre alta, tos seca intensa, escalofríos y dolor de cabeza son signos de infección. La edad avanzada y los antecedentes de hipertensión arterial y diabetes mellitus tipo 2 aumentan el riesgo de complicaciones infecciosas."
+  },
+  "expected_studies_json": [
+    {
+      "name": "EKG 12 derivaciones",
+      "priority": "urgent",
+      "expected_finding": "sin hallazgos"
+    },
+    {
+      "name": "Troponinas seriadas",
+      "priority": "urgent",
+      "expected_finding": "negativas"
+    },
+    {
+      "name": "Radiografia de torax",
+      "priority": "routine",
+      "expected_finding": "sin datos de congestion"
+    }
+  ],
+  "expected_treatments_json": [
+    {
+      "treatment": "Paracetamol 500mg VO cada 6 horas",
+      "priority": "immediate",
+      "evidence": "Class I"
+    },
+    {
+      "treatment": "Antibiótico de amplio espectro (amoxicilina 500mg VO cada 8 horas)",
+      "priority": "immediate",
+      "evidence": "Class I"
+    },
+    {
+      "treatment": "Monitorización de signos vitales",
+      "priority": "immediate",
+      "evidence": "Class I"
+    }
+  ],
+  "expected_followup": "El paciente debe ser evaluado nuevamente en 24 horas para evaluar la respuesta al tratamiento y ajustar los protocolos de seguimiento según sea necesario.",
+  "learning_objectives_json": [
+    "Identificar criterios diagnósticos de sepsis",
+    "Aplicar protocolo antibiótico de amplio espectro en primera hora",
+    "Reconocer complicaciones de sepsis"
+  ],
+  "teaching_points": "La sepsis es una infección grave que requiere evaluación y tratamiento inmediato para prevenir complicaciones. Los antecedentes de la paciente aumentan el riesgo de complicaciones infecciosas, por lo que es importante tener un enfoque proactivo en su manejo."
+}

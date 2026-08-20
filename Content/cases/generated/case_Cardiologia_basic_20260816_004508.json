@@ -1,0 +1,106 @@
+{
+    "title":  "Caso de Infarto Miocardio Agudo Estabilizado",
+    "slug":  "caso-de-infarto-miocardio-agudo-estabilizado",
+    "chief_complaint":  "Chest pain for 2 hours",
+    "specialty":  "Cardiologia",
+    "difficulty":  "basic",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  55,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  80,
+                         "height_cm":  175,
+                         "occupation":  "Gerente de empresa",
+                         "vitals_on_arrival":  {
+                                                   "hr":  85,
+                                                   "sbp":  130,
+                                                   "dbp":  85,
+                                                   "rr":  18,
+                                                   "spo2":  95,
+                                                   "temp_c":  36.9
+                                               },
+                         "past_medical_history":  [
+                                                      "Diabetes mellitus tipo 2",
+                                                      "Hipertension arterial",
+                                                      "Tabaquismo"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Glipizida 10mg",
+                                                     "Atenolol 50mg"
+                                                 ],
+                         "family_history":  "Familiares con enfermedad cardíaca",
+                         "social_history":  "Tabaquismo (10 años), alcohol moderado"
+                     },
+    "history_present_illness":  "Paciente presenta dolor torácico agudo y precordial desde hace 2 horas. El dolor se describe como un dolor de pecho desagradable, presión y malestar. El dolor es constante y no parece ser aliviado por el reposo o el descanso. Ha sentido sudoración profusa y malestar gastrointestinal. El dolor ha afectado su capacidad para realizar actividades normales durante las últimas horas.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Dolor torácico",
+                              "duration":  "2 horas",
+                              "severity":  "moderado"
+                          },
+                          {
+                              "name":  "Sudoración",
+                              "duration":  "2 horas",
+                              "severity":  "leve"
+                          },
+                          {
+                              "name":  "Náuseas",
+                              "duration":  "2 horas",
+                              "severity":  "leve"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Infarto Miocardio Agudo",
+                                    "icd10":  "I21.0",
+                                    "differential":  [
+                                                         "Angina de pecho aguda",
+                                                         "Dolor gastrointestinal",
+                                                         "Crisis anginosa"
+                                                     ],
+                                    "justification":  "El dolor torácico agudo, malestar gastrointestinal y sudoración son consistentes con un infarto miocardio agudo. El historial de diabetes, hipertensión y tabaquismo aumenta el riesgo de este diagnóstico."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "elevacion ST V1-V4"
+                                  },
+                                  {
+                                      "name":  "Troponinas seriadas",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "elevadas"
+                                  },
+                                  {
+                                      "name":  "Radiografia de torax",
+                                      "priority":  "routine",
+                                      "expected_finding":  "sin datos de congestion"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Aspirina 300mg VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Clopidogrel 600mg carga VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Enoxaparina 1mg/kg SC c/12h",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente debe ser trasladado a la Unidad de Cuidados Intensivos (UCI) para monitoreo continuo. Se debe realizar una angiografía coronaria para confirmar el diagnóstico y planificar la intervención si es necesaria. El paciente debe recibir cuidados médicos intensivos incluyendo monitorización de signos vitales, manejo del dolor, y atención de las complicaciones potenciales del infarto miocardio.",
+    "learning_objectives_json":  [
+                                     "Identificar los criterios diagnósticos del infarto miocardio agudo",
+                                     "Aplicar protocolo inicial de tratamiento del infarto miocardio agudo",
+                                     "Reconocer las complicaciones potenciales del infarto miocardio agudo"
+                                 ],
+    "teaching_points":  "El infarto miocardio agudo es un emergencia grave que requiere un diagnóstico y tratamiento rápidos para prevenir la muerte cardíaca y minimizar el daño a los músculos cardíacos. El uso de aspirina, clopidogrel y enoxaparina es crucial en la primera hora del infarto miocardio agudo para prevenir el arritmia y la reinfarto. El monitoreo continuo en la UCI es esencial para el manejo del infarto miocardio agudo y la prevención de complicaciones."
+}

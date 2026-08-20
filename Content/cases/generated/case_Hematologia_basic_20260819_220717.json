@@ -1,0 +1,119 @@
+{
+  "title": "Caso de Anemia Hemolítica",
+  "slug": "caso-de-anemia-hemolitica",
+  "chief_complaint": "Fatiga intensa, piel pálida, dolor de cabeza y picazón durante las últimas 2 semanas.",
+  "specialty": "Hematología",
+  "difficulty": "basic",
+  "setting": "outpatient",
+  "patient_json": {
+    "name": "Juan Perez Garcia",
+    "age": 50,
+    "age_unit": "years",
+    "sex": "M",
+    "weight_kg": 70,
+    "height_cm": 170,
+    "occupation": "Contador",
+    "vitals_on_arrival": {
+      "hr": 80,
+      "sbp": 120,
+      "dbp": 80,
+      "rr": 16,
+      "spo2": 97,
+      "temp_c": 36.8
+    },
+    "past_medical_history": [
+      "Hipertensión arterial",
+      "Fumador de 20 cigarrillos al día"
+    ],
+    "allergies": "ninguna conocida",
+    "current_medications": [
+      "Losartán 50mg"
+    ],
+    "family_history": "Negado",
+    "social_history": "Fumador de 20 cigarrillos al día, alcohol moderado"
+  },
+  "history_present_illness": "El paciente reporta sentirse extremadamente fatigado durante las últimas 2 semanas, especialmente después de las actividades diarias. Notó que su piel y los párpados se han vuelto más pálidos. También ha experimentado dolor de cabeza y picazón en las extremidades. No ha notado náuseas, diarrea ni fiebre. Antes de este período, no recordaba tener estos síntomas.",
+  "symptoms_json": [
+    {
+      "name": "Fatiga",
+      "duration": "2 semanas",
+      "severity": "severa"
+    },
+    {
+      "name": "Piel pálida",
+      "duration": "2 semanas",
+      "severity": "moderada"
+    },
+    {
+      "name": "Dolor de cabeza",
+      "duration": "2 semanas",
+      "severity": "leve"
+    },
+    {
+      "name": "Picazón",
+      "duration": "2 semanas",
+      "severity": "moderada"
+    }
+  ],
+  "expected_diagnosis_json": {
+    "primary": "Anemia hemolítica",
+    "icd10": "D52.0",
+    "differential": [
+      "Anemia ironica",
+      "Anemia por deficiencia de folicina",
+      "Anemia por deficiencia de vitamina B12"
+    ],
+    "justification": "El paciente presenta síntomas tipicos de anemia hemolítica (fatiga, piel pálida) junto con dolor de cabeza y picazón. La anemia hemolítica es la causa más probable basada en la historia clínica y el exámen físico."
+  },
+  "expected_studies_json": [
+    {
+      "name": "Esfuerzo hematológico",
+      "priority": "urgent",
+      "expected_finding": "Anemia microcytica y hypochromica"
+    },
+    {
+      "name": "Globina total",
+      "priority": "urgent",
+      "expected_finding": "Bajo"
+    },
+    {
+      "name": "Retículo sanguíneo",
+      "priority": "urgent",
+      "expected_finding": "Aumentado"
+    },
+    {
+      "name": "Test de hemólisis",
+      "priority": "urgent",
+      "expected_finding": "Positivo"
+    },
+    {
+      "name": "Carga de hemoglobina reticuloide",
+      "priority": "urgent",
+      "expected_finding": "Aumentado"
+    }
+  ],
+  "expected_treatments_json": [
+    {
+      "treatment": "Ferromacrolina 325mg VO",
+      "priority": "immediate",
+      "evidence": "Class I - IMSS 2022"
+    },
+    {
+      "treatment": "Folicina 5mg VO",
+      "priority": "immediate",
+      "evidence": "Class I"
+    },
+    {
+      "treatment": "Vitamina B12 1mg IM",
+      "priority": "immediate",
+      "evidence": "Class I"
+    }
+  ],
+  "expected_followup": "El paciente debe seguirse en consulta con el hematólogo en 1 semana para evaluar la respuesta a la terapia. Se recomienda realizar una prueba de esfuerzo hematológico y globina total para monitorear la evolución.",
+  "learning_objectives_json": [
+    "Identificar criterios diagnósticos de anemia hemolítica",
+    "Aplicar protocolo de tratamiento de anemia hemolítica",
+    "Reconocer complicaciones de anemia hemolítica"
+  ],
+  "teaching_points": "La anemia hemolítica es una causa común de anemia que puede tener presentación variada. Es importante diferenciarla de otras anemias debido a su tratamiento específico. El monitoreo de los parámetros del esfuerzo hematológico y la globina total es crucial para evaluar la respuesta terapéutica."
+}

@@ -1,0 +1,119 @@
+{
+  "title": "Caso de Urología: Calculo renal obstructivo",
+  "slug": "caso-urologia-calcio-renal",
+  "chief_complaint": "Dolor renal agudo intenso y hematuria durante las últimas 24 horas.",
+  "specialty": "Urologia",
+  "difficulty": "basic",
+  "setting": "emergency",
+  "patient_json": {
+    "name": "Juan Perez Garcia",
+    "age": 60,
+    "age_unit": "years",
+    "sex": "M",
+    "weight_kg": 80,
+    "height_cm": 175,
+    "occupation": "Carpintero",
+    "vitals_on_arrival": {
+      "hr": 120,
+      "sbp": 140,
+      "dbp": 90,
+      "rr": 20,
+      "spo2": 95,
+      "temp_c": 37.2
+    },
+    "past_medical_history": [
+      "Hipertension arterial",
+      "Gastritis"
+    ],
+    "allergies": "ninguna conocida",
+    "current_medications": [
+      "Ácido acetilsalicílico"
+    ],
+    "family_history": "Negado",
+    "social_history": "Fumador moderado, alcohol moderado"
+  },
+  "history_present_illness": "El paciente se presentó a urgencias debido a un dolor renal agudo intenso ubicado en la zona lumbar superior. El dolor ha sido continuo y de intensidad 8/10 en escala numérica. Comenzó con hematuria espontánea y luego se desarrollaron fiebre (37.2°C), sudoración, náuseas y vómitos. No ha tenido dolor abdominal, urinación frecuente ni dolor de cabeza. El dolor es peor cuando se levanta o se mueve. No ha tenido pérdida de apetito, pérdida de peso o fatiga extrema.",
+  "symptoms_json": [
+    {
+      "name": "Dolor renal",
+      "duration": "24 horas",
+      "severity": "intenso"
+    },
+    {
+      "name": "Hematuria",
+      "duration": "24 horas",
+      "severity": "intensa"
+    },
+    {
+      "name": "Fiebre",
+      "duration": "24 horas",
+      "severity": "moderada"
+    },
+    {
+      "name": "Sudoración",
+      "duration": "24 horas",
+      "severity": "moderada"
+    },
+    {
+      "name": "Náuseas y vómitos",
+      "duration": "24 horas",
+      "severity": "moderada"
+    }
+  ],
+  "expected_diagnosis_json": {
+    "primary": "Calcuo renal obstructivo",
+    "icd10": "N12.1",
+    "differential": [
+      "Ureteropatía",
+      "Infarto renal",
+      "Nefritis"
+    ],
+    "justification": "El dolor renal agudo intenso, hematuria espontánea, fiebre y sudoración son claves para sospechar de calcío renal obstructivo. La náuseas y vómitos podrían estar asociados con la inflamación renal. La historia del fumador y alcoholismo aumenta el riesgo de calcificaciones renal."
+  },
+  "expected_studies_json": [
+    {
+      "name": "Exámen de orina",
+      "priority": "urgent",
+      "expected_finding": "Bacterias, hematicias"
+    },
+    {
+      "name": "Exámen de orina del esfuerzo",
+      "priority": "urgent",
+      "expected_finding": "No evidencia de obstructivo"
+    },
+    {
+      "name": "Ultrasonido renal",
+      "priority": "routine",
+      "expected_finding": "Calcío renal obstructivo"
+    }
+  ],
+  "expected_treatments_json": [
+    {
+      "treatment": "Antibióticos (fluoroquinolona)",
+      "priority": "immediate",
+      "evidence": "Class I - IMSS/CENETEC 2021"
+    },
+    {
+      "treatment": "Hidratación oral intensiva",
+      "priority": "immediate",
+      "evidence": "Class I"
+    },
+    {
+      "treatment": "Painkillers (paracetamol)",
+      "priority": "immediate",
+      "evidence": "Class I"
+    },
+    {
+      "treatment": "Urgente cita con urología para evaluación",
+      "priority": "urgent",
+      "evidence": "Class I"
+    }
+  ],
+  "expected_followup": "El paciente será seguimiento en 1 semana para evaluar el progreso y revisar la necesidad de intervención quirúrgica si es necesario.",
+  "learning_objectives_json": [
+    "Identificar los criterios diagnósticos de calcío renal obstructivo",
+    "Aplicar protocolo de manejo inicial en pacientes con calcío renal obstructivo",
+    "Reconocer complicaciones potenciales de calcío renal obstructivo"
+  ],
+  "teaching_points": "Los estudiantes deben tener en cuenta la importancia de la hidratación en el manejo de pacientes con obstrucciones urinarias, así como la necesidad de un seguimiento inmediato para prevenir complicaciones como la nefritis renal."
+}

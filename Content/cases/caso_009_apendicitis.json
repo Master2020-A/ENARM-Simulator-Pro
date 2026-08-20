@@ -1,0 +1,88 @@
+﻿{
+  "id": 9,
+  "title": "Apendicitis Aguda Complicada - Perforación con Peritonitis Localizada",
+  "specialty": "Cirugía General",
+  "difficulty": 2,
+  "chief_complaint": "Dolor en el lado derecho del abdomen que empeoró mucho hoy",
+  "patient": {
+    "age": 28,
+    "sex": "F",
+    "weight_kg": 58,
+    "height_cm": 162,
+    "occupation": "Secretaria",
+    "relevant_history": [
+      "Sin enfermedades crónicas",
+      "G1P1, última menstruación hace 10 días (descarta embarazo)",
+      "Sin cirugías previas",
+      "Alergia a penicilina (rash cutáneo)"
+    ]
+  },
+  "vitals_on_arrival": {
+    "systolic_bp": 112,
+    "diastolic_bp": 72,
+    "heart_rate": 108,
+    "respiratory_rate": 20,
+    "temperature_c": 38.8,
+    "spo2_percent": 98,
+    "weight_kg": 58
+  },
+  "history_of_present_illness": "Femenino de 28 años con 72 horas de evolución. Inicio con dolor periumbilical hace 3 días, migró a fosa ilíaca derecha hace 48 horas, intensidad progresiva ahora 8/10. Náusea, vómito x3, anorexia desde el inicio. Fiebre de 38.8°C desde hace 24 horas. Refiere que el dolor alivió brevemente hace 12 horas y luego se incrementó de nuevo (posible perforación). Diarrea líquida x2.",
+  "physical_exam": {
+    "general": "Femenino joven con facies de dolor, en posición antálgica (pierna derecha flexionada). Hidratada.",
+    "cardiovascular": "Taquicardia 108 lpm. TA 112/72. Sin alteraciones.",
+    "respiratory": "Sin alteraciones.",
+    "abdomen": "Distendido. Dolor a la palpación en FID, con defensa muscular voluntaria e involuntaria. Blumberg positivo en FID. Rovsing positivo. Psoas positivo. Obturador positivo. Ruidos intestinales disminuidos. Sin hepatoesplenomegalia.",
+    "neurological": "Alerta, orientada.",
+    "extremities": "Sin edema. Llenado capilar normal."
+  },
+  "key_labs": {
+    "BH": "Leucocitos 18,200 con 91% neutrófilos, bandas 8%. Hb 13.4. Plaquetas 286,000",
+    "PCR": "168 mg/L",
+    "procalcitonina": "1.8 ng/mL",
+    "glucosa": "102 mg/dL",
+    "creatinina": "0.8 mg/dL",
+    "prueba_embarazo": "Negativa (beta-hCG sérica <2)",
+    "urianálisis": "Sin piuria, sin hematuria (descarta ITU y cólico ureteral)"
+  },
+  "key_imaging": [
+    "USG abdomen: Apéndice no visualizable por gas. Líquido libre periapendicular en FID. Adenopatías mesentéricas reactivas.",
+    "TAC abdomen y pelvis con contraste: Apéndice de 12mm de diámetro con pared engrosada, realce periférico. Stranding de grasa periapendicular. Pequeña colección de 2cm en FID adyacente al apéndice (absceso periapendicular incipiente). Sin neumoperitoneo franco. Score de Alvarado implícito: 9/10."
+  ],
+  "correct_diagnosis": "Apendicitis aguda complicada - Perforación con peritonitis localizada y absceso periapendicular",
+  "differential_diagnosis": [
+    "Enfermedad pélvica inflamatoria (EPI) - descartada por beta-hCG negativa y TAC",
+    "Quiste ovárico complicado - descartado por imagen",
+    "Diverticulitis de Meckel",
+    "Ileítis terminal (Crohn) - menos aguda, diarrea crónica"
+  ],
+  "treatment_plan": [
+    "NPO, hidratación IV",
+    "Analgesia: ketorolaco 30 mg IV c/8h + tramadol 100 mg IV PRN (NO opioides potentes inicialmente)",
+    "Antibióticos IV previo a cirugía (alergia a penicilina - usar alternativa):",
+    "  - Ciprofloxacino 400 mg IV c/12h + metronidazol 500 mg IV c/8h",
+    "  - (Alternativa si no alergia: ampicilina-sulbactam o piperacilina-tazobactam)",
+    "Cirugía urgente: apendicectomía laparoscópica o abierta",
+    "  - Laparoscópica: preferida si cirujano con experiencia (incluso en perforada)",
+    "  - Lavado y drenaje de cavidad si peritonitis localizada",
+    "  - Apendicectomía + drenaje de absceso periapendicular",
+    "Antibiótico postoperatorio: continuar 4-7 días según hallazgos",
+    "Cultivo intraoperatorio del líquido",
+    "Si absceso >3cm sin peritonitis: puede manejarse con drenaje percutáneo + antibiótico y apendicectomía diferida (intervalo appendectomy) - decisión individualizada"
+  ],
+  "scoring_rubric": {
+    "anamnesis": 0.20,
+    "physical_exam": 0.15,
+    "diagnosis": 0.35,
+    "treatment": 0.30
+  },
+  "learning_objectives": [
+    "Reconocer signos físicos de apendicitis: Blumberg, Rovsing, Psoas, Obturador",
+    "Interpretar score de Alvarado para probabilidad de apendicitis",
+    "Distinguir apendicitis simple de complicada (perforada, absceso, peritonitis)",
+    "Seleccionar antibiótico adecuado según alergia a penicilina",
+    "Conocer cuándo optar por apendicectomía de intervalo vs cirugía inmediata"
+  ],
+  "guideline_ids": [11, 12],
+  "tags": ["apendicitis", "cirugia", "perforacion", "peritonitis", "Alvarado", "laparoscopia"],
+  "enarm_topics": ["Abdomen agudo", "Cirugía de urgencia", "Antibioticoterapia quirúrgica"]
+}

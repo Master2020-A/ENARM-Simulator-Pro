@@ -1,0 +1,129 @@
+{
+    "title":  "Presentación de un paciente con delirio agudo",
+    "slug":  "presentacion-de-un-paciente-con-delirio-agudo",
+    "chief_complaint":  "Tos severa y dificultad para respirar",
+    "specialty":  "Psiquiatria",
+    "difficulty":  "intermediate",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  50,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  80,
+                         "height_cm":  175,
+                         "occupation":  "Trabajador de oficina",
+                         "vitals_on_arrival":  {
+                                                   "hr":  100,
+                                                   "sbp":  140,
+                                                   "dbp":  90,
+                                                   "rr":  20,
+                                                   "spo2":  88,
+                                                   "temp_c":  36.5
+                                               },
+                         "past_medical_history":  [
+                                                      "hipertensión arterial",
+                                                      "tabaquismo"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "acepotenilo 10mg"
+                                                 ],
+                         "family_history":  "negado",
+                         "social_history":  "tabaquismo de 20 años"
+                     },
+    "history_present_illness":  "El paciente se presentó con tos severa y dificultad para respirar durante las últimas 24 horas. Ha estado sudando, tiene mareos y ha estado confundido y agitado. Ha estado respirando rápido y con dificultad. No ha tenido fiebre ni diarrea.",
+    "symptoms_json":  [
+                          {
+                              "name":  "tos",
+                              "duration":  "24 horas",
+                              "severity":  "severa"
+                          },
+                          {
+                              "name":  "respiración rápida",
+                              "duration":  "24 horas",
+                              "severity":  "severa"
+                          },
+                          {
+                              "name":  "mareos",
+                              "duration":  "24 horas",
+                              "severity":  "moderado"
+                          },
+                          {
+                              "name":  "confusión",
+                              "duration":  "24 horas",
+                              "severity":  "moderado"
+                          },
+                          {
+                              "name":  "agitado",
+                              "duration":  "24 horas",
+                              "severity":  "moderado"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Delirio agudo",
+                                    "icd10":  "F06.9",
+                                    "differential":  [
+                                                         "Sepsis",
+                                                         "Toxemia",
+                                                         "Delirio por demencia"
+                                                     ],
+                                    "justification":  "El paciente presenta signos vitales inestables, mareos, confusión y agitado, lo cual es compatible con delirio agudo. La tos y dificultad para respirar pueden ser signos de complicaciones como la asfixia."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "sin evidencia de problemas cardíacos"
+                                  },
+                                  {
+                                      "name":  "Troponinas seriadas",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "no evidencia de daño muscular"
+                                  },
+                                  {
+                                      "name":  "Radiografia de torax",
+                                      "priority":  "routine",
+                                      "expected_finding":  "sin datos de congestión"
+                                  },
+                                  {
+                                      "name":  "Examen de orina completa",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "sin evidencia de infección urinaria"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Oxígeno suplementario",
+                                         "priority":  "immediate",
+                                         "evidence":  "Clínica estándar"
+                                     },
+                                     {
+                                         "treatment":  "Medicación para aliviar delirio",
+                                         "priority":  "immediate",
+                                         "evidence":  "Clínica estándar"
+                                     },
+                                     {
+                                         "treatment":  "Antibióticos empiricos",
+                                         "priority":  "urgent",
+                                         "evidence":  "Clínica estándar"
+                                     },
+                                     {
+                                         "treatment":  "Bicarbonato",
+                                         "priority":  "urgent",
+                                         "evidence":  "Clínica estándar"
+                                     },
+                                     {
+                                         "treatment":  "Monitorización intensiva",
+                                         "priority":  "urgent",
+                                         "evidence":  "Clínica estándar"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente debe ser evaluado nuevamente en 24 horas para monitorear la evolución del delirio y los signos vitales. Se debe realizar un examen de orina completa y considerar un análisis de sangre completo para evaluar cualquier infección.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnosticos del delirio agudo",
+                                     "Aplicar protocolo de manejo del delirio en primera hora",
+                                     "Reconocer complicaciones potenciales del delirio agudo"
+                                 ],
+    "teaching_points":  "El delirio agudo es una emergencia clínica que requiere una evaluación rápida y un tratamiento apropiado. Es importante diferenciarlo de otras condiciones similares y monitorear de manera constante para evitar complicaciones graves."
+}

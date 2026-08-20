@@ -1,0 +1,83 @@
+﻿{
+  "id": "case_007",
+  "version": "1.0",
+  "specialty": "URGENCIAS",
+  "complexity": "AVANZADO",
+  "setting": "emergency",
+  "title": "Trauma craneoencefalico severo por accidente automovilistico en varon de 32 anos",
+  "patient": {
+    "name": "Carlos Mendez Aguilar",
+    "age": 32,
+    "age_unit": "years",
+    "sex": "M",
+    "weight_kg": 82,
+    "height_cm": 175
+  },
+  "chief_complaint": "Perdida de conciencia post trauma craneal, Glasgow 7",
+  "history": {
+    "present_illness": "Paciente masculino trasladado por servicios de emergencia posterior a colision vehicular frontal a alta velocidad hace 45 minutos. Conductor sin cinturon de seguridad, con impacto craneal contra parabrisas. Perdida de conciencia desde el evento, sin recuperar. Un episodio convulsivo tonico-clonico generalizado en la ambulancia. Sin otros datos referidos por testigos.",
+    "past_medical": "Desconocidos (paciente no responde). Familia informa que era sano.",
+    "allergies": "Desconocidas",
+    "medications": "Ninguno referido",
+    "family": "No disponible",
+    "social": "Consumo social de alcohol referido por familia"
+  },
+  "vitals_initial": {
+    "hr": 58,
+    "bp_sys": 178,
+    "bp_dia": 98,
+    "spo2": 92,
+    "rr": 8,
+    "temp": 36.5
+  },
+  "physical_exam": {
+    "general": "Paciente inconsciente, con herida contusa en region frontal derecha de 8 cm sangrante, hematoma periorbitario bilateral (ojos de mapache), otorragia derecha",
+    "head_neck": "Signo de Battle positivo derecho, salida de LCR por oido derecho, collarin cervical colocado, pupilas: derecha 5mm arreactiva, izquierda 3mm hiporreactiva",
+    "cardio": "Bradicardia, ritmo regular, hipertension arterial (triada de Cushing presente)",
+    "resp": "Patron respiratorio irregular (Cheyne-Stokes), campos pulmonares con estertores por broncoaspiracion probable",
+    "abdomen": "Blando, no distendido, sin datos de irritacion peritoneal, FAST pendiente",
+    "neuro": "Glasgow 7 (O2 V2 M3), postura de decorticacion derecha, decerebracion izquierda, reflejos osteotendinosos aumentados, Babinski bilateral"
+  },
+  "correct_diagnosis": {
+    "primary": "Trauma craneoencefalico severo con probable hematoma epidural derecho y fractura de base de craneo",
+    "icd10": "S06.5",
+    "differentials": ["Hematoma subdural agudo", "Contusion cerebral hemorragica", "Lesion axonal difusa", "Hemorragia subaracnoidea traumatica"]
+  },
+  "correct_treatment": {
+    "immediate": [
+      "Via aerea definitiva: intubacion orotraqueal con secuencia rapida (Glasgow <8)",
+      "Estabilizacion cervical mantenida",
+      "Ventilacion mecanica con normocapnia (PaCO2 35-40 mmHg)",
+      "Dos accesos venosos de gran calibre",
+      "Elevacion de cabecera 30 grados",
+      "Monitorizacion invasiva de PAM y PIC"
+    ],
+    "medications": [
+      "Sedoanalgesia: fentanilo 2 mcg/kg + midazolam 0.1 mg/kg + rocuronio 1 mg/kg",
+      "Manitol 20% 0.5-1 g/kg IV en bolo o solucion salina hipertonica 3% 250 ml",
+      "Anticonvulsivante: levetiracetam 30 mg/kg IV",
+      "Meta PAM >80 mmHg, PPC >60 mmHg",
+      "Antibiotico si fractura de base: ceftriaxona 2g IV",
+      "NO usar corticoides (contraindicados en TCE)"
+    ],
+    "admission": "TAC de craneo urgente. Interconsulta a neurocirugia para probable craniectomia descompresiva. Ingreso a UCI."
+  },
+  "expected_studies": [
+    "TAC de craneo simple urgente",
+    "TAC cervical, toracica y abdominal (politraumatizado)",
+    "Rx de columna cervical AP, lateral y transoral",
+    "Biometria hematica, quimica, tiempos de coagulacion, gasometria arterial",
+    "Grupo sanguineo y pruebas cruzadas",
+    "Toxicologia (alcohol, drogas)",
+    "Electrocardiograma"
+  ],
+  "gpc_references": ["IMSS-604-13"],
+  "learning_objectives": [
+    "Aplicar ABCDE del trauma en TCE severo",
+    "Reconocer triada de Cushing (HTA, bradicardia, alteracion respiratoria)",
+    "Indicar intubacion con Glasgow <8",
+    "Manejar hipertension endocraneana con osmoterapia",
+    "Reconocer signos de fractura de base de craneo"
+  ],
+  "ai_prompt_context": "Eres Carlos Mendez Aguilar. Este paciente esta INCONSCIENTE (Glasgow 7) tras trauma craneal severo. NO puede hablar ni responder preguntas. Si el doctor te pregunta algo directo al paciente, responde SIEMPRE: '[Paciente inconsciente, no responde]' o '[Solo emite quejidos incomprensibles]' o '[No hay respuesta verbal, solo apertura ocular al dolor]'. Si el doctor pregunta por historia, di: '[La familia refiere: ...]' con datos limitados. NO inventes respuestas del paciente."
+}

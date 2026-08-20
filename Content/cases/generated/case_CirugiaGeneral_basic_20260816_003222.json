@@ -1,0 +1,95 @@
+{
+    "title":  "Paciente con dolor abdominal intenso",
+    "slug":  "paciente-con-dolor-abdominal-intenso",
+    "chief_complaint":  "Dolor abdominal intenso desde la mañana pasada",
+    "specialty":  "CirugiaGeneral",
+    "difficulty":  "basic",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  55,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  80,
+                         "height_cm":  175,
+                         "occupation":  "Mecanico",
+                         "vitals_on_arrival":  {
+                                                   "hr":  90,
+                                                   "sbp":  140,
+                                                   "dbp":  90,
+                                                   "rr":  20,
+                                                   "spo2":  95,
+                                                   "temp_c":  37.2
+                                               },
+                         "past_medical_history":  [
+                                                      "Hipertension arterial",
+                                                      "Diabetes tipo 2"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Metformina 500mg VO qd",
+                                                     "Lisinopril 10mg PO qd"
+                                                 ],
+                         "family_history":  "negado",
+                         "social_history":  "no tabaquismo, alcohol moderado"
+                     },
+    "history_present_illness":  "El paciente se despertó esta mañana con un dolor abdominal intenso y perinanal que se ha vuelto cada vez peor. El dolor es intenso y localizado en la parte baja del abdomen, con un fuerte dolor perinanal que es peor al defecar. No tiene vómitos ni diarrea. El dolor no ha mejorado con el reposo y ha empezado a afectar su sueño. La fiebre ha aumentado ligeramente desde este incidente. No ha pasado nada fuera del estómago en las últimas 24 horas.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Dolor abdominal intenso",
+                              "duration":  "24 horas",
+                              "severity":  "intenso"
+                          },
+                          {
+                              "name":  "Dolor perinanal",
+                              "duration":  "24 horas",
+                              "severity":  "intenso"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Dolor perineal y dolor abdominal intenso",
+                                    "icd10":  "I21.0",
+                                    "differential":  [
+                                                         "Dolor perineal",
+                                                         "Infección perineal",
+                                                         "Cistitis"
+                                                     ],
+                                    "justification":  "El paciente presenta un dolor perinanal intenso y dolor abdominal que es peor al defecar, lo cual sugiere una posibilidad de infección perineal o cistitis. La fiebre y el aumento del dolor perinanal lo hacen más probable una infección perineal."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "Ecografia perineal",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Sin datos de complicaciones"
+                                  },
+                                  {
+                                      "name":  "Ultrasonido abdominal",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin datos de complicaciones"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Antibiótico empírico (Amoxicilina 500mg PO q6h)",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - IMSS/CENETEC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Doloroso analgesia con paracetamol 1000mg PO q6h",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Reposo y hidratación adicional",
+                                         "priority":  "routine",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente debe ser siguiendo por un cirujano urologista para una ecografía perineal y ultrasonido abdominal para confirmar la diagnostico. Se recomienda una consulta en 24 horas y una revisión en 48 horas.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnosticos de infección perineal",
+                                     "Aplicar protocolo empírico de antibióticos en primera hora",
+                                     "Reconocer complicaciones de infección perineal"
+                                 ],
+    "teaching_points":  "El dolor perineal y dolor abdominal intenso pueden ser signos de infección perineal. Es importante realizar un examen perineal y ultrasonido abdominal para confirmar el diagnóstico. El tratamiento empírico con antibióticos es crucial en estas situaciones."
+}

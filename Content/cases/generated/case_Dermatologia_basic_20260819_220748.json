@@ -1,0 +1,94 @@
+{
+  "title": "Reves de piel en paciente con diabetes",
+  "slug": "reves-de-piel-en-paciente-con-diabetes",
+  "chief_complaint": "Reves de piel y dolor en las extremidades",
+  "specialty": "Dermatologia",
+  "difficulty": "basic",
+  "setting": "outpatient",
+  "patient_json": {
+    "name": "Juan Perez Garcia",
+    "age": 55,
+    "age_unit": "years",
+    "sex": "M",
+    "weight_kg": 80,
+    "height_cm": 175,
+    "occupation": "Trabajador administrativo",
+    "vitals_on_arrival": {
+      "hr": 88,
+      "sbp": 130,
+      "dbp": 85,
+      "rr": 18,
+      "spo2": 97,
+      "temp_c": 36.9
+    },
+    "past_medical_history": [
+      "Diabetes tipo 2",
+      "Hipertension"
+    ],
+    "allergies": "ninguna conocida",
+    "current_medications": [
+      "Metformina 500mg TID",
+      "Lisinopril 10mg DI"
+    ],
+    "family_history": "Diabetes en familia",
+    "social_history": "No tabaquismo, alcohol moderado"
+  },
+  "history_present_illness": "Paciente de 55 años con diabetes tipo 2 ha venido por dolor intenso y reves de piel en los dedos de las extremidades. El dolor es intenso y ha estado presente durante las últimas 2 semanas. El reves de piel es claro, sin inflamación ni pus. El paciente ha intentado usar alcohol y vinagre para tratar el problema, pero el dolor ha persistido.",
+  "symptoms_json": [
+    {
+      "name": "Dolor",
+      "duration": "2 semanas",
+      "severity": "intenso"
+    },
+    {
+      "name": "Reves de piel",
+      "duration": "2 semanas",
+      "severity": "leve"
+    }
+  ],
+  "expected_diagnosis_json": {
+    "primary": "Diabetes neuropática sensorial periférica",
+    "icd10": "E11.90",
+    "differential": [
+      "Reves de piel por irritación",
+      "Diabetes neuropática autónoma"
+    ],
+    "justification": "Presentación clásica de diabetes neuropática sensorial periférica con dolor intenso y reves de piel en las extremidades"
+  },
+  "expected_studies_json": [
+    {
+      "name": "Electroforenes nerviosos periféricos",
+      "priority": "urgent",
+      "expected_finding": "Deterioro de la función nerviosa sensorial"
+    },
+    {
+      "name": "Ecografía vascular periférica",
+      "priority": "routine",
+      "expected_finding": "Sin datos de aneurisma o trombosis"
+    }
+  ],
+  "expected_treatments_json": [
+    {
+      "treatment": "Control de la glucosa",
+      "priority": "immediate",
+      "evidence": "Manejo de la diabetes"
+    },
+    {
+      "treatment": "Medicamentos para el dolor",
+      "priority": "immediate",
+      "evidence": "Protocolo de gestión del dolor neuropático"
+    },
+    {
+      "treatment": "Educación y prevención",
+      "priority": "routine",
+      "evidence": "Protocolo de educación en diabetes"
+    }
+  ],
+  "expected_followup": "Reevaluación en 1 mes para control de la glucosa y evaluación neurológica.",
+  "learning_objectives_json": [
+    "Identificar los criterios diagnósticos de diabetes neuropática sensorial periférica",
+    "Aplicar el protocolo de gestión del dolor neuropático",
+    "Reconocer la importancia de la educación en la prevención y manejo de la diabetes"
+  ],
+  "teaching_points": "Los pacientes con diabetes deben ser evaluados regularmente para el diagnóstico y manejo de la neuropatía sensorial periférica. El control de la glucosa y el manejo del dolor son fundamentales para mejorar la calidad de vida de estos pacientes."
+}

@@ -1,0 +1,98 @@
+{
+    "title":  "Fiebre alta y picazón en niño",
+    "slug":  "fiebre-alta-picazon-niño",
+    "chief_complaint":  "Fiebre alta y picazón en el pecho",
+    "specialty":  "Pediatria",
+    "difficulty":  "basic",
+    "setting":  "outpatient",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  8,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  25,
+                         "height_cm":  120,
+                         "occupation":  "Estudiante de 3º grado",
+                         "vitals_on_arrival":  {
+                                                   "hr":  98,
+                                                   "sbp":  110,
+                                                   "dbp":  70,
+                                                   "rr":  20,
+                                                   "spo2":  95,
+                                                   "temp_c":  39.2
+                                               },
+                         "past_medical_history":  [
+                                                      "sin antecedentes relevantes"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "paracetamol 100mg"
+                                                 ],
+                         "family_history":  "negado",
+                         "social_history":  "no vuela ni juega al fútbol"
+                     },
+    "history_present_illness":  "El niño se presentó con fiebre alta de repente y picazón en el pecho. Ha estado con fiebre durante los últimos dos días. Además, ha notado picazón en el pecho y en algunas zonas del cuerpo. No ha tenido mareos ni dificultad para respirar.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Fiebre alta",
+                              "duration":  "2 días",
+                              "severity":  "grave"
+                          },
+                          {
+                              "name":  "Picazón en el pecho",
+                              "duration":  "2 días",
+                              "severity":  "moderada"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Picazón urticaria",
+                                    "icd10":  "L21.1",
+                                    "differential":  [
+                                                         "Erupción urticarial",
+                                                         "Faringitis",
+                                                         "Infección bacteriana"
+                                                     ],
+                                    "justification":  "El niño presenta fiebre alta y picazón urticarial. La fiebre alta y la picazón urticarial son características comunes de la picazón urticaria. No hay antecedentes de infección bacteriana ni fiebre alta prolongada que sugirieren una infección bacteriana. La erupción urticarial es la más probable."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "Examen de orina",
+                                      "priority":  "routine",
+                                      "expected_finding":  "sin datos de infección bacteriana"
+                                  },
+                                  {
+                                      "name":  "EKG 12 derivaciones",
+                                      "priority":  "routine",
+                                      "expected_finding":  "sin datos de complicaciones cardíacas"
+                                  },
+                                  {
+                                      "name":  "Citoquinas sanguíneas",
+                                      "priority":  "routine",
+                                      "expected_finding":  "sin datos de inflamación severa"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Paracetamol 100mg cada 6 horas",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Dipirona 50mg cada 4 horas",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Antihistamínicos (dipirona)",
+                                         "priority":  "routine",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "Seguimiento en 24 horas si la fiebre persiste o aumenta, o si aparecen nuevos síntomas.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnosticos de picazón urticaria",
+                                     "Aplicar protocolo de tratamiento en primera hora",
+                                     "Reconocer complicaciones de picazón urticaria"
+                                 ],
+    "teaching_points":  "Es importante diferenciar picazón urticaria de otras infecciones virales y bacterianas. El tratamiento inmediato con paracetamol y antihistamínicos puede reducir la fiebre y la picazón. El seguimiento es importante para evaluar el progreso del niño y detectar cualquier complicación."
+}

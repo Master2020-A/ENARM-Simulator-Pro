@@ -1,0 +1,118 @@
+{
+    "title":  "Caso de Angina Pectoral no Convencional (APNC) complicada por Sepsis",
+    "slug":  "caso-angina-pectoral-no-convencional-complicada-por-sepsis",
+    "chief_complaint":  "Dolor torácico intenso durante actividad física",
+    "specialty":  "Cardiologia",
+    "difficulty":  "advanced",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  55,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  85,
+                         "height_cm":  175,
+                         "occupation":  "Trabajador administrativo",
+                         "vitals_on_arrival":  {
+                                                   "hr":  120,
+                                                   "sbp":  140,
+                                                   "dbp":  90,
+                                                   "rr":  20,
+                                                   "spo2":  92,
+                                                   "temp_c":  38.5
+                                               },
+                         "past_medical_history":  [
+                                                      "Angina pectoral estables por 5 años"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Aspirina 100mg VO"
+                                                 ],
+                         "family_history":  "Hipertensión arterial familiar",
+                         "social_history":  "Fumador de 20 cigarrillos al día durante 30 años"
+                     },
+    "history_present_illness":  "El paciente se presentó con un dolor torácico intenso que comenzó durante una caminata de 30 minutos y duró durante 15 minutos. El dolor era de tipo pecho cerrado y no mejoraba con el reposo o la toma de un medicamento que toma habitualmente para su angina pectoral. El paciente sintió sudoración profusa y malestar estomacal. El dolor comenzó a aparecer mientras estaba en reposo y persistió durante los siguientes 24 horas.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Dolor torácico intenso",
+                              "duration":  "24 horas",
+                              "severity":  "severa"
+                          },
+                          {
+                              "name":  "Sudoración profusa",
+                              "duration":  "24 horas",
+                              "severity":  "leve"
+                          },
+                          {
+                              "name":  "Malestar estomacal",
+                              "duration":  "24 horas",
+                              "severity":  "leve"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Angina Pectoral no Convencional (APNC) complicada por Sepsis",
+                                    "icd10":  "I21.1",
+                                    "differential":  [
+                                                         "Angina pectoral estables",
+                                                         "Infarto agudo del miocardio",
+                                                         "Enfermedad pericardia"
+                                                     ],
+                                    "justification":  "La presentación atípica, la duración del dolor y la aparición de signos de sepsis hacen que el APNC sea el diagnóstico más probable. La fiebre, la hipertensión y el dolor torácico intenso son claves en la diferenciación con un infarto agudo del miocardio. La sospecha de sepsis se debe a la malestar estomacal y la sudoración."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "ST elevado V1-V3"
+                                  },
+                                  {
+                                      "name":  "Troponinas seriadas",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "elevadas"
+                                  },
+                                  {
+                                      "name":  "Radiografia de torax",
+                                      "priority":  "routine",
+                                      "expected_finding":  "sin datos de congestion"
+                                  },
+                                  {
+                                      "name":  "Laboratorio completa",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "elevados de C-reactivo y leukocitos"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Aspirina 300mg VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Clopidogrel 600mg carga VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Enoxaparina 1mg/kg SC c/12h",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Angioplastia primaria en \u003c90 min",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Amoxicilina 500mg cada 6 horas c/400mg de clavulana",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente debe seguirse de cerca en el primer día después de la intervención quirúrgica. Se debe realizar un ECG y troponinas para evaluar el progreso. El paciente debe seguir las indicaciones de los antibióticos y estar observado por cualquier signo de complicaciones. El seguimiento a largo plazo debe incluir un seguimiento cardiológico y la evaluación de la prevención de la reinfarto.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnosticos de Angina Pectoral no Convencional (APNC)",
+                                     "Aplicar protocolo de maniobra de emergencia en pacientes con APNC complicados por sepsis",
+                                     "Reconocer complicaciones de los procedimientos cardíacos"
+                                 ],
+    "teaching_points":  "1. El APNC puede presentarse de forma atípica, especialmente en pacientes con comorbilidades como el tabaquismo. 2. La sospecha de sepsis en pacientes con APNC debe ser considerada en cualquier situación clínica inusual. 3. Los procedimientos cardíacos deben ser seguidos por una evaluación cuidadosa de complicaciones infecciosas."
+}

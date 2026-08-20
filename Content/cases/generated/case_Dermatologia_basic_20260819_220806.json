@@ -1,0 +1,105 @@
+{
+  "title": "Lesión cutánea en paciente con diabetes mellitus",
+  "slug": "lesion-cutanea-paciente-con-diabetes-mellitus",
+  "chief_complaint": "Mancha negra en el pie durante 2 meses",
+  "specialty": "Dermatología",
+  "difficulty": "basic",
+  "setting": "outpatient",
+  "patient_json": {
+    "name": "Juan Perez Garcia",
+    "age": 60,
+    "age_unit": "years",
+    "sex": "M",
+    "weight_kg": 80,
+    "height_cm": 175,
+    "occupation": "Trabajador",
+    "vitals_on_arrival": {
+      "hr": 78,
+      "sbp": 122,
+      "dbp": 78,
+      "rr": 18,
+      "spo2": 97,
+      "temp_c": 36.6
+    },
+    "past_medical_history": [
+      "diabetes mellitus tipo 2 por 10 años",
+      "hipertensión arterial"
+    ],
+    "allergies": "ninguna conocida",
+    "current_medications": [
+      "gliclazida 150mg",
+      "metformina 500mg"
+    ],
+    "family_history": "hipertensión arterial familiar",
+    "social_history": "no alcohol, no tabaquismo"
+  },
+  "history_present_illness": "El paciente presenta una mancha negra y maciza en el pie derecho, cerca del dedo del pie, durante los últimos 2 meses. La mancha no ha crecido ni desaparecido. El paciente no experimenta dolor, pero tiene una sensación de calidez en el área afectada. Ha estado caminando con el pie derecho sin apoyo durante los últimos días.",
+  "symptoms_json": [
+    {
+      "name": "Mancha negra",
+      "duration": "2 meses",
+      "severity": "moderada"
+    },
+    {
+      "name": "Sensación de calidez",
+      "duration": "3 días",
+      "severity": "leve"
+    }
+  ],
+  "expected_diagnosis_json": {
+    "primary": "Neumonía",
+    "icd10": "J11.8",
+    "differential": [
+      "Faringitis",
+      "Pneumonía bacteriana",
+      "Infección urinaria"
+    ],
+    "justification": "El paciente tiene fiebre, dolor torácico y mala respiración, lo que sugiere una infección pulmonar. El ECOG del paciente es 3, lo que indica una infección severa. La radiografía de torax no ha revelado datos de congestión pulmonar, lo que sugiere una infección bacteriana. La expectoración es pura, lo que sugiere una infección bacteriana. La presencia de fiebre y dolor torácico en un paciente con diabetes mellitus aumenta el riesgo de complicaciones infecciosas."
+  },
+  "expected_studies_json": [
+    {
+      "name": "ECG 12 derivaciones",
+      "priority": "routine",
+      "expected_finding": "sin datos de congestión"
+    },
+    {
+      "name": "Troponinas seriadas",
+      "priority": "routine",
+      "expected_finding": "negativas"
+    },
+    {
+      "name": "Radiografia de torax",
+      "priority": "urgent",
+      "expected_finding": "congestión bilateral"
+    }
+  ],
+  "expected_treatments_json": [
+    {
+      "treatment": "Antibióticos de primera línea (penicilina G)",
+      "priority": "immediate",
+      "evidence": "Class I - AHA/ACC 2022"
+    },
+    {
+      "treatment": "Dosis aumentada de gliclazida",
+      "priority": "immediate",
+      "evidence": "Class I"
+    },
+    {
+      "treatment": "Dosis aumentada de metformina",
+      "priority": "immediate",
+      "evidence": "Class I"
+    },
+    {
+      "treatment": "Administración de paracetamol para alivio del dolor",
+      "priority": "immediate",
+      "evidence": "Class I"
+    }
+  ],
+  "expected_followup": "El paciente debe ser evaluado en la consulta de urgencias en 24 horas para una evaluación del estado de la infección y ajuste de los tratamientos. Se debe realizar una radiografía de torax en 24 horas para evaluar el progreso de la infección.",
+  "learning_objectives_json": [
+    "Identificar criterios diagnósticos de infección pulmonar",
+    "Aplicar protocolo de tratamiento de infección bacteriana en pacientes con diabetes mellitus",
+    "Reconocer complicaciones de infección pulmonar"
+  ],
+  "teaching_points": "Los pacientes con diabetes mellitus tienen un alto riesgo de complicaciones infecciosas. Es importante realizar un seguimiento regular y ajustar los tratamientos según sea necesario. El tratamiento de la infección pulmonar debe comenzar inmediatamente y ajustarse según sea necesario."
+}

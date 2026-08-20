@@ -1,0 +1,103 @@
+{
+    "title":  "Paciente con diarrea persistente y dolor abdominal",
+    "slug":  "paciente-con-diarrea-persistente-y-dolor-aboriginal",
+    "chief_complaint":  "Diarrea por 3 días, dolor abdominal intenso",
+    "specialty":  "Gastroenterologia",
+    "difficulty":  "intermediate",
+    "setting":  "outpatient",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  38,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  80,
+                         "height_cm":  175,
+                         "occupation":  "Mecanico",
+                         "vitals_on_arrival":  {
+                                                   "hr":  88,
+                                                   "sbp":  130,
+                                                   "dbp":  85,
+                                                   "rr":  20,
+                                                   "spo2":  95,
+                                                   "temp_c":  37.5
+                                               },
+                         "past_medical_history":  [
+                                                      "hipertension arterial"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "enalapril 10mg diario"
+                                                 ],
+                         "family_history":  "negado",
+                         "social_history":  "no fuma ni bebe, no usa drogas"
+                     },
+    "history_present_illness":  "Patient presenta diarrea de color verde oscuro y consistencia de lodo por 3 días. El dolor abdominal es intenso, espasmos abdominales y malestar gastrointestinal. No tiene fiebre, pero siente fatiga. No ha tenido náuseas ni vomitos. Ha estado bebiendo agua y alimentos blandos.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Diarrea verde oscuro",
+                              "duration":  "3 dias",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Dolor abdominal intenso",
+                              "duration":  "3 dias",
+                              "severity":  "severa"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Intoxicación por clostridio difficile",
+                                    "icd10":  "A10.1",
+                                    "differential":  [
+                                                         "Gastroenteritis viral",
+                                                         "Colitis ulcerativa activa",
+                                                         "Hipersensibilidad gastrointestinal"
+                                                     ],
+                                    "justification":  "Diarrea persistente, dolor abdominal intenso, y alteración de la flora intestinal."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "Frotis fecal",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Clostridio difficile"
+                                  },
+                                  {
+                                      "name":  "Electrolitos séricos",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Hipokalemia"
+                                  },
+                                  {
+                                      "name":  "Colonoscopia",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Alteración de la mucosa intestinal"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Metronidazol 500mg VO q8h por 5 días",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Dietetica oral",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Suplementos electrolíticos (potasio)",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Antibiótico alternativo si clostridio difficile no es detectado",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "Reevaluación en 48 horas para control de la diarrea, electrolitos y signos vitales. Monitorizar la evolución del dolor abdominal.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnosticos de intoxicación por clostridio difficile",
+                                     "Aplicar protocolo de tratamiento de clostridio difficile en primera hora",
+                                     "Reconocer complicaciones de intoxicación por clostridio difficile"
+                                 ],
+    "teaching_points":  "En el diagnóstico diferencial de diarrea aguda, el clostridio difficile debe ser considerado como una posibilidad importante. El tratamiento prompto con metronidazol puede prevenir complicaciones graves como perforación intestinal. Es crucial el monitoreo de los signos vitales y la recopilación de electrolitos en pacientes con diarrea aguda."
+}

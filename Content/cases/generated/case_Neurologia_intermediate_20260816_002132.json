@@ -1,0 +1,121 @@
+{
+    "title":  "Apoplejía cerebral isquémica por trombosis arteriosa cerebral",
+    "slug":  "apoplejia-cerebral-isquemica-trombosis-arteriosa-cerebral",
+    "chief_complaint":  "Paciente presenta dolor de cabeza intenso, náuseas y parálisis facial unilateral durante las últimas 24 horas",
+    "specialty":  "Neurologia",
+    "difficulty":  "intermediate",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  55,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  80,
+                         "height_cm":  175,
+                         "occupation":  "Médico",
+                         "vitals_on_arrival":  {
+                                                   "hr":  110,
+                                                   "sbp":  160,
+                                                   "dbp":  90,
+                                                   "rr":  20,
+                                                   "spo2":  95,
+                                                   "temp_c":  37.2
+                                               },
+                         "past_medical_history":  [
+                                                      "Hipertensión arterial",
+                                                      "Colesterol alto",
+                                                      "Fumar"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Aspirina 300mg VO",
+                                                     "Atorvastatina 80mg OD"
+                                                 ],
+                         "family_history":  "Negado",
+                         "social_history":  "Fuma 20 cigarrillos al día"
+                     },
+    "history_present_illness":  "Paciente reportó un dolor de cabeza intenso, náuseas y parálisis facial unilateral en la mejilla derecha durante las últimas 24 horas. El dolor comenzó repentinamente mientras estaba trabajando en su consulta médica y se peoró a lo largo del día. No ha tenido antecedentes similares en los últimos años.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Dolor de cabeza intenso",
+                              "duration":  "24 horas",
+                              "severity":  "severas"
+                          },
+                          {
+                              "name":  "Náuseas",
+                              "duration":  "24 horas",
+                              "severity":  "moderadas"
+                          },
+                          {
+                              "name":  "Parálisis facial unilateral",
+                              "duration":  "24 horas",
+                              "severity":  "severas"
+                          },
+                          {
+                              "name":  "Vomito",
+                              "duration":  "24 horas",
+                              "severity":  "leves"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Apoplejía cerebral isquémica por trombosis arteriosa cerebral",
+                                    "icd10":  "I63.90",
+                                    "differential":  [
+                                                         "Apoplejía cerebral haemorragica",
+                                                         "Apoplejía cerebral isquémica por trombosis arteriosa cerebral sin reflujo",
+                                                         "Apoplejía cerebral isquémica por embolia arteriosa cerebral"
+                                                     ],
+                                    "justification":  "Las características clínicas de dolor de cabeza intenso, náuseas, parálisis facial unilateral y vomito, junto con la edad avanzada, el historial de hipertensión arterial y colesterol alto, hacen que la apoplejía cerebral isquémica por trombosis arteriosa cerebral sea el diagnóstico principal."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Sin evidencia de arritmia"
+                                  },
+                                  {
+                                      "name":  "Troponinas seriadas",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Elevadas"
+                                  },
+                                  {
+                                      "name":  "Imaging cerebrovascular (CTV o MRI)",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Evidencia de trombosis arteriosa cerebral"
+                                  },
+                                  {
+                                      "name":  "Escaneo doppler cerebral",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Sin evidencia de embolia arteriosa cerebral"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Aspirina 300mg VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Clopidogrel 600mg carga VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Enoxaparina 1mg/kg SC c/12h",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Angioplastia primaria en \u003c90 min",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "Monitorización intensiva en la Unidad de Cuidados Intensivos, seguimiento neurológico regular y control de factores de riesgo.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnósticos de apoplejía cerebral isquémica por trombosis arteriosa cerebral",
+                                     "Aplicar protocolo de manejo de apoplejía cerebral isquémica por trombosis arteriosa cerebral en primera hora",
+                                     "Reconocer complicaciones potenciales como reflujo y reembolia de trombosis arteriosa cerebral"
+                                 ],
+    "teaching_points":  "Los estudiantes deben aprender a diferenciar apoplejía cerebral isquémica por trombosis arteriosa cerebral de apoplejía cerebral haemorragica y apoplejía cerebral isquémica por trombosis arteriosa cerebral sin reflujo. La rápida identificación del diagnóstico y el manejo inicial adecuado son cruciales para mejorar el resultado clínico."
+}

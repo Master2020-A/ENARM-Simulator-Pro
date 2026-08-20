@@ -1,0 +1,114 @@
+{
+    "title":  "Paciente Presentando Alteraciones Sensoriales y Neurológicas",
+    "slug":  "paciente-presentando-alteraciones-sensoriales-y-neurolgicas",
+    "chief_complaint":  "Dolor de cabeza intenso y visión borrosa",
+    "specialty":  "Neurologia",
+    "difficulty":  "intermediate",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  50,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  80,
+                         "height_cm":  175,
+                         "occupation":  "Trabajador en oficina",
+                         "vitals_on_arrival":  {
+                                                   "hr":  110,
+                                                   "sbp":  180,
+                                                   "dbp":  110,
+                                                   "rr":  20,
+                                                   "spo2":  92,
+                                                   "temp_c":  37.5
+                                               },
+                         "past_medical_history":  [
+                                                      "hipertensión arterial",
+                                                      "fumar 20 cigarrillos al día"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     " Lisinopril 10mg diario"
+                                                 ],
+                         "family_history":  "hipertensión familiar",
+                         "social_history":  "tabaquismo"
+                     },
+    "history_present_illness":  "El paciente ha estado experimentando dolor de cabeza severo y visión borrosa durante las últimas 24 horas. El dolor de cabeza es intenso, de tipo de martillo, localizado en el frente y temporal derecho, que se incrementa con el movimiento o la exposición al ruido. La visión borrosa es recurrente, mejorando y peorando, sin visión nula. El paciente también ha notado dificultad para hablar claramente y ha sentido náuseas y vómitos. Antes de los síntomas actuales, el paciente no presentaba problemas neurológicos conocidos.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Dolor de cabeza",
+                              "duration":  "24 horas",
+                              "severity":  "severa"
+                          },
+                          {
+                              "name":  "Visión borrosa",
+                              "duration":  "24 horas",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Dificultad para hablar",
+                              "duration":  "24 horas",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Náuseas y vómitos",
+                              "duration":  "24 horas",
+                              "severity":  "moderada"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Isla de infarto cerebral",
+                                    "icd10":  "I62.12",
+                                    "differential":  [
+                                                         "Isla de infarto cerebral",
+                                                         "Tumefacción temporal",
+                                                         "Dolor de cabeza migraña"
+                                                     ],
+                                    "justification":  "Basado en la anamnesis del paciente, la presencia de dolor de cabeza intenso, visión borrosa, dificultad para hablar y náuseas, se sospecha de infarto cerebral, ya que los signos de visión borrosa y dificultad para hablar son indicativos de un daño cerebral. El dolor de cabeza intenso y el aumento del ritmo cardíaco son también consistentes con un infarto cerebral."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "sin evidencia de arritmia"
+                                  },
+                                  {
+                                      "name":  "Imaging Cerebral (CT o MRI)",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "isla de infarto cerebral en la izquierda temporal"
+                                  },
+                                  {
+                                      "name":  "Laboratorio completo",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "leucocitos leves, hemoglobina normal, plaquetas dentro del rango normal"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Anticoagulación con enoxaparina 1mg/kg SC c/12h",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Aspirina 300mg VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Hidratación intravenosa",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Monitorización neurológica",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente será monitorizado en el quirófano durante las próximas 24 horas, con un seguimiento neurológico completo. Se realizará una angiografía cerebral para evaluar la necesidad de angioplastia percutánea. El paciente será transferido al ward para rehabilitación neurológica.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnosticos de isla de infarto cerebral",
+                                     "Aplicar protocolo de tratamiento inmediato para isla de infarto cerebral",
+                                     "Reconocer complicaciones potenciales de isla de infarto cerebral"
+                                 ],
+    "teaching_points":  "El isla de infarto cerebral es un infarto cerebral que afecta a una pequeña porción del cerebro, causado por una obstrucción de la arteria cerebral. Los síntomas pueden variar desde dolor de cabeza hasta visión borrosa y dificultad para hablar. La prevención del tabaquismo y el control de la hipertensión son fundamentales para reducir el riesgo de infarto cerebral. El manejo inmediato y el monitoreo neurológico son cruciales para mejorar los resultados del paciente."
+}

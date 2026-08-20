@@ -1,0 +1,110 @@
+{
+    "title":  "Infarto agudo del miocardio (IAM) con complicaciones",
+    "slug":  "infarto-agudo-del-miocardio-com-complicaciones",
+    "chief_complaint":  "Dolor torácico intenso, sudoración profusa, nauseas",
+    "specialty":  "Neurologia",
+    "difficulty":  "intermediate",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  55,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  80,
+                         "height_cm":  175,
+                         "occupation":  "Gerente de tiendas",
+                         "vitals_on_arrival":  {
+                                                   "hr":  110,
+                                                   "sbp":  150,
+                                                   "dbp":  90,
+                                                   "rr":  20,
+                                                   "spo2":  92,
+                                                   "temp_c":  37.2
+                                               },
+                         "past_medical_history":  [
+                                                      "HTA",
+                                                      "DM tipo 2"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Atorvastatina 40mg",
+                                                     "Metformina 1000mg"
+                                                 ],
+                         "family_history":  "Familia history negado",
+                         "social_history":  "tabaquismo (15 años), alcohol (2 veces por semana)"
+                     },
+    "history_present_illness":  "Paciente de 55 años presenta dolor torácico intenso desde hace 3 horas, que es peor con el movimiento. Se siente sudoroso, nauseas y tiene náuseas. No ha tenido desmayo ni pérdida de conciencia. El dolor parece empeorar con el tiempo. No ha tenido previa descompresión torácica.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Dolor torácico intenso",
+                              "duration":  "3 horas",
+                              "severity":  "intenso"
+                          },
+                          {
+                              "name":  "Sudoración profusa",
+                              "duration":  "desde el inicio",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Náuseas",
+                              "duration":  "desde el inicio",
+                              "severity":  "moderada"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Infarto agudo del miocardio (IAM)",
+                                    "icd10":  "I21.0",
+                                    "differential":  [
+                                                         "Angina pectoral estables",
+                                                         "Dolor renal colateral",
+                                                         "Pulmonar embolismo"
+                                                     ],
+                                    "justification":  "Presentacion tipica de IAM con dolor torácico intenso, sudoración profusa y náuseas. Examen fisico y estudios de laboratorio sugieren IAM."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "elevación ST V1-V4"
+                                  },
+                                  {
+                                      "name":  "Troponinas seriadas",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "elevadas"
+                                  },
+                                  {
+                                      "name":  "Radiografia de torax",
+                                      "priority":  "routine",
+                                      "expected_finding":  "sin datos de congestion"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Aspirina 300mg VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Clopidogrel 600mg carga VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Enoxaparina 1mg/kg SC c/12h",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Angioplastia primaria en \u003c90 min",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente debe ser monitorizado en ICU por al menos 24 horas. Se debe realizar una angiografía coronaria para determinar la extensión del infarto y planificar la terapia vascular. El paciente debe seguir un plan de seguimiento incluyendo medicación anticoagulante, antiplatelútico y control de factores de riesgo cardíacos.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnosticos de IAM",
+                                     "Aplicar protocolo de tratamiento agudo por IAM en primera hora",
+                                     "Reconocer complicaciones potenciales de IAM"
+                                 ],
+    "teaching_points":  "Es crucial el rápido reconocimiento de IAM y la implementación de un protocolo de tratamiento agudo para mejorar los resultados clínicos. La terapia primaria puede ser una opción segura y efectiva para IAM, pero debe ser realizada por un equipo con experiencia en el manejo de complicaciones cardíacas agudas."
+}

@@ -1,0 +1,99 @@
+{
+    "title":  "Caso de Angina Pectoris Crónica",
+    "slug":  "caso-angina-pectoris-chronica",
+    "chief_complaint":  "Dolor torácico crónico de intensidad moderada que empieza a nivel del pecho y se extiende a la espalda, hombros y nuca.",
+    "specialty":  "Cardiologia",
+    "difficulty":  "basic",
+    "setting":  "outpatient",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  55,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  90,
+                         "height_cm":  175,
+                         "occupation":  "Obrero",
+                         "vitals_on_arrival":  {
+                                                   "hr":  78,
+                                                   "sbp":  130,
+                                                   "dbp":  85,
+                                                   "rr":  18,
+                                                   "spo2":  95,
+                                                   "temp_c":  36.9
+                                               },
+                         "past_medical_history":  [
+                                                      "Hipertensión arterial",
+                                                      "Tabaquismo hábil"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Aspirina 100mg DI"
+                                                 ],
+                         "family_history":  "Negado",
+                         "social_history":  "Tabaquismo hábil, consumo moderado de alcohol"
+                     },
+    "history_present_illness":  "El paciente presenta dolor torácico crónico que comienza a nivel del pecho y se extiende a la espalda, hombros y nuca. El dolor es de intensidad moderada y se desencadena por el estrés emocional, ejercicio intenso y descanso. El paciente ha estado experimentando este dolor durante el último año con episodios de intensidad variable.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Dolor torácico",
+                              "duration":  "1 año",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Sudoración",
+                              "duration":  "episódicos",
+                              "severity":  "leve"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Angina Pectoris Crónica",
+                                    "icd10":  "I20.2",
+                                    "differential":  [
+                                                         "Dolor torácico no cardíaco",
+                                                         "Infarto agudo del miocardio",
+                                                         "Dolor renal"
+                                                     ],
+                                    "justification":  "El dolor torácico crónico, la presencia de antecedentes de hipertensión arterial y tabaquismo hábil, junto con la ausencia de otros signos de compromiso cardíaco, sugieren el diagnóstico de angina pectoris crónica."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "routine",
+                                      "expected_finding":  "ECG normal"
+                                  },
+                                  {
+                                      "name":  "Echocardiograma",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin evidencia de compromiso cardíaco"
+                                  },
+                                  {
+                                      "name":  "Holter Monitor",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin evidencia de arritmias"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Aspirina 300mg VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Tabaco detoxificación",
+                                         "priority":  "routine",
+                                         "evidence":  "Beneficios para la salud cardíaca"
+                                     },
+                                     {
+                                         "treatment":  "Educación sobre el manejo del estrés y el ejercicio",
+                                         "priority":  "routine",
+                                         "evidence":  "Beneficios para la calidad de vida"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente debe seguir con un seguimiento cardiológico cada 6 meses, realizar un ECG y un Holter Monitor cada año, y mantener un seguimiento de su estrés y consumo de alcohol.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnosticos de angina pectoris crónica",
+                                     "Aplicar protocolo de manejo del estrés y el ejercicio en pacientes con angina pectoris",
+                                     "Reconocer el papel del tabaquismo en la enfermedad cardíaca"
+                                 ],
+    "teaching_points":  "La angina pectoris crónica es un trastorno común y puede ser manejada con aspirina y educación sobre el estilo de vida. El seguimiento y seguimiento regular son cruciales para el control del enfermedad."
+}

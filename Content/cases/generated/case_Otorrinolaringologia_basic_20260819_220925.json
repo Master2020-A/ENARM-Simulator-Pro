@@ -1,0 +1,108 @@
+{
+  "title": "Obstruccion Nasofaringe por Tonsilares Infecciosos",
+  "slug": "obstruccion-nasofaringe-tonsilares-infecciosos",
+  "chief_complaint": "Dificultad para respirar, dolor de garganta y fiebre",
+  "specialty": "Otorrinolaringologia",
+  "difficulty": "basic",
+  "setting": "outpatient",
+  "patient_json": {
+    "name": "Juan Perez Garcia",
+    "age": 10,
+    "age_unit": "years",
+    "sex": "M",
+    "weight_kg": 30,
+    "height_cm": 120,
+    "occupation": "Estudiante",
+    "vitals_on_arrival": {
+      "hr": 90,
+      "sbp": 120,
+      "dbp": 80,
+      "rr": 20,
+      "spo2": 95,
+      "temp_c": 38.2
+    },
+    "past_medical_history": [
+      "ninguno"
+    ],
+    "allergies": "ninguna conocida",
+    "current_medications": [
+      "paracetamol 500mg"
+    ],
+    "family_history": "negado",
+    "social_history": "no fuma ni bebe"
+  },
+  "history_present_illness": "El niño ha estado con dificultad para respirar durante las últimas 24 horas, lo que ha requerido que su padre lo lleve a la consulta. Ha desarrollado fiebre alta de repente, dolor de garganta intenso y ha comenzado a llorar desesperado por no poder respirar bien. No ha tenido tos ni vómitos, pero ha estado con hambre y fatiga.",
+  "symptoms_json": [
+    {
+      "name": "Dificultad para respirar",
+      "duration": "24 horas",
+      "severity": "severa"
+    },
+    {
+      "name": "Dolor de garganta",
+      "duration": "24 horas",
+      "severity": "intenso"
+    },
+    {
+      "name": "Fiebre",
+      "duration": "24 horas",
+      "severity": "alta"
+    }
+  ],
+  "expected_diagnosis_json": {
+    "primary": "Obstrucción Nasofaringe por Tonsilares Infecciosos",
+    "icd10": "A41.9",
+    "differential": [
+      "Obstrucción Nasofaringe por Cistitis Palatina",
+      "Obstrucción Nasofaringe por Tonsilares Neumoníticos",
+      "Obstrucción Nasofaringe por Polipos"
+    ],
+    "justification": "El niño presenta fiebre alta, dolor de garganta intenso y dificultad para respirar, lo que son signos compatibles con la obstrucción nasofaringe por tonsilares infecciosos. La fiebre alta es un indicador de inflamación, el dolor de garganta es un sintoma común de la infección, y la dificultad para respirar sugiere que las tonsilares están inflamadas y bloqueando el paso del aire."
+  },
+  "expected_studies_json": [
+    {
+      "name": "Laringofaringoescopio",
+      "priority": "urgent",
+      "expected_finding": "tonsilares inflamados y purulentes"
+    },
+    {
+      "name": "ECG",
+      "priority": "routine",
+      "expected_finding": "sin datos de congestión"
+    },
+    {
+      "name": "Radiografia de torax",
+      "priority": "routine",
+      "expected_finding": "sin datos de congestión"
+    }
+  ],
+  "expected_treatments_json": [
+    {
+      "treatment": "Antibiótico oral (amoxicilina 50mg/kg/día)",
+      "priority": "immediate",
+      "evidence": "Class I - IMSS/CENETEC 2022"
+    },
+    {
+      "treatment": "Dosis adicional de paracetamol si la fiebre persiste",
+      "priority": "routine",
+      "evidence": "Class I"
+    },
+    {
+      "treatment": "Dosis adicional de paracetamol si la fiebre persiste",
+      "priority": "routine",
+      "evidence": "Class I"
+    },
+    {
+      "treatment": "Irrigaciones nasofaringes con sal y agua tibia",
+      "priority": "routine",
+      "evidence": "Class I"
+    }
+  ],
+  "expected_followup": "El niño debe ser seguido en 24 horas para evaluar la respuesta a la terapia y determinar si es necesario ajustar el tratamiento o realizar una visita adicional.",
+  "learning_objectives_json": [
+    "Identificar criterios diagnosticos de obstrucción nasofaringe por tonsilares infecciosos",
+    "Aplicar protocolo de tratamiento inmediato",
+    "Reconocer complicaciones potenciales de la infección de las tonsilares"
+  ],
+  "teaching_points": "El diagnóstico de la obstrucción nasofaringe por tonsilares infecciosos es crucial en pediatría. Es importante realizar un laringofaringoescopio para confirmar la inflamación y la presencia de purulentes. El tratamiento debe ser inmediato y debe incluir un antibiótico y medidas para aliviar los síntomas. El seguimiento es necesario para evaluar la respuesta a la terapia y determinar el curso de la enfermedad."
+}

@@ -1,0 +1,54 @@
+# Build
+build/
+build-vs/
+out/
+
+# IDE
+.vs/
+.vscode/
+*.user
+*.suo
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+*.slnx
+
+# vcpkg (instalado local)
+vcpkg_installed/
+
+# UE5
+unreal/ENARMProject/Intermediate/
+unreal/ENARMProject/Binaries/
+unreal/ENARMProject/Saved/
+unreal/ENARMProject/Plugins/ENARMCoreBridge/Intermediate/
+unreal/ENARMProject/Plugins/ENARMCoreBridge/Binaries/
+unreal/ENARMProject/Plugins/ENARMCoreBridge/Source/ENARMCoreBridge/ThirdParty/ENARM/lib/
+
+# Binarios y artefactos
+*.exe
+*.dll
+*.pdb
+*.lib
+*.obj
+*.o
+*.zip
+*-setup.exe
+
+# BD y datos locales
+*.log
+data/logs/
+
+# Backups de scripts
+*.bak*
+*.bak_*
+*.bak.7a*
+
+# Paquetes instalador
+ENARM-Simulator-Pro-*-setup.exe

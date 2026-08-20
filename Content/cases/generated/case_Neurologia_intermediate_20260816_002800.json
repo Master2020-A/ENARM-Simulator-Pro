@@ -1,0 +1,120 @@
+{
+    "title":  "Paciente con Convulsiones Paroxísticas de Origen Epileptico",
+    "slug":  "paciente-con-convulsiones-paroxisticas-de-origen-epileptico",
+    "chief_complaint":  "Convulsiones recurrentes y dolor de cabeza",
+    "specialty":  "Neurologia",
+    "difficulty":  "intermediate",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  30,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  75,
+                         "height_cm":  175,
+                         "occupation":  "Trabajador",
+                         "vitals_on_arrival":  {
+                                                   "hr":  120,
+                                                   "sbp":  140,
+                                                   "dbp":  90,
+                                                   "rr":  20,
+                                                   "spo2":  92,
+                                                   "temp_c":  37.2
+                                               },
+                         "past_medical_history":  [
+                                                      "Diabetes tipo 2",
+                                                      "Hipertension arterial"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Metformina 500mg BID",
+                                                     "Amlodipino 10mg DIA"
+                                                 ],
+                         "family_history":  "Hipertension familiar",
+                         "social_history":  "No fuma, bebe alcohol ocasionalmente, no consume sustancias"
+                     },
+    "history_present_illness":  "El paciente presenta episodios recurrentes de convulsiones que comenzaron hace dos semanas. Los episodios duran de 1-2 minutos y ocurren 2-3 veces por semana. El paciente siente dolor de cabeza severo antes y después de las convulsiones. Además, tiene dificultades para concentrarse y recordar los episodios. El paciente no ha tomado medicamentos para el tratamiento de la epilepsia.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Convulsiones paroxísticas",
+                              "duration":  "2 semanas",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Dolor de cabeza",
+                              "duration":  "2 semanas",
+                              "severity":  "severa"
+                          },
+                          {
+                              "name":  "Dificultad para concentrarse",
+                              "duration":  "2 semanas",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Falta de memoria",
+                              "duration":  "2 semanas",
+                              "severity":  "moderada"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Epilepsia paroxística",
+                                    "icd10":  "G40.11",
+                                    "differential":  [
+                                                         "Convulsiones por tiroiditis",
+                                                         "Convulsiones por debilidad neuromuscular",
+                                                         "Convulsiones por infección"
+                                                     ],
+                                    "justification":  "El paciente presenta episodios de convulsiones recurrentes, dolor de cabeza, dificultades cognitivas y falta de memoria, lo cual sugiere un diagnóstico de epilepsia paroxística. La ausencia de un historial familiar de epilepsia y el uso de medicamentos para la hipertensión y diabetes limitan los posibles diagnósticos diferenciados."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Sin hallazgos específicos"
+                                  },
+                                  {
+                                      "name":  "EEG",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Epileptiforme"
+                                  },
+                                  {
+                                      "name":  "Cortisol sérico",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Normal"
+                                  },
+                                  {
+                                      "name":  "Pruebas de función renal y glomerular filtración",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin hallazgos específicos"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Acetilsalicilico 300mg VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Levetiracetam 500mg BID",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Lorazepam 2mg IM en caso de convulsión aguda",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Monitorización neurológica y neuropsiquiátrica",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente debe ser evaluado neurológicamente y neuropsiquiátricamente a 1 semana y luego cada 2 semanas hasta establecer el control del episodio. El paciente también debe ser referido a un neurologue para un seguimiento más completo.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnósticos de epilepsia paroxística",
+                                     "Aplicar protocolo de manejo de convulsiones agudas en pacientes con epilepsia",
+                                     "Reconocer complicaciones de la epilepsia paroxística"
+                                 ],
+    "teaching_points":  "Es importante realizar una evaluación completa y exhaustiva en pacientes con convulsiones recurrentes para descartar otras causas y establecer el diagnóstico correcto. El manejo de la epilepsia debe ser individualizado y ajustado según la respuesta del paciente. Es crucial realizar un seguimiento regular para evaluar el control del episodio y ajustar el tratamiento si es necesario."
+}

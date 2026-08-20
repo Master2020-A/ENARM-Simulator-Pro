@@ -1,0 +1,135 @@
+{
+    "title":  "Infarto agudo del miocardio (IAMI) complicado por trombosis coronaria y shock sepsico",
+    "slug":  "infarto-agudo-del-miocardio-complicado-por-trombosis-coronaria-y-shock-sepsico",
+    "chief_complaint":  "Dolor torácico agudo, sudoración, nauseas, y náuseas durante el último día.",
+    "specialty":  "Cardiologia",
+    "difficulty":  "advanced",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  55,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  70,
+                         "height_cm":  170,
+                         "occupation":  "Profesor",
+                         "vitals_on_arrival":  {
+                                                   "hr":  120,
+                                                   "sbp":  80,
+                                                   "dbp":  50,
+                                                   "rr":  24,
+                                                   "spo2":  85,
+                                                   "temp_c":  37.2
+                                               },
+                         "past_medical_history":  [
+                                                      "HTA",
+                                                      "DMII",
+                                                      "fumador"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Aspirina 150mg VO",
+                                                     "Metformina 500mg PO"
+                                                 ],
+                         "family_history":  "no",
+                         "social_history":  "tabaquismo (20 cigarrillos/día), alcohol moderado"
+                     },
+    "history_present_illness":  "El paciente se presentó a la consulta debido a un dolor torácico agudo que comenzó en la región precordial y se extiende hasta el pecho, espalda y hombros. El dolor comenzó alrededor de las 12 horas atrás y se intensificó a lo largo del día. El paciente también ha experimentado sudoración, nauseas, y vómitos. No ha tenido fiebre ni dolor abdominal. El dolor se ha intensificado después de comer y ha sido peor durante la noche. El paciente ha estado en reposo y ha intentado tomar algunos medicamentos de venta libre sin éxito.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Dolor torácico agudo",
+                              "duration":  "3 días",
+                              "severity":  "intenso"
+                          },
+                          {
+                              "name":  "Sudoración",
+                              "duration":  "1 semana",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Náuseas",
+                              "duration":  "1 semana",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Vómitos",
+                              "duration":  "1 semana",
+                              "severity":  "moderada"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Infarto agudo del miocardio (IAMI)",
+                                    "icd10":  "I21.0",
+                                    "differential":  [
+                                                         "Dolor de estómago",
+                                                         "Dolor musculoesquelético"
+                                                     ],
+                                    "justification":  "El dolor torácico agudo, la presencia de signos de shock (tensión arterial baja, frecuencia cardíaca aumentada, respiración rápida, saturación de oxígeno baja), y la historia de antecedentes de HTA y DMII sugieren un IAMI. La trombosis coronaria es el complicación más común en un IAMI."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "elevación ST V1-V4, onda T modificada"
+                                  },
+                                  {
+                                      "name":  "Troponinas seriadas",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "elevadas"
+                                  },
+                                  {
+                                      "name":  "CCTA",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "trombosis coronaria"
+                                  },
+                                  {
+                                      "name":  "Radiografia de torax",
+                                      "priority":  "routine",
+                                      "expected_finding":  "sin datos de congestion"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Aspirina 300mg VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Clopidogrel 600mg carga VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Enoxaparina 1mg/kg SC c/12h",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Angioplastia primaria en \u003c90 min",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Lipidolisis",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Inflamatorios",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Anti-infecciosos",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente debe ser evaluado con un ECG, troponinas, y CCTA para confirmar el diagnóstico y planificar la intervención. Se debe establecer un plan de tratamiento que incluya anticoagulación, angioplastia primaria, y manejo del shock sepsico.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnósticos de IAMI",
+                                     "Aplicar protocolo de manejo del IAMI en primera hora",
+                                     "Reconocer complicaciones de shock sepsico"
+                                 ],
+    "teaching_points":  "El IAMI es una emergencia cardiológica grave que requiere un diagnóstico rápido y un tratamiento inmediato. El shock sepsico puede complicar el IAMI y requerir el manejo de la infekción y la resuscitación shock. Los pacientes con HTA y DMII tienen un mayor riesgo de sufrir un IAMI y deben ser evaluados regularmente para el manejo de sus factores de riesgo."
+}

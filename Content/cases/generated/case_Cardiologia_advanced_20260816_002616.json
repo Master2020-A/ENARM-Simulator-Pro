@@ -1,0 +1,136 @@
+{
+    "title":  "Sepsis cardíaca complicada por trombosis pericardial",
+    "slug":  "sepsis-cardiaca-complicada-por-trombosis-pericardial",
+    "chief_complaint":  "Dolor precordial intenso por 4 horas, sudoración profusa, fiebre de 38°C, y náuseas.",
+    "specialty":  "Cardiologia",
+    "difficulty":  "advanced",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  55,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  80,
+                         "height_cm":  175,
+                         "occupation":  "Trabajador en oficina",
+                         "vitals_on_arrival":  {
+                                                   "hr":  120,
+                                                   "sbp":  100,
+                                                   "dbp":  60,
+                                                   "rr":  24,
+                                                   "spo2":  85,
+                                                   "temp_c":  38.5
+                                               },
+                         "past_medical_history":  [
+                                                      "Hipertensión arterial",
+                                                      "Ateroesclerosis",
+                                                      "Diabetes mellitus tipo 2"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Ácido metformina 500mg VO",
+                                                     "Losartan 50mg VO"
+                                                 ],
+                         "family_history":  "Relevante de infarto agudo del miocardio",
+                         "social_history":  "Tabaquismo (20 años)",
+                         "Alcoholismo moderado (20 años)":  "history_present_illness"
+                     },
+    "symptoms_json":  [
+                          {
+                              "name":  "Dolor precordial",
+                              "duration":  "4 horas",
+                              "severity":  "intenso"
+                          },
+                          {
+                              "name":  "Sudoración profusa",
+                              "duration":  "4 horas",
+                              "severity":  "severa"
+                          },
+                          {
+                              "name":  "Fiebre",
+                              "duration":  "3 horas",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Náuseas",
+                              "duration":  "2 horas",
+                              "severity":  "leve"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Sepsis cardíaca complicada por trombosis pericardial",
+                                    "icd10":  "I21.0",
+                                    "differential":  [
+                                                         "Sepsis cardíaca",
+                                                         "Trombosis pericardial",
+                                                         "Infección pericardial"
+                                                     ],
+                                    "justification":  "Basado en los signos vitales, la anamnesis y la presentación del paciente."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Dolor precordial, elevaciones ST-T"
+                                  },
+                                  {
+                                      "name":  "Troponinas seriadas",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Elevadas"
+                                  },
+                                  {
+                                      "name":  "Radiografia de torax",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin evidencia de congestion"
+                                  },
+                                  {
+                                      "name":  "Enzimas pericardiales",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Elevadas"
+                                  },
+                                  {
+                                      "name":  "Imágen por ultrasonido cardíaco",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Trombosis pericardial"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Aspirina 300mg VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Clopidogrel 600mg carga VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Enoxaparina 1mg/kg SC c/12h",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Antibióticos IV (Clavulanic y Amoxiciclina)",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - Surviving Sepsis 2016"
+                                     },
+                                     {
+                                         "treatment":  "Angioplastia primaria en \u003c90 min",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Observación intensiva",
+                                         "priority":  "immediate",
+                                         "evidence":  "Necesario debido a la complejidad del caso"
+                                     }
+                                 ],
+    "expected_followup":  "Seguimiento cardiológico intensivo, monitoreo de signos vitales, laboratorios periódicos y evaluación de trombosis pericardial.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnósticos de trombosis pericardial complicada por sepsis cardíaca",
+                                     "Aplicar protocolo de manejo de sepsis cardíaca",
+                                     "Reconocer complicaciones potenciales y su manejo"
+                                 ],
+    "teaching_points":  "El manejo de casos complejos requiere un enfoque sistemático y la consideración de múltiples factores, incluyendo la presentación del paciente, anamnesis, exploración física y estudios diagnósticos. Es crucial realizar un seguimiento intensivo y coordinar cuidados multidisciplinarios para un mejor resultado clínico."
+}

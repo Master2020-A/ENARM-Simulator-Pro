@@ -1,0 +1,113 @@
+{
+    "title":  "Infarto agudo de miocardio en neonato",
+    "slug":  "infarto-agudo-de-miocardio-en-neonato",
+    "chief_complaint":  "Cries de dolor, mordeduras, fiebre y dificultad respiratoria",
+    "specialty":  "Pediatria",
+    "difficulty":  "intermediate",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  7,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  12,
+                         "height_cm":  80,
+                         "occupation":  "Estudiante",
+                         "vitals_on_arrival":  {
+                                                   "hr":  140,
+                                                   "sbp":  110,
+                                                   "dbp":  70,
+                                                   "rr":  20,
+                                                   "spo2":  85,
+                                                   "temp_c":  37.5
+                                               },
+                         "past_medical_history":  [
+                                                      "Ninguno relevante"
+                                                  ],
+                         "allergies":  "Ninguna conocida",
+                         "current_medications":  [
+                                                     "Ninguno"
+                                                 ],
+                         "family_history":  "Negado",
+                         "social_history":  "Ninguna"
+                     },
+    "history_present_illness":  "El paciente llegó a la consulta por tres días de fiebre, mordeduras y aumento de la frecuencia cardíaca. El niño ha estado gemiendo y mostrando dificultad respiratoria. La fiebre ha aumentado gradualmente desde hace dos días, llegando a 37.5°C. El niño ha estado mordiéndose y ha tenido dificultad para dormir. Antes de la llegada al hospital, el niño estaba en casa jugando con sus amigos y comenzó a gemir de dolor intenso.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Fiebre",
+                              "duration":  "3 dias",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Mordeduras",
+                              "duration":  "3 dias",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Dificultad respiratoria",
+                              "duration":  "1 dia",
+                              "severity":  "grave"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Infarto agudo de miocardio (IAM)",
+                                    "icd10":  "I21.0",
+                                    "differential":  [
+                                                         "Cianosis",
+                                                         "Infección bacteriana",
+                                                         "Quiste ventricular"
+                                                     ],
+                                    "justification":  "La presentación de mordeduras, fiebre y dificultad respiratoria, junto con el aumento de la frecuencia cardíaca y la fiebre, sugiere un infarto agudo de miocardio. Los signos vitales y la historia clínica son compatibles con esta condición."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "elevación ST V1-V4, onda T anulada"
+                                  },
+                                  {
+                                      "name":  "Troponinas seriadas",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "elevadas"
+                                  },
+                                  {
+                                      "name":  "Radiografía de torax",
+                                      "priority":  "routine",
+                                      "expected_finding":  "sin datos de congestión"
+                                  },
+                                  {
+                                      "name":  "Laboratorio completo",
+                                      "priority":  "routine",
+                                      "expected_finding":  "leucocitos elevados, CRP elevado"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Aspirina 300mg VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Clopidogrel 600mg carga VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Enoxaparina 1mg/kg SC c/12h",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Angioplastia primaria en \u003c90 min",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente será transferido a un centro de tratamiento de infarto agudo de miocardio para una evaluación y tratamiento adicional. El seguimiento incluirá monitoreo continuo de la frecuencia cardíaca, presión arterial y signos vitales. El paciente recibirá atención intensiva y se realizarán estudios adicionales como ECG, troponinas y otros para evaluar el daño a la miocardio. El paciente también será evaluado para la prevención de complicaciones como embolia pulmonar.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnosticos de infarto agudo de miocardio en neonatos",
+                                     "Aplicar protocolo de manejo de infarto agudo de miocardio en neonatos",
+                                     "Reconocer complicaciones potenciales del infarto agudo de miocardio en neonatos"
+                                 ],
+    "teaching_points":  "El infarto agudo de miocardio puede presentarse de manera atípica en neonatos, especialmente en el caso de mordeduras. Es importante realizar un ECG y troponinas para confirmar el diagnóstico. El manejo del infarto agudo de miocardio en neonatos requiere una atención intensiva y un protocolo de tratamiento específico. Es crucial reconocer las complicaciones potenciales del infarto agudo de miocardio y prevenirlas."
+}

@@ -1,0 +1,108 @@
+{
+    "title":  "Caso de Anemia Ginecoobstétrica",
+    "slug":  "anemia-ginecoobstetricia",
+    "chief_complaint":  "Fatiga y debilidad general durante el embarazo",
+    "specialty":  "GinecoObstetricia",
+    "difficulty":  "basic",
+    "setting":  "outpatient",
+    "patient_json":  {
+                         "name":  "Ana Martinez Rodriguez",
+                         "age":  32,
+                         "age_unit":  "years",
+                         "sex":  "F",
+                         "weight_kg":  55,
+                         "height_cm":  160,
+                         "occupation":  "Trabajadora",
+                         "vitals_on_arrival":  {
+                                                   "hr":  85,
+                                                   "sbp":  120,
+                                                   "dbp":  80,
+                                                   "rr":  16,
+                                                   "spo2":  97,
+                                                   "temp_c":  36.5
+                                               },
+                         "past_medical_history":  [
+                                                      "anemia leves en el pasado"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "multivitaminos"
+                                                 ],
+                         "family_history":  "negado",
+                         "social_history":  "no tabaquismo, alcohol moderado, no uso de drogas"
+                     },
+    "history_present_illness":  "Se ha presentado con fatiga intensa, debilidad general, mareos y dificultad para realizar tareas diarias durante las últimas 3 semanas. Antes no presentaba estos síntomas. No ha tenido dolor abdominal ni sangrado vaginal. No ha realizado actividad física intensa en el último mes.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Fatiga",
+                              "duration":  "3 semanas",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Debilidad general",
+                              "duration":  "3 semanas",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Mareos",
+                              "duration":  "3 semanas",
+                              "severity":  "leve"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Anemia falciforme",
+                                    "icd10":  "D51.9",
+                                    "differential":  [
+                                                         "Anemia aplásica",
+                                                         "Anemia hemolítica",
+                                                         "Anemia normocromocítica"
+                                                     ],
+                                    "justification":  "La anemia general con fatiga y debilidad suele ser indicativa de anemia falciforme, especialmente en un paciente de origen latinoamericano. La anemia aplásica también podría explicar los síntomas, pero no se ha encontrado evidencia de anemia aplásica en esta historia clínica."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "Hemograma completo",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Hemoglobina \u003c 10 g/dL, reticulocitos normales, hematocrito \u003c 30%"
+                                  },
+                                  {
+                                      "name":  "Perfil de ferritina",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Ferritina \u003c 15 ng/mL"
+                                  },
+                                  {
+                                      "name":  "Ultrasonido abdominal",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin datos de congestión"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Transfusión de plaquetas",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - IMSS 2021"
+                                     },
+                                     {
+                                         "treatment":  "Ergocalciferol 1000 IU VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class IIa - IMSS 2021"
+                                     },
+                                     {
+                                         "treatment":  "Folicina 5mg PO",
+                                         "priority":  "routine",
+                                         "evidence":  "Class IIa - IMSS 2021"
+                                     },
+                                     {
+                                         "treatment":  "Ironsíript 3mg IP",
+                                         "priority":  "routine",
+                                         "evidence":  "Class IIa - IMSS 2021"
+                                     }
+                                 ],
+    "expected_followup":  "Seguimiento en 1 semana para evaluar el respuesta a la terapia, incluyendo hemograma completo y perfil de ferritina.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnosticos de anemia falciforme",
+                                     "Aplicar protocolo de manejo de anemia falciforme",
+                                     "Reconocer complicaciones asociadas a la anemia falciforme"
+                                 ],
+    "teaching_points":  "La anemia falciforme es una causa común de anemia en pacientes de origen latinoamericano. Es importante diferenciarla de otras formas de anemia para el manejo adecuado. La transfusión de plaquetas puede ser necesaria en pacientes con anemia falciforme debido a la fragilidad de los glóbulos falciformes."
+}

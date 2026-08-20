@@ -1,0 +1,95 @@
+﻿{
+  "id": 5,
+  "title": "Neumonía Adquirida en la Comunidad Grave - Criterios de UCI",
+  "specialty": "Neumología",
+  "difficulty": 3,
+  "chief_complaint": "Fiebre alta y me cuesta respirar desde hace 4 días",
+  "patient": {
+    "age": 71,
+    "sex": "F",
+    "weight_kg": 62,
+    "height_cm": 158,
+    "occupation": "Pensionada, ex-maestra",
+    "relevant_history": [
+      "EPOC GOLD II diagnosticada hace 5 años, en tratamiento con tiotropio y salbutamol PRN",
+      "Hipertensión arterial controlada con enalapril 10 mg/día",
+      "No tabaquismo activo (exfumadora, 20 paquetes-año, dejó hace 10 años)",
+      "No vacuna influenza ni neumococo en últimos 5 años",
+      "Vive sola, funcional, sin contacto con enfermos recientes"
+    ]
+  },
+  "vitals_on_arrival": {
+    "systolic_bp": 102,
+    "diastolic_bp": 64,
+    "heart_rate": 118,
+    "respiratory_rate": 28,
+    "temperature_c": 39.4,
+    "spo2_percent": 88,
+    "weight_kg": 62
+  },
+  "history_of_present_illness": "Femenino de 71 años con 4 días de evolución con fiebre de hasta 40°C, tos productiva con expectoración herrumbrosa, disnea progresiva que ahora es de reposo. Refiere escalofríos, mialgia y pérdida de apetito. En las últimas 12 horas presenta confusión leve según familiar que la acompaña. No viajes recientes. No hospitalización previa en el año.",
+  "physical_exam": {
+    "general": "Femenino con dificultad respiratoria evidente, uso de músculos accesorios, cianosis peribucal leve. Desorientada en tiempo.",
+    "cardiovascular": "Taquicardia regular. Sin soplos. Pulsos presentes. Llenado capilar 3 segundos.",
+    "respiratory": "Taquipnea FR 28. Matidez a la percusión en base derecha. Crepitantes en inspiración en tercio inferior de hemitórax derecho. Broncofonía y egofonia en base derecha.",
+    "abdomen": "Blando, sin alteraciones.",
+    "neurological": "Desorientada en tiempo (día y fecha). GCS 14 (O4V4M6). Sin focalización.",
+    "extremities": "Sin edema. Cianosis distal."
+  },
+  "key_labs": {
+    "BH": "Leucocitos 22,400 con 89% neutrófilos, bandas 12%. Hb 11.8. Plaquetas 142,000",
+    "PCR": "284 mg/L (muy elevada)",
+    "procalcitonina": "4.8 ng/mL (infección bacteriana grave)",
+    "gasometria_arterial_aa": "pH 7.46, PaO2 52 mmHg, PaCO2 32 mmHg, HCO3 22, SaO2 88% (FiO2 0.21)",
+    "lactato": "2.8 mmol/L",
+    "creatinina": "1.6 mg/dL (basal 0.9)",
+    "urea": "68 mg/dL",
+    "sodio": "131 mEq/L",
+    "glucosa": "162 mg/dL",
+    "hemocultivos": "Pendientes (tomar antes de antibiótico)",
+    "antigeno_neumococo_orina": "Positivo"
+  },
+  "key_imaging": [
+    "RX tórax PA: Consolidación lobar en lóbulo inferior derecho que ocupa 2/3 del campo pulmonar derecho. Sin derrame pleural significativo. Hiperinsuflación bilateral (EPOC de base).",
+    "TAC tórax (si disponible): Consolidación con broncograma aéreo en LID, sin cavitación. Sin empiema."
+  ],
+  "correct_diagnosis": "Neumonía adquirida en la comunidad (NAC) grave por Streptococcus pneumoniae - CURB-65: 4 puntos (criterios de UCI)",
+  "differential_diagnosis": [
+    "Agudización de EPOC con neumonía sobreagregada",
+    "Neumonía atípica por Legionella (antígeno negativo en este caso)",
+    "Embolia pulmonar con infarto (menos probable por consolidación lobar)",
+    "Carcinoma broncogénico con neumonía obstructiva"
+  ],
+  "treatment_plan": [
+    "Ingreso a UCI por CURB-65 ≥3 y criterios ATS/IDSA de NAC grave",
+    "Oxígeno suplementario: iniciar con mascarilla Venturi FiO2 0.40, meta SpO2 88-92% (por EPOC)",
+    "Si no mejora con VMNi, valorar intubación orotraqueal y VM",
+    "Antibiótico IV empírico inmediato (antes de 1 hora):",
+    "  - Ceftriaxona 2g IV c/24h + Azitromicina 500mg IV c/24h (cobertura dual)",
+    "  - Alternativa: Levofloxacino 750 mg IV c/24h en monoterapia",
+    "Duración antibiótico: 5-7 días si respuesta adecuada",
+    "Líquidos IV cristaloides 500 mL en 30 min si hipotensión",
+    "Vasopresores (norepinefrina) si MAP <65 tras reanimación con fluidos",
+    "Broncodilatadores: salbutamol + ipratropio nebulizados c/4-6h (EPOC de base)",
+    "Profilaxis TVP: enoxaparina 40 mg SC/día",
+    "Cultivos: hemocultivos x2, antígeno neumococo y Legionella en orina",
+    "Monitorización gasométrica cada 2-4h",
+    "Nutrición enteral temprana si intubada"
+  ],
+  "scoring_rubric": {
+    "anamnesis": 0.20,
+    "physical_exam": 0.15,
+    "diagnosis": 0.35,
+    "treatment": 0.30
+  },
+  "learning_objectives": [
+    "Calcular CURB-65 e identificar criterios de hospitalización en UCI",
+    "Interpretar gasometría arterial en contexto de EPOC + NAC",
+    "Seleccionar antibiótico empírico adecuado para NAC grave",
+    "Conocer criterios ATS/IDSA de NAC grave",
+    "Manejar oxigenoterapia en paciente con EPOC (riesgo de hipercapnia)"
+  ],
+  "guideline_ids": [3, 4],
+  "tags": ["NAC", "neumonia", "CURB65", "UCI", "neumologia", "antibiotico", "EPOC"],
+  "enarm_topics": ["Neumonía", "Insuficiencia respiratoria", "Antibioticoterapia", "Gasometría"]
+}

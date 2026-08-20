@@ -1,0 +1,514 @@
+﻿==== 001_initial.sql COMPLETO ====
+-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+--   ENARM Database - Schema Initial (001) - v2 PostgreSQL 18
+--   Usa gen_random_uuid() nativo (no requiere uuid-ossp)
+-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+
+-- Asegurar extensiones core
+CREATE EXTENSION IF NOT EXISTS pgcrypto;
+CREATE EXTENSION IF NOT EXISTS pg_trgm;
+
+-- â”€â”€â”€ USUARIOS â”€â”€â”€
+CREATE TABLE IF NOT EXISTS users (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    full_name VARCHAR(255) NOT NULL,
+    role VARCHAR(50) DEFAULT 'student',
+    email_verified BOOLEAN DEFAULT FALSE,
+    active BOOLEAN DEFAULT TRUE,
+    created_at TIMESTAMPTZ DEFAULT NOW(),
+    updated_at TIMESTAMPTZ DEFAULT NOW(),
+    last_login TIMESTAMPTZ
+);
+CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);
+CREATE INDEX IF NOT EXISTS idx_users_role ON users(role);
+
+-- â”€â”€â”€ ESTUDIANTES â”€â”€â”€
+CREATE TABLE IF NOT EXISTS students (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    student_code VARCHAR(50) UNIQUE,
+    university VARCHAR(255),
+    graduation_year INT,
+    current_level VARCHAR(50),
+    target_specialty VARCHAR(100),
+    enarm_attempt_number INT DEFAULT 1,
+    enarm_target_score INT,
+    created_at TIMESTAMPTZ DEFAULT NOW()
+);
+CREATE INDEX IF NOT EXISTS idx_students_user_id ON students(user_id);
+
+-- â”€â”€â”€ PERFIL DEL ESTUDIANTE â”€â”€â”€
+CREATE TABLE IF NOT EXISTS student_profiles (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    student_id UUID NOT NULL REFERENCES students(id) ON DELETE CASCADE,
+    preferred_difficulty VARCHAR(50) DEFAULT 'intermediate',
+    daily_study_goal_minutes INT DEFAULT 60,
+    voice_enabled BOOLEAN DEFAULT FALSE,
+    ui_language VARCHAR(10) DEFAULT 'es-MX',
+    total_cases_completed INT DEFAULT 0,
+    total_mcq_answered INT DEFAULT 0,
+    total_study_minutes INT DEFAULT 0,
+    average_case_score NUMERIC(5,2) DEFAULT 0.0,
+    average_mcq_score NUMERIC(5,2) DEFAULT 0.0,
+    weak_areas_json JSONB DEFAULT '{}',
+    strong_areas_json JSONB DEFAULT '{}',
+    predicted_enarm_score INT,
+    prediction_confidence NUMERIC(3,2),
+    last_prediction_at TIMESTAMPTZ,
+    updated_at TIMESTAMPTZ DEFAULT NOW(),
+    UNIQUE(student_id)
+);
+CREATE INDEX IF NOT EXISTS idx_student_profiles_student ON student_profiles(student_id);
+
+-- â”€â”€â”€ CASOS CLINICOS â”€â”€â”€
+CREATE TABLE IF NOT EXISTS clinical_cases (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    title VARCHAR(500) NOT NULL,
+    slug VARCHAR(255) UNIQUE NOT NULL,
+    chief_complaint TEXT NOT NULL,
+    specialty VARCHAR(100) NOT NULL,
+    sub_specialty VARCHAR(100),
+    difficulty VARCHAR(50) NOT NULL,
+    setting VARCHAR(50) NOT NULL,
+    patient_json JSONB NOT NULL,
+    history_present_illness TEXT,
+    symptoms_json JSONB DEFAULT '[]',
+    expected_diagnosis_json JSONB NOT NULL,
+    expected_studies_json JSONB DEFAULT '[]',
+    expected_treatments_json JSONB DEFAULT '[]',
+    expected_followup TEXT,
+    learning_objectives_json JSONB DEFAULT '[]',
+    pubmed_pmids TEXT[],
+    guidelines_ids TEXT[],
+    teaching_points TEXT,
+    author_name VARCHAR(255),
+    reviewed_by VARCHAR(255),
+    version INT DEFAULT 1,
+    is_published BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMPTZ DEFAULT NOW(),
+    updated_at TIMESTAMPTZ DEFAULT NOW(),
+    published_at TIMESTAMPTZ
+);
+CREATE INDEX IF NOT EXISTS idx_cases_specialty ON clinical_cases(specialty);
+CREATE INDEX IF NOT EXISTS idx_cases_difficulty ON clinical_cases(difficulty);
+CREATE INDEX IF NOT EXISTS idx_cases_setting ON clinical_cases(setting);
+CREATE INDEX IF NOT EXISTS idx_cases_slug ON clinical_cases(slug);
+CREATE INDEX IF NOT EXISTS idx_cases_published ON clinical_cases(is_published) WHERE is_published = TRUE;
+
+-- â”€â”€â”€ VERSIONES DE CASOS â”€â”€â”€
+CREATE TABLE IF NOT EXISTS case_versions (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    case_id UUID NOT NULL REFERENCES clinical_cases(id) ON DELETE CASCADE,
+    version_number INT NOT NULL,
+    full_snapshot_json JSONB NOT NULL,
+    change_summary TEXT,
+    changed_by VARCHAR(255),
+    changed_at TIMESTAMPTZ DEFAULT NOW(),
+    UNIQUE(case_id, version_number)
+);
+CREATE INDEX IF NOT EXISTS idx_case_versions_case ON case_versions(case_id);
+
+-- â”€â”€â”€ TAGS DE CASOS â”€â”€â”€
+CREATE TABLE IF NOT EXISTS case_tags (
+    id SERIAL PRIMARY KEY,
+    case_id UUID NOT NULL REFERENCES clinical_cases(id) ON DELETE CASCADE,
+    tag VARCHAR(100) NOT NULL,
+    UNIQUE(case_id, tag)
+);
+CREATE INDEX IF NOT EXISTS idx_case_tags_case ON case_tags(case_id);
+CREATE INDEX IF NOT EXISTS idx_case_tags_tag ON case_tags(tag);
+
+-- â”€â”€â”€ SESIONES DE ESTUDIO â”€â”€â”€
+CREATE TABLE IF NOT EXISTS study_sessions (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    student_id UUID NOT NULL REFERENCES students(id) ON DELETE CASCADE,
+    mode VARCHAR(50) NOT NULL,
+    case_id UUID REFERENCES clinical_cases(id),
+    started_at TIMESTAMPTZ DEFAULT NOW(),
+    ended_at TIMESTAMPTZ,
+    duration_seconds INT,
+    completed BOOLEAN DEFAULT FALSE,
+    scores_json JSONB DEFAULT '{}',
+    total_score NUMERIC(5,2),
+    max_possible_score NUMERIC(5,2),
+    ai_feedback_json JSONB,
+    notes TEXT
+);
+CREATE INDEX IF NOT EXISTS idx_sessions_student ON study_sessions(student_id);
+CREATE INDEX IF NOT EXISTS idx_sessions_case ON study_sessions(case_id);
+CREATE INDEX IF NOT EXISTS idx_sessions_started ON study_sessions(started_at DESC);
+CREATE INDEX IF NOT EXISTS idx_sessions_completed ON study_sessions(completed);
+
+-- â”€â”€â”€ EVENTOS DE SESION â”€â”€â”€
+CREATE TABLE IF NOT EXISTS session_events (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    session_id UUID NOT NULL REFERENCES study_sessions(id) ON DELETE CASCADE,
+    event_time TIMESTAMPTZ DEFAULT NOW(),
+    sim_time_seconds NUMERIC(10,3),
+    event_type VARCHAR(50) NOT NULL,
+    category VARCHAR(50),
+    action TEXT,
+    details_json JSONB DEFAULT '{}',
+    severity INT DEFAULT 0
+);
+CREATE INDEX IF NOT EXISTS idx_events_session ON session_events(session_id);
+CREATE INDEX IF NOT EXISTS idx_events_time ON session_events(session_id, event_time);
+CREATE INDEX IF NOT EXISTS idx_events_type ON session_events(event_type);
+
+-- â”€â”€â”€ BANCO MCQ â”€â”€â”€
+CREATE TABLE IF NOT EXISTS mcq_bank (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    specialty VARCHAR(100) NOT NULL,
+    sub_specialty VARCHAR(100),
+    difficulty VARCHAR(50) DEFAULT 'intermediate',
+    topic VARCHAR(255),
+    vignette TEXT NOT NULL,
+    question TEXT NOT NULL,
+    options_json JSONB NOT NULL,
+    correct_answer CHAR(1) NOT NULL,
+    explanation_correct TEXT,
+    explanation_incorrect_json JSONB,
+    pubmed_pmids TEXT[],
+    guidelines_ids TEXT[],
+    references_text TEXT,
+    times_attempted INT DEFAULT 0,
+    times_correct INT DEFAULT 0,
+    difficulty_index NUMERIC(3,2),
+    discrimination_index NUMERIC(3,2),
+    author VARCHAR(255),
+    reviewed BOOLEAN DEFAULT FALSE,
+    is_active BOOLEAN DEFAULT TRUE,
+    year_source INT,
+    created_at TIMESTAMPTZ DEFAULT NOW(),
+    updated_at TIMESTAMPTZ DEFAULT NOW()
+);
+CREATE INDEX IF NOT EXISTS idx_mcq_specialty ON mcq_bank(specialty);
+CREATE INDEX IF NOT EXISTS idx_mcq_difficulty ON mcq_bank(difficulty);
+CREATE INDEX IF NOT EXISTS idx_mcq_active ON mcq_bank(is_active) WHERE is_active = TRUE;
+
+-- â”€â”€â”€ INTENTOS MCQ â”€â”€â”€
+CREATE TABLE IF NOT EXISTS mcq_attempts (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    session_id UUID REFERENCES study_sessions(id) ON DELETE CASCADE,
+    student_id UUID NOT NULL REFERENCES students(id) ON DELETE CASCADE,
+    mcq_id UUID NOT NULL REFERENCES mcq_bank(id) ON DELETE CASCADE,
+    selected_answer CHAR(1),
+    is_correct BOOLEAN,
+    time_seconds NUMERIC(6,2),
+    attempted_at TIMESTAMPTZ DEFAULT NOW()
+);
+CREATE INDEX IF NOT EXISTS idx_attempts_student ON mcq_attempts(student_id);
+CREATE INDEX IF NOT EXISTS idx_attempts_mcq ON mcq_attempts(mcq_id);
+CREATE INDEX IF NOT EXISTS idx_attempts_session ON mcq_attempts(session_id);
+
+-- â”€â”€â”€ REFERENCIAS PUBMED â”€â”€â”€
+CREATE TABLE IF NOT EXISTS pubmed_references (
+    pmid VARCHAR(20) PRIMARY KEY,
+    title TEXT NOT NULL,
+    authors TEXT,
+    journal VARCHAR(255),
+    year INT,
+    doi VARCHAR(100),
+    abstract TEXT,
+    mesh_terms TEXT[],
+    fetched_at TIMESTAMPTZ DEFAULT NOW()
+);
+CREATE INDEX IF NOT EXISTS idx_pubmed_year ON pubmed_references(year DESC);
+
+-- â”€â”€â”€ GUIAS CLINICAS â”€â”€â”€
+CREATE TABLE IF NOT EXISTS clinical_guidelines (
+    id VARCHAR(50) PRIMARY KEY,
+    title TEXT NOT NULL,
+    organization VARCHAR(100),
+    year INT,
+    url TEXT,
+    summary TEXT,
+    updated_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+==== 002_indices.sql ====
+-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+--   ENARM Database - Indices avanzados (002)
+-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+
+CREATE INDEX IF NOT EXISTS idx_cases_patient_gin
+    ON clinical_cases USING GIN (patient_json);
+
+CREATE INDEX IF NOT EXISTS idx_cases_symptoms_gin
+    ON clinical_cases USING GIN (symptoms_json);
+
+CREATE INDEX IF NOT EXISTS idx_cases_diagnosis_gin
+    ON clinical_cases USING GIN (expected_diagnosis_json);
+
+CREATE INDEX IF NOT EXISTS idx_sessions_scores_gin
+    ON study_sessions USING GIN (scores_json);
+
+CREATE INDEX IF NOT EXISTS idx_events_details_gin
+    ON session_events USING GIN (details_json);
+
+CREATE INDEX IF NOT EXISTS idx_mcq_options_gin
+    ON mcq_bank USING GIN (options_json);
+
+CREATE INDEX IF NOT EXISTS idx_profiles_weak_gin
+    ON student_profiles USING GIN (weak_areas_json);
+
+CREATE INDEX IF NOT EXISTS idx_cases_title_trgm
+    ON clinical_cases USING GIN (title gin_trgm_ops);
+
+CREATE INDEX IF NOT EXISTS idx_mcq_vignette_trgm
+    ON mcq_bank USING GIN (vignette gin_trgm_ops);
+
+==== 003_vectors.sql ====
+-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+--   ENARM Database - pgvector para busqueda semantica (003)
+-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+
+DO $$
+BEGIN
+    IF EXISTS (SELECT 1 FROM pg_extension WHERE extname = 'vector') THEN
+        RAISE NOTICE 'pgvector disponible - creando columnas de embeddings';
+
+        BEGIN
+            ALTER TABLE clinical_cases ADD COLUMN IF NOT EXISTS embedding vector(768);
+        EXCEPTION WHEN OTHERS THEN
+            RAISE NOTICE 'Error agregando embedding a clinical_cases: %', SQLERRM;
+        END;
+
+        BEGIN
+            ALTER TABLE mcq_bank ADD COLUMN IF NOT EXISTS embedding vector(768);
+        EXCEPTION WHEN OTHERS THEN
+            RAISE NOTICE 'Error agregando embedding a mcq_bank: %', SQLERRM;
+        END;
+
+        BEGIN
+            ALTER TABLE pubmed_references ADD COLUMN IF NOT EXISTS embedding vector(768);
+        EXCEPTION WHEN OTHERS THEN
+            RAISE NOTICE 'Error agregando embedding a pubmed: %', SQLERRM;
+        END;
+
+        BEGIN
+            CREATE INDEX IF NOT EXISTS idx_cases_embedding
+                ON clinical_cases USING ivfflat (embedding vector_cosine_ops)
+                WITH (lists = 100);
+        EXCEPTION WHEN OTHERS THEN NULL; END;
+
+        BEGIN
+            CREATE INDEX IF NOT EXISTS idx_mcq_embedding
+                ON mcq_bank USING ivfflat (embedding vector_cosine_ops)
+                WITH (lists = 100);
+        EXCEPTION WHEN OTHERS THEN NULL; END;
+
+        BEGIN
+            CREATE INDEX IF NOT EXISTS idx_pubmed_embedding
+                ON pubmed_references USING ivfflat (embedding vector_cosine_ops)
+                WITH (lists = 100);
+        EXCEPTION WHEN OTHERS THEN NULL; END;
+
+        RAISE NOTICE 'Embeddings configurados';
+    ELSE
+        RAISE NOTICE 'pgvector NO instalado - busqueda semantica desactivada';
+    END IF;
+END
+$$;
+
+==== 004_functions.sql ====
+-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+--   ENARM Database - Funciones y triggers (004)
+-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+
+CREATE OR REPLACE FUNCTION set_updated_at()
+RETURNS TRIGGER AS $$
+BEGIN
+    NEW.updated_at = NOW();
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+DROP TRIGGER IF EXISTS trg_users_updated ON users;
+CREATE TRIGGER trg_users_updated
+    BEFORE UPDATE ON users
+    FOR EACH ROW EXECUTE FUNCTION set_updated_at();
+
+DROP TRIGGER IF EXISTS trg_cases_updated ON clinical_cases;
+CREATE TRIGGER trg_cases_updated
+    BEFORE UPDATE ON clinical_cases
+    FOR EACH ROW EXECUTE FUNCTION set_updated_at();
+
+DROP TRIGGER IF EXISTS trg_profiles_updated ON student_profiles;
+CREATE TRIGGER trg_profiles_updated
+    BEFORE UPDATE ON student_profiles
+    FOR EACH ROW EXECUTE FUNCTION set_updated_at();
+
+DROP TRIGGER IF EXISTS trg_mcq_updated ON mcq_bank;
+CREATE TRIGGER trg_mcq_updated
+    BEFORE UPDATE ON mcq_bank
+    FOR EACH ROW EXECUTE FUNCTION set_updated_at();
+
+-- Actualizar stats MCQ tras cada intento
+CREATE OR REPLACE FUNCTION update_mcq_stats()
+RETURNS TRIGGER AS $$
+BEGIN
+    UPDATE mcq_bank
+    SET
+        times_attempted = times_attempted + 1,
+        times_correct = times_correct + CASE WHEN NEW.is_correct THEN 1 ELSE 0 END,
+        difficulty_index = CASE
+            WHEN times_attempted + 1 > 0 THEN
+                (times_correct + CASE WHEN NEW.is_correct THEN 1 ELSE 0 END)::NUMERIC
+                / (times_attempted + 1)
+            ELSE NULL
+        END
+    WHERE id = NEW.mcq_id;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+DROP TRIGGER IF EXISTS trg_mcq_attempt_stats ON mcq_attempts;
+CREATE TRIGGER trg_mcq_attempt_stats
+    AFTER INSERT ON mcq_attempts
+    FOR EACH ROW EXECUTE FUNCTION update_mcq_stats();
+
+==== 005_seed.sql ====
+-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+--   ENARM Database - Datos semilla (005)
+-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+
+-- Usuario demo
+INSERT INTO users (email, password_hash, full_name, role, email_verified)
+VALUES (
+    'demo@enarm.local',
+    crypt('demo123', gen_salt('bf')),
+    'Estudiante Demo',
+    'student',
+    TRUE
+)
+ON CONFLICT (email) DO NOTHING;
+
+-- Estudiante demo
+INSERT INTO students (user_id, student_code, university, current_level, target_specialty)
+SELECT id, 'DEMO-001', 'UNAM', 'aspirante_enarm', 'Medicina Interna'
+FROM users WHERE email = 'demo@enarm.local'
+ON CONFLICT (student_code) DO NOTHING;
+
+-- Perfil del estudiante demo
+INSERT INTO student_profiles (student_id, preferred_difficulty, daily_study_goal_minutes)
+SELECT s.id, 'intermediate', 90
+FROM students s
+JOIN users u ON s.user_id = u.id
+WHERE u.email = 'demo@enarm.local'
+ON CONFLICT (student_id) DO NOTHING;
+
+-- Guias clinicas mexicanas
+INSERT INTO clinical_guidelines (id, title, organization, year, url) VALUES
+    ('IMSS-234-09', 'Diagnostico y Tratamiento del Infarto Agudo del Miocardio con Elevacion del ST', 'IMSS', 2019, 'http://www.cenetec.salud.gob.mx'),
+    ('IMSS-162-09', 'Diagnostico y Tratamiento del Sindrome Coronario Agudo sin Elevacion del ST', 'IMSS', 2020, 'http://www.cenetec.salud.gob.mx'),
+    ('IMSS-014-08', 'Diagnostico y Tratamiento de la Hipertension Arterial en el Primer Nivel de Atencion', 'IMSS', 2020, 'http://www.cenetec.salud.gob.mx'),
+    ('IMSS-718-14', 'Diagnostico y Tratamiento de la Neumonia Adquirida en la Comunidad', 'IMSS', 2019, 'http://www.cenetec.salud.gob.mx'),
+    ('IMSS-104-08', 'Diagnostico y Tratamiento de la Diabetes Mellitus tipo 2', 'IMSS', 2018, 'http://www.cenetec.salud.gob.mx'),
+    ('IMSS-020-08', 'Diagnostico y Tratamiento de la Enfermedad Renal Cronica Temprana', 'IMSS', 2020, 'http://www.cenetec.salud.gob.mx'),
+    ('IMSS-085-08', 'Diagnostico y Tratamiento de la Sepsis y Choque Septico', 'IMSS', 2021, 'http://www.cenetec.salud.gob.mx'),
+    ('IMSS-320-10', 'Diagnostico y Tratamiento del Asma en Ninos y Adultos', 'IMSS', 2019, 'http://www.cenetec.salud.gob.mx'),
+    ('IMSS-037-08', 'Diagnostico y Tratamiento de la Enfermedad Pulmonar Obstructiva Cronica', 'IMSS', 2018, 'http://www.cenetec.salud.gob.mx'),
+    ('IMSS-058-08', 'Diagnostico y Tratamiento del Evento Vascular Cerebral Isquemico Agudo', 'IMSS', 2019, 'http://www.cenetec.salud.gob.mx'),
+    ('IMSS-706-14', 'Diagnostico y Tratamiento de la Preeclampsia-Eclampsia', 'IMSS', 2020, 'http://www.cenetec.salud.gob.mx'),
+    ('IMSS-032-08', 'Diagnostico y Tratamiento de la Cetoacidosis Diabetica en Adultos', 'IMSS', 2019, 'http://www.cenetec.salud.gob.mx')
+ON CONFLICT (id) DO NOTHING;
+
+==== Tablas EXISTENTES en enarm_db ====
+                Listado de tablas
+ Esquema |       Nombre        | Tipo  |   Due    
+---------+---------------------+-------+----------
+ public  | case_tags           | tabla | postgres
+ public  | case_versions       | tabla | postgres
+ public  | clinical_cases      | tabla | postgres
+ public  | clinical_guidelines | tabla | postgres
+ public  | mcq_attempts        | tabla | postgres
+ public  | mcq_bank            | tabla | postgres
+ public  | pubmed_references   | tabla | postgres
+ public  | session_events      | tabla | postgres
+ public  | student_profiles    | tabla | postgres
+ public  | students            | tabla | postgres
+ public  | study_sessions      | tabla | postgres
+ public  | users               | tabla | postgres
+(12 filas)
+
+
+
+==== Especialidades usadas actualmente ====
+  specialty  
+-------------
+ Cardiology
+ Infectology
+ Neurology
+(3 filas)
+
+
+
+==== Difficulties usadas ====
+  difficulty  
+--------------
+ intermediate
+ advanced
+(2 filas)
+
+
+
+==== Settings usados ====
+  setting  
+-----------
+ emergency
+(1 fila)
+
+
+
+==== INSERT completo en CaseRepository.cpp (L10-L60) ====
+L9:     Common::Result<std::string> CaseRepository::Insert(const ClinicalCaseRecord& c) {
+L10:         try {
+L11:             auto conn = m_db->Acquire();
+L12:             pqxx::work tx(conn.Get());
+L13: 
+L14:             auto row = tx.exec(
+L15:                 "INSERT INTO clinical_cases ("
+L16:                 "  title, slug, chief_complaint, specialty, sub_specialty,"
+L17:                 "  difficulty, setting, patient_json, history_present_illness,"
+L18:                 "  symptoms_json, expected_diagnosis_json, expected_studies_json,"
+L19:                 "  expected_treatments_json, expected_followup, learning_objectives_json,"
+L20:                 "  pubmed_pmids, guidelines_ids, teaching_points, author_name, is_published"
+L21:                 ") VALUES ("
+L22:                 "  $1, $2, $3, $4, $5,"
+L23:                 "  $6, $7, $8::jsonb, $9,"
+L24:                 "  $10::jsonb, $11::jsonb, $12::jsonb,"
+L25:                 "  $13::jsonb, $14, $15::jsonb,"
+L26:                 "  $16::text[], $17::text[], $18, $19, $20"
+L27:                 ") RETURNING id",
+L28:                 pqxx::params{
+L29:                     c.title, c.slug, c.chiefComplaint, c.specialty,
+L30:                     c.subSpecialty.value_or(""),
+L31:                     c.difficulty, c.setting,
+L32:                     c.patient.dump(),
+L33:                     c.historyPresentIllness,
+L34:                     c.symptoms.dump(),
+L35:                     c.expectedDiagnosis.dump(),
+L36:                     c.expectedStudies.dump(),
+L37:                     c.expectedTreatments.dump(),
+L38:                     c.expectedFollowup.value_or(""),
+L39:                     c.learningObjectives.dump(),
+L40:                     ToPgTextArray(c.pubmedPmids),
+L41:                     ToPgTextArray(c.guidelinesIds),
+L42:                     c.teachingPoints.value_or(""),
+L43:                     c.authorName.value_or(""),
+L44:                     c.isPublished
+L45:                 }
+L46:             ).one_row();
+L47: 
+L48:             tx.commit();
+L49:             return Common::Result<std::string>::Ok(row["id"].as<std::string>());
+L50:         } catch (const std::exception& e) {
+L51:             return Common::Err<std::string>(500, e.what(), "case_repo");
+L52:         }
+L53:     }
+L54: 
+L55:     Common::Result<void> CaseRepository::Update(const ClinicalCaseRecord& c) {
+

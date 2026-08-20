@@ -1,0 +1,109 @@
+{
+    "title":  "Caso de Infarto agudo del miocardio (IAM)",
+    "slug":  "caso-de-infarto-agudo-del-miocardio-iam",
+    "chief_complaint":  "Paciente presenta dolor precordial de repente, sudoración y náuseas",
+    "specialty":  "Cardiologia",
+    "difficulty":  "basic",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  55,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  75,
+                         "height_cm":  175,
+                         "occupation":  "Ingeniero",
+                         "vitals_on_arrival":  {
+                                                   "hr":  110,
+                                                   "sbp":  150,
+                                                   "dbp":  90,
+                                                   "rr":  20,
+                                                   "spo2":  95,
+                                                   "temp_c":  36.5
+                                               },
+                         "past_medical_history":  [
+                                                      "Hipertension arterial",
+                                                      "Colesterol alto"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Acetaminofén 500mg VO"
+                                                 ],
+                         "family_history":  "Padre con infarto de miocardio",
+                         "social_history":  "No fuma, consume alcohol ocasionalmente, no consume drogas"
+                     },
+    "history_present_illness":  "Paciente presentó dolor precordial agudo, intenso, ubicado en el pecho y radiante al hombros, que comenzó a la media noche y se acentuó con el miedo. Durante los últimos 30 minutos, ha experimentado sudoración profusa, náuseas y desmayos estomacales. El paciente ha estado en reposo y no ha tenido otros síntomas significativos.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Dolor precordial",
+                              "duration":  "30 minutos",
+                              "severity":  "intenso"
+                          },
+                          {
+                              "name":  "Sudoración profusa",
+                              "duration":  "30 minutos",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Náuseas",
+                              "duration":  "30 minutos",
+                              "severity":  "moderada"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Infarto agudo del miocardio (IAM)",
+                                    "icd10":  "I21.0",
+                                    "differential":  [
+                                                         "Angina pectoral estables",
+                                                         "Reflujo gastroesofágico",
+                                                         "Páncreatitis aguda"
+                                                     ],
+                                    "justification":  "Dolor precordial intenso, sudoración profusa, náuseas y desmayos estomacales, los cuales son signos de IAM."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Dolor precordial con elevación ST V1-V4"
+                                  },
+                                  {
+                                      "name":  "Troponinas seriadas",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Elevadas"
+                                  },
+                                  {
+                                      "name":  "Radiografia de torax",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin evidencia de congestión pulmonar"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Aspirina 300mg VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Clopidogrel 600mg carga VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Enoxaparina 1mg/kg SC c/12h",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Angioplastia primaria en \u003c90 min",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "Seguimiento en UCI por 24 horas, pruebas de función cardíaca, ecológicas y neurológicas. Seguimiento médico a corto y largo plazo.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnósticos de IAM",
+                                     "Aplicar protocolo de tratamiento en primera hora",
+                                     "Reconocer complicaciones posibles de IAM"
+                                 ],
+    "teaching_points":  "El dolor precordial intenso, sudoración profusa, náuseas y desmayos estomacales son indicadores de IAM. Es crucial realizar un ECG y pruebas de biomarcadores de miocardio en pacientes sospechosos de IAM."
+}

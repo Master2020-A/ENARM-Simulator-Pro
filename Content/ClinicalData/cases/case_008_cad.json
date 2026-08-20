@@ -1,0 +1,84 @@
+﻿{
+  "id": "case_008",
+  "version": "1.0",
+  "specialty": "ENDOCRINOLOGIA PEDIATRICA",
+  "complexity": "AVANZADO",
+  "setting": "emergency",
+  "title": "Cetoacidosis diabetica como debut en adolescente de 15 anos",
+  "patient": {
+    "name": "Sofia Torres Delgado",
+    "age": 15,
+    "age_unit": "years",
+    "sex": "F",
+    "weight_kg": 48,
+    "height_cm": 162
+  },
+  "chief_complaint": "Poliuria, polidipsia, perdida de peso y dolor abdominal de 3 semanas",
+  "history": {
+    "present_illness": "Adolescente femenina previamente sana, con cuadro de 3 semanas de evolucion caracterizado por poliuria (hasta 6 veces por la noche), polidipsia (consume 4-5 L de agua al dia), polifagia inicial y posteriormente hiporexia con perdida de peso de 6 kg. En las ultimas 48h presenta dolor abdominal difuso, nauseas, dos episodios de vomito, respiracion agitada y somnolencia progresiva. Aliento con olor afrutado referido por familiares.",
+    "past_medical": "Sin antecedentes cronicos. Ninguna hospitalizacion previa.",
+    "allergies": "Ninguna conocida",
+    "medications": "Ninguno",
+    "family": "Abuela materna con DM2, tia con DM1",
+    "social": "Estudiante de secundaria, vive con padres y hermana"
+  },
+  "vitals_initial": {
+    "hr": 128,
+    "bp_sys": 92,
+    "bp_dia": 58,
+    "spo2": 98,
+    "rr": 32,
+    "temp": 36.4
+  },
+  "physical_exam": {
+    "general": "Adolescente somnolienta pero despertable, con signos de deshidratacion severa, aliento cetonico (afrutado)",
+    "head_neck": "Mucosas muy secas, ojos hundidos, turgencia cutanea disminuida",
+    "cardio": "Taquicardia, ritmo regular, pulsos perifericos debiles, llenado capilar 4 seg",
+    "resp": "Respiracion de Kussmaul (rapida y profunda), campos pulmonares limpios",
+    "abdomen": "Blando pero doloroso difusamente a la palpacion, sin datos de irritacion peritoneal, peristalsis disminuida",
+    "neuro": "Somnolienta, orientada parcialmente, Glasgow 13, sin focalizacion"
+  },
+  "correct_diagnosis": {
+    "primary": "Cetoacidosis diabetica severa como debut de diabetes mellitus tipo 1",
+    "icd10": "E10.10",
+    "differentials": ["Cetoacidosis alcoholica", "Acidosis lactica", "Intoxicacion por salicilatos", "Abdomen agudo quirurgico"]
+  },
+  "correct_treatment": {
+    "immediate": [
+      "Dos accesos venosos perifericos",
+      "Sonda vesical para uresis horaria",
+      "Monitorizacion cardiaca continua",
+      "Fase 1 (0-1h): Reposicion con solucion fisiologica 0.9% 10-20 ml/kg en 1h",
+      "Fase 2 (despues de 1h): Continuar hidratacion 5-10 ml/kg/h con SF 0.45%"
+    ],
+    "medications": [
+      "Insulina regular: NO bolo inicial en pediatria. Infusion 0.05-0.1 UI/kg/h",
+      "Iniciar insulina 1h despues de iniciar hidratacion",
+      "Potasio: agregar KCl 20-40 mEq/L cuando K+ <5.5 mEq/L y haya diuresis",
+      "Bicarbonato: SOLO si pH <6.9 (controversial)",
+      "Cuando glucosa <250 mg/dl: agregar dextrosa a soluciones",
+      "Prevenir edema cerebral: reposicion gradual, no >4 mOsm/L/h de descenso"
+    ],
+    "admission": "UCI pediatrica. Transicion a insulina SC cuando resuelva acidosis, cetonuria y tolere via oral. Educacion diabetologica para familia."
+  },
+  "expected_studies": [
+    "Glucosa capilar (esperado >250 mg/dl)",
+    "Gasometria venosa (pH <7.3, HCO3 <15)",
+    "Electrolitos sericos completos con brecha anionica",
+    "Cetonas en sangre (beta-hidroxibutirato) y orina",
+    "Biometria hematica",
+    "Quimica sanguinea completa con osmolaridad",
+    "Hemoglobina glicosilada",
+    "Examen general de orina",
+    "Anticuerpos anti-GAD, anti-insulina, anti-islote (para clasificar DM1)"
+  ],
+  "gpc_references": ["IMSS-302-10"],
+  "learning_objectives": [
+    "Reconocer triada clasica: hiperglucemia + acidosis + cetosis",
+    "Aplicar protocolo de hidratacion secuencial en CAD pediatrica",
+    "Manejar insulina en infusion continua (NO bolo en pediatria)",
+    "Prevenir y reconocer edema cerebral (complicacion mas temida)",
+    "Reponer potasio adecuadamente"
+  ],
+  "ai_prompt_context": "Eres Sofia Torres, adolescente de 15 anos. Estas en urgencias porque llevas 3 semanas sintiendote muy mal: tomas mucha agua (litros), vas al bano a cada rato incluso en la noche, has bajado 6 kilos sin hacer dieta. Los ultimos 2 dias te duele la panza, has vomitado y respiras raro (muy rapido). Estas cansada y con sueno. Tu mama esta contigo muy preocupada. Responde como adolescente cansada, frases cortas, un poco confundida por la somnolencia. Espanol coloquial mexicano. NO uses terminos medicos."
+}

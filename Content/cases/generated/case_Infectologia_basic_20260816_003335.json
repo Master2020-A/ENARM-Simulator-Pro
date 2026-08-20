@@ -1,0 +1,99 @@
+{
+    "title":  "Paciente con fiebre alta y dolor torácico",
+    "slug":  "paciente-con-fiebre-alta-y-dolor-toracico",
+    "chief_complaint":  "Fiebre alta de 39°C y dolor torácico agudo",
+    "specialty":  "Infectologia",
+    "difficulty":  "basic",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  35,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  80,
+                         "height_cm":  175,
+                         "occupation":  "Trabajador de oficina",
+                         "vitals_on_arrival":  {
+                                                   "hr":  90,
+                                                   "sbp":  130,
+                                                   "dbp":  85,
+                                                   "rr":  18,
+                                                   "spo2":  95,
+                                                   "temp_c":  39.2
+                                               },
+                         "past_medical_history":  [
+                                                      "Hipertension arterial",
+                                                      "No alergias conocidas"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Ibuprofeno 400mg cada 6 horas"
+                                                 ],
+                         "family_history":  "Negado",
+                         "social_history":  "No tabaquismo, alcohol moderado"
+                     },
+    "history_present_illness":  "Paciente se presentó de repente con fiebre alta de 39°C durante los últimos 3 días, acompañada de dolor torácico intensivo, sudoración copiosa y malestar gastrointestinal. No tiene fiebre nocturna ni mareos. No ha tenido pérdida de apetito, diarrea o vomito. Ha estado descansando en su casa y ha tomado ibuprofeno por lo que se siente mejor, aunque aún no ha vuelto a sus actividades normales.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Fiebre alta",
+                              "duration":  "3 dias",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Dolor torácico",
+                              "duration":  "3 dias",
+                              "severity":  "intenso"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Infección bacteriana del plexo pleural",
+                                    "icd10":  "J15.0",
+                                    "differential":  [
+                                                         "Neumonía",
+                                                         "Pericarditis",
+                                                         "Embolismo pulmonar"
+                                                     ],
+                                    "justification":  "La fiebre alta, dolor torácico agudo y signos vitales normales son consistentes con una infección bacteriana del plexo pleural. El dolor torácico puede ser causado por una inflamación del plexo pleural (pleuritis), que puede ser bacteriana."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "Ct torax con contraste",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Agujeros de perforación en el plexo pleural"
+                                  },
+                                  {
+                                      "name":  "EKG",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin datos de arritmia"
+                                  },
+                                  {
+                                      "name":  "Laboratorio de orina",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin hematuria o bacterias"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Antibióticos empíricos",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Furosemetida 40mg VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Dosis dobles del ibuprofeno",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "Paciente debe ser evaluado nuevamente en 24 horas para evaluar la respuesta a la terapia y determinar si es necesario iniciar un tratamiento antibiótico específico. Debe seguir las indicaciones de la enfermería para su manejo del dolor y la fiebre.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnosticos de infección bacteriana del plexo pleural",
+                                     "Aplicar protocolo empírico de antibióticos en pacientes con fiebre alta y dolor torácico",
+                                     "Reconocer complicaciones de infección bacteriana del plexo pleural"
+                                 ],
+    "teaching_points":  "La infección bacteriana del plexo pleural es una emergencia médica que requiere un diagnóstico y tratamiento rápidos para prevenir complicaciones graves. Los signos vitales y la historia clínica son cruciales para identificar la etiología del dolor torácico y aplicar el tratamiento adecuado."
+}

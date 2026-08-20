@@ -1,0 +1,124 @@
+{
+    "title":  "Infección bacteriana del vaso sanguíneo con endocarditis bacteriana",
+    "slug":  "infeccion-bacteriana-del-vaso-sanguino-con-endocarditis-bacteriana",
+    "chief_complaint":  "Fiebre alta, dolor torácico, fatiga y sudoración nocturna.",
+    "specialty":  "Infectología",
+    "difficulty":  "intermediate",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  55,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  80,
+                         "height_cm":  175,
+                         "occupation":  "Obrero",
+                         "vitals_on_arrival":  {
+                                                   "hr":  110,
+                                                   "sbp":  140,
+                                                   "dbp":  90,
+                                                   "rr":  20,
+                                                   "spo2":  95,
+                                                   "temp_c":  38.5
+                                               },
+                         "past_medical_history":  [
+                                                      "Artritis reumatoide",
+                                                      "Hipertensión arterial"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Acetaminofén 500mg TDF"
+                                                 ],
+                         "family_history":  "negado",
+                         "social_history":  "no fuma, no bebe alcohol, no consume drogas"
+                     },
+    "history_present_illness":  "El paciente presentó fiebre alta desde la mañana, con temperatura máxima de 38.5°C, dolor torácico intenso, sudoración nocturna, fatiga extrema y dificultad para moverse. No reporta dolor de cabeza, mareos, visión borrosa ni dificultad para respirar. El dolor torácico es agudo y se empeora con el movimiento. El paciente ha estado sentado en su cama durante el día debido a su malestar.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Fiebre",
+                              "duration":  "1 día",
+                              "severity":  "alta"
+                          },
+                          {
+                              "name":  "Dolor torácico",
+                              "duration":  "1 día",
+                              "severity":  "intenso"
+                          },
+                          {
+                              "name":  "Fatiga",
+                              "duration":  "1 día",
+                              "severity":  "extrema"
+                          },
+                          {
+                              "name":  "Sudoración nocturna",
+                              "duration":  "1 día",
+                              "severity":  "moderada"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Endocarditis bacteriana",
+                                    "icd10":  "B16.0",
+                                    "differential":  [
+                                                         "Infección pélvica",
+                                                         "Pericarditis",
+                                                         "Cistitis bacteriana"
+                                                     ],
+                                    "justification":  "La fiebre alta, dolor torácico intenso y fatiga extrema son consistentes con endocarditis bacteriana. El paciente tiene antecedentes de artritis reumatoide, lo que aumenta el riesgo de infección bacteriana del vaso sanguíneo. La ausencia de otros signos de infección pélvica o pericarditis, como dolor abdominal o dificultad para respirar, respeta el diagnostico principal."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "ECG 12 derivaciones",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "sin hallazgos específicos"
+                                  },
+                                  {
+                                      "name":  "Troponinas seriadas",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "elevadas"
+                                  },
+                                  {
+                                      "name":  "Radiografía de torax",
+                                      "priority":  "routine",
+                                      "expected_finding":  "sin datos de congestión"
+                                  },
+                                  {
+                                      "name":  "Echocardiograma",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "disfunción valvular"
+                                  },
+                                  {
+                                      "name":  "Muestra de sangre para cultivo bacteriano",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "crescimiento bacteriano"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Antibiótico de amplio espectro IV",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Anticoagulación con enoxaparina 1mg/kg SC c/12h",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Corticosteroides IV",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Dosis adicional de antibiótico de amplio espectro IV c/24h",
+                                         "priority":  "urgent",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente debe seguir con un seguimiento en el servicio de infectología en 48 horas para evaluar la respuesta al tratamiento y ajustar los antibióticos según el cultivo bacteriano. Se debe realizar un segundo ecocardiograma en 72 horas para evaluar la función valvular.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnósticos de endocarditis bacteriana",
+                                     "Aplicar protocolo de tratamiento de endocarditis bacteriana en primera hora",
+                                     "Reconocer complicaciones de endocarditis bacteriana"
+                                 ],
+    "teaching_points":  "La endocarditis bacteriana es una enfermedad grave con alta mortalidad si no se trata adecuadamente. El paciente debe estar en el hospital durante el primer período de tratamiento. La dosis de antibiótico debe ser ajustada según el cultivo bacteriano. El seguimiento es crucial para el control de la infección y el prevenir complicaciones."
+}

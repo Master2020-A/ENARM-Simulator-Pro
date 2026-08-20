@@ -1,0 +1,102 @@
+{
+    "title":  "Herida cutánea por arma blanca",
+    "slug":  "herida-cutanea-arma-blanca",
+    "chief_complaint":  "Herida en la pierna",
+    "specialty":  "Traumatologia",
+    "difficulty":  "basic",
+    "setting":  "emergency",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  30,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  70,
+                         "height_cm":  170,
+                         "occupation":  "Trabajador de oficina",
+                         "vitals_on_arrival":  {
+                                                   "hr":  88,
+                                                   "sbp":  125,
+                                                   "dbp":  80,
+                                                   "rr":  18,
+                                                   "spo2":  96,
+                                                   "temp_c":  37.2
+                                               },
+                         "past_medical_history":  [
+                                                      "Hipertension arterial"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Acetaminofen 500mg"
+                                                 ],
+                         "family_history":  "Negado",
+                         "social_history":  "Ninguna relevante"
+                     },
+    "history_present_illness":  "La paciente se presentó a la consulta tras ser atacada por un arma blanca en la calle. Presenta una herida de aproximadamente 10 cm en la pierna derecha, con sangrado activo y hematomas en el área adyacente. La paciente dice que no ha sentido dolor intenso y solo ha sentido molestias al mover la pierna.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Dolor",
+                              "duration":  "2 horas",
+                              "severity":  "leve"
+                          },
+                          {
+                              "name":  "Hematomas",
+                              "duration":  "2 horas",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Sangrado activo",
+                              "duration":  "2 horas",
+                              "severity":  "moderada"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Herida por arma blanca",
+                                    "icd10":  "T15.9",
+                                    "differential":  [
+                                                         "Herida por arma de fuego",
+                                                         "Herida por arma corta"
+                                                     ],
+                                    "justification":  "Basado en el lugar del incidente, el tipo de arma y la presencia de herida, hematomas y sangrado activo."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "Examen de imagen torácico-abdominal",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin evidencia de daño a órganos internos"
+                                  },
+                                  {
+                                      "name":  "EKG 12 derivaciones",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin evidencia de arritmias"
+                                  },
+                                  {
+                                      "name":  "Laboratorio general",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin evidencia de anemia o hipotiroidismo"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Aplicación de preservación de la herida",
+                                         "priority":  "immediate",
+                                         "evidence":  "Basado en la guía de IMSS"
+                                     },
+                                     {
+                                         "treatment":  "Cicatrización con crema de gelatina",
+                                         "priority":  "routine",
+                                         "evidence":  "Basado en la guía de IMSS"
+                                     },
+                                     {
+                                         "treatment":  "Prescripción de antibióticos por posinfección",
+                                         "priority":  "routine",
+                                         "evidence":  "Basado en la guía de IMSS"
+                                     }
+                                 ],
+    "expected_followup":  "La paciente debe ser atendida de nuevo en 24 horas para control de la herida y evaluación de la cicatrización. Se recomienda seguir la prescripción de antibióticos durante 10 días.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnosticos de heridas por arma blanca",
+                                     "Aplicar protocolo de tratamiento de heridas de superficie",
+                                     "Reconocer complicaciones de heridas"
+                                 ],
+    "teaching_points":  "La herida por arma blanca es una emergencia que requiere atención inmediata para prevenir la infección y el daño a órganos internos. Es importante realizar un manejo adecuado de la herida, prescribir antibióticos y seguir el paciente para control de la cicatrización."
+}

@@ -1,0 +1,130 @@
+﻿==== PatientPrompts.h ====
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+//   ENARM.AI - Prompt templates para pacientes virtuales
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+#pragma once
+
+#include <string>
+#include <nlohmann/json.hpp>
+
+namespace ENARM::AI::PromptTemplates {
+
+    // Datos para construir persona del paciente
+    struct PatientPersonaData {
+        std::string fullName;
+        int age{0};
+        std::string sex;                    // "Male"/"Female"
+        std::string chiefComplaint;         // Motivo de consulta
+        std::string historyPresentIllness;  // HEA narrativa
+        nlohmann::json symptoms;            // Sintomas del caso
+        nlohmann::json medicalHistory;      // Antecedentes
+        nlohmann::json vitalSigns;          // Signos vitales actuales
+        nlohmann::json familyHistory;
+        nlohmann::json lifestyle;
+        std::string educationLevel{"basico"};   // Nivel para adaptar lenguaje
+        std::string emotionalState{"ansioso"};  // Estado emocional
+    };
+
+    class PatientPrompts {
+    public:
+        // Genera el prompt SISTEMA (persona del paciente)
+        static std::string BuildSystemPrompt(const PatientPersonaData& data);
+
+        // Prompt para saludo inicial (opcional)
+        static std::string BuildInitialGreetingPrompt(const PatientPersonaData& data);
+
+        // Guardrails: instrucciones que evitan que el paciente "rompa personaje"
+        static std::string GetGuardrails();
+    };
+
+}
+
+==== Buscar ClinicalCaseRecord.h ====
+
+Archivo: .\engine\ENARM.Data\include\ENARM\Data\Repositories\CaseRepository.h
+struct ClinicalCaseRecord {
+        std::string id;
+        std::string title;
+        std::string slug;
+        std::string chiefComplaint;
+        std::string specialty;
+        std::optional<std::string> subSpecialty;
+        std::string difficulty;
+        std::string setting;
+        nlohmann::json patient;
+        std::string historyPresentIllness;
+        nlohmann::json symptoms;
+        nlohmann::json expectedDiagnosis;
+        nlohmann::json expectedStudies;
+        nlohmann::json expectedTreatments;
+        std::optional<std::string> expectedFollowup;
+        nlohmann::json learningObjectives;
+        std::vector<std::string> pubmedPmids;
+        std::vector<std::string> guidelinesIds;
+        std::optional<std::string> teachingPoints;
+        std::optional<std::string> authorName;
+        int version{1};
+
+==== Uso de PatientAIController en todo el proyecto ====
+
+Archivo: .\engine\ENARM.AI\include\ENARM\AI\PatientAIController.h
+  L2: //   ENARM.AI - PatientAIController
+  L17: class PatientAIController {
+  L19: PatientAIController(std::shared_ptr<LLMRouter> router,
+
+Archivo: .\engine\ENARM.AI\src\PatientAIController.cpp
+  L2: //   ENARM.AI - PatientAIController Implementation
+  L4: #include "ENARM/AI/PatientAIController.h"
+  L8: PatientAIController::PatientAIController(
+  L17: void PatientAIController::RebuildSystemPrompt() {
+  L22: Common::Result<std::string> PatientAIController::Ask(const std::string& doctorQuestion) {
+  L43: Common::Result<std::string> PatientAIController::AskStream(
+  L67: void PatientAIController::UpdateEmotionalState(const std::string& newState) {
+  L73: void PatientAIController::UpdatePainLevel(int /*painScale*/) {
+  L77: void PatientAIController::Reset() {
+
+Archivo: .\engine\ENARM.GUI\include\ENARM\GUI\AppContext.h
+  L10: #include "ENARM/AI/PatientAIController.h"
+  L67: std::unique_ptr<AI::PatientAIController> patient;
+
+Archivo: .\engine\ENARM.GUI\src\Views\PatientSessionView.cpp
+  L4: #include "ENARM/AI/PatientAIController.h"
+
+==== ENARM.CLI main - creacion del patient ====
+
+--- Match L10 ---
+  L8: #include "ENARM/AI/OllamaClient.h"
+  L9: #include "ENARM/AI/LLMRouter.h"
+  L10: #include "ENARM/AI/PatientAIController.h"
+  L11: 
+  L12: #include "ENARM/Data/DatabaseManager.h"
+  L13: #include "ENARM/Data/Repositories/CaseRepository.h"
+  L14: #include "ENARM/Data/Repositories/SessionRepository.h"
+  L15: 
+  L16: #include <iostream>
+  L17: #include <iomanip>
+
+--- Match L754 ---
+  L752: 
+  L753:     // Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ Persona Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+  L754:     AI::PromptTemplates::PatientPersonaData persona;
+  L755:     persona.fullName              = c.patient["full_name"].get<std::string>();
+  L756:     persona.age                   = c.patient["age"].get<int>();
+  L757:     persona.sex                   = c.patient["sex"].get<std::string>();
+  L758:     persona.chiefComplaint        = c.chiefComplaint;
+  L759:     persona.historyPresentIllness = c.historyPresentIllness;
+  L760:     persona.symptoms              = c.symptoms;
+  L761:     persona.medicalHistory        = c.patient.value("medical_history", json::array());
+
+--- Match L768 ---
+  L766:     persona.emotionalState        = "muy asustado, con dolor, buscando ayuda urgente";
+  L767: 
+  L768:     AI::PatientAIController patient(router, persona);
+  L769:     CaseSimulator simulator(c);
+  L770: 
+  L771:     PrintHeader(c);
+  L772:     PrintHelp();
+  L773:     simulator.PrintCaseInfo();
+  L774: 
+  L775:     // Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ LOOP Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+

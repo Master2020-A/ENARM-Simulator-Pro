@@ -1,0 +1,77 @@
+﻿{
+  "id": "case_006",
+  "version": "1.0",
+  "specialty": "CIRUGIA PEDIATRICA",
+  "complexity": "INTERMEDIO",
+  "setting": "emergency",
+  "title": "Apendicitis aguda en nino de 8 anos con dolor migratorio",
+  "patient": {
+    "name": "Diego Ramirez Perez",
+    "age": 8,
+    "age_unit": "years",
+    "sex": "M",
+    "weight_kg": 28,
+    "height_cm": 128
+  },
+  "chief_complaint": "Dolor abdominal de 12 horas, primero periumbilical ahora en fosa iliaca derecha",
+  "history": {
+    "present_illness": "Escolar de 8 anos previamente sano que inicia hace 12h con dolor abdominal periumbilical tipo colico, acompanado de nausea y un episodio de vomito alimentario. En las ultimas 6h el dolor migro a fosa iliaca derecha, haciendose constante e intenso, que aumenta con el movimiento. Presenta hiporexia y fiebre no cuantificada. Ultima evacuacion hace 24h normal.",
+    "past_medical": "Sin antecedentes de importancia. Esquema de vacunacion completo.",
+    "allergies": "Ninguna conocida",
+    "medications": "Ninguno",
+    "family": "Padres sanos",
+    "social": "Escolar, vive con ambos padres"
+  },
+  "vitals_initial": {
+    "hr": 118,
+    "bp_sys": 105,
+    "bp_dia": 65,
+    "spo2": 98,
+    "rr": 24,
+    "temp": 38.2
+  },
+  "physical_exam": {
+    "general": "Escolar consciente, quejumbroso, en posicion antalgica (decubito con flexion de cadera derecha)",
+    "head_neck": "Mucosas orales semi-secas",
+    "cardio": "Taquicardia sin soplos",
+    "resp": "Campos pulmonares bien ventilados",
+    "abdomen": "Dolor a la palpacion en fosa iliaca derecha con signo de McBurney positivo, Blumberg positivo, Rovsing positivo, defensa muscular localizada. Ruidos peristalticos disminuidos.",
+    "neuro": "Alerta, orientado, sin focalizacion"
+  },
+  "correct_diagnosis": {
+    "primary": "Apendicitis aguda no complicada",
+    "icd10": "K35.80",
+    "differentials": ["Adenitis mesenterica", "Gastroenteritis aguda", "Diverticulo de Meckel complicado", "Invaginacion intestinal"]
+  },
+  "correct_treatment": {
+    "immediate": [
+      "Ayuno absoluto",
+      "Acceso venoso periferico",
+      "Hidratacion IV con solucion Hartmann 20 ml/kg de carga",
+      "Analgesia: paracetamol 15 mg/kg IV",
+      "Interconsulta a cirugia pediatrica urgente"
+    ],
+    "medications": [
+      "Antibioticoterapia preoperatoria: ceftriaxona 50 mg/kg IV + metronidazol 10 mg/kg IV",
+      "Analgesia con opioide si dolor severo (nalbufina 0.1 mg/kg IV)",
+      "Antiemetico: ondansetron 0.15 mg/kg IV"
+    ],
+    "admission": "Apendicectomia laparoscopica de urgencia. Score de Alvarado: 8-9 puntos (alta probabilidad)."
+  },
+  "expected_studies": [
+    "Biometria hematica completa (leucocitosis con neutrofilia esperada)",
+    "Proteina C reactiva",
+    "Examen general de orina (descartar ITU)",
+    "Ultrasonido abdominal (apendice >6mm, no compresible)",
+    "Tomografia abdominal si USG no concluyente",
+    "Quimica sanguinea y electrolitos"
+  ],
+  "gpc_references": ["IMSS-031-08"],
+  "learning_objectives": [
+    "Reconocer clinica clasica de apendicitis en pediatricos",
+    "Aplicar score de Alvarado modificado",
+    "Distinguir apendicitis de diagnosticos diferenciales pediatricos",
+    "Indicar profilaxis antibiotica prequirurgica"
+  ],
+  "ai_prompt_context": "Eres Diego Ramirez, un nino de 8 anos. Te duele mucho la panza. Empezo ayer en la noche por el ombligo, pero ahora te duele mas del lado derecho abajo. Vomitaste una vez y no tienes hambre. Te sientes caliente. Responde como un nino de 8 anos hablaria: frases cortas y simples, con miedo, a veces respondes solo con 'si' o 'no'. Mama esta contigo. NO uses palabras dificiles. Ejemplo: 'Me duele mucho aqui doctor', 'Vomite una vez', 'No quiero comer'."
+}

@@ -1,0 +1,134 @@
+{
+    "title":  "Diabetes mellitus tipo 2 recien diagnosticada con HbA1c 9.5",
+    "slug":  "diabetes-mellitus-tipo-2-recien-diagnosticada-con-hba1c-9-5",
+    "chief_complaint":  "Fiebre alta, aumento de sed y orina, fatiga",
+    "specialty":  "Endocrinologia",
+    "difficulty":  "basic",
+    "setting":  "outpatient",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  50,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  80,
+                         "height_cm":  175,
+                         "occupation":  "Trabajador en oficina",
+                         "vitals_on_arrival":  {
+                                                   "hr":  90,
+                                                   "sbp":  130,
+                                                   "dbp":  85,
+                                                   "rr":  20,
+                                                   "spo2":  97,
+                                                   "temp_c":  38.5
+                                               },
+                         "past_medical_history":  [
+                                                      "Hipertension arterial",
+                                                      "Obesidad"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Metformina 500mg VO"
+                                                 ],
+                         "family_history":  "Diabetes mellitus en familia",
+                         "social_history":  "No fuma, consume alcohol ocasionalmente, no consume drogas"
+                     },
+    "history_present_illness":  "Paciente que se presenta con fiebre alta (38.5°C), aumento de sed y orina, y fatiga. El paciente dice que ha estado experimentando estos signos durante las últimas 3 días. No tiene dolor estomacal ni dolor abdominal. Ha notado una disminución en su apetito y ha perdido 2 kg de peso en las últimas semanas.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Fiebre",
+                              "duration":  "3 dias",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Aumento de sed",
+                              "duration":  "3 dias",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Orina frecuente",
+                              "duration":  "3 dias",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Fatiga",
+                              "duration":  "3 dias",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Disminución en apetito",
+                              "duration":  "3 dias",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Pérdida de peso",
+                              "duration":  "3 dias",
+                              "severity":  "moderada"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Diabetes mellitus tipo 2",
+                                    "icd10":  "E11.9",
+                                    "differential":  [
+                                                         "Diabetes mellitus tipo 1",
+                                                         "Insuficiencia renal crónica",
+                                                         "Hipotiroidismo"
+                                                     ],
+                                    "justification":  "La HbA1c es de 9.5%, lo cual indica diabetes mellitus tipo 2. Los síntomas de fiebre, aumento de sed y orina son consistentes con esta condición. La edad, historial familiar de diabetes y el aumento de peso son factores de riesgo adicionales."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "HbA1c",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "9.5%"
+                                  },
+                                  {
+                                      "name":  "Perfil lipídico completo",
+                                      "priority":  "routine",
+                                      "expected_finding":  "N/A"
+                                  },
+                                  {
+                                      "name":  "Funcion renal",
+                                      "priority":  "routine",
+                                      "expected_finding":  "N/A"
+                                  },
+                                  {
+                                      "name":  "Funcion tiroides",
+                                      "priority":  "routine",
+                                      "expected_finding":  "N/A"
+                                  },
+                                  {
+                                      "name":  "Funcion renal",
+                                      "priority":  "routine",
+                                      "expected_finding":  "N/A"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Metformina 500mg VO, aumentar a 1000mg VO",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Ortazapina 1mg SC",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Monitorizar cianosis y alteraciones electrolíticas",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Recomendar dieta baja en carbohidratos y ejercicio moderado",
+                                         "priority":  "routine",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "Seguimiento en 1 semana con control de glucosa en sangre y revisión de tratamientos. Evaluación de dietista y fisioterapeuta. Posible insuminoterapia si la glucosa no se controla adecuadamente.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnosticos de diabetes mellitus tipo 2",
+                                     "Aplicar protocolo inicial de tratamiento en pacientes recién diagnosticados",
+                                     "Reconocer complicaciones iniciales de la diabetes mellitus"
+                                 ],
+    "teaching_points":  "En el caso de diabetes mellitus tipo 2, es crucial el diagnóstico temprano y la implementación de un tratamiento inmediato para evitar complicaciones graves. El seguimiento regular es esencial para el control de la glucosa y la prevención de complicaciones a largo plazo."
+}

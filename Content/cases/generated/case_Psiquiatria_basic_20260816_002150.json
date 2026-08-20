@@ -1,0 +1,119 @@
+{
+    "title":  "Paciente con episodio de depresión recurrente",
+    "slug":  "paciente-con-episodio-de-depresion-recurrente",
+    "chief_complaint":  "Sentirse triste y sin interés por las actividades habituales durante las últimas semanas",
+    "specialty":  "Psiquiatria",
+    "difficulty":  "basic",
+    "setting":  "outpatient",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  45,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  70,
+                         "height_cm":  170,
+                         "occupation":  "Trabajador administrativo",
+                         "vitals_on_arrival":  {
+                                                   "hr":  80,
+                                                   "sbp":  120,
+                                                   "dbp":  80,
+                                                   "rr":  16,
+                                                   "spo2":  98,
+                                                   "temp_c":  36.8
+                                               },
+                         "past_medical_history":  [
+                                                      "Hipertensión arterial controlada",
+                                                      "Depresión recurrente"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Sertralina 50mg diario"
+                                                 ],
+                         "family_history":  "Depresión familiar",
+                         "social_history":  "Ninguno relevante"
+                     },
+    "history_present_illness":  "Paciente presenta un episodio de depresión recurrente. Sentía triste y sin interés por las actividades habituales durante las últimas semanas. Ha sentido fatiga y pérdida de apetito. Ha experimentado pensamientos de muerte y ha pensado en suicidio en varias ocasiones. Ha estado tenso y ansioso, y ha sentido sudoración nocturna. Ha tenido dificultades para concentrarse y ha estado irritado y frustrado. Ha estado teniendo sueño y ha experimentado cambios en su peso.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Depresión",
+                              "duration":  "3 semanas",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Ansiedad",
+                              "duration":  "1 semana",
+                              "severity":  "leve"
+                          },
+                          {
+                              "name":  "Fatiga",
+                              "duration":  "3 semanas",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Pensamientos de muerte",
+                              "duration":  "1 semana",
+                              "severity":  "leve"
+                          },
+                          {
+                              "name":  "Irritabilidad",
+                              "duration":  "1 semana",
+                              "severity":  "leve"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Depresión recurrente, episodio depresivo",
+                                    "icd10":  "F32.2",
+                                    "differential":  [
+                                                         "Bipolaridad I",
+                                                         "Trastorno ansioso",
+                                                         "Distrivución de la atención"
+                                                     ],
+                                    "justification":  "El paciente tiene un historial de depresión recurrente y presenta síntomas tipicos de depresión como tristeza, falta de interés, fatiga, pensamientos de muerte y irritabilidad."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "Examen de laboratorio completo",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin cambios significativos"
+                                  },
+                                  {
+                                      "name":  "Escanear imagen de cerebro",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Sin evidencia de alteraciones"
+                                  },
+                                  {
+                                      "name":  "Evaluación neurológica",
+                                      "priority":  "routine",
+                                      "expected_finding":  "Sin evidencia de alteraciones"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Sertralina 100mg diario",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I - AHA/ACC 2022"
+                                     },
+                                     {
+                                         "treatment":  "Citalopram 20mg diario",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Acetaminofén 650mg cada 6 horas",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     },
+                                     {
+                                         "treatment":  "Monitoreo de la depresión e ansiedad",
+                                         "priority":  "immediate",
+                                         "evidence":  "Class I"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente debe seguir el protocolo de tratamiento de depresión recurrente y ser evaluado semanalmente. Se debe realizar un seguimiento neurológico y psiquiátrico para monitorear la respuesta al tratamiento y prevenir complicaciones.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnósticos de depresión recurrente",
+                                     "Aplicar protocolo de tratamiento de depresión recurrente",
+                                     "Reconocer complicaciones de depresión recurrente"
+                                 ],
+    "teaching_points":  "La depresión recurrente es un trastorno neurológico que requiere un tratamiento adecuado y monitoreo regular. El paciente debe ser evaluado neurológico y psiquiátrico regularmente para prevenir complicaciones y mejorar su calidad de vida."
+}

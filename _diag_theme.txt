@@ -1,0 +1,273 @@
+﻿==== Theme.h ====
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+//   ENARM.GUI - Theme (Hero Medical Dashboard)
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+#pragma once
+
+#include <cstdint>
+#include <imgui.h>
+
+namespace ENARM::GUI::Theme {
+
+    namespace Colors {
+        // â”€â”€â”€ Backgrounds claros modernos â”€â”€â”€
+        inline constexpr ImVec4 BgApp        {0.96f, 0.97f, 0.99f, 1.00f};   // gris muy claro
+        inline constexpr ImVec4 BgPanel      {1.00f, 1.00f, 1.00f, 1.00f};   // blanco
+        inline constexpr ImVec4 BgPanelAlt   {0.98f, 0.98f, 0.99f, 1.00f};
+        inline constexpr ImVec4 BgHover      {0.92f, 0.94f, 0.97f, 1.00f};
+        inline constexpr ImVec4 BgSubtle     {0.94f, 0.96f, 0.98f, 1.00f};
+
+        // â”€â”€â”€ Textos â”€â”€â”€
+        inline constexpr ImVec4 TextTitle    {0.10f, 0.14f, 0.22f, 1.00f};   // casi negro
+        inline constexpr ImVec4 TextPrimary  {0.20f, 0.24f, 0.32f, 1.00f};
+        inline constexpr ImVec4 TextSecondary{0.45f, 0.50f, 0.58f, 1.00f};
+        inline constexpr ImVec4 TextDim      {0.60f, 0.64f, 0.70f, 1.00f};
+        inline constexpr ImVec4 TextOnColor  {1.00f, 1.00f, 1.00f, 1.00f};   // sobre gradientes
+        inline constexpr ImVec4 TextOnColorDim{1.00f, 1.00f, 1.00f, 0.80f};
+
+        // â”€â”€â”€ Accent (azul medico principal) â”€â”€â”€
+        inline constexpr ImVec4 Accent       {0.30f, 0.65f, 0.85f, 1.00f};
+        inline constexpr ImVec4 AccentHover  {0.35f, 0.70f, 0.90f, 1.00f};
+        inline constexpr ImVec4 AccentDark   {0.20f, 0.50f, 0.70f, 1.00f};
+
+        // â”€â”€â”€ HERO header (gradiente cyan-azul) â”€â”€â”€
+        inline constexpr ImVec4 HeroTop      {0.35f, 0.72f, 0.85f, 1.00f};
+        inline constexpr ImVec4 HeroBottom   {0.25f, 0.62f, 0.78f, 1.00f};
+
+        // â”€â”€â”€ CARDS con gradientes vibrantes (top -> bottom) â”€â”€â”€
+        // Card azul cyan
+        inline constexpr ImVec4 CardBlueTop     {0.30f, 0.72f, 0.92f, 1.00f};
+        inline constexpr ImVec4 CardBlueBottom  {0.20f, 0.55f, 0.80f, 1.00f};
+
+        // Card rosa/rojo
+        inline constexpr ImVec4 CardPinkTop     {0.95f, 0.30f, 0.55f, 1.00f};
+        inline constexpr ImVec4 CardPinkBottom  {0.90f, 0.20f, 0.40f, 1.00f};
+
+        // Card morado
+        inline constexpr ImVec4 CardPurpleTop   {0.55f, 0.45f, 0.90f, 1.00f};
+        inline constexpr ImVec4 CardPurpleBottom{0.42f, 0.32f, 0.78f, 1.00f};
+
+        // Card verde/teal
+        inline constexpr ImVec4 CardGreenTop    {0.20f, 0.75f, 0.60f, 1.00f};
+        inline constexpr ImVec4 CardGreenBottom {0.15f, 0.62f, 0.50f, 1.00f};
+
+        // Card naranja/rojo
+        inline constexpr ImVec4 CardOrangeTop   {0.98f, 0.55f, 0.30f, 1.00f};
+        inline constexpr ImVec4 CardOrangeBottom{0.92f, 0.40f, 0.20f, 1.00f};
+
+        // Card dorado/amarillo
+        inline constexpr ImVec4 CardGoldTop     {0.98f, 0.72f, 0.20f, 1.00f};
+        inline constexpr ImVec4 CardGoldBottom  {0.92f, 0.58f, 0.10f, 1.00f};
+
+        // â”€â”€â”€ Estados clinicos (semaforos) â”€â”€â”€
+        inline constexpr ImVec4 StatusNormal   {0.20f, 0.75f, 0.45f, 1.00f};
+        inline constexpr ImVec4 StatusWarning  {0.95f, 0.72f, 0.20f, 1.00f};
+        inline constexpr ImVec4 StatusCritical {0.95f, 0.35f, 0.30f, 1.00f};
+        inline constexpr ImVec4 StatusEmergency{1.00f, 0.15f, 0.10f, 1.00f};
+
+        // â”€â”€â”€ Badges y detalles â”€â”€â”€
+        inline constexpr ImVec4 BadgeBg        {1.00f, 1.00f, 1.00f, 0.25f};   // sobre card gradient
+        inline constexpr ImVec4 BadgeAlergy    {1.00f, 0.90f, 0.90f, 1.00f};
+        inline constexpr ImVec4 BadgeAlergyTxt {0.90f, 0.20f, 0.20f, 1.00f};
+
+        // â”€â”€â”€ Borders y shadows â”€â”€â”€
+        inline constexpr ImVec4 Border         {0.88f, 0.90f, 0.93f, 1.00f};
+        inline constexpr ImVec4 Shadow         {0.10f, 0.14f, 0.22f, 0.08f};
+        inline constexpr ImVec4 ShadowStrong   {0.10f, 0.14f, 0.22f, 0.15f};
+    }
+
+    // Enum de tipos de card gradient
+    enum class CardGradient : uint8_t {
+        Blue,
+        Pink,
+        Purple,
+        Green,
+        Orange,
+        Gold
+    };
+
+    // Aplicar tema
+    void ApplyHeroTheme();
+
+    // Obtener colores de un gradiente
+    void GetGradientColors(CardGradient g, ImVec4& top, ImVec4& bottom);
+
+    // Helpers de dibujo
+    void DrawShadowedRect(ImDrawList* dl, ImVec2 min, ImVec2 max, float rounding, ImU32 shadowColor);
+    void DrawGradientRect(ImDrawList* dl, ImVec2 min, ImVec2 max,
+                           ImU32 topColor, ImU32 bottomColor, float rounding);
+    void DrawGradientRectV(ImDrawList* dl, ImVec2 min, ImVec2 max, ImU32 topColor, ImU32 bottomColor);
+
+    ImU32 ColorForVitalStatus(int severity);
+    const char* IconForVitalStatus(int severity);
+}
+
+==== RenderDashboardView COMPLETA ====
+RenderDashboardView L445 a L516 (total 72 lineas)
+L445:     static void RenderDashboardView(AppContext& ctx, Application::Impl* impl) {
+L446:         using namespace Theme::Colors;
+L447: 
+L448:         // Hero header
+L449:         DrawHeroHeader(ctx, impl);
+L450: 
+L451:         // Titulo de seccion
+L452:         if (impl->fontLarge) ImGui::PushFont(impl->fontLarge);
+L453:         ImGui::PushStyleColor(ImGuiCol_Text, TextTitle);
+L454:         ImGui::Text("Acciones rapidas");
+L455:         ImGui::PopStyleColor();
+L456:         if (impl->fontLarge) ImGui::PopFont();
+L457: 
+L458:         if (impl->fontRegular) ImGui::PushFont(impl->fontRegular);
+L459:         ImGui::PushStyleColor(ImGuiCol_Text, TextSecondary);
+L460:         ImGui::Text("Atajos operativos del expediente");
+L461:         ImGui::PopStyleColor();
+L462: 
+L463:         ImGui::Dummy(ImVec2(0, 16));
+L464: 
+L465:         // BOTON directo a casos clinicos
+L466:         ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.30f, 0.65f, 0.85f, 1.00f));
+L467:         ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.35f, 0.70f, 0.90f, 1.00f));
+L468:         ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.25f, 0.55f, 0.75f, 1.00f));
+L469:         ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1, 1, 1, 1));
+L470:         if (impl->fontLarge) ImGui::PushFont(impl->fontLarge);
+L471:         if (ImGui::Button("   ABRIR CASOS CLINICOS   ", ImVec2(450, 60))) {
+L472:             ENARM_LOG_INFO("BOTON CLICK -> CasesList");
+L473:             ctx.NavigateTo(AppView::CasesList);
+L474:         }
+L475:         if (impl->fontLarge) ImGui::PopFont();
+L476:         ImGui::PopStyleColor(4);
+L477:         ImGui::Dummy(ImVec2(0, 24));
+L478: 
+L479:         // Grid 3 columnas x 2 filas
+L480:         struct CardDef {
+L481:             const char* title;
+L482:             const char* subtitle;
+L483:             const char* icon;
+L484:             Theme::CardGradient gradient;
+L485:             AppView target;
+L486:         };
+L487: 
+L488:         const float cardW = 320.0f;
+L489:         const float cardH = 220.0f;
+L490:         const float gapX = 24.0f;
+L491:         const float gapY = 24.0f;
+L492: 
+L493:         CardDef cards[] = {
+L494:             {"Casos Clinicos",  "Simulacion de pacientes",  "CC", Theme::CardGradient::Blue,   AppView::CasesList},
+L495:             {"Banco MCQ",       "Preguntas de opcion multiple", "MC", Theme::CardGradient::Purple, AppView::Dashboard},
+L496:             {"Estadisticas",    "Progreso y desempeno",      "ES", Theme::CardGradient::Green,  AppView::Dashboard},
+L497:             {"Configuracion",   "Opciones del sistema",      "CF", Theme::CardGradient::Orange, AppView::Settings},
+L498:             {"Sesiones",        "Historial de simulaciones", "SE", Theme::CardGradient::Pink,   AppView::Dashboard},
+L499:             {"Ayuda",           "Manual y atajos",           "AY", Theme::CardGradient::Gold,   AppView::Dashboard},
+L500:         };
+L501: 
+L502:         for (size_t i = 0; i < std::size(cards); ++i) {
+L503:             const auto& c = cards[i];
+L504:             // 3 columnas
+L505:             if (i % 3 != 0) ImGui::SameLine(0, gapX);
+L506:             bool clicked = DrawGradientCard(c.title, c.subtitle, c.icon,
+L507:                                             c.gradient, ImVec2(cardW, cardH), impl);
+L508:             if (clicked) {
+L509:                 ENARM_LOG_INFO("Card click -> view");
+L510:                 ctx.NavigateTo(c.target);
+L511:             }
+L512:             if (i % 3 == 2) ImGui::Dummy(ImVec2(0, gapY));
+L513:         }
+L514: 
+L515:         if (impl->fontRegular) ImGui::PopFont();
+L516:     }
+
+==== CasesListView.cpp - primeros 60 lineas (ver uso de Theme) ====
+L1: // ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â
+L2: //   ENARM.GUI - CasesListView Implementation
+L3: // ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â
+L4: #include "ENARM/GUI/Views/CasesListView.h"
+L5: #include "ENARM/GUI/Theme.h"
+L6: 
+L7: #include <imgui.h>
+L8: #include <string>
+L9: #include <cstring>
+L10: 
+L11: namespace ENARM::GUI::Views {
+L12: 
+L13:     // Obtener color de card segun especialidad
+L14:     static Theme::CardGradient GradientForSpecialty(const std::string& sp) {
+L15:         if (sp == "Cardiology")   return Theme::CardGradient::Pink;
+L16:         if (sp == "Infectology")  return Theme::CardGradient::Orange;
+L17:         if (sp == "Neurology")    return Theme::CardGradient::Purple;
+L18:         if (sp == "Pneumology")   return Theme::CardGradient::Blue;
+L19:         if (sp == "Gastroenterology") return Theme::CardGradient::Green;
+L20:         return Theme::CardGradient::Gold;
+L21:     }
+L22: 
+L23:     static const char* IconForSpecialty(const std::string& sp) {
+L24:         if (sp == "Cardiology")   return "H";  // Heart
+L25:         if (sp == "Infectology")  return "V";  // Virus
+L26:         if (sp == "Neurology")    return "N";  // Nerve
+L27:         if (sp == "Pneumology")   return "P";  // Pulmonar
+L28:         if (sp == "Gastroenterology") return "G";
+L29:         return "M";  // Medicina general
+L30:     }
+L31: 
+L32:     static const char* SpecialtyNameES(const std::string& sp) {
+L33:         if (sp == "Cardiology")   return "CARDIOLOGIA";
+L34:         if (sp == "Infectology")  return "INFECTOLOGIA";
+L35:         if (sp == "Neurology")    return "NEUROLOGIA";
+L36:         if (sp == "Pneumology")   return "NEUMOLOGIA";
+L37:         if (sp == "Gastroenterology") return "GASTROENTEROLOGIA";
+L38:         return "MEDICINA INTERNA";
+L39:     }
+L40: 
+L41:     static const char* DifficultyBadge(const std::string& d) {
+L42:         if (d == "basic")        return "BASICO";
+L43:         if (d == "intermediate") return "INTERMEDIO";
+L44:         if (d == "advanced")     return "AVANZADO";
+L45:         if (d == "expert")       return "EXPERTO";
+L46:         return "-";
+L47:     }
+L48: 
+L49:     void CasesListView::Render(AppContext& ctx,
+L50:                                 ImFont* fontHuge, ImFont* fontLarge,
+L51:                                 ImFont* fontMedium, ImFont* fontRegular,
+L52:                                 ImFont* fontSmall) {
+L53:         using namespace Theme::Colors;
+L54: 
+L55:         // Titulo
+L56:         if (fontLarge) ImGui::PushFont(fontLarge);
+L57:         ImGui::PushStyleColor(ImGuiCol_Text, TextTitle);
+L58:         ImGui::Text("Casos Clinicos");
+L59:         ImGui::PopStyleColor();
+L60:         if (fontLarge) ImGui::PopFont();
+
+==== RenderMainMenuBar ====
+L590:     void Application::RenderMainMenuBar() {
+L591:         if (ImGui::BeginMainMenuBar()) {
+L592:             if (ImGui::BeginMenu("Archivo")) {
+L593:                 if (ImGui::MenuItem("Nueva sesion", "Ctrl+N")) m_context.view = AppView::CasesList;
+L594:                 if (ImGui::MenuItem("Dashboard", "Ctrl+H")) m_context.NavigateTo(AppView::Dashboard);
+L595:                 if (ImGui::MenuItem("Casos Clinicos", "Ctrl+C")) m_context.NavigateTo(AppView::CasesList);
+L596:                 ImGui::Separator();
+L597:                 if (ImGui::MenuItem("Salir", "Alt+F4")) m_running = false;
+L598:                 ImGui::EndMenu();
+L599:             }
+L600:             if (ImGui::BeginMenu("Ver")) {
+L601:                 ImGui::MenuItem("Ventana ImGui Demo", nullptr, &m_context.showDemoWindow);
+L602:                 ImGui::EndMenu();
+L603:             }
+L604:             if (ImGui::BeginMenu("Ayuda")) {
+L605:                 if (ImGui::MenuItem("Acerca de")) m_context.showAboutWindow = true;
+L606:                 ImGui::EndMenu();
+L607:             }
+L608:             ImGui::EndMainMenuBar();
+L609:         }
+L610:     }
+L611: 
+L612:     void Application::RenderDockspace() {}
+L613:     void Application::RenderPlaceholderPanels() {}
+L614: 
+L615:     void Application::RenderLoadingScreen() {
+L616:         using namespace Theme::Colors;
+L617:         const ImGuiViewport* vp = ImGui::GetMainViewport();
+L618:         ImGui::SetNextWindowPos(ImVec2(vp->WorkPos.x + vp->WorkSize.x * 0.5f,
+L619:                                         vp->WorkPos.y + vp->WorkSize.y * 0.5f),
+

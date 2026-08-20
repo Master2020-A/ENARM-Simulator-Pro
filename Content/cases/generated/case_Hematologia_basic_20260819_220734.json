@@ -1,0 +1,108 @@
+{
+  "title": "Dolor torácico y hemoptisis en paciente con antecedentes de VIH",
+  "slug": "dolor-toracico-hemoptisis-vih",
+  "chief_complaint": "Dolor torácico persistente y hemoptisis",
+  "specialty": "Hematologia",
+  "difficulty": "basic",
+  "setting": "emergency",
+  "patient_json": {
+    "name": "Juan Perez Garcia",
+    "age": 45,
+    "age_unit": "years",
+    "sex": "M",
+    "weight_kg": 70,
+    "height_cm": 170,
+    "occupation": "Jefe de oficina",
+    "vitals_on_arrival": {
+      "hr": 100,
+      "sbp": 130,
+      "dbp": 85,
+      "rr": 20,
+      "spo2": 92,
+      "temp_c": 37.5
+    },
+    "past_medical_history": [
+      "VIH/SIDA"
+    ],
+    "allergies": "ninguna conocida",
+    "current_medications": [
+      "trimetoprim-sulfamethoxazole"
+    ],
+    "family_history": "negado",
+    "social_history": "tabaquismo, no alcohol, no drogas"
+  },
+  "history_present_illness": "El paciente presenta dolor torácico intenso desde hace 3 días, que aumenta con la respiración profunda y durante el descanso. Ha experimentado hemoptisis de sangre espuma que comienza por la noche y se asienta durante el día. El dolor es más intenso en la parte inferior izquierda del pecho. Ha notado fatiga y pérdida de apetito. No ha experimentado fiebre ni rigidez torácica. No ha tenido hemoptisis anteriormente.",
+  "symptoms_json": [
+    {
+      "name": "Dolor torácico",
+      "duration": "3 dias",
+      "severity": "intenso"
+    },
+    {
+      "name": "Hemoptisis",
+      "duration": "3 dias",
+      "severity": "moderada"
+    }
+  ],
+  "expected_diagnosis_json": {
+    "primary": "Pneumonía complicada por VIH/SIDA",
+    "icd10": "J13.1",
+    "differential": [
+      "Bactéricas",
+      "Mycobacterias",
+      "Virus respiratorio"
+    ],
+    "justification": "La presentación de dolor torácico y hemoptisis, junto con la enfermedad VIH/SIDA, sugiere una pneumonía complicada. El dolor intenso es compatible con una infección bacteriana, mientras que la hemoptisis podría ser causada por una mycobacterias o un virus respiratorio."
+  },
+  "expected_studies_json": [
+    {
+      "name": "Respiración 12 derivaciones",
+      "priority": "urgent",
+      "expected_finding": "elevación ST"
+    },
+    {
+      "name": "Placa completa",
+      "priority": "urgent",
+      "expected_finding": "leucocitosis"
+    },
+    {
+      "name": "Cultivo de orina",
+      "priority": "urgent",
+      "expected_finding": "sin datos de infección"
+    },
+    {
+      "name": "Biopsia pulmonar",
+      "priority": "routine",
+      "expected_finding": "sin datos de infección"
+    }
+  ],
+  "expected_treatments_json": [
+    {
+      "treatment": "Antibióticos de amplia cobertura",
+      "priority": "immediate",
+      "evidence": "Class I - AHA/ACC 2022"
+    },
+    {
+      "treatment": "Antiretroviral (HAART)",
+      "priority": "immediate",
+      "evidence": "Class I"
+    },
+    {
+      "treatment": "Soroideos",
+      "priority": "urgent",
+      "evidence": "Class I"
+    },
+    {
+      "treatment": "Oxígeno por neumático",
+      "priority": "urgent",
+      "evidence": "Class I"
+    }
+  ],
+  "expected_followup": "El paciente debe ser evaluado por un pulmonar y un hematologo para un seguimiento del tratamiento y el manejo de la complicación del VIH/SIDA. Se debe realizar un cultivo de orina y biopsia pulmonar para confirmar el diagnóstico.",
+  "learning_objectives_json": [
+    "Identificar criterios diagnosticos de pneumonía complicada por VIH/SIDA",
+    "Aplicar protocolo de tratamiento inmediato",
+    "Reconocer complicaciones del VIH/SIDA"
+  ],
+  "teaching_points": "En pacientes con VIH/SIDA, la complicación de la pneumonía puede ser grave y requerir un manejo rápido y adecuado. El cultivo de orina y la biopsia pulmonar son herramientas importantes para confirmar el diagnóstico y planificar el tratamiento."
+}

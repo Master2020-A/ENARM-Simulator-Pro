@@ -1,0 +1,107 @@
+{
+  "title": "Caso de paciente con presión arterial alta",
+  "slug": "caso-presion-arterial-alta",
+  "chief_complaint": "Dolor torácico, sudoración y nausea",
+  "specialty": "MedicinaInterna",
+  "difficulty": "basic",
+  "setting": "emergency",
+  "patient_json": {
+    "name": "Juan Perez Garcia",
+    "age": 55,
+    "age_unit": "years",
+    "sex": "M",
+    "weight_kg": 90,
+    "height_cm": 175,
+    "occupation": "Profesor",
+    "vitals_on_arrival": {
+      "hr": 110,
+      "sbp": 180,
+      "dbp": 100,
+      "rr": 20,
+      "spo2": 95,
+      "temp_c": 36.5
+    },
+    "past_medical_history": [
+      "Hipertensión arterial"
+    ],
+    "allergies": "ninguna conocida",
+    "current_medications": [
+      "Tabaco"
+    ],
+    "family_history": "Negado",
+    "social_history": "Tabaquismo (20 años), alcohol moderado"
+  },
+  "history_present_illness": "El paciente se presentó con dolor torácico espasmódico intensivo durante las últimas 2 horas, acompañado de sudoración y náuseas. El dolor comenzó de repente mientras estaba trabajando en el aula. No ha tenido mareos, flemor o pérdida de conciencia. El paciente ha estado tomando aceite de oliva y tabaco durante los últimos días.",
+  "symptoms_json": [
+    {
+      "name": "Dolor torácico espasmódico",
+      "duration": "2 horas",
+      "severity": "intenso"
+    },
+    {
+      "name": "Sudoración",
+      "duration": "desconocido",
+      "severity": "moderada"
+    },
+    {
+      "name": "Náuseas",
+      "duration": "desconocido",
+      "severity": "leve"
+    }
+  ],
+  "expected_diagnosis_json": {
+    "primary": "Angina pectoral aguda",
+    "icd10": "I21.0",
+    "differential": [
+      "Dolor de espalda",
+      "Estrés agudo"
+    ],
+    "justification": "El dolor torácico espasmódico, la presión arterial alta y la historia del paciente sugieren un diagnóstico de angina pectoral aguda."
+  },
+  "expected_studies_json": [
+    {
+      "name": "ECG 12 derivaciones",
+      "priority": "urgent",
+      "expected_finding": "Dolor de pecho con presión"
+    },
+    {
+      "name": "Troponinas seriadas",
+      "priority": "urgent",
+      "expected_finding": "Negativas"
+    },
+    {
+      "name": "Echocardiograma",
+      "priority": "routine",
+      "expected_finding": "Sin evidencia de daño cardíaco"
+    }
+  ],
+  "expected_treatments_json": [
+    {
+      "treatment": "Aspirina 300mg VO",
+      "priority": "immediate",
+      "evidence": "Class I - AHA/ACC 2022"
+    },
+    {
+      "treatment": "Oxígeno 2L/min por nebulizador",
+      "priority": "immediate",
+      "evidence": "Class I"
+    },
+    {
+      "treatment": "Diazepam 5mg IV",
+      "priority": "immediate",
+      "evidence": "Class I"
+    },
+    {
+      "treatment": "Monitorización continua del paciente",
+      "priority": "immediate",
+      "evidence": "Class I"
+    }
+  ],
+  "expected_followup": "El paciente debe seguir la monitoreo del ECG y las troponinas. Se debe realizar un seguimiento en 24 horas para evaluar el recupero del dolor y la presión arterial.",
+  "learning_objectives_json": [
+    "Identificar los criterios diagnosticos de angina pectoral aguda",
+    "Aplicar protocolo de manejo de angina pectoral aguda",
+    "Reconocer la importancia de la monitorización en pacientes con angina pectoral aguda"
+  ],
+  "teaching_points": "El dolor torácico espasmódico es un signo de preocupación en el paciente mayor. La evaluación inicial debe centrarse en el dolor y la presión arterial. El manejo de la angina pectoral aguda incluye el uso de aspirina, oxígeno y diazepam. La monitorización continua del paciente es crucial para evaluar el recupero y la evolución del caso."
+}

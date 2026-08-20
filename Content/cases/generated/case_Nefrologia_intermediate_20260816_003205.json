@@ -1,0 +1,115 @@
+{
+    "title":  "Caso de Insuficiencia Renal Aguda en Paciente con Diabete",
+    "slug":  "caso-insuficiencia-renal-aguda-en-paciente-con-diabetes",
+    "chief_complaint":  "Fatiga intensa, dolor abdominal y aumento del volumen urinario",
+    "specialty":  "Nefrologia",
+    "difficulty":  "intermediate",
+    "setting":  "inpatient",
+    "patient_json":  {
+                         "name":  "Juan Perez Garcia",
+                         "age":  55,
+                         "age_unit":  "years",
+                         "sex":  "M",
+                         "weight_kg":  90,
+                         "height_cm":  180,
+                         "occupation":  "Trabajador de oficina",
+                         "vitals_on_arrival":  {
+                                                   "hr":  88,
+                                                   "sbp":  150,
+                                                   "dbp":  90,
+                                                   "rr":  20,
+                                                   "spo2":  95,
+                                                   "temp_c":  37.2
+                                               },
+                         "past_medical_history":  [
+                                                      "Diabetes tipo 2 por 10 años",
+                                                      "Hipertension arterial por 5 años"
+                                                  ],
+                         "allergies":  "ninguna conocida",
+                         "current_medications":  [
+                                                     "Metformina 500mg VO cada 12h",
+                                                     "Amlodipina 5mg VO cada 24h"
+                                                 ],
+                         "family_history":  "Diabetes familiar en primer grado",
+                         "social_history":  "No fuma, no consume alcohol, consume cafe"
+                     },
+    "history_present_illness":  "El paciente ha estado experimentando fatiga intensa, dolor abdominal generalizado y ha observado un aumento significativo en el volumen urinario durante las últimas 24 horas. El dolor abdominal se ha intensificado con el esfuerzo y parece estar centrado en la región lumbar. Además, el paciente ha notado que su orina es más oscura que de costumbre. El paciente ha estado sin alimento durante la noche y ha estado bebiendo agua y jugo de limonada en los últimos días.",
+    "symptoms_json":  [
+                          {
+                              "name":  "Fatiga intensa",
+                              "duration":  "24 horas",
+                              "severity":  "severa"
+                          },
+                          {
+                              "name":  "Dolor abdominal",
+                              "duration":  "24 horas",
+                              "severity":  "moderada"
+                          },
+                          {
+                              "name":  "Aumento en volumen urinario",
+                              "duration":  "24 horas",
+                              "severity":  "moderada"
+                          }
+                      ],
+    "expected_diagnosis_json":  {
+                                    "primary":  "Insuficiencia Renal Aguda (IRA)",
+                                    "icd10":  "N11.9",
+                                    "differential":  [
+                                                         "Acido urico",
+                                                         "Refluxo vesical",
+                                                         "Gastritis"
+                                                     ],
+                                    "justification":  "El paciente tiene antecedentes de diabetes y hipertension, lo que aumenta el riesgo de IRA. El aumento del volumen urinario y el dolor abdominal son signos claves de este diagnóstico."
+                                },
+    "expected_studies_json":  [
+                                  {
+                                      "name":  "Colesterol sérico",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Hipercolesterolemia"
+                                  },
+                                  {
+                                      "name":  "Creatinina sérica",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Elevada"
+                                  },
+                                  {
+                                      "name":  "Urinograma completa",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Proteínas (albumina, globulina) y células epiteliales"
+                                  },
+                                  {
+                                      "name":  "Glicemia en ayunas",
+                                      "priority":  "urgent",
+                                      "expected_finding":  "Elevada"
+                                  }
+                              ],
+    "expected_treatments_json":  [
+                                     {
+                                         "treatment":  "Dietas líquida y límite de proteínas",
+                                         "priority":  "immediate",
+                                         "evidence":  "Nefrología"
+                                     },
+                                     {
+                                         "treatment":  "Antieméticos",
+                                         "priority":  "immediate",
+                                         "evidence":  "Nefrología"
+                                     },
+                                     {
+                                         "treatment":  "Injertas de bicarbonato de sodio",
+                                         "priority":  "urgent",
+                                         "evidence":  "Nefrología"
+                                     },
+                                     {
+                                         "treatment":  "Antibióticos (ciprofloxacino)",
+                                         "priority":  "urgent",
+                                         "evidence":  "Nefrología"
+                                     }
+                                 ],
+    "expected_followup":  "El paciente deberá ser evaluado nuevamente en 24 horas para monitorear los signos vitales y los resultados de los estudios de laboratorio. Se recomienda que continue con una dieta líquida y límite de proteínas, y que se le realice un seguimiento más cercano para monitorear la evolución de la insuficiencia renal aguda.",
+    "learning_objectives_json":  [
+                                     "Identificar criterios diagnosticos de insuficiencia renal aguda",
+                                     "Aplicar protocolo de manejo en primera hora",
+                                     "Reconocer complicaciones de insuficiencia renal aguda"
+                                 ],
+    "teaching_points":  "1. El diabetes tipo 2 es un factor de riesgo importante para la insuficiencia renal aguda. 2. La identificación de proteínas en el orina es un signo clave de insuficiencia renal aguda. 3. La injección de bicarbonato de sodio puede ser útil en el manejo de la insuficiencia renal aguda."
+}

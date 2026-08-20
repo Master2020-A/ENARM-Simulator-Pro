@@ -1,0 +1,98 @@
+{
+  "title": "Respiración insuficiente neonatal",
+  "slug": "respiracion-insuficiente-neonatal",
+  "chief_complaint": "Tos fuerte y dificultad para respirar",
+  "specialty": "Neonatologia",
+  "difficulty": "basic",
+  "setting": "inpatient",
+  "patient_json": {
+    "name": "Juan Perez Garcia",
+    "age": 3,
+    "age_unit": "years",
+    "sex": "M",
+    "weight_kg": 7,
+    "height_cm": 45,
+    "occupation": "Jubilado",
+    "vitals_on_arrival": {
+      "hr": 120,
+      "sbp": 100,
+      "dbp": 60,
+      "rr": 50,
+      "spo2": 85,
+      "temp_c": 36.5
+    },
+    "past_medical_history": [
+      "prematuridad"
+    ],
+    "allergies": "ninguna conocida",
+    "current_medications": [
+      "pancrizona 0.5mg IV"
+    ],
+    "family_history": "ninguno relevante",
+    "social_history": "no aplica"
+  },
+  "history_present_illness": "El paciente es un niño de 3 años de prematuridad. Presenta tos intensa y dificultad para respirar durante las últimas 24 horas. El niño fue intubado en el hospital pediátrico local debido a dificultad para respirar. Su respiración es rápida y apnea esfuerzo, con signos de agitación y sudoración. Ha estado deshidratado y ha recibido fluidos IV en el hospital. Ha estado en observación en el pabellón pediátrico durante las últimas 24 horas sin mejorar.",
+  "symptoms_json": [
+    {
+      "name": "tos",
+      "duration": "24 horas",
+      "severity": "intensa"
+    },
+    {
+      "name": "dificultad para respirar",
+      "duration": "24 horas",
+      "severity": "severa"
+    }
+  ],
+  "expected_diagnosis_json": {
+    "primary": "Respiración insuficiente neonatal",
+    "icd10": "R57.129",
+    "differential": [
+      "Asma neonatal",
+      "Pneumonía neonatal",
+      "Hiperinflamación bronquial"
+    ],
+    "justification": "Basado en la presentación clínica, la tos intensa, dificultad para respirar y respiración rápida, así como el contexto de prematuridad, la respiración insuficiente neonatal es el diagnostico principal."
+  },
+  "expected_studies_json": [
+    {
+      "name": "ECG 12 derivaciones",
+      "priority": "urgent",
+      "expected_finding": "sin datos relevantes"
+    },
+    {
+      "name": "Troponinas seriadas",
+      "priority": "urgent",
+      "expected_finding": "sin datos relevantes"
+    },
+    {
+      "name": "Radiografía de torax",
+      "priority": "routine",
+      "expected_finding": "sin datos relevantes"
+    }
+  ],
+  "expected_treatments_json": [
+    {
+      "treatment": "Oxígeno suplementario",
+      "priority": "immediate",
+      "evidence": "Protocolo estandar"
+    },
+    {
+      "treatment": "Terapia respiratoria con ventilación mecánica",
+      "priority": "urgent",
+      "evidence": "Protocolo estandar"
+    },
+    {
+      "treatment": "Medicamentos broncodilatadores",
+      "priority": "urgent",
+      "evidence": "Protocolo estandar"
+    }
+  ],
+  "expected_followup": "El niño debe seguirse en observación en el pabellón neonatal. Es probable que sea necesario realizar una ventriculopericardioscopia y una ventriculograma para evaluar el daño cerebral cerebral. El niño también requerirá de terapia intensiva y posiblemente un trasplante de pulmones.",
+  "learning_objectives_json": [
+    "Identificar criterios diagnosticos de respiración insuficiente neonatal",
+    "Aplicar protocolo de ventilación mecánica en primera hora",
+    "Reconocer complicaciones de respiración insuficiente neonatal"
+  ],
+  "teaching_points": "La respiración insuficiente neonatal es un padecimiento común en neonatos y requiere un diagnóstico y tratamiento rápidos. La ventilación mecánica es una herramienta esencial en el manejo de este padecimiento."
+}

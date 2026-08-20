@@ -1,0 +1,119 @@
+{
+  "title": "Caso de Insuficiencia Renal Aguda",
+  "slug": "caso-insuficiencia-renal-aguda",
+  "chief_complaint": "Dolor abdominal intenso y náuseas",
+  "specialty": "MedicinaFamiliar",
+  "difficulty": "basic",
+  "setting": "emergency",
+  "patient_json": {
+    "name": "Juan Perez Garcia",
+    "age": 60,
+    "age_unit": "years",
+    "sex": "M",
+    "weight_kg": 75,
+    "height_cm": 175,
+    "occupation": "Mecanico",
+    "vitals_on_arrival": {
+      "hr": 110,
+      "sbp": 140,
+      "dbp": 90,
+      "rr": 20,
+      "spo2": 95,
+      "temp_c": 37.5
+    },
+    "past_medical_history": [
+      "Insuficiencia renal crónica",
+      "Hipertension arterial"
+    ],
+    "allergies": "Ninguna conocida",
+    "current_medications": [
+      "Aceite de oliva"
+    ],
+    "family_history": "Negado",
+    "social_history": "Tabaquismo moderado, alcohol ocasional"
+  },
+  "history_present_illness": "El paciente se presentó con dolor abdominal intenso que comenzó hace 24 horas, asociado con náuseas y vómitos. El dolor es agudo, ubicado en la zona epigástrica, se extiende hacia el lomo y la espalda. El paciente también reporta fatiga y pérdida de apetito. No ha consumido nada sólido en los últimos 12 horas.",
+  "symptoms_json": [
+    {
+      "name": "Dolor abdominal",
+      "duration": "24 horas",
+      "severity": "intenso"
+    },
+    {
+      "name": "Náuseas",
+      "duration": "24 horas",
+      "severity": "moderada"
+    },
+    {
+      "name": "Vómitos",
+      "duration": "12 horas",
+      "severity": "leve"
+    },
+    {
+      "name": "Fatiga",
+      "duration": "24 horas",
+      "severity": "moderada"
+    },
+    {
+      "name": "Pérdida de apetito",
+      "duration": "24 horas",
+      "severity": "leve"
+    }
+  ],
+  "expected_diagnosis_json": {
+    "primary": "Insuficiencia renal aguda (IRA)",
+    "icd10": "N17.1",
+    "differential": [
+      "Perforación gastrointestinal",
+      "Gastroenteritis",
+      "Angina pectoral"
+    ],
+    "justification": "El dolor abdominal intenso, náuseas y vómitos, junto con la fatiga y pérdida de apetito, son compatibles con la IRA. El dolor agudo en la zona epigástrica y la extensión hacia el lomo son indicativos de un perforación gastrointestinal. El paciente tiene antecedentes de insuficiencia renal crónica, lo que aumenta el riesgo de complicaciones."
+  },
+  "expected_studies_json": [
+    {
+      "name": "Pruebas de sangre",
+      "priority": "urgent",
+      "expected_finding": "Leucocitos aumentados, proteínas aumentadas"
+    },
+    {
+      "name": "Pruebas de orina",
+      "priority": "urgent",
+      "expected_finding": "Bacteriuria con pus"
+    },
+    {
+      "name": "Radiografia de abdomen",
+      "priority": "routine",
+      "expected_finding": "Sin datos de perforación"
+    }
+  ],
+  "expected_treatments_json": [
+    {
+      "treatment": "Antibióticos (ej: Amoxiciclina)",
+      "priority": "immediate",
+      "evidence": "Class I"
+    },
+    {
+      "treatment": "Antidiarreicos (ej: Loperamide)",
+      "priority": "immediate",
+      "evidence": "Class II"
+    },
+    {
+      "treatment": "Hidratación intravenosa",
+      "priority": "urgent",
+      "evidence": "Class I"
+    },
+    {
+      "treatment": "Antagonistas del ácido",
+      "priority": "urgent",
+      "evidence": "Class I"
+    }
+  ],
+  "expected_followup": "El paciente se referirá a la urgencia para una exploración abdominal y posiblemente una cirugía exploratoria. El seguimiento seguirá el protocolo de seguimiento para la IRA y la monitoreo de la insuficiencia renal crónica.",
+  "learning_objectives_json": [
+    "Identificar los criterios diagnósticos de la insuficiencia renal aguda",
+    "Aplicar el protocolo de manejo de la IRA en la primera hora",
+    "Reconocer las complicaciones potenciales de la insuficiencia renal aguda"
+  ],
+  "teaching_points": "La insuficiencia renal aguda puede presentarse con un dolor abdominal intenso, náuseas y vómitos. Los antibióticos son crucial en la terapia de la IRA debido a la posibilidad de un perforación gastrointestinal. El seguimiento es esencial para monitorear la evolución de la insuficiencia renal y evitar complicaciones."
+}

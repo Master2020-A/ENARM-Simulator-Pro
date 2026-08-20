@@ -1,0 +1,106 @@
+﻿{
+  "id": 10,
+  "title": "Preeclampsia con Criterios de Severidad - 34 Semanas",
+  "specialty": "Ginecología y Obstetricia",
+  "difficulty": 3,
+  "chief_complaint": "Dolor de cabeza muy fuerte y veo borroso, estoy embarazada",
+  "patient": {
+    "age": 32,
+    "sex": "F",
+    "weight_kg": 78,
+    "height_cm": 163,
+    "occupation": "Contadora",
+    "relevant_history": [
+      "Gesta 2, Para 1 (parto vaginal hace 4 años, sin complicaciones)",
+      "34.2 semanas de gestación por fecha de última menstruación y USG del 1er trimestre",
+      "Control prenatal irregular (solo 3 consultas)",
+      "TA basal 110/70 en primer trimestre (normotensa previa)",
+      "Sin diabetes pregestacional",
+      "Sin nefropatía previa"
+    ]
+  },
+  "vitals_on_arrival": {
+    "systolic_bp": 168,
+    "diastolic_bp": 112,
+    "heart_rate": 96,
+    "respiratory_rate": 18,
+    "temperature_c": 37.0,
+    "spo2_percent": 97,
+    "weight_kg": 78
+  },
+  "history_of_present_illness": "Femenino de 32 años, 34.2 SDG, acude a urgencias por cefalea frontal intensa 8/10 de 6 horas de evolución, visión borrosa y fotofobia. Refiere edema de cara y manos que notó hace 3 días. Epigastralgia moderada. Niega convulsiones. Movimientos fetales presentes. PA en esta semana por familiar: 160/105 mmHg. Sin sangrado vaginal.",
+  "physical_exam": {
+    "general": "Femenino embarazada con facies de dolor, ansiosa. Edema facial (++). Orientada.",
+    "cardiovascular": "Taquicardia leve. HTA severa. Sin soplos.",
+    "respiratory": "Sin crepitantes. SpO2 97%.",
+    "abdomen": "Útero grávido con fondo uterino a 33cm. FCF 148 lpm por Doppler. Epigastralgia a la palpación profunda. Sin contractilidad.",
+    "neurological": "Alerta. Hiperreflexia rotuliana (3+). Sin clonus. Fondo de ojo: edema de papila incipiente, espasmo arteriolar.",
+    "extremities": "Edema de miembros inferiores (+++), con godete. Edema de manos."
+  },
+  "key_labs": {
+    "proteinuria_24h": "4.8 g/24h (rango nefrótico)",
+    "proteinuria_tira": "3+",
+    "creatinina": "1.2 mg/dL (elevada para embarazo, basal 0.6)",
+    "acido_urico": "7.8 mg/dL",
+    "BH": "Hb 11.2, plaquetas 89,000 (trombocitopenia severa - criterio HELLP)",
+    "ALT": "186 U/L",
+    "AST": "210 U/L",
+    "LDH": "820 U/L",
+    "bilirrubina_total": "1.8 mg/dL",
+    "frotis_periferico": "Esquistocitos presentes (microangiopatía)",
+    "coagulacion": "TP y TTP normales",
+    "glucosa": "92 mg/dL"
+  },
+  "key_imaging": [
+    "USG obstétrico: Feto único vivo en presentación cefálica. Peso estimado 1980g (percentil 8 para EG - RCIU). ILA 5.8 cm (oligohidramnios leve). Doppler de arteria umbilical: flujo diastólico ausente (signo de alarma).",
+    "NST (cardiotocografía): Reactivo. Sin desaceleraciones.",
+    "USG hepático: Sin hematoma subcapsular."
+  ],
+  "correct_diagnosis": "Preeclampsia con criterios de severidad complicada con Síndrome HELLP completo (Hemólisis + Enzimas hepáticas elevadas + Plaquetas bajas)",
+  "differential_diagnosis": [
+    "Hipertensión gestacional (sin proteinuria - descartada)",
+    "Hipertensión crónica con preeclampsia sobreagregada",
+    "Púrpura trombocitopénica trombótica (TTP - similar pero diferente manejo)",
+    "Hígado graso agudo del embarazo (hipoglucemia, coagulopatía - descartado)"
+  ],
+  "treatment_plan": [
+    "INGRESO INMEDIATO a UCI obstétrica / área de alto riesgo",
+    "1. Prevención y tratamiento de convulsiones (eclampsia):",
+    "   Sulfato de magnesio: dosis de carga 4-6g IV en 15-20 min",
+    "   Mantenimiento: 1-2 g/h en infusión IV continua",
+    "   Monitorizar: diuresis >25mL/h, FR >12/min, reflejos presentes",
+    "   Antídoto disponible: gluconato de calcio 1g IV",
+    "2. Control de PA (meta: 140-150/90-100 mmHg):",
+    "   Labetalol 20 mg IV, repetir c/10 min (máx 300 mg)",
+    "   O hidralazina 5-10 mg IV c/20 min",
+    "   O nifedipino 10 mg VO (en situación no urgente)",
+    "   EVITAR: IECAS, ARA-II (contraindicados en embarazo)",
+    "3. Maduración pulmonar fetal:",
+    "   Betametasona 12 mg IM c/24h x2 dosis (34 SDG - beneficio marginal pero se indica)",
+    "4. Resolución del embarazo:",
+    "   INDICACIÓN ABSOLUTA DE INTERRUPCIÓN dado HELLP completo",
+    "   Vía: cesárea urgente (plaquetas <100,000 + HELLP = mayor riesgo de hemorragia en parto vaginal)",
+    "   Transfusión plaquetas si <50,000 antes de cirugía",
+    "5. Postparto:",
+    "   Continuar sulfato de magnesio 24-48h postparto",
+    "   Continuar antihipertensivos (nifedipino VO)",
+    "   Seguimiento de plaquetas y enzimas hepáticas",
+    "   Lactancia: evaluar según medicamentos"
+  ],
+  "scoring_rubric": {
+    "anamnesis": 0.20,
+    "physical_exam": 0.15,
+    "diagnosis": 0.35,
+    "treatment": 0.30
+  },
+  "learning_objectives": [
+    "Identificar criterios de severidad en preeclampsia (PA, proteinuria, síntomas)",
+    "Diagnosticar síndrome HELLP por laboratorio (hemólisis, LDH, plaquetas, enzimas)",
+    "Administrar sulfato de magnesio correctamente (dosis, monitorización, antídoto)",
+    "Conocer antihipertensivos seguros y contraindicados en embarazo",
+    "Decidir vía y momento de interrupción del embarazo en preeclampsia severa"
+  ],
+  "guideline_ids": [13, 14],
+  "tags": ["preeclampsia", "HELLP", "obstetricia", "sulfato_magnesio", "eclampsia", "embarazo_alto_riesgo"],
+  "enarm_topics": ["Preeclampsia", "Síndrome HELLP", "Urgencias obstétricas", "Maduración pulmonar fetal"]
+}
