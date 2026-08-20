@@ -21,6 +21,7 @@ set(GUI_SOURCES
     src/Views/ScoringPanelView.cpp
     src/Views/GuidelinesListView.cpp
     src/Views/EmergencyCodeView.cpp
+    src/Views/ECGMonitorView.cpp
 
     # Views opcionales (agregar cuando existan)
     # src/Views/CaseSelectorView.cpp
