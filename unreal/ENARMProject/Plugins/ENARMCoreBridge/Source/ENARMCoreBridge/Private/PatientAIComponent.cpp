@@ -2,11 +2,15 @@
 #include "PatientAIComponent.h"
 #include "Engine/World.h"
 
-// Headers del motor clinico ENARM (modulos puros, sin vcpkg)
+// Headers del motor clinico ENARM (modulos puros + AI/Data con vcpkg)
 #include "ENARM/Physiology/HemodynamicModel.h"
 #include "ENARM/Pharmacology/DrugDatabase.h"
 #include "ENARM/Domain/Patient.h"
 #include "ENARM/Common/Result.h"
+#include "ENARM/AI/PatientAIController.h"
+#include "ENARM/AI/LLMRouter.h"
+#include "ENARM/AI/OllamaClient.h"
+#include "ENARM/AI/PromptTemplates/PatientPrompts.h"
 
 UPatientAIComponent::UPatientAIComponent()
     : m_Simulator(nullptr)
@@ -20,7 +24,7 @@ void UPatientAIComponent::BeginPlay()
     Super::BeginPlay();
     m_Simulator = new ENARM::Physiology::HemodynamicModel();
     m_Initialized = true;
-    UE_LOG(LogTemp, Log, TEXT("[ENARM] Bridge inicializado. Farmacos disponibles: %d"),
+    UE_LOG(LogTemp, Log, TEXT("[ENARM] Bridge inicializado. Farmacos: %d"),
            (int)ENARM::Pharmacology::DrugDatabase::Instance().Count());
 }
 
@@ -46,7 +50,8 @@ void UPatientAIComponent::AskPatient(const FString& DoctorQuestion,
                                      const FString& /*OnCompleteCallback*/)
 {
     UE_LOG(LogTemp, Log, TEXT("[ENARM] Pregunta: %s"), *DoctorQuestion);
-    // TODO Sprint 10: conectar PatientAIController (requiere vcpkg en UE5)
+    // TODO Sprint 10: instanciar PatientAIController con router Ollama
+    // y conectar respuesta a TTS + lip sync del MetaHuman
 }
 
 bool UPatientAIComponent::IsAIReady() const
@@ -91,7 +96,6 @@ bool UPatientAIComponent::GiveBolus(const FString&DrugName, float DoseMg)
 {
     if (!m_Simulator) return false;
 
-    // Verificar en DrugDatabase que el farmaco existe y la dosis es plausible
     auto drug = ENARM::Pharmacology::DrugDatabase::Instance()
         .FindByName(TCHAR_TO_UTF8(*DrugName));
     if (!drug.has_value())
@@ -105,7 +109,6 @@ bool UPatientAIComponent::GiveBolus(const FString&DrugName, float DoseMg)
         return false;
     }
 
-    // Aplicar efecto fisiologico (bolo simple)
     auto* heart = static_cast<ENARM::Physiology::HemodynamicModel*>(m_Simulator);
     if (drug->category == ENARM::Pharmacology::DrugCategory::Vasopressor)
     {
